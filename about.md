@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hi! I'm Vicki. I do data science (Python+R+Tableau+SQL+tons and tons of data profiling). In my spare time, I write, read, run and enjoy Nutella. More at my [main site](http://www.vickiboykis.com). 
 
-### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[vickiboykis@gmail.com](mailto:vickiboykis@gmail.com)
