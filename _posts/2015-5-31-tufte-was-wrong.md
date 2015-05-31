@@ -3,7 +3,7 @@ layout: post
 title: I'm not so sure about Tufte
 ---
 
-![Kandinsky](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/ducreux.png)
+![Kandinsky](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/kandinsky.jpg)
 
 
 A couple years ago, I was fortunate enough to be able to catch [Edward Tufte](http://en.wikipedia.org/wiki/Edward_Tufte), the father of the current wave of thinking about data visualization, at a seminar he was giving in Philadelphia. 
