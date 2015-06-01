@@ -94,9 +94,9 @@ Yes, subqueries are much, much faster if you're aggregating across multiple data
 
 SELECT * from trans a --transactions table 
 JOIN region b --region table with 5 splits
-on a.trans_id=b.regionid
+ON a.trans_id=b.regionid
 WHERE a.product_type='nutella'
-and b.regionid='NE' --NE=northeast
+AND b.regionid='NE' --NE=northeast
 ORDER BY RAND() --selecting a random sample of 100
 LIMIT 100
 ```
