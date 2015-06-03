@@ -3,7 +3,7 @@ layout: post
 title: What do we do with all these photos? 
 ---
 
-![photos](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/littleme.jpg)
+![photos](littleme.jpg)
 
 When I go to visit my grandfather, I often enjoy looking at our family photo album. He was born in the 1930s in the Soviet Union and the pictures start sometime in the 1950s, when he married my grandmother, and go all the way up to today.
 
