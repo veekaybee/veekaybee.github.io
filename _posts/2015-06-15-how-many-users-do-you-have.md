@@ -13,7 +13,7 @@ or
 
 The same is true for music: you're either actively looking for a song, or you want to listen to a "channel." If I just want to play specific songs, I use my own music on my phone or go to YouTube. If I want channels, I'll use Spotify. 
 
-Spotify is really great at building channels not only by genre, but by intangible things like mood.  "Coffeehouse chill" is one of my favorites. I'm not sure if this is still the case, but (initially)(http://www.cnet.com/news/spotify-adds-human-touch-to-help-people-find-playlists/), Spotify had a staff of 35 people working on this curation problem by creating manual lists. 
+Spotify is really great at building channels not only by genre, but by intangible things like mood.  "Coffeehouse chill" is one of my favorites. I'm not sure if this is still the case, but [initially](http://www.cnet.com/news/spotify-adds-human-touch-to-help-people-find-playlists/), Spotify had a staff of 35 people working on this curation problem by creating manual lists. 
 
 Every day, there is a new collection of playlists up on my app. Because they are so carefully managed to show relevant lists by time of day, I love this section and check it out first: 
 
