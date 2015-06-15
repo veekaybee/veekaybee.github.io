@@ -52,8 +52,7 @@ For example, [Facebook usually says ](http://newsroom.fb.com/company-info/) they
 
 That's 13% of the world's total population logging in every month! That's enormous! How does anyone get any work done when almost 1/7 of the entire world is just reposting gifs of slow lorises? 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/
-slow-loris-eating-rice-ball-o.gif)
+![image](https://38.media.tumblr.com/500736338e23d5b5adb0201b6b74cbc9/tumblr_mmyemrrqkq1s1fx0zo1_500.gif)
 
 The answer is that obviously not that many people are actively using Facebook, depending on Facebook's definition of "active." Is active..
 
