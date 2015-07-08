@@ -16,19 +16,17 @@ Often times, this data is only available at a granular level (i.e. you have a ba
 
 Here's the CSV file you're given to work with: (also available in [the associated GitHub repo](https://github.com/veekaybee/cumtotal) for all the code in this post. ) 
 
-|Company	| Month	| Employees|
-| ------------- |:-------------:| -----:|
-|Hooli	| Jan-2014	|123,456|
-|Hooli	| Feb-2014	|1,434|
-|Hooli	| Mar-2014|	2,455|
-|Pied Piper	| Jan-2014|	1|
-|Pied Piper	| Feb-2014|	2|
-|Pied Piper|	 Mar-2014|	2|
-|Raviga|	Jan-14|	50|
-|Raviga	| Feb-2014|	-2|
-|Raviga	| Mar-2014|	17|
-
-
+ |Company	| Month	| Employees|
+ | ------------- |:-------------:| -----:|
+ |Hooli	| Jan-2014	|123,456|
+ |Hooli	| Feb-2014	|1,434|
+ |Hooli	| Mar-2014|	2,455|
+ |Pied Piper	| Jan-2014|	1|
+ |Pied Piper	| Feb-2014|	2|
+ |Pied Piper|	 Mar-2014|	2|
+ |Raviga|	Jan-14|	50|
+ |Raviga	| Feb-2014|	-2|
+ |Raviga	| Mar-2014|	17|
 
 But what we really want is this: 
 
@@ -97,74 +95,74 @@ This "problem" (which is really just a feature of programming) is easy to solve 
     df.convert_objects(convert_numeric=True)
 
 
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Company</th>
-      <th>Month</th>
-      <th>New Employess</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>      Hooli</td>
-      <td>2015-01-14</td>
-      <td> 123456</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>      Hooli</td>
-      <td>2015-02-14</td>
-      <td>   1434</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>      Hooli</td>
-      <td>2015-03-14</td>
-      <td>   2455</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td> Pied Piper</td>
-      <td>2015-01-14</td>
-      <td>      1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td> Pied Piper</td>
-      <td>2015-02-14</td>
-      <td>      2</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td> Pied Piper</td>
-      <td>2015-03-14</td>
-      <td>      2</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>     Raviga</td>
-      <td>2015-01-14</td>
-      <td>     50</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>     Raviga</td>
-      <td>2015-02-14</td>
-      <td>     -2</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>     Raviga</td>
-      <td>2015-03-14</td>
-      <td>     17</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Company</th>
+          <th>Month</th>
+          <th>New Employess</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td>      Hooli</td>
+          <td>2015-01-14</td>
+          <td> 123456</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>      Hooli</td>
+          <td>2015-02-14</td>
+          <td>   1434</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>      Hooli</td>
+          <td>2015-03-14</td>
+          <td>   2455</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td> Pied Piper</td>
+          <td>2015-01-14</td>
+          <td>      1</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td> Pied Piper</td>
+          <td>2015-02-14</td>
+          <td>      2</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td> Pied Piper</td>
+          <td>2015-03-14</td>
+          <td>      2</td>
+        </tr>
+        <tr>
+          <th>6</th>
+          <td>     Raviga</td>
+          <td>2015-01-14</td>
+          <td>     50</td>
+        </tr>
+        <tr>
+          <th>7</th>
+          <td>     Raviga</td>
+          <td>2015-02-14</td>
+          <td>     -2</td>
+        </tr>
+        <tr>
+          <th>8</th>
+          <td>     Raviga</td>
+          <td>2015-03-14</td>
+          <td>     17</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
 
 
 
@@ -199,15 +197,14 @@ This "problem" (which is really just a feature of programming) is easy to solve 
 
 R, in theory, operates on matrices. But mostly, R "thinks about data sets" in columns as opposed to across both rows and columns.  In order for it to understand matrices the same way databases do, you need to get the data.table package. (Check out [this link](http://stackoverflow.com/questions/22824662/calculate-cumulative-sum-of-one-column-based-on-another-columns-rank) for more details.) It's a little more straightforward than Python because it handles CSV formatting a little better and you don't need to do as much pre-processing. Like Python, the data.table package has cumulative sum as a built-in function, but there are two steps to organizing the data correctly to be sorted instead of one. 
 
-    install.packages("data.table", lib="/Library/Frameworks/R.framework/Versions/3.1/Resources/library") #get the data table     package
+    install.packages("data.table", lib="/Library/Frameworks/R.framework/Versions/3.1/Resources/library")      
     sv <- read.csv("~/Desktop/ipythondata/sv.csv") #read in data
     require(data.table) #package for transforming to data table
-   View(sv)
-   setDT (sv) #set the table as your dataset
-
+    View(sv)
+    setDT (sv) #set the table as your dataset
     setkey(sv, Company,Month) #sort in chronological order and groups
-   sv[,csum := cumsum(New.Employees),by=Company] #cumulative sum
-   View(sv) #view your results
+    sv[,csum := cumsum(New.Employees),by=c('Company')] #cumulative sum
+    View(sv) #view your results
 
 And you get: 
 
@@ -220,21 +217,21 @@ This one is a little trickier because instead of running RStudio or IPython note
 I have a Digital Ocean droplet that has Postgres installed exactly for this kind of tomfoolery. [There is a bunch of admin work](https://wiki.postgresql.org/wiki/First_steps) that will have to be done before you can create tables in Postgres, but then you're on your way on the command line: 
 
         postgres@data:~$ psql
-      postgres=# CREATE SCHEMA employees; #creates the database where you'll be doing stuff
+      postgres=# CREATE SCHEMA employees; 
       CREATE SCHEMA
-      postgres=#  CREATE TABLE cumtot(company CHAR(50) NOT NULL, month DATE NOT NULL,nemp NUMERIC NOT NULL); #create the table   and specify the column types
+      postgres=#  CREATE TABLE cumtot(company CHAR(50) NOT NULL, month DATE NOT NULL,nemp NUMERIC NOT NULL);
       CREATE TABLE
   
 Then take a look at the table that you've created: 
-      postgres=# \d 
-    List of relations
-          Schema |  Name  | Type  |  Owner   
-          --------+--------+-------+----------
+postgres=# \d 
+List of relations
+ Schema |  Name  | Type  |  Owner   
+ --------+--------+-------+----------
           public | cumtot | table | postgres
 
  Then, let's copy the csv file into the table, instead of creating each row one by one: 
 
-         postgres=# copy cumtot FROM '/data/sv.csv' DELIMITER ',' CSV HEADER;
+    postgres=# copy cumtot FROM '/data/sv.csv' DELIMITER ',' CSV HEADER;
 
 In the file, we first have to change the date format because Postgres only takes certain formats http://www.postgresql.org/docs/9.1/static/datatype-datetime.html
 
