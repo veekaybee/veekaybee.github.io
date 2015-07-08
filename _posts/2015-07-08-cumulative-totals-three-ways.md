@@ -77,11 +77,8 @@ This "problem" (which is really just a feature of programming) is easy to solve 
 
 ###Read in CSV file 
 
-
-df=pd.read_csv('sv.csv')
-
-print df
-
+    df=pd.read_csv('sv.csv')
+    print df
           Company   Month  New Employess
     0       Hooli  14-Jan         123456
     1       Hooli  14-Feb           1434
@@ -96,10 +93,8 @@ print df
 
 ###Make sure date and number values are rendered correctly from CSV file (the dateutil library)
 
-
-df['Month'] = pd.to_datetime(df['Month'])
+    df['Month'] = pd.to_datetime(df['Month'])
     df.convert_objects(convert_numeric=True)
-
 
 
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -175,16 +170,15 @@ df['Month'] = pd.to_datetime(df['Month'])
 
 ###check each column's datatype
 
-print df.dtypes
-
+    print df.dtypes
     Company                  object
     Month            datetime64[ns]
     New Employess           float64
     dtype: object
 
+###Finally, roll up the cumulative total with two group bys: 
 
-
-  print df.groupby(by=['Company','Month']).sum().groupby(level=[0]).cumsum()
+   print df.groupby(by=['Company','Month']).sum().groupby(level=[0]).cumsum()
 
                            New Employess
     Company    Month                    
@@ -196,53 +190,49 @@ print df.dtypes
                2015-03-14              5
     Raviga     2015-01-14             50
                2015-02-14             48
-               2015-03-14            65 
+               2015-03-14             65 
                
                
-
-
 
 
 ##Cumulative Totals in R
 
-R, in theory, operates on matrices, but it sees matrices in a pretty rigid, mathematical way, instead of the looser way they're implemented in databases. 
+R, in theory, operates on matrices. But mostly, R "thinks about data sets" in columns as opposed to across both rows and columns.  In order for it to understand matrices the same way databases do, you need to get the data.table package. (Check out [this link](http://stackoverflow.com/questions/22824662/calculate-cumulative-sum-of-one-column-based-on-another-columns-rank) for more details.) It's a little more straightforward than Python because it handles CSV formatting a little better and you don't need to do as much pre-processing. Like Python, the data.table package has cumulative sum as a built-in function, but there are two steps to organizing the data correctly to be sorted instead of one. 
 
-In order to do cumulative operations,   you can do this by converting your dataset to a more table-like format. (Check out [this link](http://stackoverflow.com/questions/22824662/calculate-cumulative-sum-of-one-column-based-on-another-columns-rank) for more detail on how to. )
+    install.packages("data.table", lib="/Library/Frameworks/R.framework/Versions/3.1/Resources/library") #get the data table     package
+    sv <- read.csv("~/Desktop/ipythondata/sv.csv") #read in data
+    require(data.table) #package for transforming to data table
+   View(sv)
+   setDT (sv) #set the table as your dataset
 
-  install.packages("data.table", lib="/Library/Frameworks/R.framework/Versions/3.1/Resources/library") #get the data table     package
-  sv <- read.csv("~/Desktop/ipythondata/sv.csv") #read in data
-  require(data.table) #package for transforming to data table
-  View(sv)
-  setDT (sv) #set the table as your dataset
+    setkey(sv, Company,Month) #sort in chronological order and groups
+   sv[,csum := cumsum(New.Employees),by=Company] #cumulative sum
+   View(sv) #view your results
 
-  setkey(sv, Company,Month) #sort in chronological order and groups
-  sv[,csum := cumsum(New.Employees),by=Company] #cumulative sum
-  View(sv) #view your results
-
+And you get: 
 
 ![RTotal](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/rtotal.png)
 
 
 ##Cumulative Totals in SQL
 
-This one is a little trickier because you have to start a database instance...somewhere. You can set up MySQL or Postgres locally.  
+This one is a little trickier because instead of running RStudio or IPython notebooks locally, you have to start a database instance...somewhere. You can, in theory, set up SQLite or MySQL locally, but it's probably more of a pain than it's worth. 
+I have a Digital Ocean droplet that has Postgres installed exactly for this kind of tomfoolery. [There is a bunch of admin work](https://wiki.postgresql.org/wiki/First_steps) that will have to be done before you can create tables in Postgres, but then you're on your way on the command line: 
 
-I have a Digital Ocean droplet that has Postgres installed. [There is a bunch of admin work](https://wiki.postgresql.org/wiki/First_steps) that will have to be done before you can create tables in Postgres, but then you're on your way on the command line: 
+        postgres@data:~$ psql
+      postgres=# CREATE SCHEMA employees; #creates the database where you'll be doing stuff
+      CREATE SCHEMA
+      postgres=#  CREATE TABLE cumtot(company CHAR(50) NOT NULL, month DATE NOT NULL,nemp NUMERIC NOT NULL); #create the table   and specify the column types
+      CREATE TABLE
+  
+Then take a look at the table that you've created: 
+      postgres=# \d 
+    List of relations
+          Schema |  Name  | Type  |  Owner   
+          --------+--------+-------+----------
+          public | cumtot | table | postgres
 
-        
-  postgres@data:~$ psql
-  postgres=# CREATE SCHEMA employees; #creates the database where you'll be doing stuff
-  CREATE SCHEMA
-  postgres=#  CREATE TABLE cumtot(company CHAR(50) NOT NULL, month DATE NOT NULL,nemp NUMERIC NOT NULL); #create the table   and specify the column types
-  CREATE TABLE
-  postgres=# \d #take a look a the column types
-
-         List of relations
-  Schema |  Name  | Type  |  Owner   
-  --------+--------+-------+----------
-  public | cumtot | table | postgres
-
- Then we copy the data to the table from our file:
+ Then, let's copy the csv file into the table, instead of creating each row one by one: 
 
          postgres=# copy cumtot FROM '/data/sv.csv' DELIMITER ',' CSV HEADER;
 
@@ -261,7 +251,7 @@ So what we're importing is:
     Raviga,2014-Feb-01,-2
     Raviga,2014-Mar-01,17
 
-Check out the table created: 
+Check out the table created with the `\d command:
 
         postgres=# \d cumtot
         Table "public.cumtot"
@@ -271,8 +261,8 @@ Check out the table created:
         month   | date          | not null
         nemp    | numeric       | not null
 
-
-  postgres=# select * from cumtot; #view the whole table
+And now view the contents of the table: (don't forget the semi-colon...Postgres is pretty picky with syntax):
+  postgres=# select * from cumtot; 
 
     company         |   month    |  nemp  
     --------------------------------------
@@ -287,10 +277,11 @@ Check out the table created:
     Raviga         | 2014-03-01 |     65
 
 
-That was just the gruntwork. Now we get to actually do the cumulative total, which requires a window function. [Window functions](http://sqlschool.modeanalytics.com/advanced/window-functions.html) in SQL seem complicated but they're pretty easy once you get the hang of them. They say, "don't look at this entire table, look at a portion of the table in a specific order." 
+That was just the pre-work gruntwork. Now we get to actually do the cumulative total, which requires a window function. [Window functions](http://sqlschool.modeanalytics.com/advanced/window-functions.html) in SQL seem complicated but they're pretty easy once you get the hang of them. They say, "don't look at this entire table, look at a portion of the table in a specific order." 
 
-
-    postgres=# select company, month, nemp, sum(nemp) OVER (PARTITION BY company ORDER BY month) as cum_tot from cumtot ORDER BY company, month;
+    postgres=# SELECT company, month, nemp, sum(nemp) 
+    OVER (PARTITION BY company ORDER BY month) as cum_tot 
+    FROM cumtot ORDER BY company, month;
 
     company                 |   month    |  nemp  | cum_tot 
    ----------------------------------------------------+------------
@@ -304,6 +295,19 @@ That was just the gruntwork. Now we get to actually do the cumulative total, whi
     Raviga                   | 2014-02-01 |     -2 |      48
     Raviga                   | 2014-03-01 |     17 |      65 
 
-
+And then you're done. 
  
-So that's pretty much it. Three different approaches to cumulative totals, that will each give you the right answer. Some are better for specific use cases than others.  For small data sets, R and IPython should be just fine.  Once you get larger, Python and SQL will start to work better than R. If you already have this data in a SQL database, then there's no point in exporting it, and so on. 
+So that's pretty much it. Three different approaches to cumulative totals, that will each give you the right answer.  
+
+I worked with a tiny dataset that is lightning-fast in memory and very easy to transfer from place to place. The larger your dataset grows, the less you will want to move it. In this case, if you already have the data set up in a SQL database, keep it there and run your window function. It will take MUCH less time than exporting it out as a csv and importing it into either IPython or R.  At the size of the data included in this post, it pretty much doesn't matter which one you use (although creating and importing into a database will take longer.)
+
+###When to use what: 
+
++ Use IPython if you need to do further cleaning to the data after you cumulatively total it, and want to retrace your steps back to the original data. 
++ Use R if you need to do simple statistics or regression or charting on the data as-is, and if the data is small. 
++ Use SQL if your data's already in SQL and you need to create more groups from it. 
+
+
+
+
+
