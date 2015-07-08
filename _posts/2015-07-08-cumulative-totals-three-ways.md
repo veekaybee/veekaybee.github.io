@@ -16,31 +16,12 @@ Often times, this data is only available at a granular level (i.e. you have a ba
 
 Here's the CSV file you're given to work with: (also available in [the associated GitHub repo](https://github.com/veekaybee/cumtotal) for all the code in this post.) 
 
-|Company	| Month	| Employees|
-| ------------- |-------------| -----|
-|Hooli	| Jan-2014	|123,456|
-|Hooli	| Feb-2014	|1,434|
-|Hooli	| Mar-2014|	2,455 |
-|Pied Piper	| Jan-2014|	1|
-|Pied Piper	| Feb-2014|	2|
-|Pied Piper|	 Mar-2014|	2|
-|Raviga|	Jan-14|	50|
-|Raviga	| Feb-2014|	-2|
-|Raviga	| Mar-2014|	17|
+	Company	Month	New Employees	Hooli	    14-Jan	 123,456	Hooli	    14-Feb	   1,434	Hooli	    14-Mar	   2,455	Pied Piper	14-Jan	       1	Pied Piper	14-Feb	       2	Pied Piper	14-Mar	       2	Raviga	    14-Jan	      50	Raviga	    14-Feb	      -2	Raviga	    14-Mar	      17
+
 
 But what we really want is this: 
 
-|Company	| Month	| Employees|
-| ------------- |-------------| -----|
-|Hooli	| Jan-2014	|123,456|
-|Hooli	| Feb-2014	|124,890|
-|Hooli	| Mar-2014|	127,345 |
-|Pied Piper	| Jan-2014|	1|
-|Pied Piper	| Feb-2014|	3|
-|Pied Piper|	 Mar-2014|	5|
-|Raviga|	Jan-14|	50|
-|Raviga	| Feb-2014|	48|
-|Raviga	| Mar-2014|	65|
+	Company	Month	New Employees	Hooli	    14-Jan	 123,456	Hooli	    14-Feb	 124,890	Hooli	    14-Mar	 127,345	Pied Piper	14-Jan	       1	Pied Piper	14-Feb	       3	Pied Piper	14-Mar	       5	Raviga	    14-Jan	      50	Raviga	    14-Feb	      48	Raviga	    14-Mar	      65
 
 
 
@@ -97,7 +78,7 @@ This "problem" (which is really just a feature of programming) is easy to solve 
     New Employess           float64
     dtype: object
 
-###Finally, roll up the cumulative total with two group bys: 
+###Finally, roll up the cumulative total with two group-bys: 
 
     print df.groupby(by=['Company','Month']).sum().groupby(level=[0]).cumsum()
 
@@ -122,7 +103,7 @@ R, in theory, operates on matrices. But mostly, R "thinks about data sets" in co
 
 Install the package, read in the csv file, set it as the data table, and set the two keys as the columns you want to group by, then run the cumulative sum function. 
 
-    install.packages("data.table", lib="/Library/Frameworks/R.framework/Versions/3.1/Resources/library")      
+    install.packages("data.table")      
      sv <- read.csv("~/Desktop/ipythondata/sv.csv") #read in data
     require(data.table) #package for transforming to data table
     View(sv)
@@ -205,6 +186,7 @@ That was just the pre-work gruntwork. Now we get to actually do the cumulative t
     postgres=# SELECT company, month, nemp, sum(nemp) 
     OVER (PARTITION BY company ORDER BY month) as cum_tot 
     FROM cumtot ORDER BY company, month;
+    
     company                 |   month    |  nemp  | cum_tot 
     Hooli                    | 2014-01-01 | 123456 |  123456
     Hooli                    | 2014-02-01 |   1434 |  124890
