@@ -14,24 +14,24 @@ Something people often ask of data scientists (or analysts or engineers or what 
 Often times, this data is only available at a granular level (i.e. you have a base number and the adds every month.) For example, let's say we want to find out how many total employees each of these Silicon Valley Companies have in any given month. Are they growing as quickly as Hooli? 
 
 
-Here's the CSV file you're given to work with: (also available in [the associated GitHub repo](https://github.com/veekaybee/cumtotal) for all the code in this post. ) 
+Here's the CSV file you're given to work with: (also available in [the associated GitHub repo](https://github.com/veekaybee/cumtotal) for all the code in this post.) 
 
- |Company	| Month	| Employees|
- | ------------- |:-------------:| -----:|
- |Hooli	| Jan-2014	|123,456|
- |Hooli	| Feb-2014	|1,434|
- |Hooli	| Mar-2014|	2,455|
- |Pied Piper	| Jan-2014|	1|
- |Pied Piper	| Feb-2014|	2|
- |Pied Piper|	 Mar-2014|	2|
- |Raviga|	Jan-14|	50|
- |Raviga	| Feb-2014|	-2|
- |Raviga	| Mar-2014|	17|
+|Company	| Month	| Employees|
+| ------------- |-------------| -----|
+|Hooli	| Jan-2014	|123,456|
+|Hooli	| Feb-2014	|1,434|
+|Hooli	| Mar-2014|	2,455 |
+|Pied Piper	| Jan-2014|	1|
+|Pied Piper	| Feb-2014|	2|
+|Pied Piper|	 Mar-2014|	2|
+|Raviga|	Jan-14|	50|
+|Raviga	| Feb-2014|	-2|
+|Raviga	| Mar-2014|	17|
 
 But what we really want is this: 
 
 |Company	| Month	| Employees|
-| ------------- |:-------------:| -----:|
+| ------------- |-------------| -----|
 |Hooli	| Jan-2014	|123,456|
 |Hooli	| Feb-2014	|124,890|
 |Hooli	| Mar-2014|	127,345 |
@@ -89,84 +89,7 @@ This "problem" (which is really just a feature of programming) is easy to solve 
     8      Raviga  14-Mar             17
 
 
-###Make sure date and number values are rendered correctly from CSV file (the dateutil library)
-
-    df['Month'] = pd.to_datetime(df['Month'])
-    df.convert_objects(convert_numeric=True)
-
-
-    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
-    <table border="1" class="dataframe">
-      <thead>
-        <tr style="text-align: right;">
-          <th></th>
-          <th>Company</th>
-          <th>Month</th>
-          <th>New Employess</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>0</th>
-          <td>      Hooli</td>
-          <td>2015-01-14</td>
-          <td> 123456</td>
-        </tr>
-        <tr>
-          <th>1</th>
-          <td>      Hooli</td>
-          <td>2015-02-14</td>
-          <td>   1434</td>
-        </tr>
-        <tr>
-          <th>2</th>
-          <td>      Hooli</td>
-          <td>2015-03-14</td>
-          <td>   2455</td>
-        </tr>
-        <tr>
-          <th>3</th>
-          <td> Pied Piper</td>
-          <td>2015-01-14</td>
-          <td>      1</td>
-        </tr>
-        <tr>
-          <th>4</th>
-          <td> Pied Piper</td>
-          <td>2015-02-14</td>
-          <td>      2</td>
-        </tr>
-        <tr>
-          <th>5</th>
-          <td> Pied Piper</td>
-          <td>2015-03-14</td>
-          <td>      2</td>
-        </tr>
-        <tr>
-          <th>6</th>
-          <td>     Raviga</td>
-          <td>2015-01-14</td>
-          <td>     50</td>
-        </tr>
-        <tr>
-          <th>7</th>
-          <td>     Raviga</td>
-          <td>2015-02-14</td>
-          <td>     -2</td>
-        </tr>
-        <tr>
-          <th>8</th>
-          <td>     Raviga</td>
-          <td>2015-03-14</td>
-          <td>     17</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-
-
-
-###check each column's datatype
+###Make sure date and number values are rendered correctly from CSV file (the dateutil library) and check each column's datatype
 
     print df.dtypes
     Company                  object
@@ -176,7 +99,7 @@ This "problem" (which is really just a feature of programming) is easy to solve 
 
 ###Finally, roll up the cumulative total with two group bys: 
 
-   print df.groupby(by=['Company','Month']).sum().groupby(level=[0]).cumsum()
+    print df.groupby(by=['Company','Month']).sum().groupby(level=[0]).cumsum()
 
                            New Employess
     Company    Month                    
@@ -197,13 +120,15 @@ This "problem" (which is really just a feature of programming) is easy to solve 
 
 R, in theory, operates on matrices. But mostly, R "thinks about data sets" in columns as opposed to across both rows and columns.  In order for it to understand matrices the same way databases do, you need to get the data.table package. (Check out [this link](http://stackoverflow.com/questions/22824662/calculate-cumulative-sum-of-one-column-based-on-another-columns-rank) for more details.) It's a little more straightforward than Python because it handles CSV formatting a little better and you don't need to do as much pre-processing. Like Python, the data.table package has cumulative sum as a built-in function, but there are two steps to organizing the data correctly to be sorted instead of one. 
 
+Install the package, read in the csv file, set it as the data table, and set the two keys as the columns you want to group by, then run the cumulative sum function. 
+
     install.packages("data.table", lib="/Library/Frameworks/R.framework/Versions/3.1/Resources/library")      
-    sv <- read.csv("~/Desktop/ipythondata/sv.csv") #read in data
+     sv <- read.csv("~/Desktop/ipythondata/sv.csv") #read in data
     require(data.table) #package for transforming to data table
     View(sv)
     setDT (sv) #set the table as your dataset
-    setkey(sv, Company,Month) #sort in chronological order and groups
-    sv[,csum := cumsum(New.Employees),by=c('Company')] #cumulative sum
+    setkey(sv, Company,Month) 
+    sv[,csum := cumsum(New.Employees),by=c('Company')] 
     View(sv) #view your results
 
 And you get: 
@@ -216,10 +141,11 @@ And you get:
 This one is a little trickier because instead of running RStudio or IPython notebooks locally, you have to start a database instance...somewhere. You can, in theory, set up SQLite or MySQL locally, but it's probably more of a pain than it's worth. 
 I have a Digital Ocean droplet that has Postgres installed exactly for this kind of tomfoolery. [There is a bunch of admin work](https://wiki.postgresql.org/wiki/First_steps) that will have to be done before you can create tables in Postgres, but then you're on your way on the command line: 
 
-        postgres@data:~$ psql
+     postgres@data:~$ psql
       postgres=# CREATE SCHEMA employees; 
       CREATE SCHEMA
-      postgres=#  CREATE TABLE cumtot(company CHAR(50) NOT NULL, month DATE NOT NULL,nemp NUMERIC NOT NULL);
+      postgres=#  CREATE TABLE cumtot(company CHAR(50) NOT NULL, 
+                                      month DATE NOT NULL,nemp NUMERIC NOT NULL);
       CREATE TABLE
   
 Then take a look at the table that you've created: 
@@ -248,7 +174,7 @@ So what we're importing is:
     Raviga,2014-Feb-01,-2
     Raviga,2014-Mar-01,17
 
-Check out the table created with the `\d command:
+Check out the table created with the \d command:
 
         postgres=# \d cumtot
         Table "public.cumtot"
@@ -259,8 +185,8 @@ Check out the table created with the `\d command:
         nemp    | numeric       | not null
 
 And now view the contents of the table: (don't forget the semi-colon...Postgres is pretty picky with syntax):
-  postgres=# select * from cumtot; 
 
+    postgres=# select * from cumtot; 
     company         |   month    |  nemp  
     --------------------------------------
     Hooli          | 2014-01-01 | 123456
@@ -279,9 +205,7 @@ That was just the pre-work gruntwork. Now we get to actually do the cumulative t
     postgres=# SELECT company, month, nemp, sum(nemp) 
     OVER (PARTITION BY company ORDER BY month) as cum_tot 
     FROM cumtot ORDER BY company, month;
-
     company                 |   month    |  nemp  | cum_tot 
-   ----------------------------------------------------+------------
     Hooli                    | 2014-01-01 | 123456 |  123456
     Hooli                    | 2014-02-01 |   1434 |  124890
     Hooli                    | 2014-03-01 |   2455 |  127345
