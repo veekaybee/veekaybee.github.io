@@ -2,9 +2,8 @@
 layout: post
 title: Cumulative totals three different ways in data science
 ---
+<img src="http://nancyfriedman.typepad.com/.a/6a00d8341c4f9453ef01a73dafb230970d-pi"  style="width: 400px;"/>
 
-
-![image](http://nancyfriedman.typepad.com/.a/6a00d8341c4f9453ef01a73dafb230970d-pi =400x300) 
 
 The data analysis field has moved away from querying tools like Crystal Reports (**shudder**), OLAP cubes, and Excel, to programming languages closer to the raw data. 
 
@@ -79,9 +78,9 @@ This "problem" (which is really just a feature of programming) is easy to solve 
 ###Read in CSV file 
 
 
-```df=pd.read_csv('sv.csv')```
+df=pd.read_csv('sv.csv')
 
-```print df```
+print df
 
           Company   Month  New Employess
     0       Hooli  14-Jan         123456
@@ -98,9 +97,8 @@ This "problem" (which is really just a feature of programming) is easy to solve 
 ###Make sure date and number values are rendered correctly from CSV file (the dateutil library)
 
 
-```df['Month'] = pd.to_datetime(df['Month'])
-    df.convert_objects(convert_numeric=True)```
-
+df['Month'] = pd.to_datetime(df['Month'])
+    df.convert_objects(convert_numeric=True)
 
 
 
@@ -177,9 +175,7 @@ This "problem" (which is really just a feature of programming) is easy to solve 
 
 ###check each column's datatype
 
-
-    
- ```print df.dtypes```
+print df.dtypes
 
     Company                  object
     Month            datetime64[ns]
@@ -188,7 +184,7 @@ This "problem" (which is really just a feature of programming) is easy to solve 
 
 
 
-  ```print df.groupby(by=['Company','Month']).sum().groupby(level=[0]).cumsum()```
+  print df.groupby(by=['Company','Month']).sum().groupby(level=[0]).cumsum()
 
                            New Employess
     Company    Month                    
@@ -213,19 +209,18 @@ R, in theory, operates on matrices, but it sees matrices in a pretty rigid, math
 
 In order to do cumulative operations,   you can do this by converting your dataset to a more table-like format. (Check out [this link](http://stackoverflow.com/questions/22824662/calculate-cumulative-sum-of-one-column-based-on-another-columns-rank) for more detail on how to. )
 
-```
-install.packages("data.table", lib="/Library/Frameworks/R.framework/Versions/3.1/Resources/library") #get the data table package
-sv <- read.csv("~/Desktop/ipythondata/sv.csv") #read in data
-require(data.table) #package for transforming to data table
-View(sv)
-setDT (sv) #set the table as your dataset
+  install.packages("data.table", lib="/Library/Frameworks/R.framework/Versions/3.1/Resources/library") #get the data table     package
+  sv <- read.csv("~/Desktop/ipythondata/sv.csv") #read in data
+  require(data.table) #package for transforming to data table
+  View(sv)
+  setDT (sv) #set the table as your dataset
 
-setkey(sv, Company,Month) #sort in chronological order and groups
-sv[,csum := cumsum(New.Employees),by=Company] #cumulative sum
-View(sv) #view your results
-```
+  setkey(sv, Company,Month) #sort in chronological order and groups
+  sv[,csum := cumsum(New.Employees),by=Company] #cumulative sum
+  View(sv) #view your results
+
+
 ![RTotal](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/rtotal.png)
-
 
 
 ##Cumulative Totals in SQL
@@ -234,87 +229,81 @@ This one is a little trickier because you have to start a database instance...so
 
 I have a Digital Ocean droplet that has Postgres installed. [There is a bunch of admin work](https://wiki.postgresql.org/wiki/First_steps) that will have to be done before you can create tables in Postgres, but then you're on your way on the command line: 
 
+        
+  postgres@data:~$ psql
+  postgres=# CREATE SCHEMA employees; #creates the database where you'll be doing stuff
+  CREATE SCHEMA
+  postgres=#  CREATE TABLE cumtot(company CHAR(50) NOT NULL, month DATE NOT NULL,nemp NUMERIC NOT NULL); #create the table   and specify the column types
+  CREATE TABLE
+  postgres=# \d #take a look a the column types
 
-```
-postgres@data:~$ psql
-postgres=# CREATE SCHEMA employees; #creates the database where you'll be doing stuff
-CREATE SCHEMA
-postgres=#  CREATE TABLE cumtot(company CHAR(50) NOT NULL, month DATE NOT NULL,nemp NUMERIC NOT NULL); #create the table and specify the column types
-CREATE TABLE
-postgres=# \d #take a look a the column types
-```
          List of relations
- Schema |  Name  | Type  |  Owner   
---------+--------+-------+----------
- public | cumtot | table | postgres
- ```
- 
+  Schema |  Name  | Type  |  Owner   
+  --------+--------+-------+----------
+  public | cumtot | table | postgres
+
  Then we copy the data to the table from our file:
- ```
- postgres=# copy cumtot FROM '/data/sv.csv' DELIMITER ',' CSV HEADER;
-COPY 9
-```
+
+         postgres=# copy cumtot FROM '/data/sv.csv' DELIMITER ',' CSV HEADER;
+
 In the file, we first have to change the date format because Postgres only takes certain formats http://www.postgresql.org/docs/9.1/static/datatype-datetime.html
 
 So what we're importing is: 
 
-```
-Company,Month,NewEmployees
-Hooli,2014-Jan-01,123456
-Hooli,2014-Feb-01,1434
-Hooli,2014-Mar-01,2455
-Pied Piper,2014-Jan-01,1
-Pied Piper,2014-Feb-01,2
-Pied Piper,2014-Mar-01,2
-Raviga,2014-Jan-01,50
-Raviga,2014-Feb-01,-2
-Raviga,2014-Mar-01,17
-```
-```
-\d cumtot
+    Company,Month,NewEmployees
+    Hooli,2014-Jan-01,123456
+    Hooli,2014-Feb-01,1434
+    Hooli,2014-Mar-01,2455
+    Pied Piper,2014-Jan-01,1
+    Pied Piper,2014-Feb-01,2
+    Pied Piper,2014-Mar-01,2
+    Raviga,2014-Jan-01,50
+    Raviga,2014-Feb-01,-2
+    Raviga,2014-Mar-01,17
+
+Check out the table created: 
+
+        postgres=# \d cumtot
         Table "public.cumtot"
- Column  |     Type      | Modifiers 
----------+---------------+-----------
- company | character(50) | not null
- month   | date          | not null
- nemp    | numeric       | not null
-```
+        Column  |     Type      | Modifiers 
+        ---------+---------------+-----------
+        company | character(50) | not null
+        month   | date          | not null
+        nemp    | numeric       | not null
 
-postgres=# select * from cumtot; #view the whole table
 
-```
-company         |   month    |  nemp  
---------------------------------------
- Hooli          | 2014-01-01 | 123456
- Hooli          | 2014-02-01 |   1434
- Hooli          | 2014-03-01 |   2455
- Pied Piper     | 2014-01-01 |      1
- Pied Piper     | 2014-02-01 |      2
- Pied Piper     | 2014-03-01 |      2
- Raviga         | 2014-01-01 |     50
- Raviga         | 2014-02-01 |     48
- Raviga         | 2014-03-01 |     65
-```
+  postgres=# select * from cumtot; #view the whole table
+
+    company         |   month    |  nemp  
+    --------------------------------------
+    Hooli          | 2014-01-01 | 123456
+    Hooli          | 2014-02-01 |   1434
+    Hooli          | 2014-03-01 |   2455
+    Pied Piper     | 2014-01-01 |      1
+    Pied Piper     | 2014-02-01 |      2
+    Pied Piper     | 2014-03-01 |      2
+    Raviga         | 2014-01-01 |     50
+    Raviga         | 2014-02-01 |     48
+    Raviga         | 2014-03-01 |     65
+
 
 That was just the gruntwork. Now we get to actually do the cumulative total, which requires a window function. [Window functions](http://sqlschool.modeanalytics.com/advanced/window-functions.html) in SQL seem complicated but they're pretty easy once you get the hang of them. They say, "don't look at this entire table, look at a portion of the table in a specific order." 
 
-```
-postgres=# select company, month, nemp, sum(nemp) OVER (PARTITION BY company ORDER BY month) as cum_tot from cumtot ORDER BY company, month;
-```
 
-```
-  company                 |   month    |  nemp  | cum_tot 
-----------------------------------------------------+------------
- Hooli                    | 2014-01-01 | 123456 |  123456
- Hooli                    | 2014-02-01 |   1434 |  124890
- Hooli                    | 2014-03-01 |   2455 |  127345
- Pied Piper               | 2014-01-01 |      1 |       1
- Pied Piper               | 2014-02-01 |      2 |       3
- Pied Piper               | 2014-03-01 |      2 |       5
- Raviga                   | 2014-01-01 |     50 |      50
- Raviga                   | 2014-02-01 |     -2 |      48
- Raviga                   | 2014-03-01 |     17 |      65 
- ```
- 
+    postgres=# select company, month, nemp, sum(nemp) OVER (PARTITION BY company ORDER BY month) as cum_tot from cumtot ORDER BY company, month;
+
+    company                 |   month    |  nemp  | cum_tot 
+   ----------------------------------------------------+------------
+    Hooli                    | 2014-01-01 | 123456 |  123456
+    Hooli                    | 2014-02-01 |   1434 |  124890
+    Hooli                    | 2014-03-01 |   2455 |  127345
+    Pied Piper               | 2014-01-01 |      1 |       1
+    Pied Piper               | 2014-02-01 |      2 |       3
+    Pied Piper               | 2014-03-01 |      2 |       5
+    Raviga                   | 2014-01-01 |     50 |      50
+    Raviga                   | 2014-02-01 |     -2 |      48
+    Raviga                   | 2014-03-01 |     17 |      65 
+
+
  
 So that's pretty much it. Three different approaches to cumulative totals, that will each give you the right answer. Some are better for specific use cases than others.  For small data sets, R and IPython should be just fine.  Once you get larger, Python and SQL will start to work better than R. If you already have this data in a SQL database, then there's no point in exporting it, and so on. 
