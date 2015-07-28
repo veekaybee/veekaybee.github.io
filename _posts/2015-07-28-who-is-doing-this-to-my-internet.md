@@ -42,6 +42,15 @@ All of this is a long preamble to say that I've been pretty angry with SoundClou
 
 Ever since I discovered [SoundCloud](https://en.wikipedia.org/wiki/SoundCloud), I've really enjoyed listening to it to find music that's never played on the radio. It's particularly good for amazing remixes of songs you think you've heard a million times, for ambient programming music, and for electronic, pop, and folk songs from artists no one has ever heard of. For example: 
 
+<iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/175651162&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;"></iframe>
+
+and 
+
+<iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/121239554&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;"></iframe>
+
+and, surprisingly: 
+
+<iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/192932921&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
 I've really loved listening to SoundCloud over the past couple years since mainstream radio sucks, [for the same reasons](http://blog.vickiboykis.com/2014/07/why-does-american-radio-suck-so-much/) that mainstream TV used to (needing to target the lowest common denominator so as to not upset advertisers.)
 
