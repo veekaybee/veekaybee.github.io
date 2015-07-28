@@ -102,7 +102,7 @@ Who's doing this to my internet?
 
 But most importantly, who will solve it? 
 
-
+Edited to add: Hacker News discussion [here](https://news.ycombinator.com/item?id=9960730)
 
 
 
