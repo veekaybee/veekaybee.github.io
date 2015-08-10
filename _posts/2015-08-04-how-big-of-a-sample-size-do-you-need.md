@@ -74,7 +74,7 @@ Putting in our nubmers there, we get:
 
 2,345 as the sample size. 
 
-![image](stattest.png)
+![image](https://github.com/veekaybee/veekaybee.github.io/blob/master/images/stattest.png)
 
 
 There is also a [really nice Python script](http://bc-forensics.com/?p=15) that does the same thing, if you're into it:
