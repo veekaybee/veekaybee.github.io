@@ -17,7 +17,7 @@ The second was this quote:
 
 ##The technical side of sampling
 
-Even if you don't have huge data sets (defined for me perosonally as anything over 10GB or 5 million rows, whichever comes first), you usually run into issues where even a fast computer will process too slowly in memory. It will go even slower if you're processing data remotely, as is usually the case with pulling down data from relational databases (I'm not considering Hadoop or other NoSQL solutions in this post, since they're a different animal entirely.)
+Even if you don't have huge data sets (defined for me personally as anything over 10GB or 5 million rows, whichever comes first), you usually run into issues where even a fast computer will process too slowly in memory. It will go even slower if you're processing data remotely, as is usually the case with pulling down data from relational databases (I'm not considering Hadoop or other NoSQL solutions in this post, since they're a different animal entirely.)
 
 In the cases where pulling down data takes longer than running regressions on it, you'll need to sample. 
 
@@ -34,7 +34,7 @@ That was the question I was trying to answer a couple weeks ago when I was worki
 
 To understand the relationship between an entire population and a subset, let's take a step back to see why someone might ask. 
 
-Let's say you're the data scientist at a start-up - Goatly - that sells artisinal handcrafted medicine boxes monthly to owners of narcoleptic goats ([this is a real thing and I could watch this video over and over again](https://www.youtube.com/watch?v=we9_CdNPuJg).  
+Let's say you're the data scientist at a start-up - Goatly - that sells artisanal handcrafted medicine boxes monthly to owners of narcoleptic goats ([this is a real thing and I could watch this video over and over again](https://www.youtube.com/watch?v=we9_CdNPuJg).  
 
 Goatly has ~ 100,000 farms already in your system (who knew America had a narcoleptic goat problem?) and the CEO wants to buy a share in a private jet, so she needs the company to keep growing very quickly. A startling number of goats get much better after taking your medicine and hence, the farm leaves your service. The CEO needs you to figure out what makes these goats better and see if you can predict how many farms will be the next to leave, and as a result, how much business she needs to replace them. 
 
@@ -70,7 +70,7 @@ Interpreting the results of the four stats you need for the entire equation: If 
 
 There are a couple ways to run a quick calculation. The fastest is probably [this site](http://www.surveysystem.com/sscalc.htm). I use it a lot for quick back of the envelope calculations. Normally I would be wary of using a site whose code and methods I didn't know, but this site is generally well-documented, and we'll be cross-checking this value against another method.  
 
-Putting in our nubmers there, we get: 
+Putting in our numbers there, we get: 
 
 2,345 as the sample size. 
 
@@ -131,7 +131,7 @@ It also returns the same number:
 
 
 
-There are a couple of ways to get close to it in R, but I haven't found anything in the pwr library so far that only requires those three things: margin of error, cofidence level, and population. I also haven't found anything in either SciPy or NumPy that does exactly this, although if I do, I'll be sure to change the post. 
+There are a couple of ways to get close to it in R, but I haven't found anything in the pwr library so far that only requires those three things: margin of error, confidence level, and population. I also haven't found anything in either SciPy or NumPy that does exactly this, although if I do, I'll be sure to change the post. 
 
 
 ## Wrapping up
