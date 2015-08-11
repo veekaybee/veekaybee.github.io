@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How large should your sample size be?
+title: How large should your sample size be? (using goats as an example)
 ---
 
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/statelibraryqueensland/3197460723/in/photolist-5SxPFa-59qMqQ-63FpTG-7Mz8DZ-63Ba3B-bQFWMt-5SxPEa-6DgPCX-7VEZcu-5SxPzT-bzgRnN-9rk79o-9PvnKB-nhRgK8-6DkXvC-6DkXaE-8agbki-6DkXeS-drAnsh-ssmEWP-otizPX-6nBFEg-saMi8A-ssbNwq-orgG7o-obNSav-ssjRj2-bzgRoh-owchHW-ot6t4W-orgzdy-oya5Fa-otgY61-ssbNub-aUzkqM-81kDDd-9D27ZY-ssmEUe-otisNc-ovxBe9-obNW5V-orgzj5-vHNDGX-orgJxf-avjAM5-otiu8B-otgXhN-ot6uq3-obNWAV-obNVF7" title="Four boys riding goats, ca. 1918"><img src="https://farm4.staticflickr.com/3091/3197460723_861311ec62.jpg" width="500" height="398" alt="Four boys riding goats, ca. 1918"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
@@ -76,51 +76,55 @@ Putting in our numbers there, we get:
 ![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/stattest.png)
 
 
-There is also a [really nice Python script](http://bc-forensics.com/?p=15) that does the same thing, if you're into it:
+There is also a [really nice Python script](http://bc-forensics.com/?p=15) that does the same thing:
 
-	import math
+```
+import math
  
-	# SUPPORTED CONFIDENCE LEVELS: 50%, 68%, 90%, 95%, and 99%
-	confidence_level_constant = [50,.67], [68,.99], [90,1.64], [95,1.96], [99,2.57]
+# SUPPORTED CONFIDENCE LEVELS: 50%, 68%, 90%, 95%, and 99%
+confidence_level_constant = [50,.67], [68,.99], [90,1.64], [95,1.96], [99,2.57]
  
-	# CALCUALTE THE SAMPLE SIZE
-	def sample_size(population_size, confidence_level, confidence_interval):
-  		Z = 0.0
-  		p = 0.5
-  		e = confidence_interval/100.0
-  		N = population_size
-  		n_0 = 0.0
-  		n = 0.0
+# CALCUALTE THE SAMPLE SIZE
+def sample_size(population_size, confidence_level, confidence_interval):
+  Z = 0.0
+  p = 0.5
+  e = confidence_interval/100.0
+  N = population_size
+  n_0 = 0.0
+  n = 0.0
  
- 	 # LOOP THROUGH SUPPORTED CONFIDENCE LEVELS AND FIND THE NUM STD
-  	# DEVIATIONS FOR THAT CONFIDENCE LEVEL
-  	for i in confidence_level_constant:
-   	 if i[0] == confidence_level:
-     	 Z = i[1]
+  # LOOP THROUGH SUPPORTED CONFIDENCE LEVELS AND FIND THE NUM STD
+  # DEVIATIONS FOR THAT CONFIDENCE LEVEL
+  for i in confidence_level_constant:
+    if i[0] == confidence_level:
+      Z = i[1]
  
-  	if Z == 0.0:
-    	return -1
+  if Z == 0.0:
+    return -1
  
-  	# CALC SAMPLE SIZE
-  	n_0 = ((Z**2) * p * (1-p)) / (e**2)
+  # CALC SAMPLE SIZE
+  n_0 = ((Z**2) * p * (1-p)) / (e**2)
  
-  	# ADJUST SAMPLE SIZE FOR FINITE POPULATION
-  	n = n_0 / (1 + ((n_0 - 1) / float(N)) )
+  # ADJUST SAMPLE SIZE FOR FINITE POPULATION
+  n = n_0 / (1 + ((n_0 - 1) / float(N)) )
  
-  	return int(math.ceil(n)) # THE SAMPLE SIZE
+  return int(math.ceil(n)) # THE SAMPLE SIZE
  
-	def main():
-  		sample_sz = 0
-  		population_sz = 100000
-  		confidence_level = 95.0
-  		confidence_interval = 2.0
+def main():
+  sample_sz = 0
+  population_sz = 100000
+  confidence_level = 95.0
+  confidence_interval = 2.0
  
-  	sample_sz = sample_size(population_sz, confidence_level, confidence_interval)
+  sample_sz = sample_size(population_sz, confidence_level, confidence_interval)
  
-  	print "SAMPLE SIZE: %d" % sample_sz
+  print "SAMPLE SIZE: %d" % sample_sz
  
-	if __name__ == "__main__":
-  	main()
+if __name__ == "__main__":
+  main()
+```
+
+
 
 It also returns the same number: 
 
