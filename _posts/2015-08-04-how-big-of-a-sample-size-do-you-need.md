@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How large should your sample size be? (using goats as an example)
+title: How large should your sample size be?
 ---
 
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/statelibraryqueensland/3197460723/in/photolist-5SxPFa-59qMqQ-63FpTG-7Mz8DZ-63Ba3B-bQFWMt-5SxPEa-6DgPCX-7VEZcu-5SxPzT-bzgRnN-9rk79o-9PvnKB-nhRgK8-6DkXvC-6DkXaE-8agbki-6DkXeS-drAnsh-ssmEWP-otizPX-6nBFEg-saMi8A-ssbNwq-orgG7o-obNSav-ssjRj2-bzgRoh-owchHW-ot6t4W-orgzdy-oya5Fa-otgY61-ssbNub-aUzkqM-81kDDd-9D27ZY-ssmEUe-otisNc-ovxBe9-obNW5V-orgzj5-vHNDGX-orgJxf-avjAM5-otiu8B-otgXhN-ot6uq3-obNWAV-obNVF7" title="Four boys riding goats, ca. 1918"><img src="https://farm4.staticflickr.com/3091/3197460723_861311ec62.jpg" width="500" height="398" alt="Four boys riding goats, ca. 1918"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
@@ -17,7 +17,7 @@ The second was this quote:
 
 ##The technical side of sampling
 
-Even if you don't have huge data sets (defined for me personally as anything over 10GB or 5 million rows, whichever comes first), you usually run into issues where even a fast computer will process too slowly in memory. It will go even slower if you're processing data remotely, as is usually the case with pulling down data from relational databases (I'm not considering Hadoop or other NoSQL solutions in this post, since they're a different animal entirely.)
+Even if you don't have huge data sets (defined for me personally as anything over 10GB or 5 million rows, whichever comes first), you usually run into issues where even a fast computer will process too slowly in memory (especially if you're using R). It will go even slower if you're processing data remotely, as is usually the case with pulling down data from relational databases (I'm not considering Hadoop or other NoSQL solutions in this post, since they're a different animal entirely.)
 
 In the cases where pulling down data takes longer than running regressions on it, you'll need to sample. 
 
@@ -40,13 +40,12 @@ Goatly has ~ 100,000 farms already in your system (who knew America had a narcol
 
 You think you might be able to use [logistic regression](https://www.strath.ac.uk/aer/materials/5furtherquantitativeresearchdesignandanalysis/unit6/whatislogisticregression/) to predict whether the farm will cancel Goatly (number of goats, size of goats, color of goats, how much of the pills they buy in a month, how many pills they use in a month, ratio of narcoleptic to regular goats, etc.) But when you try to run the regression on the entire data set, it fails because it's simply too much. 
 
-So you need to sample. How many farms do you need to pick to make sure that they accurately represent the total population of farms? There are some smaller farms, some larger farms, some farms with more narcoleptic goats, some farms where the farmers are more aggressive in giving the goats the medicine, etc. If you pick the wrong sample, it won't be the same as the population. 
+So you need to sample. How many farms do you need to pick to make sure that they accurately represent the total population of farms? There are some smaller farms, some larger farms, some farms with more narcoleptic goats, some farms where the farmers are more aggressive in giving the goats the medicine, etc. If you pick the wrong sample, it won't be the same as the population, and then all the tests you plan to do later will fail.  
 
 ## Determining sample size
 
-The basic equation for finding the right sample size is figuring out what will give you the right power for a test that gives you an acceptable Type I error. A Type I error is a false positive, or saying that a farm will leave the Goatly platform when they really won't. What you're really testing for is whether the sample you're taking matches the population. 
+[Here's the standard equation](https://www.qualtrics.com/blog/determining-sample-size/) used to calculate error. It's often the precursor to testing the power of a test (that is, if this equation works in your favor, then you can use power of a test to figure out whether logistic regression or most other tests you use actually work on your sample). More on that at the bottom of the post. 
 
-[Here's the standard equation](https://www.qualtrics.com/blog/determining-sample-size/) used to calculate error. It's often called a statistical power test. 
 
 You need to know: 
 
@@ -138,7 +137,11 @@ There are a couple of ways to get close to it in R, but I haven't found anything
 
 If you want to select a sample of farms that are representative of the whole Goatly population, you'd need to pick about 2.5k, which is much more manageable than looking at 100,000, and will allow you to get your CEO the results much more quickly. You're happy, she's happy, and the narcoleptic goats (the ones that are getting treated, anyway), are also happy. 
 
-*Thanks to [Sandy Rogers](http://www.saberr.com/company) for editing.* 
+##Post-script on the Power of a Test
+
+Something you might often come across while reading up on picking the right sample size is "power of test."  (This can be performed once)[https://en.wikipedia.org/wiki/Statistical_power] you actually have your sample size.  The power for a test gives you an acceptable Type I error. A Type I error is a false positive, or saying that a farm will leave the Goatly platform when they really won't. What you're really testing for is whether the sample size you're taking matches the population. 
+
+**Thanks to [Sandy](http://www.saberr.com/company) and [@perfectalgo](https://twitter.com/perfectalgo) for editing.** 
 
 
 
