@@ -61,7 +61,7 @@ So I had to write a Python script to parse out the text I actually needed, about
 	paragraphs = soup.find('article').find_all('p')
 
 	for paragraph in paragraphs:
-	print paragraph.text
+		print paragraph.text
 ```
 
 The resulting text was 21 lines of actual content, just under 1,000 words, wrapped in hundreds of lines of ad tech and unecessary Javascript.  It took me about half an hour of work to get at what I needed, which was a 5-minute read of bullet points I needed to consider when migrating phones. 
