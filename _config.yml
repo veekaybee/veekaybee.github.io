@@ -23,7 +23,7 @@ footer-links:
   flickr:
   github: veekaybee
   instagram:
-  linkedin: vicki.boykis
+  linkedin: vickiboykis
   pinterest:
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
   twitter: vboykis
@@ -53,7 +53,7 @@ baseurl: ""
 # !! You don't need to change any of the configuration flags below !!
 #
 
-markdown: redcarpet
+
 highlighter: pygments
 permalink: /:title/
 
