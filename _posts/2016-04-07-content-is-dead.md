@@ -81,7 +81,7 @@ And, if I pay for Wired, I then also have to pay for all the other sites that no
 
 I am not alone. Right now on Reddit, there is a whole thread of people trading tricks about how to [block content anti-patterns](https://www.reddit.com/r/LifeProTips/comments/4dmj6v/lpt_if_youre_trying_to_read_an_online_article_and/).
 
-##Where do we go from here? 
+## Where do we go from here? 
 
 The common answer to this problem seems to be micropayments. There have been some [promising moves in this space](https://medium.com/on-blendle/blendle-a-radical-experiment-with-micropayments-in-journalism-365-days-later-f3b799022edc#.wmfzhedan). But, as another post points out, articles, in a world where another article is just a click away,  are not worth 27 cents, or whatever micropayment is decided, especially given consumer expectations. 
 
