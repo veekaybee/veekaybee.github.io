@@ -1,5 +1,5 @@
 ---
-layout: 
+layout: post
 post: Content is dead. Long live filler!
 ---
 
