@@ -25,7 +25,7 @@ So I did what any semi-literate tech person would do:  I decided to cURL the art
 
 Unfortunately, what you get when you curl any page containing even the tiniest amount of reasonable content these days is crap. 
 
-In my case, I got over 1800 lines of crap, starting with external vendor stuff: 
+In my case, I got over [1800 lines of crap](https://github.com/veekaybee/wired/blob/master/original_html.txt), starting with external vendor stuff: 
 
 	<head itemscope itemtype="http://schema.org/WebSite" profile="http://gmpg.org/xfn/11">
 
@@ -64,7 +64,7 @@ So I had to write a Python script to parse out the text I actually needed, about
 		print paragraph.text
 ```
 
-The resulting text was 21 lines of actual content, just under 1,000 words, wrapped in hundreds of lines of ad tech and unecessary Javascript.  It took me about half an hour of work to get at what I needed, which was a 5-minute read of bullet points I needed to consider when migrating phones. 
+The [resulting text](https://github.com/veekaybee/wired/blob/master/article.txt) was 21 lines of actual content, just under 1,000 words, wrapped in hundreds of lines of ad tech and unecessary Javascript.  It took me about half an hour of work to get at what I needed, which was a 5-minute read of bullet points I needed to consider when migrating phones. 
 
 You could argue that web scraping is a ridiculous and unfair thing to do to the writer who spent time putting together the content and the publication that acts as a central repository for trustworthy content.   But if I stop using AdBlock on Wired, what are the tradeoffs in response for five minutes' worth of information that I could potentially get at another site? 
 
