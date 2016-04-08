@@ -85,7 +85,7 @@ I am not alone. Right now on Reddit, there is a whole thread of people trading t
 
 The common answer to this problem seems to be micropayments. There have been some [promising moves in this space](https://medium.com/on-blendle/blendle-a-radical-experiment-with-micropayments-in-journalism-365-days-later-f3b799022edc#.wmfzhedan). But, as another post points out, articles, in a world where another article is just a click away,  are not worth 27 cents, or whatever micropayment is decided, especially given consumer expectations. 
 
-The only answer, as I see it, is to cut back on the junk and start writing good content again, and to charge in full for it. In a world full of Buzzfeeds, Wireds, and Voxes, there are ony a handful of Aeons, Economists, [New Yorkers] whose strategy is not reliant on ad networks, but on a reputation. 
+The only answer, as I see it, is to cut back on the junk and start writing good content again, and to charge in full for it. In a world full of Buzzfeeds, Wireds, and Voxes, there are only a handful of Aeons, Economists, [New Yorkers] whose strategy is not reliant on ad networks, but on a reputation. 
 
 >The challenge, however, for The New Yorker, has been balancing that higher metabolism of the Web with its strong tradition of reporting, editing and rigorous fact checking. This is, unapologetically, still a magazine, without pretensions of being a “digital news brand.” This is why the NewYorker.com has a dedicated fact checker, who helps make sure every post the website produces is accurate before writers publish them. It’s a rare position online today. “We built up this brand over 90 years. It’s really important that we hold ourselves up to the standard of the brand,” Thompson said.
 
@@ -97,7 +97,7 @@ This is a lot like saying that the only way to lose weight is to eat less and ex
 
 So hard that most companies will wave their hand at this. There's no way Wired will just waive its paywall and include the results of what I scraped in a post that would genuinely help people, draw more loyal readers to its site, and allow it to charge full-price for a tech site that is genuinely interesting, timely, and full of content whose audience is people instead of SEO robots. That's too simple. And also excruciatingly hard.  
 
-But a digital content property today can't epxect to put out mostly junk filler, wrap it in ad tech, and beg for money from the very people it is exploiting as the product. 
+But a digital content property today can't expect to put out mostly junk filler, wrap it in ad tech, and beg for money from the very people it is exploiting as the product. 
 
 And if it does, it shouldn't be surprised that sometimes the product gets tired of it. 
 
