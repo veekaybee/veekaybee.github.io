@@ -3,7 +3,7 @@ layout: post
 post: Content is dead. Long live filler!
 ---
 
-It's 2016. I shouldn't have write a scraping script to extract the information I need from the webpage of a magazine article. But that's exactly what I had to do in February when I needed information on switching between Android and iOS. 
+It's 2016. I shouldn't have to write  a scraping script to extract the information I need from the webpage of a magazine article. But that's exactly what I had to do in February when I needed information on switching between Android and iOS. 
 
 I was wondering what the transfer process was like (for phone numbers, specifically) from Android to iPhone, so I went to the Googles and searched for ""Android to iOS" or something similar. The third or fourth result (now fifth or sixth based on whatever magic Google constantly performs on search results - completely opaque at this point by personalizes search, cookies, and PageRank refactoring) was this Wired article: 
 
