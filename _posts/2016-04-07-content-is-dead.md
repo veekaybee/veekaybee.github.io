@@ -101,3 +101,4 @@ But a digital content property today can't expect to put out mostly junk filler,
 
 And if it does, it shouldn't be surprised that sometimes the product gets tired of it. 
 
+[Hacker News discussion](https://news.ycombinator.com/item?id=11446289)
