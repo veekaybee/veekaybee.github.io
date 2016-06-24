@@ -1,4 +1,4 @@
---
+---
 title: How to keep up with what's going on in the data industry today?  
 layout: post
 ---
