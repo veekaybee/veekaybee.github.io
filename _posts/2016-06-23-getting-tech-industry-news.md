@@ -1,5 +1,5 @@
 ---
-title: How to keep up with what's going on in the data industry today?  
+title: How to keep up with the data industry today?  
 layout: post
 ---
 
@@ -61,4 +61,19 @@ A helpful but hard way to find your way around the market is to go on job interv
 10) **Stack OverFlow** - Excellent source for answers, but I also sometimes just browse [Cross Validated](http://stats.stackexchange.com/), the stas sister site, to see what's popular and what people are answering. 
 
 11) **O'Reilly and Manning emails** - I bought books from them at one point and still get the emails. The latest book announcements are a good signal of what tech is in demand. They also sometimes have interesting free webinars.  
+
+12) Podcasts - I'll binge-listen to a bunch every few months. There are starting to be some really high-quality data-driven podcasts out there. The trick is finding ones where the creators have a good back-and-forth and get into the tech right away as opposed to chatting about the weekend for 40 minutes. 
+
++ [Data Skeptic](http://dataskeptic.com/
++ [Linear Digressions](http://lineardigressions.com/)
++ [The Talking Machines](http://www.thetalkingmachines.com/)
++ [Raw Data](https://soundcloud.com/rawdatapodcast)
++ 
+13) [KD Nuggets](http://www.kdnuggets.com/) - I don't always read here, but I'll skim from time to time. 
+
+Python
+
++ [Podcast.__init__](http://podcastinit.com/)
++ [Talk Python to Me](https://talkpython.fm/)
+
 
