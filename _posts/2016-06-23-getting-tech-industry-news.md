@@ -25,9 +25,9 @@ For example, right now on the front page, there is a post called "An APL Compile
 
 3) **Twitter** - I find Twitter to be really noisy and not as enjoyable as it used to be even as little as two years ago. But there are still a few people tweeting good links, and who generate industry discussion
 
-+ [@thepracticaldev](https://twitter.com/ThePracticalDev) is one of the best Twitter accounts to get a feel for the zeitgeist of development today and has lots of good links
-+ [@randal_olson](https://twitter.com/randal_olson) is really good about catching all the hot data science links of the day 
-+ [@b0rk](https://twitter.com/b0rk) is great at generating industry discussion as is probably one of the friendliest public faces in IT today 
++ [@thepracticaldev](https://twitter.com/ThePracticalDev) is one of the best Twitter accounts to get a feel for the zeitgeist of software development today and has lots of good links
++ [@randal_olson](https://twitter.com/randal_olson) is really good about catching all the hot data science links of the day and at generating a community of commentary around those links
++ [@b0rk](https://twitter.com/b0rk) is probably one of the friendliest public faces in tech today, very generous with her knowledge, and contagious in her enthusiasm for the topic. 
 
 
 4) **Reddit** - A couple of subreddits have discussion that is at the quality of Hacker News and maybe even more because they focus less on abstract ideas and more on actual examples. 
