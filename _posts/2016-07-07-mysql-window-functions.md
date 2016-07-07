@@ -39,9 +39,9 @@ Let's say you want to sum total pageviews for a given user over the span of all 
 | Jared     | 1        | 17:03 |
 
 
-	SELECT user_name,
-       time,
-       SUM(pageview) OVER
+		SELECT user_name,
+       			time,
+       			SUM(pageview) OVER
          (PARTITION BY user_name) AS running_total_pageviews, SUM(pageview) OVER
          (PARTITION BY user_name order by time) AS pageviews_per_min
          FROM piedpiper.pageviews
@@ -92,7 +92,7 @@ Given Oracle's [general hostility to open-source contributions](https://techcrun
 In addition to Oracle's contribution to shrinking the user base, the NoSQL trend really hit big starting in 2006, leaving some of the best talent to work on distributed systems as opposed to shoring up traditional relational databases.  It also has meant that developers are using stores like MongoDB in new,[ MEAN web stacks](http://www.infoworld.com/article/2937159/application-development/mean-vs-lamp-your-next-programming-project.html), contributing to MySQL's decline even further. 
 
 LAMP AND MEAN: Guess which is which. 
-![image](https://github.com/veekaybee/veekaybee.github.io/blob/master/images/lampmean.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/lampmean.png)
 
 All of this makes me wonder about the stability of web app infrastructure going forward. The LAMP stack has been quietly and steadily powering Wordpress, 37Signals, and hundreds of thousands other websites for years. It's a known element, a vanilla default so easy to set up and run. But at the same time, all of its elements are atrophying. PHP is no longer a favored scripting language, and MySQL, it looks like, is quietly looking to stop active development. 
 
