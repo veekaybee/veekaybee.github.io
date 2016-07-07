@@ -81,7 +81,7 @@ I began wondring if it was usual for MySQL developers to be unresponsive, or min
 
 With some quick DataScience (TM), aka an Excel chart, it was easy to see that development activity really kicked into gear in 2010, and then drastically dropped off, leaving me to believe this won't be fixed anytime soon.  
 
-![image](https://github.com/veekaybee/veekaybee.github.io/blob/master/images/bugs.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/bugs.png)
 
 Given these trends and a quick scan of the trade press, it looks like the issue really is two-fold. 
 
