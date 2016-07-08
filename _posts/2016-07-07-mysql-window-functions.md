@@ -5,6 +5,8 @@ title: Why doesn't MySQL have window functions?
 
 ![image](https://cdn.meme.am/instances/500x/52119287.jpg)
 
+*Updated with comments from MySQL at end of post. *
+
 I've worked with a lot of the different flavors of SQL, including Oracle, SQL Server, Postgres, and SQLite, so I thought I knew all nuances of different SQL syntaxes. But I've recently been working with a project that's using a  LAMP stack, so I've gotten a lot more understanding of the MySQL's caveats.  
 
 I'm working on some data manipulation that requires window functions in MySQL, and I learned the hard way that [MySQL doesn't support them](http://www.xaprb.com/blog/2013/09/10/features-id-like-in-mysql-windowing-functions/).
@@ -100,8 +102,20 @@ At the same time, while MEAN is new and shiny and scales, it is [not yet at a po
 
 Where does this leave us? Somewhere between the old (Web 2.0?) and the new (MEANTensorFlowMicroservices.io (R) And where does this leave me? Still, very unfortunately, without window functions. 
 
+EDITED TO ADD : [Morgan Tocker from MySQL](https://twitter.com/morgo) sent me an email with some clarifications to the data analysis I did on my post:  
 
+>1)      The data science here only includes bugs from bugs.mysql.com
 
+>We also have bugs reported from customers in the Oracle bugs system (that applies to all Oracle products). See for example >in the [release notes:](http://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-13.html)There is a short bug number format >and a long one.
+ 
+>2)  The front ~ 12 months of the data science is not quite accurate – because there are some bugs fixed waiting in feature >branches which will not yet be merged. [For example](http://labs.mysql.com/), what we have in labs and in development in >8.0: (The clone for 5.7 RC was over 12 months ago.  The new data dictionary, which is considerable work does not appear in >these stats.  Bugs are only closed when they go out in a release.)
 
+>3)Sun acquired MySQL in 2008 (not Oracle).  Oracle acquired Sun in 2010.
+
+>If I can encourage you to look at commits (and contributors), you will see that the team size has indeed doubled.. and the >quality of even patches has gone up.  An individual evaluation of code showed that there was more new changes in 5.6 [than >any release prior](https://www.flamingspork.com/blog/2013/03/05/mysql-code-size/):
+ 
+>And in 5.7, I built a list of new features: http://www.thecompletelistoffeatures.com/
+
+He added in a message, "Thank you, feedback on Windowing functions heard loud and clear."
 
 
