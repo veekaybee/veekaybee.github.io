@@ -60,7 +60,10 @@ And, one of the most important features for me with any software product:
 + Easy to get started with and has a large community of practitioners that answer each other's questions
 
 
-My first course of action was to see how active the community around the product was by checking out blog posts and asking fellow practitioners. If you read DataTau or HackerNews, every other post is about R or Python or Tensorflow or AWS, which several things for me: 1) They're languages and platforms the community uses frequently and will be available in almost any data science environment 2) They're in active development and have a lot of active developers and 3) There will be a lot of Stack Overflow answers if I get stuck. 
+My first course of action was to see how active the community around the product was by checking out blog posts and asking fellow practitioners. If you read DataTau or HackerNews, every other post is about R or Python or Tensorflow or AWS, which tells me several things: 
+1) They're languages and platforms the community uses frequently and will be available in almost any data science environment 
+2) They're in active development and have a lot of active developers and 
+3) There will be a lot of Stack Overflow answers if I get stuck. 
 
 Unfortunately, I only found [one](http://datasciencedojo.com/building-classification-model-azure-machine-learning-studio/) or [two posts](https://projectbotticelli.com/knowledge/brief-introduction-to-microsoft-azure-ml). The StackOverflow pickings [were slim](http://stackoverflow.com/questions/tagged/azure-ml). 
 
