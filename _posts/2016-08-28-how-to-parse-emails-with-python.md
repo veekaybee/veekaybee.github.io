@@ -1,6 +1,7 @@
-# How to parse emails with Python (or, how I liberated my Strata schedule)
-
-
+---
+layout: post
+title: How to parse emails with Python (or, how I liberated my Strata schedule)
+---
 
 [Strata](http://conferences.oreilly.com/strata/hadoop-big-data-ny), arguably the largest data science conference in the United States, is coming up in September and [my company](http://www.captechconsulting.com/) is sponsoring my trip there this year, so I've started planning out which sessions I'll be attending. 
 
