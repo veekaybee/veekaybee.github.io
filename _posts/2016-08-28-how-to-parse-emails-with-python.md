@@ -69,6 +69,7 @@ Sorry PEP8
 
 from icalendar import Calendar, Event
 from datetime import datetime
+import glob, os
 
 
 # date formats for DTSTART and END
@@ -97,19 +98,23 @@ def parse_ics(infile):
 def ics_to_file(filename, events):
 	with open(filename, 'w') as f:
 		for e in events:
-			f.write(e)
+			f.write(e.encode('utf-8')) #include correct encoding
 
+def convert_file():
+	for file in glob.glob("*.ics"):
+		outfilename = os.path.splitext(file)[0]
+		infile = open(file, 'rb')
+		parsed_results = parse_ics(infile)
+		ics_to_file('%s.txt' % outfilename, parsed_results) 
 
 if __name__ == '__main__':
-	infile = open('strata.ics', 'rb') #TODO: offer command line input as next step
-	parsed_results = parse_ics(infile)
-	ics_to_file('strata_2016_cal.txt', parsed_results)
+	convert_file()
 	
 ```
 
 
 
-The code is pretty straight-forward. It takes an input file, my `strata.ics`, and generates an output file, called `strata_2016_cal.txt` that strips the .ics formatting into a more human-readable format. 
+The code is pretty straight-forward. It takes all input files in the given active directory and generates output files, named with the same prefix as the input file, but outputting as a text file, that strips the .ics formatting into a more human-readable format. 
 
 The way it does this is by reading in a `Calendar()` object. `Calendar()` has a function called `walk` that loops through each event in the 'vevent' sub-category and fetches the ones with the names I'm interested in (like summary, for example). It then appends each compiled line into a list which is then read into a txt file. 
 
@@ -124,4 +129,6 @@ Location: Hall 1C
 Time: Wed Sep 28 11:20-12:00 
 ```
 
-And the end result is an entire, readable, usable text file. The only thing to modify is to allow renaming of files via command line inputs.  It's no fancy social shared calendar or scheduling app, but it does the job in a pinch. 
+And the end result is an entire, readable, usable text file.  It's no fancy social shared calendar or scheduling app, but it does the job in a pinch. 
+
+All of the [code and raw files are here](https://github.com/veekaybee/strata_schedule). 
