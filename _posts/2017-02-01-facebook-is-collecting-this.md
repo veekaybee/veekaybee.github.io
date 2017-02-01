@@ -1,5 +1,5 @@
 ---
-title: What should you think about when you use Facebook?
+title: What should you think about when using Facebook?
 layout: post
 ---
 
@@ -7,7 +7,7 @@ layout: post
 
 **Courbet, The Winnowers**
 
-TL;DR: Facebook collects data about you in hundreds of ways, across numerous channels. It's very hard to opt out, but by reading about what they collect, you can understand the risks of the platform and choose to be more restrictive with your Facebook usage. 
+TL;DR: Facebook collects data about you in hundreds of ways, across numerous channels. It's very hard to opt out, but by reading about what they collect, you can understand the risks of the platform and choose to be more restrictive with your Facebook usage.
 
 Contents:
 
@@ -35,9 +35,9 @@ Facebook, the platform, has taken up such a large part of our mindshare and has 
 
 And gets them it does. In 2014, Facebook engineers wrote that they have about [600 terabytes of data coming in on a daily basis](https://code.facebook.com/posts/229861827208629/scaling-the-facebook-data-warehouse-to-300-pb/). 
 
-For perspective, the size of War and Peace, as a text file, is 3.1 megabytes. War and Peace, the movie, is 7 hours long, or [8 gigabytes](https://www.reddit.com/r/iphone/comments/462isr/get_some_storage_back_by_trying_to_download_a/) in size. 
+For perspective, the size of War and Peace, the text is 3.1 megabytes. The 1966 Soviet movie version of War and Peace the movie is 7 hours long, or [8 gigabytes](https://www.reddit.com/r/iphone/comments/462isr/get_some_storage_back_by_trying_to_download_a/) in size. 
 
-So people are uploading the equivalent of 193 million copies of War and Peaces, or 75,000 copies of War and Peace movies, every single day. 
+So people are uploading the equivalent of 193 million copies of War and Peace books, or 75,000 copies of War and Peace movies, every single day. 
 
 [Facebook's Data Policy](https://www.facebook.com/policy.php) outlines what it collects and what it does with that data. However, like most companies, it leaves out the actual points that tell customers what exactly is happening. 
 
@@ -55,12 +55,12 @@ The data that users see in the front-end is a subset of the backend data.
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/facebookui.png)
 
-If you're interested in more of the technical specs, there are lots of architecture diagrams on the googles. It includes [Hive, Hadoop, HBase, BigPipe, MySQL, Memcached, Thrift,](https://www.quora.com/What-is-Facebooks-architecture-6) and much, much more. All of this is housed in lots of massive data centers, such as one in [Prineville, Oregon](https://www.facebook.com/PrinevilleDataCenter/).  
+If you're interested in more of the technical specs, there are lots of architecture diagrams on the googles. Facebook is at the cutting edge of working with big data, and their stack includes [Hive, Hadoop, HBase, BigPipe, MySQL, Memcached, Thrift,](https://www.quora.com/What-is-Facebooks-architecture-6) and much, much more. All of this is housed in lots of massive data centers, such as one in [Prineville, Oregon](https://www.facebook.com/PrinevilleDataCenter/).  
 
 
 # What does Facebook know before you post? 
 
-Facebook data collection begins before you press "POST". As you are crafting your message, [Facebook collects your keystrokes](http://www.slate.com/articles/technology/future_tense/2013/12/facebook_self_censorship_what_happens_to_the_posts_you_don_t_publish.html). 
+Facebook data collection potentially begins before you press "POST". As you are crafting your message, [Facebook collects your keystrokes](http://www.slate.com/articles/technology/future_tense/2013/12/facebook_self_censorship_what_happens_to_the_posts_you_don_t_publish.html). 
 
 Facebook [has previously used to use this data to study self-censorship](http://www.aaai.org/ocs/index.php/ICWSM/ICWSM13/paper/viewFile/6093/6350) (PDF.)
 
@@ -77,11 +77,16 @@ Meaning, that if you posted something like, "I just HATE my boss. He drives me N
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/prethought.png)
 
-Something of interest here is: deleted posts, deleted comments, and deleted checkins. So, even if you delete a post, Facebook keeps track of that post. I.e. Facebook keeps track of the metadata, or the data about your data. For example, the data of a phone call is what you actually talked about. The metadata is when you called, where you called from ,how long you called for, etc. 
+Something of interest here is: deleted posts, deleted comments, and deleted checkins.Just like there's no guarantee that things you didn't write won't be stored, there's no guarantee that,if you delete data, the data is actually deleted. 
 
-For Facebook, metadata, is just as important as real data, and it uses that data to make extrapolations about who you are, as we can see from the study. 
+So, even if you delete a post, Facebook keeps track of that post. I.e. Facebook keeps track of the metadata, or the data about your data. For example, the data of a phone call is what you actually talked about. The metadata is when you called, where you called from ,how long you called for, etc. 
 
-Just like there's no guarantee that things you didn't write won't be stored, there's no guarantee that,if you delete data, the data is actually deleted. Incidentally, this is true for account deletions, as well. 
+For Facebook, metadata is just as important as real data, and it uses that data to make extrapolations about who you are. Using Developer Tools on Chrome, it's relatively easy to see the plethora of data passed to Facebook from your client to their backend via xhr. I'm not a front-end ninja (but would actually love to talk to one to see what else we could pull), but from 
+one image, you can see that facebook is tracking the time you spend doing ...something? Not clear what, but it probably figures into time spent on the site, [which Facebook reports out](https://www.nytimes.com/2016/05/06/business/facebook-bends-the-rules-of-audience-engagement-to-its-advantage.html?_r=0). 
+
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/xhr.png)
+
+Incidentally, this is true for account deletions, as well. 
 
 Since Facebook has so many systems and so many places where data can co-mingle, as a [former Facebook consultant writes](https://www.quora.com/When-you-permanently-delete-your-Facebook-account-what-happens-to-your-information, 
 
@@ -119,15 +124,15 @@ In addition to everything it knows about you, it also knows everything about you
 
 Facebook does quite a few things with the data it collects.  
 
-First, it conducts simple queries on information to improve site performance or to do business reporting (for example, what was the uptime on the site, [how many users does Facebook have](http://veekaybee.github.io/how-many-users-do-you-have/), how much ad revenue did it make today? )
+First, it conducts simple queries on information to improve site performance or to do business reporting (for example, what was the uptime on the site, [how many users does Facebook have](http://veekaybee.github.io/how-many-users-do-you-have/), how much ad revenue did it make today?) This is true for every single company anywhere. 
 
-It has an entire engineering team dedicated to building tools to make data easier to query with SQL-like language built on top of Hadoop, with [Hive](https://www.facebook.com/notes/facebook-engineering/hive-a-petabyte-scale-data-warehouse-using-hadoop/89508453919/), and, although Facebook claims that access is strictly controlled, some accounts say [otherwise](http://www.techtimes.com/articles/36186/20150227/who-access-account-details-facebook.htm#sthash.GXFknTxA.dpuf). 
+However, with Facebook, there's a twist.  It has an entire engineering team dedicated to building tools to make data easier to query with SQL-like language built on top of Hadoop, with [Hive](https://www.facebook.com/notes/facebook-engineering/hive-a-petabyte-scale-data-warehouse-using-hadoop/89508453919/), and, although Facebook claims that access is strictly controlled, some accounts say [otherwise](http://www.techtimes.com/articles/36186/20150227/who-access-account-details-facebook.htm#sthash.GXFknTxA.dpuf). 
 
 > Paavo Siljamäki, director at the record label Anjunabeats, brought attention to the issue when he posted, on Facebook, that on a visit to the company's L.A. office an employee was easily able to access his account without asking him for his password.
 
 Here are [some more accounts of Facebook employees accessing private data](https://www.quora.com/Do-Mark-Zuckerberg-or-Facebook-employees-have-a-skeleton-key-granting-them-access-to-every-members-Facebook-profile-page-and-information). 
 
-Second, Facebook conducts academic research.
+Second, Facebook conducts academic research by using its users as guinea pigs, a fact that is not mentioned in the Data Policy, which is interesting, given that on [Facebook Research's main page](https://research.fb.com/), a header reads, "At Facebook, research permeates everything we do."
 
 It has a pretty large data science team ([41 people at last count](https://research.fb.com/people/page/3/?cat=6). ) To put in perspective, a similarly-sized company of 15,000 might have 5 data scientists, if it's really trying to aggressively push a data science research program. 
 
@@ -193,7 +198,7 @@ All this would be concerning even if Facebook collected the data just for itself
 
 # What relationship does Facebook have with marketers? 
 
-Facebook's Data Policy notes that it partners to collect data about you from other vendors: 
+Facebook's Data Policy notes that it partners with other vendors to collect data about you: 
 
 > We receive information about you and your activities on and off Facebook from third-party partners, such as information from a partner when we jointly offer services or from an advertiser about your experiences or interactions with them.
 
@@ -259,13 +264,14 @@ It's safe to say it [collects your browsing history to enrich ads](http://gizmod
 
 # What should I think about when I use Facebook?
 
-What does this all mean? Essentially, it means that every single thing you do on Facebook, and if you're logged in, on other websites, is potentially tracked by Facebook, and saved on their servers. It also means if you're not active on Facebook, you could still be tracked. 
+What does this all mean? Essentially, it means that every single thing you do on Facebook, and if you're logged in, on other websites, is potentially tracked by Facebook, and saved on their servers. Even if Facebook is currently not doing some of the things I mentioned (capturing pre-posts, messing with the News Feed,) they're doing very similar work and there's no guarantee of privacy or not being used in an experiment.  It also means if you're not active on Facebook, you could still be tracked. 
 
 Every single like you gave a post, every friend you added, every place you checked in, every product category you clicked on, every photo, is saved to Facebook and aggregated. 
 
-Aggregated how? Hard to say. Maybe as part of a social experiment. Maybe your information is being passed over to government agencies. Maybe individual employees at Facebook 
+Aggregated how? Hard to say. Maybe as part of a social experiment. Maybe your information is being passed over to government agencies. Maybe individual employees at Facebook that don't necessarily have the right permissions can access your page and see your employment history. Maybe that same employment history is being sent over to insurance companies.  
 
-This includes all private groups, all closed groups, and all messages. There is no such thing as privacy on Facebook. 
+This includes all private groups, all closed groups, and all messages. And, as Facebook points out, 
+There is no such thing as privacy on Facebook. 
 
 Essentially, what this means is that you need to go into Facebook assuming every single thing you do will be made public, or could be used for advertising, or analyzed by a government agency. 
 
@@ -295,32 +301,36 @@ It's very sad that a social network that's done so much good is also the single 
 
 For my part, something I personally as a data professional have done is send Facebook recruiters that email me the following message: 
 
+Dear Recruiter, 
 
-	Hi [Recruiter],
+The way Facebook collects and uses data, including:
 	
-	Thanks for reaching out. 
++ reselling user data to advertising companies like Acxiom, 
++ [tracking user browsing](http://www.huffingtonpost.com/nate-hanson/how-to-stop-facebook-from_b_8160400.html), 
++ [facial recognition](https://www.allbusiness.com/marketers-use-facebooks-facial-recognition-stalk-customers-2-11934-1.html), 
++ the creation of [shadow profiles](http://www.dailydot.com/news/facebook-shadow-profiles-privacy-faq/),
++ and particularly social science experimentation like [emotional
+ contagion*](http://www.pnas.org/content/111/24/8788.full), 
++ the use algorithms in the  the News Feed to create a [filter
+  bubble](https://www.theguardian.com/us-news/2016/nov/16/facebook-bias-bubble-us-election-conservative-liberal-news-feed)
++ and, most importantly, [give access of the wealth of data Facebook has made available](http://venturebeat.com/2014/05/15/how-the-nsa-fbi-made-facebook-the-perfect-mass-surveillance-tool/) to government bodies like the NSA
 	
-	The way Facebook collects and uses data, including:
+has made me not only strongly oppose working there but has made me strongly evaluate my usage of Facebook, because I never know how every keystroke I enter into the system will be used. 
 	
-	+ cooperating with data resale companies like Acxiom, 
-	+ tracking user browsing, 
-	+facial recognition and the creation of shadow profiles,
+If Facebook as a company is committed to changing direction and 
 	
-	and particularly social science experimentation 
++ using data to fight some of these issues
++ actively working on ways to [delete unnecessary data*](http://idlewords.com/talks/haunted_by_data.htm)
++ actively working on private, secure communication that is not party to government interference
++ and actively working on ways to prevent private customer data from being shared to unnecessary third parties
 	
-	+ like emotional contagion, 
-	+ the use algorithms in the  the News Feed to create a filter bubble
-	+ and, most importantly, give access of the wealth of data Facebook has available to government bodies like the NSA
+I would love to know. 
 	
+Sincerely,
 	
-	has made me not only strongly oppose working there but has made me cut down and evaluate my usage of Facebook in recent weeks, because I never know how every keystroke I enter into the system will be used. 
-	
-	If Facebook as a company is committed to changing direction and  using data to fight some of these issues actively working on ways to delete unnecessary data, actively working on private, secure communication that is not party to government interference,  and actively working on ways to prevent customer data from being shared I would love to know. 
+Vicki
 
-	Sincerely,
-	Vicki
 
+We are social animals, and we are wired to want to connect, want approval, want to share, and want to organize on the platform where everyone else is, and this, for now, is in Facebook's advantage. Additionally, it's hard to say that Facebook is all bad: it does connect people, it has helped organize meetups and events, and it does make the world more interconnected. 
 
-We are social animals, and we are wired to want to connect, want approval, want to share, and want to organize on the platform where everyone else is, and this, for now, is in Facebook's advantage. But if we understand how this data is being used, we can still play on Facebook's playground, by its rules, but be a little smarter about it. 
-
-
+But, as Facebook's users, we and our data are its product.  And, as we understand more about how this data is being used, we can still play on Facebook's playground, by its rules, but be a little smarter about it. 
