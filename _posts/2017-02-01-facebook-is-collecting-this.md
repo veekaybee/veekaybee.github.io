@@ -84,7 +84,7 @@ So, even if you delete a post, Facebook keeps track of that post. I.e. Facebook 
 For Facebook, metadata is just as important as real data, and it uses that data to make extrapolations about who you are. Using Developer Tools on Chrome, it's relatively easy to see the plethora of data passed to Facebook from your client to their backend via xhr. I'm not a front-end ninja (but would actually love to talk to one to see what else we could pull), but from 
 one image, you can see that facebook is tracking the time you spend doing ...something? Not clear what, but it probably figures into time spent on the site, [which Facebook reports out](https://www.nytimes.com/2016/05/06/business/facebook-bends-the-rules-of-audience-engagement-to-its-advantage.html?_r=0). 
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/xhr-facebook.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/xhr-fb.png)
 
 Incidentally, this is true for account deletions, as well. 
 
