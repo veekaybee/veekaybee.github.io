@@ -136,7 +136,7 @@ Second, Facebook conducts academic research by using its users as guinea pigs, a
 
 It has a pretty large data science team ([41 people at last count](https://research.fb.com/people/page/3/?cat=6). ) To put in perspective, a similarly-sized company of 15,000 might have 5 data scientists, if it's really trying to aggressively push a data science research program. 
 
-However, as late as 2014, there was no process to keep check on what kind of data was accessed, and for what kind of studies. As a [former Facebook data scientist wrote](http://andrewledvina.com/code/2014/07/04/10-ways-facebook-is-the-devil.html, 
+However, as late as 2014, there was no process to keep check on what kind of data was accessed, and for what kind of studies. As a [former Facebook data scientist wrote](http://andrewledvina.com/code/2014/07/04/10-ways-facebook-is-the-devil.html), 
 
 >While I was at Facebook, there was no institutional review board that scrutinized the decision to run an experiment for internal purposes. Once someone had a result that they decided they wanted to submit for publication to a journal, there definitely was a back and forth with PR and legal over what could be published. If you want to run a test to see if people will click on a green button instead of a blue button you don't need approval. In the same way, if you want to test a new ad targeting system to see if people click on more ads and revenue goes up, you don't need institutional approval.
 
