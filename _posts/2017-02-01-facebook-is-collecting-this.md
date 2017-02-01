@@ -146,7 +146,7 @@ He goes on to note,
 
 >The fundamental purpose of most people at Facebook working on data is to influence and alter people's moods and behaviour. They are doing it all the time to make you like stories more, to click on more ads, to spend more time on the site.
 
-While this is understandably a goal of most websites, you may want to think twice about spending more than [40 minutes a day](http://www.businessinsider.com/how-much-time-people-spend-on-facebook-per-day-2015-7 on a site that is aimed to undermine you emotionally. 
+While this is understandably a goal of most websites, you may want to think twice about spending more than [40 minutes a day](http://www.businessinsider.com/how-much-time-people-spend-on-facebook-per-day-2015-7) on a site that is aimed to undermine you emotionally. 
 
 In addition to Facebook mining text and [studying our emotions](https://research.fb.com/support-when-you-re-feeling-blue/), it also [manipulates them](https://www.theguardian.com/technology/2014/jun/29/facebook-users-emotions-news-feeds). 
 
