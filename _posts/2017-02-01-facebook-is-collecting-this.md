@@ -264,7 +264,9 @@ It's safe to say it [collects your browsing history to enrich ads](http://gizmod
 
 # What should I think about when I use Facebook?
 
-What does this all mean? Essentially, it means that every single thing you do on Facebook, and if you're logged in, on other websites, is potentially tracked by Facebook, and saved on their servers. Even if Facebook is currently not doing some of the things I mentioned (capturing pre-posts, messing with the News Feed,) they're doing very similar work and there's no guarantee of privacy or not being used in an experiment.  It also means if you're not active on Facebook, you could still be tracked. 
+What does this all mean? Essentially, it means that every single thing you do on Facebook, and if you're logged in, on other websites, is potentially tracked by Facebook, and saved on their servers. 
+
+To be clear, every company currently does some form of this tracking of users. There would simply be no other way to measure operations. But Facebook has quite clearly been tiptoeing outside the bounds of what is ethically acceptable data business practices for a while.  Even if Facebook is currently not doing some of the things I mentioned (capturing pre-posts, messing with the News Feed,) they're doing very similar work and there's no guarantee of privacy or not being used in an experiment.  It also means if you're not active on Facebook, you could still be tracked. 
 
 Every single like you gave a post, every friend you added, every place you checked in, every product category you clicked on, every photo, is saved to Facebook and aggregated. 
 
