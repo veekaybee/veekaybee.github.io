@@ -88,7 +88,7 @@ one image, you can see that facebook is tracking the time you spend doing ...som
 
 Incidentally, this is true for account deletions, as well. 
 
-Since Facebook has so many systems and so many places where data can co-mingle, as a [former Facebook consultant writes](https://www.quora.com/When-you-permanently-delete-your-Facebook-account-what-happens-to-your-information, 
+Since Facebook has so many systems and so many places where data can co-mingle, as a [former Facebook consultant writes](https://www.quora.com/When-you-permanently-delete-your-Facebook-account-what-happens-to-your-information), 
 
 > To answer the first part of your question, "Could you pay Facebook to properly delete all your information?", assuming "properly" means completely wipe away any trace that you ever existed on Facebook, the answer is no.  
 
