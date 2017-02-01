@@ -166,7 +166,7 @@ For example, recently, the data science team published a study on the [social ti
 
 These are the studies we know to be public. What else are they doing under wraps? 
 
-Another thing Facebook likes to study, is, understandably, [faces.](https://www.bloomberg.com/news/articles/2016-10-26/is-facebook-s-facial-scanning-technology-invading-your-privacy-rights).  Every time you tag yourself in a picture, Facebook recognizes you and will adjust accordingly. 
+Another thing Facebook likes to study, is, understandably, [faces](https://www.bloomberg.com/news/articles/2016-10-26/is-facebook-s-facial-scanning-technology-invading-your-privacy-rights).  Every time you tag yourself in a picture, Facebook recognizes you and will adjust accordingly. 
 
 >Facebook encourages users to "tag" people in photographs they upload in their personal posts and the social network stores the collected information. The company uses a program it calls DeepFace to match other photos of a person.
 
