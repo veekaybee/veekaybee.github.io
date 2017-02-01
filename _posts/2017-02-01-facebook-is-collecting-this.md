@@ -41,7 +41,7 @@ So people are uploading the equivalent of 193 million copies of War and Peaces, 
 
 [Facebook's Data Policy](https://www.facebook.com/policy.php) outlines what it collects and what it does with that data. However, like most companies, it leaves out the actual points that tell customers what exactly is happening. 
 
-Frustrated by the constant speculation of where those keystroke are going for every status update I write, I decided to do some research. All of the information below is taken from tech trade press, academic publications, and what I was able to see on the client side as a Facebook user. I've added to this post my own interpretations as a data professional working with user data for 10+ years.
+Frustrated by the constant speculation of where those keystrokes are going for every status update I write, I decided to do some research. All of the information below is taken from tech trade press, academic publications, and what I was able to see on the client side as a Facebook user. I've added to this post my own interpretations as a data professional working with user data for 10+ years.
 
 If anyone working at Facebook wants to add corrections to this post, I would love to hear from them that they're not collecting and processing as much as everything below says they are. 
  
