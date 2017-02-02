@@ -77,9 +77,9 @@ Meaning, that if you posted something like, "I just HATE my boss. He drives me N
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/prethought.png)
 
-Something of interest here is: deleted posts, deleted comments, and deleted checkins.Just like there's no guarantee that things you didn't write won't be stored, there's no guarantee that,if you delete data, the data is actually deleted. 
+Something of interest here is: deleted posts, deleted comments, and deleted checkins. Just like there's no guarantee that things you didn't write won't be stored, there's no guarantee that,if you delete data, the data is actually deleted. 
 
-So, even if you delete a post, Facebook keeps track of that post. I.e. Facebook keeps track of the metadata, or the data about your data. For example, the data of a phone call is what you actually talked about. The metadata is when you called, where you called from ,how long you called for, etc. 
+So, even if you delete a post, Facebook keeps track of that post. Facebook keeps track of the metadata, or the data about your data. For example, the data of a phone call is what you actually talked about. The metadata is when you called, where you called from, how long you called for, etc. 
 
 For Facebook, metadata is just as important as real data, and it uses that data to make extrapolations about who you are. Using Developer Tools on Chrome, it's relatively easy to see the plethora of data passed to Facebook from your client to their backend via xhr. I'm not a front-end ninja (but would actually love to talk to one to see what else we could pull), but from 
 one image, you can see that facebook is tracking the time you spend doing ...something? Not clear what, but it probably figures into time spent on the site, [which Facebook reports out](https://www.nytimes.com/2016/05/06/business/facebook-bends-the-rules-of-audience-engagement-to-its-advantage.html?_r=0). 
@@ -154,7 +154,7 @@ The News Feed is prime for manipulation, specifically because Facebook has engin
 
 This is how today's so-called filter bubble got started. Because people click on things that are interesting to them, Facebook shows only things that engage people, meaning that other points of view, friends, and images, are omitted from a person's Facebook Feed diet. For an excellent example of how this works, check out [Red Feed, Blue Feed](http://graphics.wsj.com/blue-feed-red-feed/), which shows how differently liberal and conservative Facebook feeds look. 
 
- What else are they studying? The rate at which [gay people come out](https://research.fb.com/americas-coming-out-on-facebook/), to start with. How do they know this? "Over the past year, approximately 800,000 Americans updated their profile to express a same-gender attraction or custom gender."
+What else are they studying? The rate at which [gay people come out](https://research.fb.com/americas-coming-out-on-facebook/), to start with. How do they know this? "Over the past year, approximately 800,000 Americans updated their profile to express a same-gender attraction or custom gender."
 
 A lot of Facebook's studies center on graph theory; that is, how we relate to our friends; in other words, it's performing anthropological research on subjects that have never consented to it. 
 
@@ -172,7 +172,7 @@ Another thing Facebook likes to study, is, understandably, [faces](https://www.b
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/selfie.png)
 
-This program, called DeepFace, is a fantastic way to get more accurate tags. This is also a fantastic way to violate someone's privacy For example, what if you don't want to be tagged? Like, if you're at a government protest? Or, even, simply, if you went to a concert with one friend instead of the other and didn't want to let one know? 
+This program, called DeepFace, is a fantastic way to get more accurate tags. This is also a fantastic way to violate someone's privacy. For example, what if you don't want to be tagged? Like, if you're at a government protest? Or, even, simply, if you went to a concert with one friend instead of the other and didn't want to let one know? 
 
 Unfortunately, privacy of movement soon won't be an option. Facebook is working on ways to [identify people hidden in pictures.](http://fortune.com/2015/06/23/facebook-facial-recognition/) The Facebook [paper on DeepFace notes](https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf) that, "The social and cultural implications of face recognition technologies are far reaching", and yet does not at all talk about the possible privacy dangers with having your face tagged, [for example](http://spectrum.ieee.org/biomedical/imaging/facebooks-face-recognition-tech-goes-on-trial), 
 
