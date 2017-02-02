@@ -294,10 +294,10 @@ Not everyone will do what I do. But the most important thing is that, even if yo
 2. Don't post any pictures of your children, especially if they're at an age where they can't consent to it. 
 3. Log out of Facebook when you're done with it on your browser. Use a separate browser for Facebook and a separate one for everything else. 
 4. Use [ad blockers](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en)
-5. Don't use Facebook, particularly Messenger to organize or attend political events like protests. If you need to organize, use Facebook as a starting point, and then get on another platform. 
-	Recommended Platforms: Signal or Telegram. Whatsapp, I don't recommend because it's tied to Facebook's system of metadata. But again, it depends on your level of risk. Here is [more on](https://www.relativisticramblings.com/ramblings/telegram-vs-signal/) [these platforms](http://lifehacker.com/signal-the-encrypted-chat-app-is-now-available-on-des-1787103250). 
+5. Don't use Facebook, particularly Messenger to organize or attend political events. If you need to organize, use Facebook as a starting point, and then get on another platform. 
+	Recommended Platforms: Signal is the gold standard for private chat right now.  Whatsapp is ok for group chat, but, I don't recommend because it's tied to Facebook's system of metadata. Telegram is also good, but not as good because it's closed source.  Again, it depends on your level of risk. Here is [more on](https://www.relativisticramblings.com/ramblings/telegram-vs-signal/) [these platforms](http://lifehacker.com/signal-the-encrypted-chat-app-is-now-available-on-des-1787103250). 
 6. 	Don't install the Facebook app on your phone. It asks for a lot of [crazy permissions](http://www.makeuseof.com/tag/use-facebook-android-without-invasive-permissions/). 
-7. Don't install [Messenger on your phone](https://www.facebook.com/help/messenger-app/783897061631577).  Use the mobile site. 
+7. Don't install [Messenger on your phone](https://www.facebook.com/help/messenger-app/783897061631577).  Use the mobile site. Messenger is blocked on mobile now, so use the workaround of [enabling the desktop site on your browser](http://www.howtogeek.com/176932/how-to-disable-the-mobile-version-of-a-website-on-your-phone/).  
 
 It's very sad that a social network that's done so much good is also the single worst thing about the internet, but until people leave the platform or apply some kind of economic pressure on it, nothing will change. 
 
