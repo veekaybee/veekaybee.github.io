@@ -313,7 +313,7 @@ The way Facebook collects and uses data, including:
 + the creation of [shadow profiles](http://www.dailydot.com/news/facebook-shadow-profiles-privacy-faq/),
 + and particularly social science experimentation like [emotional
  contagion*](http://www.pnas.org/content/111/24/8788.full), 
-+ the use algorithms in the  the News Feed to create a [filter
++ the use of algorithms in the News Feed to create a [filter
   bubble](https://www.theguardian.com/us-news/2016/nov/16/facebook-bias-bubble-us-election-conservative-liberal-news-feed)
 + and, most importantly, [give access of the wealth of data Facebook has made available](http://venturebeat.com/2014/05/15/how-the-nsa-fbi-made-facebook-the-perfect-mass-surveillance-tool/) to government bodies like the NSA
 	
