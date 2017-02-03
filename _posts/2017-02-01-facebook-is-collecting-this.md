@@ -336,3 +336,5 @@ Vicki
 We are social animals, and we are wired to want to connect, want approval, want to share, and want to organize on the platform where everyone else is, and this, for now, is in Facebook's advantage. Additionally, it's hard to say that Facebook is all bad: it does connect people, it has helped organize meetups and events, and it does make the world more interconnected. 
 
 But, as Facebook's users, we and our data are its product.  And, as we understand more about how this data is being used, we can still play on Facebook's playground, by its rules, but be a little smarter about it. 
+
+[Hacker News Discussion here](https://news.ycombinator.com/item?id=13559498). 
