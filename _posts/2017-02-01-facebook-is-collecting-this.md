@@ -29,6 +29,8 @@ Contents:
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
+
+
 Facebook, for better or worse, has become our living room, our [third place](https://en.wikipedia.org/wiki/Third_place) online. It's the place where we talk to friends, sound off on the news, organize events,  grieve over people we've lost, celebrate babies, engagements, new jobs, new haircuts, and vacations. 
 
 Facebook, the platform, has taken up such a large part of our mindshare and has started to serve as our [pensieve](http://harrypotter.wikia.com/wiki/Pensieve). Because of this, it's important to understand what Facebook, the company, is doing with our hopes, dreams, political statements, and baby pictures once it gets them. 
@@ -336,5 +338,7 @@ Vicki
 We are social animals, and we are wired to want to connect, want approval, want to share, and want to organize on the platform where everyone else is, and this, for now, is in Facebook's advantage. Additionally, it's hard to say that Facebook is all bad: it does connect people, it has helped organize meetups and events, and it does make the world more interconnected. 
 
 But, as Facebook's users, we and our data are its product.  And, as we understand more about how this data is being used, we can still play on Facebook's playground, by its rules, but be a little smarter about it. 
+
+Portuguese [translation here](https://medium.com/@ibrahimcesar/sobre-o-que-voc%C3%AA-deveria-pensar-enquanto-usa-o-facebook-8982b722d5f7#.cbe422iq8). Thank you to Ibrahim! 
 
 [Hacker News Discussion here](https://news.ycombinator.com/item?id=13559498). 
