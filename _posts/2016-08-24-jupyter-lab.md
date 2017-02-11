@@ -22,7 +22,7 @@ The second problem with notebooks is that they take up quite a bit of screen rea
 
 So I was really excited to hear about[Jupyter Lab](http://blog.jupyter.org/2016/07/14/jupyter-lab-alpha/) development a couple months ago.  
 
-#Why Jupyter Lab could help
+# Why Jupyter Lab could help
 
 Some of the features [they're promising](https://www.youtube.com/watch?list=PLYx7XA2nY5Gf37zYZMw6OqGFRPjB1jCy6&v=Ejh0ftSjk6g) include debugging/profiling, tighter integration with version control, and the ability to have all of the features of Jupyter in a single browser window. With the introduction of this, Jupyter is moving from an interactive to integrated development environment. 
 
