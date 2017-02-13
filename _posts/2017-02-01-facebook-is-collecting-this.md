@@ -340,5 +340,6 @@ We are social animals, and we are wired to want to connect, want approval, want 
 But, as Facebook's users, we and our data are its product.  And, as we understand more about how this data is being used, we can still play on Facebook's playground, by its rules, but be a little smarter about it. 
 
 Portuguese [translation here](https://medium.com/@ibrahimcesar/sobre-o-que-voc%C3%AA-deveria-pensar-enquanto-usa-o-facebook-8982b722d5f7#.cbe422iq8). Thank you to Ibrahim! 
+Ukranian [translation here](http://texty.org.ua/pg/article/newsmaker/read/74461/Velykyj_Mark_Cukerberg_stezhyt_za_vamy_facebook)
 
 [Hacker News Discussion here](https://news.ycombinator.com/item?id=13559498). 
