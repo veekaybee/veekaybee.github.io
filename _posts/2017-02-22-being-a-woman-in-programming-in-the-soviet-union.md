@@ -28,7 +28,7 @@ In the programming classes, we studied programming the “dry” way: using pape
 
 ![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/program_written.jpg)
 
-**Paper and pencil code for opening a file in Macro Assembler** 
+**Paper and pencil code for opening a file in Macroassembler** 
 
 Every semester we would take a new programming language to learn. We learned Algol, Fortran,and  PL/1. We would learn from simplest commands to loop organization, function and sub-function programming, multi-dimensional array processing, and more. 
 
