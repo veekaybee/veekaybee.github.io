@@ -1,10 +1,10 @@
 
 
-*Vicki's note: A couple weeks ago, I saw a really interesting clip on Twitter that showed students in the Soviet Union learning to program using pen and paper. My mom has often told stories about how she learned to program the same way, and I[shared the tweet](https://twitter.com/TheEliselise/status/830606510413725696).  [Marie Hicks, a tech historian,](http://mariehicks.net/) reached out and asked if my mom would want to write about her experiences, and she did. *
+**Vicki's note: A couple weeks ago, I saw a really interesting clip on Twitter that showed students in the Soviet Union learning to program using pen and paper. My mom has often told stories about how she learned to program the same way, and I[shared the tweet](https://twitter.com/TheEliselise/status/830606510413725696).  [Marie Hicks, a tech historian,](http://mariehicks.net/) reached out and asked if my mom would want to write about her experiences, and she did.**
 
 ![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/code_notebook.jpg)
 
-**My mom's code notebook, with her name and  "Macroassembler" on it. **
+**My mom's code notebook, with her name and  "Macroassembler" on it.**
 
 In 1976, after eight years in the Soviet education system, I graduated the equivalent of middle school. Afterwards, I could choose to go for two more years, which would earn me a high school diploma, and then do three years of college, which would get me a diploma in "higher education."
 
