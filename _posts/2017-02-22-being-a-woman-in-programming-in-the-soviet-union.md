@@ -8,9 +8,6 @@ layout: post
 
 **Vicki's note: A couple weeks ago, I saw a really interesting clip on Twitter that showed students in the Soviet Union learning to program using pen and paper. My mom has often told stories about how she learned to program the same way, and I [shared the tweet](https://twitter.com/TheEliselise/status/830606510413725696).  [Marie Hicks, a tech historian,](http://mariehicks.net/) reached out and asked if my mom would want to write about her experiences, and she did.**
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/code_notebook.jpg)
-
-**My mom's code notebook, with her name and  "Macroassembler" on it.**
 
 In 1976, after eight years in the Soviet education system, I graduated the equivalent of middle school. Afterwards, I could choose to go for two more years, which would earn me a high school diploma, and then do three years of college, which would get me a diploma in "higher education."
 
@@ -23,6 +20,10 @@ My best friend at the time proposed that we take the entrance exams to attend [N
 They had a program called "Programming for high-speed computing machines." Since I got good grades in math and geometry, this looked like I'd be able to get in. It also didn't hurt that my aunt, a very good seamstress and dressmaker, sewed several dresses specifically for the school's chief accountant, who was involved in enrollment decisions. So I got in. 
 
 What's interesting is that from the almost sixty students accepted into the program that year, all of them were female. It was the same for the class before us, and for the class after us. Later, after I started working the Soviet Union, and even in the United States in the early 1990s, I understood that this was a trend. I'd say that 70% of the programmers I encountered in the IT industry were female. The males were mostly in middle and upper management.
+
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/code_notebook.jpg)
+
+**My mom's code notebook, with her name and  "Macroassembler" on it.**
 
 We started what would be considered our major concentration courses during the second year. Along with programming, there were a lot of related classes: "Computing Appliances and Their Organization", "Electro Technology", "Algorithms of Numerical Methods," and a lot of math that included integral and differential calculations. But programming was the main course, and we spent the most hours on it. 
 
