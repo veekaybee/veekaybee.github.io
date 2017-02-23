@@ -6,7 +6,7 @@ layout: post
 
 [Image source.](http://zavodfoto.livejournal.com/2908010.html) 
 
-**Vicki's note: A couple weeks ago, I saw a really interesting clip on Twitter that showed students in the Soviet Union learning to program using pen and paper. My mom has often told stories about how she learned to program the same way, and I[shared the tweet](https://twitter.com/TheEliselise/status/830606510413725696).  [Marie Hicks, a tech historian,](http://mariehicks.net/) reached out and asked if my mom would want to write about her experiences, and she did.**
+**Vicki's note: A couple weeks ago, I saw a really interesting clip on Twitter that showed students in the Soviet Union learning to program using pen and paper. My mom has often told stories about how she learned to program the same way, and I [shared the tweet](https://twitter.com/TheEliselise/status/830606510413725696).  [Marie Hicks, a tech historian,](http://mariehicks.net/) reached out and asked if my mom would want to write about her experiences, and she did.**
 
 ![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/code_notebook.jpg)
 
@@ -28,7 +28,7 @@ We started what would be considered our major concentration courses during the s
 
 ![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/codenotes.jpg)
 
-**Notes on programming - Heading is ""Directives (Commands) for job control implementation"", covering the ABRT command**
+**Notes on programming - Heading is "Directives (Commands) for job control implementation", covering the ABRT command**
 
 In the programming classes, we studied programming the “dry” way: using paper, pencil and eraser. In fact, this method was so important that students who forgot their pencils were sent to the main office to ask for one. It was extremely embarrassing, and we learned quickly not to forget them. 
 
@@ -56,7 +56,7 @@ These machines were clones of the IBM 360. They worked with punch cards and punc
 
 After two and half years of rigorous study using pencil and paper, we had six months of practice. Most of the time it was one of several scientific research institutes existed in Nizhny Novgorod. I went to an institute that was oriented towards the auto industry. 
 
-I graduate with title "Programmer-Technician". Most of the girls from my class took computer operator jobs, but I did not want to settle. I continued my education at Lobachevsky State University, named after Lobachevsky, the famous Russian mathematician.  Since I was taking evening classes, it took me 6 years to graduate. 
+I graduate with title "Programmer-Technician". Most of the girls from my class took computer operator jobs, but I did not want to settle. I continued my education at [Lobachevsky State University](http://eng.unn.ru/), named after [Lobachevsky](https://en.wikipedia.org/wiki/Nikolai_Lobachevsky), the famous Russian mathematician.  Since I was taking evening classes, it took me six years to graduate. 
 
 I wrote a lot about my first college because now looking back I realize that this is where I really learned to code and developed my programming skills. At the State University, we took a huge amount of unnecessary courses. The only useful one was professional English. After this course I could read technical documentation in English without issues.
 
