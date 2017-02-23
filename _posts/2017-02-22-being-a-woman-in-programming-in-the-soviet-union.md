@@ -21,7 +21,7 @@ They had a program called "Programming for high-speed computing machines." Since
 
 What's interesting is that from the almost sixty students accepted into the program that year, all of them were female. It was the same for the class before us, and for the class after us. Later, after I started working the Soviet Union, and even in the United States in the early 1990s, I understood that this was a trend. I'd say that 70% of the programmers I encountered in the IT industry were female. The males were mostly in middle and upper management.
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/code_notebook.jpg)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/code_notebooks.jpg)
 
 **My mom's code notebook, with her name and  "Macroassembler" on it.**
 
