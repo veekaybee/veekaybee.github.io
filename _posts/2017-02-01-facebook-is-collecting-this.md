@@ -210,7 +210,7 @@ Facebook's Data Policy notes that it partners with other vendors to collect data
 
 In addition to collecting all the details you volunteer about yourself, such as full legal name, birth date, hobbies, religion, and all the places you ever went to school or worked,  Facebook also makes assumptions about things it doesn't know so it can [share that data with Acxiom, and other advertising powerbrokers to more effectively target to you. 
 
-For example: household income, which it then uses to create a data profile to sell to marketers, who are, after all, its paying customers.  Marketers can then buy fine-grained ads that include [any and all of the following](https://www.washingtonpost.com/news/the-intersect/wp/2016/08/19/98-personal-data-points-that-facebook-uses-to-target-ads-to-you/): 
+For example: household income, which it then uses to create a data profile to sell to marketers, who are, after all, its paying customers.  Marketers can then buy fine-grained profiles that include [any and all of the following](https://www.washingtonpost.com/news/the-intersect/wp/2016/08/19/98-personal-data-points-that-facebook-uses-to-target-ads-to-you/): 
 
 Location, Age, Generation, Gender, Language, Education level, Field of study, School, Ethnic affinity, Income and net worth, Home ownership and type, Home value, Property size, Square footage of home, Year home was built, Household composition. 
 
