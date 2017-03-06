@@ -9,6 +9,12 @@ layout: post
 
 TL;DR: Facebook collects data about you in hundreds of ways, across numerous channels. It's very hard to opt out, but by reading about what they collect, you can understand the risks of the platform and choose to be more restrictive with your Facebook usage.
 
+## Translations
+
+ + Dutch [translation here](http://benbrandenburg.nubeter.nl/wat-je-moet-weten-als-je-facebook-gebruikt/) Big thank you to [Ben](http://benbrandenburg.nubeter.nl/)!
+ + Portuguese [translation here](https://medium.com/@ibrahimcesar/sobre-o-que-voc%C3%AA-deveria-pensar-enquanto-usa-o-facebook-8982b722d5f7#.cbe422iq8). Thank you to [Ibrahim](https://github.com/ibrahimcesar)! 
+ + Ukranian [translation here](http://texty.org.ua/pg/article/newsmaker/read/74461/Velykyj_Mark_Cukerberg_stezhyt_za_vamy_facebook)
+
 Contents:
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -339,7 +345,8 @@ We are social animals, and we are wired to want to connect, want approval, want 
 
 But, as Facebook's users, we and our data are its product.  And, as we understand more about how this data is being used, we can still play on Facebook's playground, by its rules, but be a little smarter about it. 
 
-Portuguese [translation here](https://medium.com/@ibrahimcesar/sobre-o-que-voc%C3%AA-deveria-pensar-enquanto-usa-o-facebook-8982b722d5f7#.cbe422iq8). Thank you to Ibrahim! 
-Ukranian [translation here](http://texty.org.ua/pg/article/newsmaker/read/74461/Velykyj_Mark_Cukerberg_stezhyt_za_vamy_facebook)
+
+
+
 
 [Hacker News Discussion here](https://news.ycombinator.com/item?id=13559498). 
