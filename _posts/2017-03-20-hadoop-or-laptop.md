@@ -4,9 +4,9 @@ layout: post
 ---
 
 *Vicki's note: I've given this talk at [Data Philly at Sidecar](https://www.meetup.com/DataPhilly/events/237673648/) and [Software as Craft at Promptworks](https://www.meetup.com/Software-as-Craft-Philadelphia/events/237732903/). To see all the slides and the code,
-check out the original deck [here.](https://veekaybee.github.io/data-lake-talk/#/)
+check out the original deck [here.](https://veekaybee.github.io/data-lake-talk/#/)*
 
-This talk is not meant to discourage you from pursuing distributed, noSQL systems, but to get you to think about tradeoffs. Every technical choice is a tradeoff for another one, and it's important to understand what you're keeping and giving up in each scenario.*
+This talk is not meant to discourage you from pursuing distributed, NoSQL systems, but to get you to think about tradeoffs. Every technical choice is a tradeoff for another one, and it's important to understand what you're keeping and giving up in each scenario.
 
 <img src ="/images/data-lake-1.png">
 
