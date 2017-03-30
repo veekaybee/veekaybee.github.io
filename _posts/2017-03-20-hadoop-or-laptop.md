@@ -19,14 +19,14 @@ Some of the implementations I've seen have been really great examples of use cas
 
 This talk is about exploring the idea of how far you can go with a single-node machine, aka your laptop, before moving to distributed, or even relational systems.
 
-<img src ="/images/data-lake-2.png">
+<img src ="/images/data-lake-2.png" class="border">
 
 It turns out, you can go pretty far just doing big data analysis on a laptop with decent specs. All of my analysis for this talk was done on a mid-2015 Macbook Pro with 2.8 GHz Intel Core i7 processor and 16 GB of RAM.
 
-<img src ="/images/laptop-specs.png">
+<img src ="/images/laptop-specs.png" class="border">
 
 
-<img src ="/images/data-lake-3.png">
+<img src ="/images/data-lake-3.png" class="border">
 
  There used to be a website up a couple years ago, which doesn't exist anymore, called yourdatafitsinram.com, where you could enter the amount of data you want to store or process, and the site would tell you if you needed a distributed system. Most of the times, even in cases up to a terabyte, the site would tell you to buy a beefy standalone Dell commodity server.
 
@@ -48,7 +48,7 @@ Once you are processing data at the scale of  a Google or Amazon, you need distr
 
 For now, let's see just how far we can get locally.
 
-<img src ="/images/data-lake-4.png">
+<img src ="/images/data-lake-4.png" class="border">
 
 For this example, I did the classic MapReduce exercise of counting words. WordCount in distributed systems is a standard exercise, simply because it really showcases what distributed systems are good at. And, it shows a common business analysis case, particularly in business with lots of web logs: grouping and counting instances of things.
 
@@ -58,7 +58,7 @@ Les Miserables is [655,000 words long](http://www.gutenberg.org/ebooks/135), whi
 
 All of the code for the talk is [here](https://github.com/veekaybee/data-lake-code).
 
-<img src ="/images/data-lake-5.png">
+<img src ="/images/data-lake-5.png" class="border">
 
 How much data can your laptop process in theory? Databricks, who was founded by [the creator of Spark](https://www.youtube.com/watch?v=7k4yDKBYOcw), released Tungsten, an execution engine for Spark, that theoretically can "[take less than one second](https://databricks.com/blog/2016/05/23/apache-spark-as-a-compiler-joining-a-billion-rows-per-second-on-a-laptop.html) to perform the hash join operation on 1 billion tuples on both the Databricks platform (with Intel Haswell processor 3 cores) as well as on a 2013 Macbook Pro (with mobile Intel Haswell i7)."
 
@@ -122,7 +122,7 @@ Then you can optimize parallelization by invoking  `mawk` and `args`.
 
  Or, you can move to Python by writing [some Python code that MapReduces stuff](https://github.com/veekaybee/data-lake-code/blob/master/mapreduce.py). The heart of the code is the `map_function`, which looks at each single word in the text and adds them to a Python dictionary if it isn't there already. (You could also use [defaultdict](https://pymotw.com/2/collections/defaultdict.html).)
 
-<img src ="/images/data-lake-6.png">
+<img src ="/images/data-lake-6.png" class="border">
 
 The other key part is the `Pool` object, which is [part of the multiprocessing library](https://docs.python.org/2/library/multiprocessing.html) in Python, which allows you to create parallelized Python tasks. Running both that optimization, and running programs with [PyPy](https://pypy.org/), means that you can process 6 GB of Les Miserables data in 4 minutes max on your local machine. (Of course, YMMV depending on settings, RAM, etc.)
 
@@ -154,18 +154,18 @@ sc.stop()
 
 The upside is that this code is much, much faster to write. The downside is, that, since Spark is optimized for distributed systems, it spawns up a bunch of processes that listen to various parts of the architecture. The essence of Spark is the [driver program](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/spark-architecture.html) that manages a number of different [worker threads](http://spark.apache.org/docs/latest/submitting-applications.html)(in this case, 5) As a result, it takes a long time to run - 26 minutes for this particular job.
 
-<img src ="/images/data-lake-7.png">
+<img src ="/images/data-lake-7.png" class="border">
 
 So there are a number of ways you can do raw data processing on your laptop, of at least 6 GB at a time. The next question is whether you want to process this much data to begin with. In some cases, particularly if you're dealing with a ton of homogenous log data, it might make sense to take samples. The government [does a lot of sampling.](https://www.jstor.org/stable/23487672?seq=1#page_scan_tab_contents), as do polls. Random sampling can be a very effective way to get the data you need, if your sample is large enough. If you have a total of 50 customers and sample 25, and all 25 are in California whereas your population is nationwide, it won't work, and the sample will be extremely biased and will give you an incorrect answer.
 
-<img src ="/images/data-lake-8.png">
+<img src ="/images/data-lake-8.png" class="border">
 
 
 However, in a lot of cases, gathering more data comes at an expense: more data is more accurate, but [it also takes more time to process](https://www.datanami.com/2017/03/17/anatomy-hadoop-project-failure/). You have to decide whether the extra time to set up an entire architecture to ingest all of your data is worth the extra decrease in margin of error, which tells us the difference between the sample and the population if the data is unbiased. The larger the sample size is, the more you'll notice the margin of error decreases and the sample gets closer to the population, but the growth is exponential, so it slows down.
 
 Here's a [script to calculate the correct sample size](https://github.com/veekaybee/data/blob/master/samplesize.py). You can run it and play around for yourself to see that even extremely large sample sizes don't offer that much of an increase in accuracy.  
 
-<img src ="/images/data-lake-9.png">
+<img src ="/images/data-lake-9.png" class="border">
 
 So far, I've talked a lot about small, undistributed, relational systems. If you're thinking about moving to big data, it's important to understand what those systems can give you over distributed systems like Hadoop or Cassandra.
 
@@ -173,31 +173,31 @@ Those systems can't give you data integrity or normalized naming conventions. I 
 
 As a result of this paradigm, it's very hard to perform traditional SQL-like analyses on distributed systems unless the structures are created on top of the data in HDFS, which means analysts can lose time as they wait for engineers to pre-define Hive tables. You're also losing out on consistency in a tradeoff for [eventual consistency](https://en.wikipedia.org/wiki/Eventual_consistency), which means it's very important to understand that distributed systems are not like traditional file systems on your computer (like the one processing the Les Miserables data,) and not like traditional databases, either: you can't keep track of transactions in the same way.
 
-<img src ="/images/data-lake-10.png">
+<img src ="/images/data-lake-10.png" class="border">
 
 And, as I've been mentioning all along, there is a lot of overhead with the amount of components a distributed system requires to work correctly. By the time you start up Hadoop, you might have already run your "command line job," and in fact, [a recent paper found](https://pdfs.semanticscholar.org/6753/959eed800e9fad9e330daae43f81b7a48017.pdf) that almost every distributed system is configured in an unoptimal way such as to incur "COSTS" as compared to single-threaded systems.
 
-<img src ="/images/data-lake-11.png">
+<img src ="/images/data-lake-11.png" class="border">
 
 There are also tons of benefits of distributed systems, which is why many companies are using them. First, they allow for much better storage of unstructured data, which relational systems and traditional file systems do not. These can include things like call center recordings, video, images, and XML blobs, which don't play well with relational systems at all.  They also provide for more reliability in that if one node goes down, the Name Node or manager redirects to the replicate copies of the data. This is how AWS (until recently), and Netflix remain up 99% of the time. Here's a good comic about [how data replication works in Hadoop](https://docs.google.com/file/d/0B-zw6KHOtbT4MmRkZWJjYzEtYjI3Ni00NTFjLWE0OGItYTU5OGMxYjc0N2M1/edit?pli=1). And, because the systems are architected in such a way to handle a lot of concurrent traffic, they're great if you have lots and lots of concurrent users.
 
 A big business case for distributed systems is the shared aspect. Oftentimes, businesses have siloed data that can't mesh well together and will start the case for a data lake, which can bring in lots of different kinds of data.
 
-<img src ="/images/data-lake-12.png">
+<img src ="/images/data-lake-12.png" class="border">
 
 Some really good examples of cases where Hadoop makes sense are [Netflix](http://techblog.netflix.com/2014/10/using-presto-in-our-big-data-platform.html) in the commercial space, and [Sloan Digital Sky Survey](http://www.sdss.org/) in the academic space. These are both cases where there are hundreds, maybe even thousands of users, querying and transforming datasets that are terabytes to petabytes in size, and growing. Netflix needs to have 99% uptime reliability so it can provide streaming video constantly, and the digital sky survey needs to be accessible to lots of scientists looking for the most accurate star maps for publication-quality data.
 
-<img src ="/images/data-lake-13.png">
+<img src ="/images/data-lake-13.png" class="border">
 
 With great power, comes great responsibility. [Distributed systems are complicated!](https://github.com/aphyr/distsys-class/blob/master/README.markdown) If you do decide to go the Hadoop route, there are a number of things that need to be configured to make the system work correctly. First, there is a lot of admin overhead. You need to have one to two people who really know what they're doing and understand all the layers where things can go wrong: Linux Filesystem, Hadoop, Networking, Application Layer (Spark, Hive, etc.) There's also an entire authentication/authorization/[security component](http://shop.oreilly.com/product/0636920033332.do) that's important to understand, as well.  And, as with any complex system, you'll need a lot of people to manage it: one architect, two developers, and one or two analysts, at a very minimum.
 
 There are also a couple of internal things you'll need to be very familiar with: Hadoop file formats, and optimal languages for Hadoop.
 
-<img src ="/images/data-lake-14.png">
+<img src ="/images/data-lake-14.png" class="border">
 
 There are a LOT of Hadoop file formats. The most common ones are Parquet, Avro, and ORC. Each of them has their pluses and minuses,and each is suited for different use case, which will depend on how, ultimately, the data is being used, which goes back to that schema-on-read concept I mentioned earlier. Each also works better with a different compression format, which is fun.  [Here's a great site](http://www.svds.com/dataformats/) that does a fantastic job giving an overview. The main thing to remember here is that you want to conduct tests on the actual sample data that you'll be using.
 
-<img src ="/images/data-lake-15.png">
+<img src ="/images/data-lake-15.png" class="border">
 
 There is also a huge debate about which programming language is best suited to Hadoop development, particularly now that Spark is going to play a much more important role in the Hadoop ecosystem. Particularly for Spark, there is a huge debate about whether to use Scala or Python with regards to speed.  It depends. If you're developing ETL applications, the answer is usually Scala. Although, with [lambda expressions coming to Java 8](http://blog.cloudera.com/blog/2014/04/making-apache-spark-easier-to-use-in-java-with-java-8/).  If you're already a Java developer, it may be faster for you to get started that way. If you're doing machine learning, Python will probably be more familiar and more flexible. There is some debate about Python being slower than Scala, particularly since [Spark is written in Scala](http://stackoverflow.com/questions/32464122/spark-performance-for-scala-vs-python), but you have to factor in the time to learn the development language as well as compile time.
 
