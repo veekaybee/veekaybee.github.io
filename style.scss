@@ -30,6 +30,8 @@ body {
   width: 100%;
 }
 
+.border { border-width: 5px; border-color: gray; border-style: solid; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
