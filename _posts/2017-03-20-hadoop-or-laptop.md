@@ -8,7 +8,9 @@ check out the original deck [here.](https://veekaybee.github.io/data-lake-talk/#
 
 This talk is not meant to discourage you from pursuing distributed, NoSQL systems, but to get you to think about tradeoffs. Every technical choice is a tradeoff for another one, and it's important to understand what you're keeping and giving up in each scenario.
 
-<img src ="/images/data-lake-1.png">
+The video for the talk is [here](https://www.youtube.com/watch?v=rKBZBZS5Q5g). 
+
+<img src ="/images/data-lake-1.png" class="border">
 
 
  I've worked on three different Hadoop projects across three different companies over the past five years. It's been interesting to see Hadoop go from a fledgeling technology, to one that's going through its second round of architecture with the implementation of [YARN in 2012](https://www.datanami.com/2015/04/15/from-spiders-to-elephants-the-history-of-hadoop/), and now [Spark](http://www.datacenterknowledge.com/archives/2015/09/09/cloudera-aims-to-replace-mapreduce-with-spark-as-default-hadoop-framework/).  Many startups are [rethinking their first round of Hadoop architecture](https://medium.com/airbnb-engineering/data-infrastructure-at-airbnb-8adfb34f169c), but what's also cool is that Hadoop is just now getting to the point of really large-scale enterprise-level implementations, as well.
