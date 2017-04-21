@@ -57,6 +57,6 @@ And, phew. You're ready to go.
 
 I just taught the SQL class again several weekends ago, and the set-up worked really well for 20-ish students, except for a moment when a cartesian join query made a couple of the instances hang, but I plan to refactor that in the next go-around.
 
-After I presented, I wanted to see if anything new had come onto the market.  The only promising new product was [Mode Analytics](https://modeanalytics.com/) (h/t (Sara)[http://www.saracanfield.com]), which requires a sign-up and also is oriented towards Jupyter notebooks as opposed to pure SQL programming.
+After I presented, I wanted to see if anything new had come onto the market.  The only promising new product was [Mode Analytics](https://modeanalytics.com/) (h/t [Sara](http://www.saracanfield.com), which requires a sign-up and also is oriented towards Jupyter notebooks as opposed to pure SQL programming.
 
 Here's the class I [ended up teaching](https://veekaybee.github.io/intro-to-sql/#/1). Hope this helps in case you're thinking about teaching SQL, as well.
