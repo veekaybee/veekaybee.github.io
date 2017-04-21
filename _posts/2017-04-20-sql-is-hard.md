@@ -43,7 +43,7 @@ Here's what I did to set up a MySQL PHPMyAdmin database for my students to pract
   A. Install easyinstall
   B. Easy intall [pip](http://www.saltycrane.com/blog/2010/02/how-install-pip-ubuntu/_)
   C. `sudo apt-get install python-setuptools python-dev build-essential`
-  D. Install a [MySQL client for Python]https://github.com/PyMySQL/mysqlclient-python
+  D. Install a [MySQL client for Python](https://github.com/PyMySQL/mysqlclient-python)
 4. Install the database:
   5. sudo service mysql start
   6. Find a [sample dataset to load into the DB](https://github.com/datacharmer/test_db) and follow instructions on the GitHub page to get it up and running.
