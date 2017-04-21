@@ -49,9 +49,7 @@ Here's what I did to set up a MySQL PHPMyAdmin database for my students to pract
   
     D. Install a [MySQL client for Python](https://github.com/PyMySQL/mysqlclient-python)
   
-4. Install the database:
-
-  A. sudo service mysql start
+4. Install the database: `sudo service mysql start`
   
 5. Find a [sample dataset to load into the DB](https://github.com/datacharmer/test_db) and follow instructions on the GitHub page to get it up and running.
 
