@@ -40,13 +40,14 @@ Here's what I did to set up a MySQL PHPMyAdmin database for my students to pract
 2. Install the [LAMP stack](http://howtoubuntu.org/how-to-install-lamp-on-ubuntu)
 3. Install [PHP 7](http://askubuntu.com/questions/705880/how-to-install-php-7)
 4. Install Python so I could run [create users scripts](https://github.com/veekaybee/intro-to-sql/blob/master/python/addusers.py) and a couple of other clean-ups for the environment:
-  A. Install easyinstall
+    
+    A. Install easyinstall
   
-  B. Easy intall [pip](http://www.saltycrane.com/blog/2010/02/how-install-pip-ubuntu/_)
+    B. Easy intall [pip](http://www.saltycrane.com/blog/2010/02/how-install-pip-ubuntu/_)
   
-  C. `sudo apt-get install python-setuptools python-dev build-essential`
+    C. `sudo apt-get install python-setuptools python-dev build-essential`
   
-  D. Install a [MySQL client for Python](https://github.com/PyMySQL/mysqlclient-python)
+    D. Install a [MySQL client for Python](https://github.com/PyMySQL/mysqlclient-python)
   
 4. Install the database:
   5. sudo service mysql start
