@@ -10,7 +10,7 @@ Although there has been a huge backlash against traditional programming paradigm
 
 First, it's proven (working in production settings for over forty years). Second, its human-language-like syntax and declarative nature make it a perfect stepping stone for people who have zero programming knowledge and get overwhelmed by having to start learning by understanding data types and loops. When I started working in analytics, it was the first language I learned. I love teaching it to people new to/outside of technology and seeing them understand the power of being able to manipulate a data programmatically without *shudder* Excel spreadsheets.
 
-With imperative programming languages, you can get started pretty quickly. You might need to install JDK, download an IDE, and update a couple of dependencies, but as soon as you have your environment set up, you're writing code. (For beginners, [it's not always as easy as that](http://blog.vickiboykis.com/2013/07/cooking-100-stir-frys/), but usually half an hour of poking around or so should get you going.
+With imperative programming languages, you can get started pretty quickly. You might need to install JDK, download an IDE, and update a couple of dependencies, but as soon as you have your environment set up, you're writing code. (For beginners, [it's not always as easy as that](http://blog.vickiboykis.com/2013/07/cooking-100-stir-frys/)), but usually half an hour of poking around or so should get you going.
 
 And, if you don't want to, you don't even have to deal with any of that. You can just go to Code Academy, CodingBat, or, more recently, sites like [Glitch](https://glitch.com/), where the entire environment is already rendered in the browser for you, and start practicing.
 
