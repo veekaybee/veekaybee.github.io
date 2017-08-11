@@ -7,7 +7,7 @@ layout: post
 <meta name="twitter:site" content="@vboykis">
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="The demise of SoundCloud">
-<meta name="twitter:description" content="Soundcloud has been the soundtrack of my life for the last five years. How do you make money from something that gives people an essential joy? ">
+<meta name="twitter:description" content="Soundcloud is in trouble. But,how do you monetize joy?">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/gramophone.jpg">
 
 
