@@ -1,5 +1,5 @@
 ---
-title: How to monetize joy: the demise of SoundCloud
+title: The demise of SoundCloud
 layout: post
 ---
 
