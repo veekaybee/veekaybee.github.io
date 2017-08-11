@@ -31,7 +31,7 @@ The next day after the party, one of my friends came up to me.  "My mom turned o
 
 In addition to whatever was on the radio, I listened to [Russian rock from the 70s](https://www.youtube.com/watch?v=_8F7fLOUchI), [Persian pop](https://www.youtube.com/watch?v=TR1ttVCvi_M), [French superhits](https://www.youtube.com/watch?v=RvK19xgAxSU), [late-90s Russian techno](https://www.youtube.com/watch?v=JuizYpZ_9eQ), and [Bollywood](https://www.youtube.com/watch?v=YfpYD-MU0Fc). 
 
-My iPod was always there, eager, game for anything ([except Cyrillic characters](https://github.com/ruslanss/iTunes-Script-Convert-Cyrillic--no-menu-version-).), and it was all right there at my fingertips, or more accurately, at my scroll wheel. 
+My iPod was always there, eager, game for anything ([except Cyrillic characters](https://github.com/ruslanss/iTunes-Script-Convert-Cyrillic--no-menu-version-)), and it was all right there at my fingertips, or more accurately, at my scroll wheel. 
 
 The ways I've hoarded this music have changed considerably over the last 20 years. I've gone from making mix tapes to Ace of Base tapes in my parents' basement, to Backstreet Boys/NSync mixes that I burned on my Pentium PC, to Russian techno on new-fangled MP3 format that I got from Napster, competing with our modem for bandwidth, waiting for the completion bar to make its way from red to green, then to streaming services like Grooveshark. 
 
@@ -43,7 +43,7 @@ Napster folded. Limewire folded.  Just as I was getting excited about Grooveshar
 
 Even as all these services collapsed, the music industry bloomed. Suddenly, I was not the only one listening to semi-obscure stuff. [Pitchfork](https://en.wikipedia.org/wiki/Pitchfork_(website)) really came alive during this time. Weird, independent artists like Amanda Palmer and Iceland's [Of Monsters and Men](https://www.youtube.com/watch?v=ghb6eDopW8I&list=RDEMtACcMWsbzhWrS4jAODqpQg) that never would have succeeded before the virality of the internet gained huge followings. The very European genres of techno and EDM [ballooned in popularity](https://smartasset.com/mortgage/the-economics-of-electronic-dance-music-festivals). 
 
-As much as I loved pop music, it was a welcome break from the [monotonous sameness of the American pop charts.](http://blog.vickiboykis.com/2014/07/why-does-american-radio-suck-so-much/).   
+As much as I loved pop music, it was a welcome break from the [monotonous sameness of the American pop charts.](http://blog.vickiboykis.com/2014/07/why-does-american-radio-suck-so-much/)   
 
 And then, around 2012, I started seeing songs embedded into websites in a slick orange media box. When you played the song, people's reaction to that immediate second would pop up on the screen. The songs featured on this service were new, different, unique. There were male covers of [Whitney Houston songs](https://soundcloud.com/indieshuffle/whitney-houston-how-will-i). There were [long, thoughtful mixes](https://soundcloud.com/zwette/winter-session) of music I could program to.  There were [indie artists](https://soundcloud.com/user-208607115/golden-daze) I'd never hear on the radio. [There was Kygo](https://www.youtube.com/watch?v=nDopn_p2wk4), who brought [something completely new](http://www.rollingstone.com/music/news/kygo-on-the-birth-of-tropical-house-billy-joel-fandom-20160526) to music. 
 
