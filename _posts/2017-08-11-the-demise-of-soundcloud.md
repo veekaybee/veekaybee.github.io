@@ -1,16 +1,15 @@
 ---
-title: How to monetize pure joy: The demise of SoundCloud
+title: How to monetize joy: the demise of SoundCloud
 layout: post
 ---
 
-<meta charset="UTF-8">
- 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vboykis">
+<meta name="twitter:creator" content="@vboykis">
+<meta name="twitter:title" content="The demise of SoundCloud">
+<meta name="twitter:description" content="Soundcloud has been the soundtrack of my life for the last five years. How do you make money from something that gives people an essential joy? ">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/gramophone.jpg">
 
-<meta name="description" content="Soundcloud has been the soundtrack of my life for the last five years. How do you make money from something that gives people an essential joy?">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8">
- <meta name="keywords" content="Soundcloud, music, economics, tech">
- <meta name="author" content="Vicki Boykis">
 
 ![gramophone](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/gramophone.jpg)
 
