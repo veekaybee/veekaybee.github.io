@@ -1,17 +1,9 @@
 ---
-title: Alice in Python projectland
 layout: post
+title: Alice in Python projectland
 ---
 
-
-![alice](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_cards.jpg)
-
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents** 
-
-- [Preamble](#preamble)
+- [Intro](#intro)
 - [Python hides the hurt](#python-hides-the-hurt)
 - [Building a simple word processor](#building-a-simple-word-processor)
 - [Creating a single object](#creating-a-single-object)
@@ -29,8 +21,8 @@ layout: post
   - [`__main.py__` driver](#__mainpy__-driver)
   - [`setup.py`](#setuppy)
 - [Sharing and using our package](#sharing-and-using-our-package)
-- [Super-advanced next steps](#super-advanced-next-steps)
-  - [Testing in environments](#testing-in-environments)
+- [Next steps](#next-steps)
+  - [Testing environments](#testing-environments)
   - [More advanced testing](#more-advanced-testing)
   - [Continuous Integration](#continuous-integration)
   - [Git Hooks and Version Control](#git-hooks-and-version-control)
@@ -44,7 +36,20 @@ layout: post
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-## Preamble
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vboykis">
+<meta name="twitter:creator" content="@vboykis">
+<meta name="twitter:title" content="Structuring a Python project">
+<meta name="twitter:description" content="A post that walks through structuring and packaging a Python project, because setup is hard.  ">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_cards.jpg">
+
+
+
+![alice](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_cards.jpg)
+
+
+## <a id="intro"></a>Intro
 
 Python project structure and packaging standardization is still not a solved problem, something that became  even more apparent to me when I recently worked on packaging a machine learning natural language app. 
 
@@ -69,7 +74,7 @@ All of the code is [here.](https://github.com/veekaybee/textedit/tree/master/tex
 
 My hope is that this post becomes a living document, so if you see something egregiously wrong, or something I missed, feel free to [submit a pull request.](https://github.com/veekaybee/textedit/pulls)  
 
-## Python hides the hurt
+# <a id="python-hides-the-hurt"></a>Python hides the hurt
 
 I'm going to start this Python post with a little Java. Sorry in advance. 
 
@@ -122,7 +127,7 @@ But, since Python abstracts types, objects, and paths away from the user, and th
 To understand what Python abstracts away and why this leads to different architecture choices, let's start at The Beginning. 
 
 
-## Building a simple word processor
+# <a id="building-a-simple-word-processor"></a> Building a simple word processor
 
 ![alice](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/rabbit.jpg)
 
@@ -133,7 +138,7 @@ What kinds of stuff do authors usually like to do to books, that can be easily a
 We're going to create a [really, really (really) simple version of Word](https://github.com/veekaybee/textedit) to demonstrate how Python packaging works, drilling down through internals and hopefully having some fun along the way. 
 
 
-## Creating a single object
+# <a id="creating-a-single-object"></a>Creating a single object
 
 
 ![alice](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_door.gif)
@@ -180,7 +185,7 @@ Then, we can look at the type of a single Python object by calling `type()` on i
 
 You can see that it's an instance of class `string`. And, further, you can see that string is a class, too, type. 
 
-```python
+```bash
 >>> x = "Alice"
 >>> type(x)
 <class 'str'>
@@ -217,7 +222,7 @@ You can check this by creating an `int`:
 
 Finally, [the object's value](https://stackoverflow.com/questions/12693606/reason-for-globals-in-python). Since we're working in the Python REPL, `x` is a global variable, i.e. available to the entire Python namespace. Therefore, we should be able to see it:
 
-```python
+```bash
 >>> globals()
 {'__loader__': <class '_frozen_importlib.BuiltinImporter'>, 'x': 'Alice', '__spec__': None, 'y': 9, '__name__': '__main__', '__doc__': None, '__builtins__': <module 'builtins' (built-in)>, '__package__': None}
 ```
@@ -233,7 +238,7 @@ We can run `globals` specifically on it to get its value:
 Now that we know what a single object can look like, let's get out of the shallows of the REPL and  create a bunch of them to interact with each other. 
 
 
-## Combining objects into a program
+# <a id="combining-objects-into-a-program"></a> Combining objects into a program
 
 
 ![tea_muse](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/tea_mouse.jpg)
@@ -252,7 +257,7 @@ In another moment down went Alice after it, never once considering how in the wo
 
 We are now working with a file, `wordcount.py`, and a text file, in the same directory. 
 
-```python
+```bash
 mbp-vboykis:python_packaging vboykis$ tree
 ├── alice.txt
 └── wordcount.py
@@ -303,16 +308,16 @@ Let's check what our `PYTHONPATH` is:
 
 >>> print('\n'.join(sys.path)) # all the paths Python checks for packages
 
-/usr/local/Cellar/python3/3.5.1/Frameworks/
+python3/3.5.1/Frameworks/
 
 Python.framework/Versions/3.5/lib/python35.zip
-/usr/local/Cellar/python3/3.5.1/Frameworks/
+python3/3.5.1/Frameworks/
 
 Python.framework/Versions/3.5/lib/python3.5
-/usr/local/Cellar/python3/3.5.1/Frameworks/
+python3/3.5.1/Frameworks/
 
 Python.framework/Versions/3.5/lib/python3.5/plat-darwin
-/usr/local/Cellar/python3/3.5.1/Frameworks/
+python3/3.5.1/Frameworks/
 
 Python.framework/Versions/3.5/lib/python3.5/lib-dynload
 /usr/local/lib/python3.5/site-packages
@@ -333,7 +338,7 @@ with open('texts/alice.txt', 'r') as file:
 ```
 Output:
  
-```python
+```bash
 mbp-vboykis:python_packaging vboykis$ python wordcount.py 
 __name__: __main__
 Word count: 274
@@ -359,7 +364,7 @@ If you want to see what the byte code of our program looks like, [digging into i
  
 We've just created a Python runtime environment, told Python which directories it should be reading from, imported some stuff, allocated memory, and given some output. Basically all of the things we do to run a program. 
  
-### Refactoring a single program 
+## <a id="refactoring-a-single-program"></a>Refactoring a single program 
 
 Ok, so we've run our program. But, if we try to run it on any other file, not just `alice.txt`, we won't be able to. Let's make it a bit more robust. First, we'll abstract out some of the hard coding referencing `alice.txt`. 
 
@@ -399,7 +404,7 @@ if __name__ == '__main__':
 ```
 Output:	
 
-```python
+```bash
 vboykis$ python wordcount.py
 Total words:    2098
 total sentences:     117
@@ -509,7 +514,7 @@ Now we're cooking. We've got a program that's easy to read, abstractable, and ap
 For bonus fun and to do some QA, you can paste the test into Word to do a sanity check. I got 274 words, which matches our program. 
 
 
-## Combining programs into scripts
+# Combining programs into scripts
 
 ![alice](https://cdn-images-1.medium.com/max/1600/1*c8z_BEgJvo7ra4IKH28RfA.jpeg)
 
@@ -608,7 +613,7 @@ This distinction makes up the heart of the Python packaging system.
 
 Let's finish up by replace a callable object with an api, as well. 
 
-## Combining scripts into a module
+# <a id="combining-scripts-into-a-module"></a>Combining scripts into a module
 
 ![tea party](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/tea_party.png)
 
@@ -673,7 +678,7 @@ Which brings me to a (probably obvious) tip: Try to base your software on existi
 
 At its very basic level, this is what our code structure looks like. 
 
-## Project structure
+# Project structure
 
 But, there are signals we need to give to Python to read this correctly.  CPython also needs to know how these things relate to each other in order to compile a package for us. And the code needs to be built in a way such that other people can seamlessly download it and use it without a lot of explanation from you. 
 
@@ -683,7 +688,7 @@ Generally, it's a good idea to look at other people's work, so here are some [sm
 
 So how do you go from two scripts to a fully-functional package? 
 
-### Modular Code
+## <a id="modular-code"></a>Modular Code
 
 First, Python needs to have all of the files of the [project in its same directory and subdirectory:](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html#directory-layout). The top-level textedit is the distribution or package, and the lower-level one is the actual module.  
 
@@ -702,7 +707,7 @@ First, Python needs to have all of the files of the [project in its same directo
 
 ```
 
-### Unit Tests 
+## <a id="unit-tests"></a>Unit Tests 
 
 Then, you'll  want to add tests. Unit tests help you make sure that your code runs as expected, even as you change it. You usually want to write a test for each function or package. 
 
@@ -781,11 +786,11 @@ So we have to add this `sys.path.append(os.path.abspath("/python_packaging/texte
 >>>sys.path.append(os.path.abspath("/python_packaging/textedit/textedit/review"))
 >>> print('\n'.join(sys.path))
 
-/usr/local/Cellar/python3/3.5.1/Frameworks/
+python3/3.5.1/Frameworks/
 Python.framework/Versions/3.5/lib/python35.zip
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/plat-darwin
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/lib-dynload
+python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5
+python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/plat-darwin
+python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/lib-dynload
 /usr/local/lib/python3.5/site-packages
 /python_packaging/textedit/textedit/review
 ```
@@ -795,7 +800,7 @@ And there it is, at the end. For now, we have to add `sys.path.append` to every 
 And, speaking of imports, we now have external packages that we're calling: os, re, and sys, common modules. How does our package know how to call those? 
 
 
-### Requirements.txt and package dependencies
+## <a id="requirements.txt-and-package-dependencies"></a>Requirements.txt and package dependencies
 
 
 ```
@@ -829,7 +834,7 @@ mbp-vboykis:textedit vboykis$ cat requirements.txt
 numpy==1.11.0
 ```
 
-### Documentation
+## <a id="documentation"></a>Documentation
 
 Let's add some documentation, as well.  Good documentation is really important, paricularly to someone just coming into your project. And, even more so, for yourself tomorrow morning. :) The easiest way to add documentation is to add a 	`README` to the top level of your module, the same place as `requirements.txt`. 
 
@@ -866,7 +871,7 @@ Author: Vicki Boykis
 For classes, check out Scikit-learn; it's really good at [documentation](https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/k_means_.py)
 
 
-### Scripts
+## <a id="scripts"></a>Scripts
 
 If you have any shell scripts or additional helper methods associated with your project, you can create a `bin` directory for them.  We don't, so that folder will be empty. But scripts are usually present anywhere you have to deploy stuff, add it to cron, or generally put it in production in any way. 
 
@@ -892,7 +897,7 @@ This is also where continuous integration can come in.
 			
 ```
 
-### `__init.py__`
+## `__init.py__`
 
 And, finally and most importantly, the `__init__.py`, which we'll want to add to every directory where you have runable Python modules. 
 
@@ -902,7 +907,7 @@ We can leave it null. Or you can [add things to it](http://mikegrouchy.com/blog/
 
 When Python imports the module for the first time, it checks the module registry for a list of modules that it can use. `Init` allows your module to be [put in that registry.](http://effbot.org/zone/import-confusion.htm#what-does-python-do). 
 
-### `__main.py__` driver
+## <a id="__main.py__-driver"></a>`__main.py__` driver
 
 There is this concept in Java of a driver program that you can run and have it call all the other programs in the package. 
 
@@ -933,7 +938,7 @@ Additionally, there are mixed thoughts about having a driver. Google's Python co
 			
 ```
 
-### `setup.py`
+## <a id="setup.py"></a>`setup.py`
 
 
 Now that we have the scaffolding in place, we can add things that will help us set up the module after we import it from pip or download it. 
@@ -1069,9 +1074,9 @@ You can see that in action here, [for example](https://github.com/pallets/flask/
 
  
 
-## Sharing and using our package
+# <a id="sharing-and-using-our-package"></a>Sharing and using our package
 
-![wordmenu](http://wordyenglish.com/alice/i/jt/p20/alice_08c-alice_flamingo.png)
+![wordmenu](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_08c-alice_flamingo.png)
 
 Ok, we're done writing all of our code, our tests, making sure objects are accessible, and we have our structure all layed out. What do we do now? [Let's package it!](https://github.com/veekaybee/textedit)
 
@@ -1098,17 +1103,17 @@ Successfully installed textedit-0.0.0
 Let's see that it's in our PYTHONPATH: 
 
 ```
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python35.zip
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/plat-darwin
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/lib-dynload
+python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python35.zip
+python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5
+python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/plat-darwin
+python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/lib-dynload
 /usr/local/lib/python3.5/site-packages
 /usr/local/lib/python3.5/site-packages/textedit-0.0.0-py3.5.egg
 ```
 
 And now, let's write some code with it! We can either use the command line to run individual modules:
 
-```python
+```bash
 #Replace 
 
 python replace.py ../texts/alice.txt "Alice" "Dora the Explorer"
@@ -1172,9 +1177,11 @@ The next step would be to use [`argparse`](https://docs.python.org/3/library/arg
 And that's it! We've imported a package that we can now use to write other software. 
 
 
-## Super-advanced next steps
+# <a id="next-steps"></a>Next steps
 
-![wordmenu](https://upload.wikimedia.org/wikipedia/commons/6/60/Alice_par_John_Tenniel_09.png)
+![wordmenu](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_dodo.png)
+
+https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/
 
 🎉 Congratulations! We've built a Python package!  🎉
 
@@ -1184,7 +1191,7 @@ But, now that we've taken our first step into a much larger and more insane worl
 
 Here are some great places to start exploring once you've gotten the hang of the above: 
 
-### Testing environments
+## <a id="testing-environments"></a>Testing environments
 
 I mentioned before that there are several ways to create specific environments to build your applications so you're isolated from whatever else is going on in your Python ecosystem. 
 
@@ -1196,38 +1203,38 @@ Both of these are involved in modifying the `os.path` that we looked at earlier 
 
 Your next step would be to use either of these instead of your local Python environment. 
 
-### More advanced testing
+## <a id="more-advanced-testing"></a>More advanced testing
 
 Unittest is a great starting point, but there's also `pytest`, `nose`, mock testing (when you have complex object dependencies), and [much, much more.](https://wiki.python.org/moin/PythonTestingToolsTaxonomy) All of these work slightly differently.  
 
 
-### Continuous Integration
+## <a id="continuous-integration"></a>Continuous Integration
 
 Once you build a package, you'll probably want to make changes to it. And push those changes to some remote  version-controlled repository so that others can use them. And you'll want to automate this process so that you're not manually doing `pip install .`.  This process is known as [continuous integration.](https://www.thoughtworks.com/continuous-integration). 
 
 There's a number of fantastic tools for Python CI. The most popular one these days is [Travis](http://docs.python-guide.org/en/latest/scenarios/ci/), which inovlves adding a `travis.yml` file that will test your code against your tests and known Python versions. 
 
-### Git Hooks and Version Control
+## <a id="git-hooks-and-version-control"></a>Git Hooks and Version Control
 
-We haven't touched the subject of version control for your package, but you'll want to add it to specific repositories.  You can also add [pre-commit and post-commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to your code, which mean that the code gets checked, or some specific action is triggered, when you try to check in your code. 
+We haven't touched the subject of version control for your package, but you'll want to add it to specific repositories.  We can also add [pre-commit and post-commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to our code, which mean that the code gets checked, or some specific action is triggered, when you try to check in your code. 
 
-### Setup.cfg
+## <a id="setup.cfg"></a>Setup.cfg
 
 In our module, there are no passwords or usernames. But if you're working with databases, webforms, or any number of software options that require you to log in, you'll need a separate `setup.cfg` file that stores your passwords and keeps them safe on your local or testing machine while not sharing them with others. 
 	
 
-### Sphinx/reST
+## <a id="Sphinx/reST"></a>Sphinx/reST
 
 We've already written README.md. But what if you have multiple files that rely on each other? Or you want to use your docstrings to build documentation? [Sphinx and reST](https://thomas-cokelaer.info/tutorials/sphinx/introduction.html) are some ways popular Python pakcages are documented. 
 
-### Wheels
+## <a id="wheels"></a>Wheels
 
 Once you're done refining all of that, and you're ready to go to production, you should build a wheel. Python [wheels](https://packaging.python.org/tutorials/distributing-packages/#wheels) are similar to `JAR` packages in Java, and are a much faster and lightweight process to use in production environments.  You can use `setup.py` to build wheels (which is why it's so important to get it right initially), `python setup.py bdist_wheel --universal`, but they don't
 
 For much, much more info on wheels, see [here](http://pythonwheels.com/.)
 
 
-### PyPi
+## <a id="PyPi"></a>PyPi
 
 This is the big one. If your module is stable enough, you [can release it to PyPi](https://glyph.twistedmatrix.com/2016/08/python-packaging.html), which means anyone in the world can download it through `pip`. There are some [extra hoops you have to jump through here](https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/), namely in how you configure your setup.py file. 
 For an easier way to do this, [Flit](http://flit.readthedocs.io/en/latest/) is a potential option. 
@@ -1235,7 +1242,7 @@ For an easier way to do this, [Flit](http://flit.readthedocs.io/en/latest/) is a
 Once you're ready, the whole world can see and use your text editor. 
 
 
-## Conclusion
+# <a id="conclusion"></a> Conclusion
 
 Python project structure and packaging can be intimidating, but, if you take it step by step, it doesn't have to be. 
 
@@ -1243,7 +1250,7 @@ Look at other people's code, particularly smaller, modular projects, break the w
 
 Good luck!
 
-## Acknowledgements
+# <a id="acknowledgements"></a> Acknowledgements
 
 A huge thank you to [Sam Zeitlin](https://twitter.com/SamanthaZeitlin), [Tom Ausperger](https://twitter.com/TomAugspurger), [William Cox](https://twitter.com/gallamine), and [Mark Roddy](https://twitter.com/digitallogic) for reading drafts of this post. 
 
