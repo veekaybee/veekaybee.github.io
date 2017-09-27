@@ -43,7 +43,7 @@ title: Alice in Python projectland
 <meta name="twitter:site" content="@vboykis">
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="Structuring a Python project">
-<meta name="twitter:description" content="A post that walks through structuring and packaging a Python project, because setup is hard.  ">
+<meta name="twitter:description" content="Let's walk through the intricacies of structuring and packaging a Python project by building a fun mini word editor. ">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_cards.jpg">
 
 
