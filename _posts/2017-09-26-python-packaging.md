@@ -65,7 +65,9 @@ This post goes through:
 
 To comfortably go through the content, you should be reasonably comfortable with Python (aka if you know what a [list comprehension](http://effbot.org/zone/python-list.htm) is and how it works you should probably be good), and have some understanding of object-oriented programming basics.
 
-My hope is that this post becomes a living document, so if you see something egregiously wrong, or something I missed, feel free to submit a pull request.  
+All of the code is [here.](https://github.com/veekaybee/textedit/tree/master/textedit) 
+
+My hope is that this post becomes a living document, so if you see something egregiously wrong, or something I missed, feel free to [submit a pull request.](https://github.com/veekaybee/textedit/pulls)  
 
 ## Python hides the hurt
 
@@ -128,7 +130,7 @@ Let's say I am Lewis Carroll, and I'm writing _Alice in Wonderland._ But instead
 
 What kinds of stuff do authors usually like to do to books, that can be easily automated with a program? Fixing spacing after a period from single to double, spellcheck, replacing words in entire texts, and word count are some common text editing tasks. Authors like word editors. 
 
-We're going to create a really, really (really) simple version of Word to demonstrate how Python packaging works, drilling down through internals and hopefully having some fun along the way. 
+We're going to create a [really, really (really) simple version of Word](https://github.com/veekaybee/textedit) to demonstrate how Python packaging works, drilling down through internals and hopefully having some fun along the way. 
 
 
 ## Creating a single object
@@ -301,10 +303,18 @@ Let's check what our `PYTHONPATH` is:
 
 >>> print('\n'.join(sys.path)) # all the paths Python checks for packages
 
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python35.zip
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/plat-darwin
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/lib-dynload
+/usr/local/Cellar/python3/3.5.1/Frameworks/
+
+Python.framework/Versions/3.5/lib/python35.zip
+/usr/local/Cellar/python3/3.5.1/Frameworks/
+
+Python.framework/Versions/3.5/lib/python3.5
+/usr/local/Cellar/python3/3.5.1/Frameworks/
+
+Python.framework/Versions/3.5/lib/python3.5/plat-darwin
+/usr/local/Cellar/python3/3.5.1/Frameworks/
+
+Python.framework/Versions/3.5/lib/python3.5/lib-dynload
 /usr/local/lib/python3.5/site-packages
 ```
 
@@ -343,7 +353,7 @@ However, if we run `wordcount.py` form the REPL, since we're importing the `word
 6) All of the code gets translated at run-time to byte code using the CPython interpreter. Python 
 generates a copy of the file with the `.pyc` extension in a folder called `__pycache__`.
 
-If you want to take a look at what the byte code of your program looks like, [digging into it](http://akaptur.com/blog/2013/08/14/python-bytecode-fun-with-dis/) can be fun.
+If you want to see what the byte code of our program looks like, [digging into it](http://akaptur.com/blog/2013/08/14/python-bytecode-fun-with-dis/) can be fun.
 
 7) As the code is executed, Python reads all of our objects and loops. The interpreter allocates memory to the code and the special Python strucutres for each object are created. This is where the `id` for each object is created, and why we can call these things after we run the code. 
  
@@ -494,7 +504,7 @@ if __name__ == '__main__':
 
 ```
 
-Now we're cooking. We've got the program that's easy to read, abstractable, and applicable across multiple files. We have a complete Python module. 
+Now we're cooking. We've got a program that's easy to read, abstractable, and applicable across multiple files. We have [a complete Python module.](https://github.com/veekaybee/textedit/blob/master/textedit/review/wordcount.py) 
 
 For bonus fun and to do some QA, you can paste the test into Word to do a sanity check. I got 274 words, which matches our program. 
 
@@ -539,7 +549,7 @@ Let's say I want to call the wordcount on `alice.txt`, and then again on `new_al
 
 Or, I could just reference it from a different file in the same directory. Remember, Python always checks the directory you're currently working in first for files, and the top-level file is the one that has the `__main__` [module.](https://docs.python.org/3/library/__main__.html#module-__main__ ) 
 
-Our directory currently looks like this: 
+Our directory [currently looks like this:](https://github.com/veekaybee/textedit/blob/master/textedit/edit/replace.py) 
 
 ```
 
@@ -611,13 +621,13 @@ Let's brainstorm a couple modules of functionality:
  
 So, in addition to our two modules: 
 
-+ wordcount
-+ replace
++ [wordcount](https://github.com/veekaybee/textedit/blob/master/textedit/review/wordcount.py)
++ [replace](https://github.com/veekaybee/textedit/blob/master/textedit/edit/replace.py)
 
 We'll be adding two more
 
-+ spacing 
-+ readability 
++ [spacing](https://github.com/veekaybee/textedit/blob/master/textedit/edit/spacing.py)
++ [readability](https://github.com/veekaybee/textedit/blob/master/textedit/review/readability.py)
 
 Based on PEP, the arbiter in Python style, the package name should be [short, lowercase, and meaningful.](https://www.python.org/dev/peps/pep-0008/#package-and-module-names).
 
@@ -745,7 +755,7 @@ Ran 3 tests in 0.001s
 OK
 ```
 
-When you run this piece of code, it will check to make sure that wordcount is doing what you want it to do. Usually, we'll want to have the units broken down and more well-defined, but remember, here, we're focusing on building a package rather than the nuances of testing. 
+[When you run this piece of code,](https://github.com/veekaybee/textedit/tree/master/textedit/tests) it will check to make sure that wordcount is doing what you want it to do. Usually, we'll want to have the units broken down and more well-defined, but remember, here, we're focusing on building a package rather than the nuances of testing. 
 
 But, whoa! What's going on up top here?  We have some important changes: 
 
@@ -771,7 +781,8 @@ So we have to add this `sys.path.append(os.path.abspath("/python_packaging/texte
 >>>sys.path.append(os.path.abspath("/python_packaging/textedit/textedit/review"))
 >>> print('\n'.join(sys.path))
 
-/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python35.zip
+/usr/local/Cellar/python3/3.5.1/Frameworks/
+Python.framework/Versions/3.5/lib/python35.zip
 /usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5
 /usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/plat-darwin
 /usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/lib-dynload
@@ -801,7 +812,7 @@ And, speaking of imports, we now have external packages that we're calling: os, 
 	requirements.txt
 			
 ```
-We put a requirements.txt module at the top level of our module. This file that will tell people who install the package which Python packages are used in your programs and automatically install them when you run `pip install -r requirements.txt` on the package. 
+We put a requirements.txt module at the top level of our module. This file that will tell people who install the package which Python packages are used in our programs and automatically install them when you run `pip install .` on the package. (We may have to run ``pip install -r requirements.txt` separately, but that's usually an edge case.)
 
 For example, we've used `os`, `sys`, and `re` in building this module so far. These aren't that out of the norm and most people should have them on their systems, but if they don't, Python will download them from PyPI. It will also sync versions to make sure that they have the exact version you used to develop your code. 
 
@@ -852,7 +863,7 @@ Author: Vicki Boykis
 """
 ```
 
-For classes: Scikit learn is really good at [this](https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/k_means_.py)
+For classes, check out Scikit-learn; it's really good at [documentation](https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/k_means_.py)
 
 
 ### Scripts
@@ -883,11 +894,11 @@ This is also where continuous integration can come in.
 
 ### `__init.py__`
 
-And, finally and most importantly, the `__init__.py`, which you'll want to add to every directory where you have runable Python modules. 
+And, finally and most importantly, the `__init__.py`, which we'll want to add to every directory where you have runable Python modules. 
 
 If you remember from the Python innards overview `__init__` is a special file that will make Python realize that you have a package working together instead of a [single file.](https://docs.python.org/3/tutorial/modules.html#packages)
 
-You can leave it null. Or you can [add things to it](http://mikegrouchy.com/blog/2012/05/be-pythonic-__init__py.html) that will initialize when the module is run.  Let's leave it null for now. 
+We can leave it null. Or you can [add things to it](http://mikegrouchy.com/blog/2012/05/be-pythonic-__init__py.html) that will initialize when the module is run.  Let's leave it null for now. 
 
 When Python imports the module for the first time, it checks the module registry for a list of modules that it can use. `Init` allows your module to be [put in that registry.](http://effbot.org/zone/import-confusion.htm#what-does-python-do). 
 
@@ -895,7 +906,7 @@ When Python imports the module for the first time, it checks the module registry
 
 There is this concept in Java of a driver program that you can run and have it call all the other programs in the package. 
 
-In Python, you can also have a `__main.py__` file, which will execute everything in it first and pull in from other directories. This might be helpful if you're pre-executing things, like for example a script has to kick off right away to load the word document, for example. 
+In Python, we can also have a `__main.py__` file, which will execute everything in it first and pull in from other directories. This might be helpful if you're pre-executing things, like for example a script has to kick off right away to load the word document, for example. 
 
 Here, since we're just performing different things to a document in a single state, we don't really need it.  
 
@@ -927,7 +938,7 @@ Additionally, there are mixed thoughts about having a driver. Google's Python co
 
 Now that we have the scaffolding in place, we can add things that will help us set up the module after we import it from pip or download it. 
 
-This is `setup.py`, the "heart" of a module setup project. 
+This is `setup.py`, the heart of a project. 
 
 It has metadata about the project, `import distutils`, which does the actual program setup whenever someone downloads it, as we specified in the `README.md`, and be at the [top level of the package.](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html#setup-py-description). 
 
@@ -1014,7 +1025,7 @@ Now, once we run setup.py like the README specifices, we can follow the accepted
 
 For us, it would be: 
 
-`import textedit.edit.replace`
+`import edit.replace`
 
 The rest is metadata about who you are and what the package looks like. It's really top-loaded for use in PyPI, so I removed those components and kepts the ones necessary for use locally. 
 
@@ -1062,7 +1073,7 @@ You can see that in action here, [for example](https://github.com/pallets/flask/
 
 ![wordmenu](http://wordyenglish.com/alice/i/jt/p20/alice_08c-alice_flamingo.png)
 
-Ok, we're done writing all of our code, our tests, making sure objects are accessible, and we have our structure all layed out. What do we do now? Let's package it!
+Ok, we're done writing all of our code, our tests, making sure objects are accessible, and we have our structure all layed out. What do we do now? [Let's package it!](https://github.com/veekaybee/textedit)
 
 Let's go to the module level of our package - where our `setup.py` file that will actually handle the install is located
 
@@ -1221,7 +1232,7 @@ For much, much more info on wheels, see [here](http://pythonwheels.com/.)
 This is the big one. If your module is stable enough, you [can release it to PyPi](https://glyph.twistedmatrix.com/2016/08/python-packaging.html), which means anyone in the world can download it through `pip`. There are some [extra hoops you have to jump through here](https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/), namely in how you configure your setup.py file. 
 For an easier way to do this, [Flit](http://flit.readthedocs.io/en/latest/) is a potential option. 
 
-Once you're ready, the whole world can see  and use your text editor. 
+Once you're ready, the whole world can see and use your text editor. 
 
 
 ## Conclusion
@@ -1238,5 +1249,5 @@ A huge thank you to [Sam Zeitlin](https://twitter.com/SamanthaZeitlin), [Tom Aus
 
 Any additional errors are wholly my own and the fault of too many late nights spent in the [Tenniel Alice in Wonderland illustrations.](http://www.gutenberg.org/files/114/114-h/114-h.htm) 
 
-To fix a bug, feel free to submit a pull request. 
+To fix a bug, feel free to [submit a pull request.](https://github.com/veekaybee/textedit/pulls)  
 
