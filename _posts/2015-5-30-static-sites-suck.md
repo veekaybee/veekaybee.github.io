@@ -11,7 +11,7 @@ I like clean stuff and I like tech blogs. So, I decided to give Jekyll, the most
 
 The extra-super bonus challenge was working  around a four-month-old's schedule. 
 
-##Here are the steps to set up a Wordpress blog:
+## Here are the steps to set up a Wordpress blog:
 
 
 1. Set up domain name + hosting. <br>
@@ -68,16 +68,16 @@ Here are the steps I started following three days ago for Jekyll. I started pret
 23. I spent 20 more minutes figuring out how to include a picture with a post, including how GitPages shows assets and the Liquid formatting. 
 23. I go to look for the wine.  
 
-##To sum up
+## To sum up
 
-###Things you need to have a working knowledge of to blog on Wordpress: 
+### Things you need to have a working knowledge of to blog on Wordpress: 
     + English 
     + some HTML 
     + some CSS
     + some SQL
     + some command line 
     + some server stuff <br>
-###Things you need to have a working knowledge of to blog on Jekyll: 
+### Things you need to have a working knowledge of to blog on Jekyll: 
     + English
     + HTML
     + Ruby
