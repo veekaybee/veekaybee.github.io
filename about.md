@@ -1,30 +1,31 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Hi! I'm Vicki. I do data science. I work mostly in Python, R, Spark, and SQL, and really enjoy building end-to-end data products. 
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I also like to think about what technology means in the context of society, and write about that, here, as well. 
 
-There are currently two themes built on Poole:
+Talks I've Given Recently: 
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
++ [Hadoop on Your Latpop](http://veekaybee.github.io/hadoop-or-laptop/)
++ [SQL for beginners](http://veekaybee.github.io/sql-is-hard/)
++ Skeptech: [Manuscripts don't burn](http://blog.vickiboykis.com/2017/06/19/skeptech/)
++ [Breaking the Internet Bubble](https://www.icp.org/browse/archive/media/breaking-the-internet-bubble)
++ [How to pick a data architecture strategy](https://www.youtube.com/watch?v=o-kbwKX3dus) 
 
-Learn more and contribute on [GitHub](https://github.com/poole).
 
-## Setup
+In my spare time, I write, read, run and enjoy Nutella. More at my [main site](http://www.vickiboykis.com). 
 
-Some fun facts about the setup of this project include:
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+### Contact me
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+I love getting emails. 
 
-Thanks for reading!
+[vickiboykis@gmail.com](mailto:vickiboykis@gmail.com)
+
+### Sharing
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
