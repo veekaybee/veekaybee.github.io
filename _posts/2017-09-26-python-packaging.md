@@ -3,6 +3,8 @@ layout: post
 title: Alice in Python projectland
 ---
 
+![alice](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_cards.jpg)
+
 - [Intro](#intro)
 - [Python hides the hurt](#python-hides-the-hurt)
 - [Building a simple word processor](#building-a-simple-word-processor)
@@ -33,7 +35,7 @@ title: Alice in Python projectland
 - [Conclusion](#conclusion)
 - [Acknowledgements](#acknowledgements)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 
 
@@ -46,7 +48,6 @@ title: Alice in Python projectland
 
 
 
-![alice](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_cards.jpg)
 
 
 ## <a id="intro"></a>Intro
@@ -1181,7 +1182,6 @@ And that's it! We've imported a package that we can now use to write other softw
 
 ![wordmenu](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_dodo.png)
 
-https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/
 
 🎉 Congratulations! We've built a Python package!  🎉
 
