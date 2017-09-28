@@ -820,9 +820,10 @@ And, speaking of imports, we now have external packages that we're calling: os, 
 ```
 We put a requirements.txt module at the top level of our module. This file that will tell people who install the package which Python packages are used in our programs and automatically install them when you run `pip install .` on the package. (We may have to run ``pip install -r requirements.txt` separately, but that's usually an edge case.)
 
-For example, we've used `os`, `sys`, and `re` in building this module so far. These aren't that out of the norm and most people should have them on their systems, but if they don't, Python will download them from PyPI. It will also sync versions to make sure that they have the exact version you used to develop your code. 
+For example, we've used `os`, `sys`, and `re` in building this module so far. These are standard library modules, and come default with every Python install.  It will also sync versions to make sure that they have the exact version you used to develop your code. 
 
-To create a requirements file, you would normally do a  `pip freeze > requirements.txt`. You'll notice that this includes a lot of stuff, basically everything you have in your Python environment, since `pip freeze` doesn't know which specific packages you're using to build your package and there could be interactions. 
+To create a requirements file, you would normally do a  `pip freeze > requirements.txt`. You'll notice that this includes a lot of stuff, basically everything you have in your Python environment, since `pip freeze` doesn't know which specific packages you're using to build your package and there could be interactions.
+ 
 
 There are several ways to build requirements on a per-project basis, but we're not going to use them here because we want to focus, again, on packaging rather than Python environments. A simpler way to do this is to install [pipreqs and take it from there](https://github.com/bndr/pipreqs). 
 
@@ -832,7 +833,7 @@ If you run that, you'll see that the file generated is blank, because the three 
 
 ```
 mbp-vboykis:textedit vboykis$ cat requirements.txt 
-numpy==1.11.0
+nltk==3.2
 ```
 
 ## <a id="documentation"></a>Documentation
