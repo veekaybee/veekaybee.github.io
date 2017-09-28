@@ -623,7 +623,7 @@ Ok, now we have a word "editor", a word counter, and we're cranking away on _Ali
 Let's brainstorm a couple modules of functionality: 
 
 + the ability to change from single to double space after a period? 
-+ And, the ability to determine how readable our document is based on the [Colman-Liau](https://readable.io/content/the-coleman-liau-index/) index. There are lots of ways to gague readability, but a lot of them involve counting word syllables, which is too complicated for what we're trying to do here, which is focus on Python package structure. (If you are interested in [wordcount](http://veekaybee.github.io/hadoop-or-laptop/), check out my other posts. )
++ And, the ability to determine how readable our document is based on the [Colman-Liau](https://readable.io/content/the-coleman-liau-index/) index. There are lots of ways to gauge readability, but a lot of them involve counting word syllables, which is too complicated for what we're trying to do here, which is focus on Python package structure. (If you are interested in [wordcount](http://veekaybee.github.io/hadoop-or-laptop/), check out my other posts. )
  
 So, in addition to our two modules: 
 
