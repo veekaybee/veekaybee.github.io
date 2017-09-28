@@ -534,7 +534,7 @@ mbp-vboykis:python_packaging vboykis$ tree
 
 ```
 
-Now we have a couple of text samples and a couple of modules in the same file. Starting to get a little complicated, but it's not too bad, yet. 
+Now we have a couple of text samples and a couple of modules in the same file folder. Starting to get a little complicated, but it's not too bad, yet. 
 
 ```python
 def replace_words(words):
@@ -566,7 +566,7 @@ mbp-vboykis:python_packaging vboykis$ tree
 ├── replace.py
 └── wordcount.py
 ```
-So, since the word count module is smaller, I'd like to call it from the `replace` module. Remember that all modules can be imported with their filename. So, if we are in the same directory, we should be able to do a simple `import wordcount`. Once we do that, we have access to all of wordcount's classes and methods in the `replace` module.
+Now, I'd like to call the  `wordcount` module from the `replace` module. Remember that all modules can be imported with their filename. So, if we are in the same directory, we should be able to do a simple `import wordcount`. Once we do that, we have access to all of wordcount's classes and methods in the `replace` module.
 
 We also want to see what the name of the module in relationship to the module calling it is. Notice that wordcount's `__name __`is `wordcount`, while `replace's` is `main`, since that's now the main module we're referencing.
 
@@ -612,7 +612,7 @@ All of the functions from the wordcount module are imported into the `replace` m
 
 This distinction makes up the heart of the Python packaging system.  
 
-Let's finish up by replace a callable object with an api, as well. 
+Let's finish up by replace a callable object with an API, as well. 
 
 # <a id="combining-scripts-into-a-module"></a>Combining scripts into a module
 
@@ -623,7 +623,7 @@ Ok, now we have a word "editor", a word counter, and we're cranking away on _Ali
 Let's brainstorm a couple modules of functionality: 
 
 + the ability to change from single to double space after a period? 
-+ And, the ability to determine how readable our document is based on the [Colman-Liau](https://readable.io/content/the-coleman-liau-index/) index. There are lots of ways to gauge readability, but a lot of them involve counting word syllables, which is too complicated for what we're trying to do here, which is focus on Python package structure. (If you are interested in [wordcount](http://veekaybee.github.io/hadoop-or-laptop/), check out my other posts. )
++ And, the ability to determine how readable our document is based on the [Colman-Liau](https://readable.io/content/the-coleman-liau-index/) index. There are lots of ways to gauge readability, but a lot of them involve counting word syllables, which is too complicated for what we're trying to do here, which is focus on Python package structure. (If you are interested in [wordcount](http://veekaybee.github.io/2017/03/20/hadoop-or-laptop/), check out my other posts. )
  
 So, in addition to our two modules: 
 
@@ -694,8 +694,8 @@ So how do you go from two scripts to a fully-functional package?
 First, Python needs to have all of the files of the [project in its same directory and subdirectory:](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html#directory-layout). The top-level textedit is the distribution or package, and the lower-level one is the actual module.  
 
 ```
- textedit - namespace
- 	textedit - package
+ textedit - package
+ 	textedit - module
 		├── edit
 			├── replace.py
 			├── spacing.py
@@ -1229,7 +1229,7 @@ We've already written README.md. But what if you have multiple files that rely o
 
 ## <a id="wheels"></a>Wheels
 
-Once you're done refining all of that, and you're ready to go to production, you should build a wheel. Python [wheels](https://packaging.python.org/tutorials/distributing-packages/#wheels) are similar to `JAR` packages in Java, and are a much faster and lightweight process to use in production environments.  You can use `setup.py` to build wheels (which is why it's so important to get it right initially), `python setup.py bdist_wheel --universal`, but they don't
+Once you're done refining all of that, and you're ready to go to production, you should build a wheel. Python [wheels](https://packaging.python.org/tutorials/distributing-packages/#wheels) are similar to `JAR` packages in Java, and are a much faster and lightweight process to use in production environments.  You can use `setup.py` to build wheels (which is why it's so important to get it right initially), `python setup.py bdist_wheel --universal`.
 
 For much, much more info on wheels, see [here](http://pythonwheels.com/.)
 
