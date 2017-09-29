@@ -685,7 +685,7 @@ But, there are signals we need to give to Python to read this correctly.  CPytho
 
 Which is why, if you look at some popular Python project folder structures like [Pandas](https://github.com/pandas-dev/pandas), [Requests](https://github.com/requests/requests), or [Flask](https://github.com/pallets/flask), you'll see they tend to be a bit more complicated.  
 
-Generally, it's a good idea to look at other people's work, so here are some [smaller Python packages to take a look at.](https://news.ycombinator.com/item?id=9896369)  
+Generally, it's a good idea to look at other people's work, so here are some [smaller Python packages to take a look at](https://news.ycombinator.com/item?id=9896369).
 
 So how do you go from two scripts to a fully-functional package? 
 
