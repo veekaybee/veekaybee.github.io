@@ -71,9 +71,9 @@ This post goes through:
 
 To comfortably go through the content, you should be reasonably comfortable with Python (aka if you know what a [list comprehension](http://effbot.org/zone/python-list.htm) is and how it works you should probably be good), and have some understanding of object-oriented programming basics.
 
-All of the code is [here.](https://github.com/veekaybee/textedit/tree/master/textedit) 
+All of the code is [here](https://github.com/veekaybee/textedit/tree/master/textedit).
 
-My hope is that this post becomes a living document, so if you see something egregiously wrong, or something I missed, feel free to [submit a pull request.](https://github.com/veekaybee/textedit/pulls)  
+My hope is that this post becomes a living document, so if you see something egregiously wrong, or something I missed, feel free to [submit a pull request](https://github.com/veekaybee/textedit/pulls).
 
 # <a id="python-hides-the-hurt"></a>Python hides the hurt
 
@@ -202,7 +202,7 @@ It's classes and objects all the way down. We can also find out more about the `
 
 ```
 
-(If you're more curious about how strings specifically are created, digging into [the Python source code is fun](https://github.com/python/cpython/blob/2.7/Objects/stringobject.c), which is where the `__doc__` string comes from comes from. 
+(If you're more curious about how strings specifically are created, digging into [the Python source code is fun](https://github.com/python/cpython/blob/2.7/Objects/stringobject.c), which is where the `__doc__` string comes from comes from.) 
 
 And if we call `dir()`, we can see all of the object attributes and methods that can act on that class. Attributes are variables and methods created specifically by higher-level Python classes. Methods are specific to that object. For example, most Python objects have the `__add__`, `__dir__`, and `__setattr__` attributes. Only strings have `join`, `strip`, and `replace` 
  
@@ -245,7 +245,7 @@ Now that we know what a single object can look like, let's get out of the shallo
 ![tea_muse](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/tea_mouse.jpg)
 
 
-Usually, after we write a couple one-liners, we want to write a complete snippet of code that does something. For example, let's say Lewis Carroll has written a couple pages and wants to do a word count on the file he's written (writers always want to compulsively do word counts.)
+Usually, after we write a couple one-liners, we want to write a complete snippet of code that does something. For example, let's say Lewis Carroll has written a couple pages and wants to do a word count on the file he's written (writers always want to compulsively do word counts).
 
 We'll work with `alice.txt` here: 
 
@@ -348,7 +348,7 @@ Word count: 274
 
 How do we get that file elsewhere? For example, how do we import functions from wordcount if we're in the REPL?  The REPL is, essentially, a special case of a file being executed directly in our current working directory.
 
-However, if we run `wordcount.py` form the REPL, since we're importing the `wordcount` module from elsewhere, the name immediately becomes that module. 
+However, if we run `wordcount.py` from the REPL, since we're importing the `wordcount` module from elsewhere, the name immediately becomes that module. 
 
 ```python
 >>> import wordcount
@@ -361,7 +361,7 @@ generates a copy of the file with the `.pyc` extension in a folder called `__pyc
 
 If you want to see what the byte code of our program looks like, [digging into it](http://akaptur.com/blog/2013/08/14/python-bytecode-fun-with-dis/) can be fun.
 
-7) As the code is executed, Python reads all of our objects and loops. The interpreter allocates memory to the code and the special Python strucutres for each object are created. This is where the `id` for each object is created, and why we can call these things after we run the code. 
+7) As the code is executed, Python reads all of our objects and loops. The interpreter allocates memory to the code and the special Python structures for each object are created. This is where the `id` for each object is created, and why we can call these things after we run the code. 
  
 We've just created a Python runtime environment, told Python which directories it should be reading from, imported some stuff, allocated memory, and given some output. Basically all of the things we do to run a program. 
  
@@ -375,7 +375,7 @@ Finally, we'll add `if __name__ == '__main__'` to the program, put all the funct
 
 This is a really common pattern for running multiple functions and keeping track of them.  As we noted in the last section, 
 
-> If there are no external dependencies (aka packages), as is the case in our word count program, a special attributed, ``__name__`` is initialized to ``"__main__"`` in the __main__ [namespace](https://docs.python.org/3/library/__main__.html)
+> If there are no external dependencies (aka packages), as is the case in our word count program, a special attributed, ``__name__`` is initialized to ``"__main__"`` in the `__main__` [namespace](https://docs.python.org/3/library/__main__.html)
 > 
 If the program is the main program you're running, Python will run everything in order under that statement.  
 
@@ -510,7 +510,7 @@ if __name__ == '__main__':
 
 ```
 
-Now we're cooking. We've got a program that's easy to read, abstractable, and applicable across multiple files. We have [a complete Python module.](https://github.com/veekaybee/textedit/blob/master/textedit/review/wordcount.py) 
+Now we're cooking. We've got a program that's easy to read, abstractable, and applicable across multiple files. We have [a complete Python module](https://github.com/veekaybee/textedit/blob/master/textedit/review/wordcount.py).
 
 For bonus fun and to do some QA, you can paste the test into Word to do a sanity check. I got 274 words, which matches our program. 
 
@@ -521,7 +521,7 @@ For bonus fun and to do some QA, you can paste the test into Word to do a sanity
 
 Ok, we've cleaned up a single file. We have a pretty simple, clean module to do a word count, a sentence count, or character count on any file that's input.  But what if we want to count the words in a file, and then replace some text in that file, save as a new file, and do a word count again?
 
-I could do this in the same `wordcount.py` script, but for the sake of the case study and modulatrity, let's call these separate pieces of code, since they do separate things. The `wordcount` module is for analytics, the new module would actually change things in the program. 
+I could do this in the same `wordcount.py` script, but for the sake of the case study and modularity, let's call these separate pieces of code, since they do separate things. The `wordcount` module is for analytics, the new module would actually change things in the program. 
 
 So now I want one piece of code to do a word count and another to replace words in a file. Here's the word replacement. As always, we start with a single file and a single function.  
 
@@ -553,9 +553,9 @@ if __name__ == '__main__':
 
 Let's say I want to call the wordcount on `alice.txt`, and then again on `new_alice.txt`, since I am adding more words. I could copy and paste the `word_count` method into the `replace_words` code. 
 
-Or, I could just reference it from a different file in the same directory. Remember, Python always checks the directory you're currently working in first for files, and the top-level file is the one that has the `__main__` [module.](https://docs.python.org/3/library/__main__.html#module-__main__ ) 
+Or, I could just reference it from a different file in the same directory. Remember, Python always checks the directory you're currently working in first for files, and the top-level file is the one that has the `__main__` [module](https://docs.python.org/3/library/__main__.html#module-__main__ ).
 
-Our directory [currently looks like this:](https://github.com/veekaybee/textedit/blob/master/textedit/edit/replace.py) 
+Our directory [currently looks like this](https://github.com/veekaybee/textedit/blob/master/textedit/edit/replace.py):
 
 ```
 
@@ -568,7 +568,7 @@ mbp-vboykis:python_packaging vboykis$ tree
 ```
 Now, I'd like to call the  `wordcount` module from the `replace` module. Remember that all modules can be imported with their filename. So, if we are in the same directory, we should be able to do a simple `import wordcount`. Once we do that, we have access to all of wordcount's classes and methods in the `replace` module.
 
-We also want to see what the name of the module in relationship to the module calling it is. Notice that wordcount's `__name __`is `wordcount`, while `replace's` is `main`, since that's now the main module we're referencing.
+We also want to see what the name of the module in relationship to the module calling it is. Notice that `wordcount`'s `__name __`is `wordcount`, while `replace`'s is `main`, since that's now the main module we're referencing.
 
 Program: 
 
@@ -623,7 +623,7 @@ Ok, now we have a word "editor", a word counter, and we're cranking away on _Ali
 Let's brainstorm a couple modules of functionality: 
 
 + the ability to change from single to double space after a period? 
-+ And, the ability to determine how readable our document is based on the [Colman-Liau](https://readable.io/content/the-coleman-liau-index/) index. There are lots of ways to gauge readability, but a lot of them involve counting word syllables, which is too complicated for what we're trying to do here, which is focus on Python package structure. (If you are interested in [wordcount](http://veekaybee.github.io/2017/03/20/hadoop-or-laptop/), check out my other posts. )
++ And, the ability to determine how readable our document is based on the [Colman-Liau](https://readable.io/content/the-coleman-liau-index/) index. There are lots of ways to gauge readability, but a lot of them involve counting word syllables, which is too complicated for what we're trying to do here, which is focus on Python package structure. (If you are interested in [wordcount](http://veekaybee.github.io/2017/03/20/hadoop-or-laptop/), check out my other posts.)
  
 So, in addition to our two modules: 
 
@@ -635,7 +635,7 @@ We'll be adding two more
 + [spacing](https://github.com/veekaybee/textedit/blob/master/textedit/edit/spacing.py)
 + [readability](https://github.com/veekaybee/textedit/blob/master/textedit/review/readability.py)
 
-Based on PEP, the arbiter in Python style, the package name should be [short, lowercase, and meaningful.](https://www.python.org/dev/peps/pep-0008/#package-and-module-names).
+Based on PEP, the arbiter in Python style, the package name should be [short, lowercase, and meaningful](https://www.python.org/dev/peps/pep-0008/#package-and-module-names).
 
 Now that we have more than three modules, and also some text files, we'll want to create a package. Let's follow PEP again and call it something easy: `textedit`.  If we were publishing this package to [PyPI](https://pypi.python.org/pypi), the public repository of all available Python code and where we pull stuff from when we do `pip package`,  we would want to make sure it doesn't conflict with other names. Since we're just sharing it with ourselves and maybe a couple of other people on our team, it's fine for now. 
 
@@ -683,15 +683,15 @@ At its very basic level, this is what our code structure looks like.
 
 But, there are signals we need to give to Python to read this correctly.  CPython also needs to know how these things relate to each other in order to compile a package for us. And the code needs to be built in a way such that other people can seamlessly download it and use it without a lot of explanation from you. 
 
-Which is why, if you look at some popular Python project folder structures,like [Pandas](https://github.com/pandas-dev/pandas), [Requests](https://github.com/requests/requests), or [Flask](https://github.com/pallets/flask), you'll see they tend to be a bit more complicated.  
+Which is why, if you look at some popular Python project folder structures like [Pandas](https://github.com/pandas-dev/pandas), [Requests](https://github.com/requests/requests), or [Flask](https://github.com/pallets/flask), you'll see they tend to be a bit more complicated.  
 
-Generally, it's a good idea to look at other people's work, so here are some [smaller Python packages to take a look at.](https://news.ycombinator.com/item?id=9896369)  
+Generally, it's a good idea to look at other people's work, so here are some [smaller Python packages to take a look at](https://news.ycombinator.com/item?id=9896369).
 
 So how do you go from two scripts to a fully-functional package? 
 
 ## <a id="modular-code"></a>Modular Code
 
-First, Python needs to have all of the files of the [project in its same directory and subdirectory:](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html#directory-layout). The top-level textedit is the distribution or package, and the lower-level one is the actual module.  
+First, Python needs to have all of the files of the [project in its same directory and subdirectory](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html#directory-layout). The top-level textedit is the distribution or package, and the lower-level one is the actual module.  
 
 ```
  textedit - package
@@ -781,7 +781,7 @@ Before, we were executing everything in the same folder. But now, Python needs t
 >>> print('\n'.join(sys.path)) # all the paths Python checks for packages
 ```
 
-So we have to add this `sys.path.append(os.path.abspath("/python_packaging/textedit/textedit/review"))` to our sys path so Python knows where to refrence it from:
+So we have to add `sys.path.append(os.path.abspath("/python_packaging/textedit/textedit/review"))` to our sys path so Python knows where to refrence it from:
 
 ```python
 >>>sys.path.append(os.path.abspath("/python_packaging/textedit/textedit/review"))
@@ -818,18 +818,17 @@ And, speaking of imports, we now have external packages that we're calling: os, 
 	requirements.txt
 			
 ```
-We put a requirements.txt module at the top level of our module. This file that will tell people who install the package which Python packages are used in our programs and automatically install them when you run `pip install .` on the package. (We may have to run ``pip install -r requirements.txt` separately, but that's usually an edge case.)
+We put a requirements.txt module at the top level of our module. This file that will tell people who install the package which Python packages are used in our programs and automatically install them when you run `pip install .` on the package. (We may have to run `pip install -r requirements.txt` separately, but that's usually an edge case.)
 
 For example, we've used `os`, `sys`, and `re` in building this module so far. These are standard library modules, and come default with every Python install.  It will also sync versions to make sure that they have the exact version you used to develop your code. 
 
 To create a requirements file, you would normally do a  `pip freeze > requirements.txt`. You'll notice that this includes a lot of stuff, basically everything you have in your Python environment, since `pip freeze` doesn't know which specific packages you're using to build your package and there could be interactions.
- 
 
 There are several ways to build requirements on a per-project basis, but we're not going to use them here because we want to focus, again, on packaging rather than Python environments. A simpler way to do this is to install [pipreqs and take it from there](https://github.com/bndr/pipreqs). 
 
 `pipreqs --force "/python_packaging/textedit/textedit"`
 
-If you run that, you'll see that the file generated is blank, because the three modules we've included, `os`, `re`, and `sys`, are part of the standard Python library. If we included something like NumPy, we'd get:
+If you run that, you'll see that the file generated is blank, because the three modules we've included, `os`, `re`, and `sys`, are part of the standard Python library. If we included something like [NLTK](http://www.nltk.org/), we'd get:
 
 ```
 mbp-vboykis:textedit vboykis$ cat requirements.txt 
@@ -838,7 +837,7 @@ nltk==3.2
 
 ## <a id="documentation"></a>Documentation
 
-Let's add some documentation, as well.  Good documentation is really important, paricularly to someone just coming into your project. And, even more so, for yourself tomorrow morning. :) The easiest way to add documentation is to add a 	`README` to the top level of your module, the same place as `requirements.txt`. 
+Let's add some documentation, as well.  Good documentation is really important, paricularly to someone just coming into your project. And, even more so, for yourself tomorrow morning. :) The easiest way to add documentation is to add a `README` to the top level of your module, the same place as `requirements.txt`. 
 
 ```
  textedit - package
@@ -856,11 +855,11 @@ Let's add some documentation, as well.  Good documentation is really important, 
 		
 		
 ``` 
-Here are some aspirational examples of what [good documentation](https://github.com/PharkMillups/beautiful-docs) should look like, but remember, these are really complicated examples. Here's a [good, simple one.](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) 
+Here are some aspirational examples of what [good documentation](https://github.com/PharkMillups/beautiful-docs) should look like, but remember, these are really complicated examples. Here's a [good, simple one](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). 
 
 The advanced next level is to generate your documentation with Sphinx or reST. Don't worry about that yet. 
 
-Documentation also includes your code. All of your code should have headers, and your classes should have [docstrings](https://www.python.org/dev/peps/pep-0257/), as well. [Comments are good!](https://www.python.org/dev/peps/pep-0008/)
+Documentation also includes your code. All of your code should have headers, and your classes should have [docstrings](https://www.python.org/dev/peps/pep-0257/), as well. [Comments are good](https://www.python.org/dev/peps/pep-0008/)!
 
 For headers, there are mixed opinions onto what one should contain, but I think headers help. 
 
@@ -870,7 +869,7 @@ Author: Vicki Boykis
 """
 ```
 
-For classes, check out Scikit-learn; it's really good at [documentation](https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/k_means_.py)
+For classes, check out Scikit-learn; it's really good at [documentation](https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/k_means_.py).
 
 
 ## <a id="scripts"></a>Scripts
@@ -903,11 +902,11 @@ This is also where continuous integration can come in.
 
 And, finally and most importantly, the `__init__.py`, which we'll want to add to every directory where you have runable Python modules. 
 
-If you remember from the Python innards overview `__init__` is a special file that will make Python realize that you have a package working together instead of a [single file.](https://docs.python.org/3/tutorial/modules.html#packages)
+If you remember from the Python innards overview `__init__` is a special file that will make Python realize that you have a package working together instead of a [single file](https://docs.python.org/3/tutorial/modules.html#packages).
 
 We can leave it null. Or you can [add things to it](http://mikegrouchy.com/blog/2012/05/be-pythonic-__init__py.html) that will initialize when the module is run.  Let's leave it null for now. 
 
-When Python imports the module for the first time, it checks the module registry for a list of modules that it can use. `Init` allows your module to be [put in that registry.](http://effbot.org/zone/import-confusion.htm#what-does-python-do). 
+When Python imports the module for the first time, it checks the module registry for a list of modules that it can use. `Init` allows your module to be [put in that registry](http://effbot.org/zone/import-confusion.htm#what-does-python-do). 
 
 ## <a id="__main.py__-driver"></a>`__main.py__` driver
 
@@ -917,7 +916,7 @@ In Python, we can also have a `__main.py__` file, which will execute everything 
 
 Here, since we're just performing different things to a document in a single state, we don't really need it.  
 
-Additionally, there are mixed thoughts about having a driver. Google's Python code, for example, says that every [file should have a name/main pattern.](https://google.github.io/styleguide/pyguide.html#Main)
+Additionally, there are mixed thoughts about having a driver. Google's Python code, for example, says that every [file should have a name/main pattern](https://google.github.io/styleguide/pyguide.html#Main).
  
 ```
  textedit - package
@@ -947,13 +946,14 @@ Now that we have the scaffolding in place, we can add things that will help us s
 
 This is `setup.py`, the heart of a project. 
 
-It has metadata about the project, `import distutils`, which does the actual program setup whenever someone downloads it, as we specified in the `README.md`, and be at the [top level of the package.](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html#setup-py-description). 
+It has metadata about the project, `import distutils`, which does the actual program setup whenever someone downloads it, as we specified in the `README.md`, and be at the [top level of the package](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html#setup-py-description). 
 
 Here's more [really good background](https://github.com/kennethreitz/setup.py) on what goes into the file.  
 
 Here's what ours will look like. The most important part is setting the `here` variable to the current filepath. 
 
 Remember how we had to do crazy things to get our modules to reference each other in the context of the package? 
+
 `sys.path.append(os.path.abspath("python_packaging/textedit/textedit/review"))`
 
 This lets us avoid all of that and forces a root directory.
@@ -1038,9 +1038,9 @@ The rest is metadata about who you are and what the package looks like. It's rea
 
 One of the things included in here is the `install_requires` which lists the requirements that will be installed for the file to continue. But wait, you say. Don't we already have a `requirements.txt` file? Yes, we do. We'll be using that one, instead. 
 
-The difference between the two is that `install_requires` is configured more if you're packaging for production-ready systems and putting your package in PyPi, the Python package repository. If you are targeting specific packages in [development or testing, use requirements.txt.](https://www.reddit.com/r/Python/comments/3uzl2a/setuppy_requirementstxt_or_a_combination/) 
+The difference between the two is that `install_requires` is configured more if you're packaging for production-ready systems and putting your package in PyPi, the Python package repository. If you are targeting specific packages in [development or testing, use `requirements.txt`](https://www.reddit.com/r/Python/comments/3uzl2a/setuppy_requirementstxt_or_a_combination/). 
 
-Since we're not exactly focusing on targeting PyPi here to keep things simple, we'll use requirements. 
+Since we're not exactly focusing on targeting PyPi here to keep things simple, we'll use `requirements.txt`. 
 
 So now, finally we have: 
 
@@ -1080,13 +1080,13 @@ You can see that in action here, [for example](https://github.com/pallets/flask/
 
 ![wordmenu](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/alice_08c-alice_flamingo.png)
 
-Ok, we're done writing all of our code, our tests, making sure objects are accessible, and we have our structure all layed out. What do we do now? [Let's package it!](https://github.com/veekaybee/textedit)
+Ok, we're done writing all of our code, our tests, making sure objects are accessible, and we have our structure all layed out. What do we do now? [Let's package it](https://github.com/veekaybee/textedit)!
 
-Let's go to the module level of our package - where our `setup.py` file that will actually handle the install is located
+Let's go to the module level of our package - where our `setup.py` file that will actually handle the install is located:
 
 `mbp-vboykis:textedit vboykis$ cd /python_packaging/textedit/textedit`
 
-and run 
+and run: 
 
 `pip install .`
 
@@ -1206,14 +1206,14 @@ Your next step would be to use either of these instead of your local Python envi
 
 ## <a id="more-advanced-testing"></a>More advanced testing
 
-Unittest is a great starting point, but there's also `pytest`, `nose`, mock testing (when you have complex object dependencies), and [much, much more.](https://wiki.python.org/moin/PythonTestingToolsTaxonomy) All of these work slightly differently.  
+Unittest is a great starting point, but there's also [pytest](https://docs.pytest.org/en/latest/), [nose2](https://nose2.readthedocs.io/en/latest/index.html), mock testing (when you have complex object dependencies), and [much, much more](https://wiki.python.org/moin/PythonTestingToolsTaxonomy). All of these work slightly differently.  
 
 
 ## <a id="continuous-integration"></a>Continuous Integration
 
-Once you build a package, you'll probably want to make changes to it. And push those changes to some remote  version-controlled repository so that others can use them. And you'll want to automate this process so that you're not manually doing `pip install .`.  This process is known as [continuous integration.](https://www.thoughtworks.com/continuous-integration). 
+Once you build a package, you'll probably want to make changes to it. And push those changes to some remote  version-controlled repository so that others can use them. And you'll want to automate this process so that you're not manually doing `pip install .`.  This process is known as [continuous integration](https://www.thoughtworks.com/continuous-integration). 
 
-There's a number of fantastic tools for Python CI. The most popular one these days is [Travis](http://docs.python-guide.org/en/latest/scenarios/ci/), which inovlves adding a `travis.yml` file that will test your code against your tests and known Python versions. 
+There's a number of fantastic tools for Python CI. The most popular one these days is [Travis](http://docs.python-guide.org/en/latest/scenarios/ci/), which involves adding a `travis.yml` file that will test your code against your tests and known Python versions. 
 
 ## <a id="git-hooks-and-version-control"></a>Git Hooks and Version Control
 
@@ -1226,13 +1226,13 @@ In our module, there are no passwords or usernames. But if you're working with d
 
 ## <a id="Sphinx/reST"></a>Sphinx/reST
 
-We've already written README.md. But what if you have multiple files that rely on each other? Or you want to use your docstrings to build documentation? [Sphinx and reST](https://thomas-cokelaer.info/tutorials/sphinx/introduction.html) are some ways popular Python pakcages are documented. 
+We've already written `README.md`. But what if you have multiple files that rely on each other? Or you want to use your docstrings to build documentation? [Sphinx](https://thomas-cokelaer.info/tutorials/sphinx/introduction.html) and reST are some ways popular Python packages are documented. 
 
 ## <a id="wheels"></a>Wheels
 
 Once you're done refining all of that, and you're ready to go to production, you should build a wheel. Python [wheels](https://packaging.python.org/tutorials/distributing-packages/#wheels) are similar to `JAR` packages in Java, and are a much faster and lightweight process to use in production environments.  You can use `setup.py` to build wheels (which is why it's so important to get it right initially), `python setup.py bdist_wheel --universal`.
 
-For much, much more info on wheels, see [here](http://pythonwheels.com/.)
+For much, much more info on wheels, see [here](http://pythonwheels.com/).
 
 
 ## <a id="PyPi"></a>PyPi
@@ -1255,7 +1255,7 @@ Good luck!
 
 A huge thank you to [Sam Zeitlin](https://twitter.com/SamanthaZeitlin), [Tom Ausperger](https://twitter.com/TomAugspurger), [William Cox](https://twitter.com/gallamine), and [Mark Roddy](https://twitter.com/digitallogic) for reading drafts of this post. 
 
-Any additional errors are wholly my own and the fault of too many late nights spent in the [Tenniel Alice in Wonderland illustrations.](http://www.gutenberg.org/files/114/114-h/114-h.htm) 
+Any additional errors are wholly my own and the fault of too many late nights spent in the [Tenniel Alice in Wonderland illustrations](http://www.gutenberg.org/files/114/114-h/114-h.htm).
 
-To fix a bug, feel free to [submit a pull request.](https://github.com/veekaybee/textedit/pulls)  
+To fix a bug, feel free to [submit a pull request](https://github.com/veekaybee/textedit/pulls).
 
