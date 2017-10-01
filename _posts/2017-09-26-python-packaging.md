@@ -202,7 +202,7 @@ It's classes and objects all the way down. We can also find out more about the `
 
 ```
 
-(If you're more curious about how strings specifically are created, digging into [the Python source code is fun](https://github.com/python/cpython/blob/2.7/Objects/stringobject.c), which is where the `__doc__` string comes from comes from.) 
+(If you're more curious about how strings specifically are created, digging into [the Python source code is fun](https://github.com/python/cpython/blob/2.7/Objects/stringobject.c), which is where the `__doc__` string comes from.) 
 
 And if we call `dir()`, we can see all of the object attributes and methods that can act on that class. Attributes are variables and methods created specifically by higher-level Python classes. Methods are specific to that object. For example, most Python objects have the `__add__`, `__dir__`, and `__setattr__` attributes. Only strings have `join`, `strip`, and `replace` 
  
