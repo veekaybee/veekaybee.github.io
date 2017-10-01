@@ -19,8 +19,8 @@ title: Alice in Python projectland
   - [Requirements.txt and package dependencies](#requirementstxt-and-package-dependencies)
   - [Documentation](#documentation)
   - [Scripts](#scripts)
-  - [`__init.py__`](#__initpy__)
-  - [`__main.py__` driver](#__mainpy__-driver)
+  - [`__init__.py`](#__init__.py)
+  - [`__main__.py` driver](#__main__.py-driver)
   - [`setup.py`](#setuppy)
 - [Sharing and using our package](#sharing-and-using-our-package)
 - [Next steps](#next-steps)
@@ -56,7 +56,7 @@ Python project structure and packaging standardization is still not a solved pro
 
 In the JVM, [as long as you have your path structured correctly,](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html) build tools will understand it and create a `package` for you into an executable `JAR`. 
 
-But, when I started looking for the same standardization in Python, it wasn't as straightforward. Some questions I had as I worked:  Should I be using virtualenvs? Pipenvs? `Setuptools`? Should I have a `setup.cfg?` What are wheels, or eggs, for that matter?  Does each folder need an `__init.py__`? What does that file even do?  How do I reference modules along the same `PYTHONPATH`? 
+But, when I started looking for the same standardization in Python, it wasn't as straightforward. Some questions I had as I worked:  Should I be using virtualenvs? Pipenvs? `Setuptools`? Should I have a `setup.cfg?` What are wheels, or eggs, for that matter?  Does each folder need an `__init__.py`? What does that file even do?  How do I reference modules along the same `PYTHONPATH`?
 
 It became apparent that Python's flexbility, which I really appreciate when I'm buckled down and writing code, makes it a huge pain to operationalize. 
 
@@ -899,7 +899,7 @@ This is also where continuous integration can come in.
 			
 ```
 
-## `__init.py__`
+## `__init__.py`
 
 And, finally and most importantly, the `__init__.py`, which we'll want to add to every directory where you have runable Python modules. 
 
@@ -909,11 +909,11 @@ We can leave it null. Or you can [add things to it](http://mikegrouchy.com/blog/
 
 When Python imports the module for the first time, it checks the module registry for a list of modules that it can use. `Init` allows your module to be [put in that registry.](http://effbot.org/zone/import-confusion.htm#what-does-python-do). 
 
-## <a id="__main.py__-driver"></a>`__main.py__` driver
+## <a id="__main__.py-driver"></a>`__main__.py` driver
 
 There is this concept in Java of a driver program that you can run and have it call all the other programs in the package. 
 
-In Python, we can also have a `__main.py__` file, which will execute everything in it first and pull in from other directories. This might be helpful if you're pre-executing things, like for example a script has to kick off right away to load the word document, for example. 
+In Python, we can also have a `__main__.py` file, which will execute everything in it first and pull in from other directories. This might be helpful if you're pre-executing things, like for example a script has to kick off right away to load the word document, for example. 
 
 Here, since we're just performing different things to a document in a single state, we don't really need it.  
 
