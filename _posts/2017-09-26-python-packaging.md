@@ -245,7 +245,7 @@ Now that we know what a single object can look like, let's get out of the shallo
 ![tea_muse](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/tea_mouse.jpg)
 
 
-Usually, after we write a couple one-liners, we want to write a complete snippet of code that does something. For example, let's say Lewis Carroll has written a couple pages and wants to do a word count on the file he's written (writers always want to compulsively do word counts.)
+Usually, after we write a couple one-liners, we want to write a complete snippet of code that does something. For example, let's say Lewis Carroll has written a couple pages and wants to do a word count on the file he's written (writers always want to compulsively do word counts).
 
 We'll work with `alice.txt` here: 
 
