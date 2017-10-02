@@ -1200,7 +1200,7 @@ I mentioned before that there are several ways to create specific environments t
 
 2) Use [pipenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/), in which you install packages through `pipenv install requests` instead of pip. It will create a Pipfile, which keeps track of all your libraries. 
 
-Both of these are involved in modifying the `os.path` that we looked at earlier so that Python knows where to find other stuff. 
+Both of these are involved in modifying the `sys.path` that we looked at earlier so that Python knows where to find other files. 
 
 Your next step would be to use either of these instead of your local Python environment. 
 
