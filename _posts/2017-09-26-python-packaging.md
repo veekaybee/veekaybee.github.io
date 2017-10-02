@@ -326,7 +326,7 @@ Python.framework/Versions/3.5/lib/python3.5/lib-dynload
 
 4) Python assembles a Python virtual machine, [CPython](https://en.wikipedia.org/wiki/CPython), to execute and interpret the code. 
 
-5) If there are no external dependencies (aka packages), as is the case in our word count program, a special attributed, ``__name__`` is initialized to ``"__main__"`` in the __main__ [namespace](https://docs.python.org/3/library/__main__.html). 
+5) If there are no external dependencies (aka packages), as is the case in our word count program, a special attribute, ``__name__`` is initialized to ``"__main__"`` in the __main__ [namespace](https://docs.python.org/3/library/__main__.html). 
 
 Program: 
 
@@ -361,7 +361,7 @@ generates a copy of the file with the `.pyc` extension in a folder called `__pyc
 
 If you want to see what the byte code of our program looks like, [digging into it](http://akaptur.com/blog/2013/08/14/python-bytecode-fun-with-dis/) can be fun.
 
-7) As the code is executed, Python reads all of our objects and loops. The interpreter allocates memory to the code and the special Python strucutres for each object are created. This is where the `id` for each object is created, and why we can call these things after we run the code. 
+7) As the code is executed, Python reads all of our objects and loops. The interpreter allocates memory to the code and the special Python structures for each object are created. This is where the `id` for each object is created, and why we can call these things after we run the code. 
  
 We've just created a Python runtime environment, told Python which directories it should be reading from, imported some stuff, allocated memory, and given some output. Basically all of the things we do to run a program. 
  
@@ -375,7 +375,7 @@ Finally, we'll add `if __name__ == '__main__'` to the program, put all the funct
 
 This is a really common pattern for running multiple functions and keeping track of them.  As we noted in the last section, 
 
-> If there are no external dependencies (aka packages), as is the case in our word count program, a special attributed, ``__name__`` is initialized to ``"__main__"`` in the __main__ [namespace](https://docs.python.org/3/library/__main__.html)
+> If there are no external dependencies (aka packages), as is the case in our word count program, a special attribute, ``__name__`` is initialized to ``"__main__"`` in the __main__ [namespace](https://docs.python.org/3/library/__main__.html)
 > 
 If the program is the main program you're running, Python will run everything in order under that statement.  
 
@@ -1211,9 +1211,9 @@ Unittest is a great starting point, but there's also `pytest`, `nose`, mock test
 
 ## <a id="continuous-integration"></a>Continuous Integration
 
-Once you build a package, you'll probably want to make changes to it. And push those changes to some remote  version-controlled repository so that others can use them. And you'll want to automate this process so that you're not manually doing `pip install .`.  This process is known as [continuous integration.](https://www.thoughtworks.com/continuous-integration). 
+Once you build a package, you'll probably want to make changes to it. And push those changes to some remote  version-controlled repository so that others can use them. And you'll want to automate this process so that you're not manually doing `pip install .`.  This process is known as [continuous integration](https://www.thoughtworks.com/continuous-integration). 
 
-There's a number of fantastic tools for Python CI. The most popular one these days is [Travis](http://docs.python-guide.org/en/latest/scenarios/ci/), which inovlves adding a `travis.yml` file that will test your code against your tests and known Python versions. 
+There's a number of fantastic tools for Python CI. The most popular one these days is [Travis](http://docs.python-guide.org/en/latest/scenarios/ci/), which involves adding a `travis.yml` file that will test your code against your tests and known Python versions. 
 
 ## <a id="git-hooks-and-version-control"></a>Git Hooks and Version Control
 
@@ -1226,7 +1226,7 @@ In our module, there are no passwords or usernames. But if you're working with d
 
 ## <a id="Sphinx/reST"></a>Sphinx/reST
 
-We've already written README.md. But what if you have multiple files that rely on each other? Or you want to use your docstrings to build documentation? [Sphinx and reST](https://thomas-cokelaer.info/tutorials/sphinx/introduction.html) are some ways popular Python pakcages are documented. 
+We've already written README.md. But what if you have multiple files that rely on each other? Or you want to use your docstrings to build documentation? [Sphinx and reST](https://thomas-cokelaer.info/tutorials/sphinx/introduction.html) are some ways popular Python packages are documented. 
 
 ## <a id="wheels"></a>Wheels
 
