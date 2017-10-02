@@ -10,8 +10,8 @@ I also like to think about what technology means in the context of society, and 
 
 Talks I've Given Recently: 
 
-+ [Hadoop on Your Latpop](http://veekaybee.github.io/hadoop-or-laptop/)
-+ [SQL for beginners](http://veekaybee.github.io/sql-is-hard/)
++ [Hadoop on Your Laptop](http://veekaybee.github.io/2017/03/20/hadoop-or-laptop/)
++ [SQL for beginners](http://veekaybee.github.io/2017/04/20/sql-is-hard/)
 + Skeptech: [Manuscripts don't burn](http://blog.vickiboykis.com/2017/06/19/skeptech/)
 + [Breaking the Internet Bubble](https://www.icp.org/browse/archive/media/breaking-the-internet-bubble)
 + [How to pick a data architecture strategy](https://www.youtube.com/watch?v=o-kbwKX3dus) 
