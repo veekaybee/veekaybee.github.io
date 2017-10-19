@@ -1,6 +1,8 @@
 ---
 title: What should you think about when using Facebook?
 layout: post
+redirect_from:
+  - /facebook-is-collecting-this/
 ---
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/winnowers.jpg)

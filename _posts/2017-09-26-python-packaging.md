@@ -893,6 +893,7 @@ This is also where continuous integration can come in.
 			├── wordcount.py
 			└── readability.py
 		├── tests
+		    __init__.py
 			└── test_wordcount.py
 	README.MD
 	requirements.txt
