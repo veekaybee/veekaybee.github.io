@@ -8,9 +8,9 @@ layout: post
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="Data ex machina">
 <meta name="twitter:description" content="We shouldn't thorw away the data and software development process for a new paradigm based on neural nets.">
-<meta name="twitter:image" content="https://uploads7.wikiart.org/images/roy-lichtenstein/washing-machine-1961.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/washing-machine-1961.jpg">
 
-![lichtenstein](https://uploads7.wikiart.org/images/roy-lichtenstein/washing-machine-1961.jpg)
+![lichtenstein](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/washing-machine-1961.jpg)
 
 Washing Machine (1961), Roy Lichtenstein 
 
