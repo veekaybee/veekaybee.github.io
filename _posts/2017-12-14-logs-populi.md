@@ -1,6 +1,6 @@
 ---
-layout:post
-title: Logs populi (or, Thanks, Netflix!)
+title: Logs populi or, Thanks, Netflix!
+layout: post
 ---
 
 <meta name="twitter:card" content="summary_large_image">
