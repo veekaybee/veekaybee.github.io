@@ -304,6 +304,8 @@ Let's check what our `PYTHONPATH` is:
 
 ```python
 >>> import os
+>>> import sys
+
 >>> os.getcwd() #where we're currently running code
 '/python_packaging'
 
