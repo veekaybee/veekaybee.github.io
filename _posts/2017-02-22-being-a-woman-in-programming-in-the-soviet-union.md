@@ -1,6 +1,8 @@
 ---
 title: Being a woman in programming in the Soviet Union
 layout: post
+redirect_from:
+  - /being-a-woman-in-programming-in-the-soviet-union/
 ---
 ![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/programmers.jpg)
 
