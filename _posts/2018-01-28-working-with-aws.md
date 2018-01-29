@@ -145,7 +145,7 @@ Now, a closer look at each three of the environments:
 
 First, there's the **Management Console**, which was my first point of entry into AWS. You can do many basic things with the services there, like create lambdas, set triggers, upload files to S3 buckets, set up EC2 instances, and much, much more.  But the UI doesn't let you replicate what you've done or automate certain processes. 
 
-Second, there's ***AWS CLI***.  It's a [Python-based tool](https://aws.amazon.com/cli/) that you can install (`pip intsall awscli`) and run recurrent commands with. Once you run it the first time, it will also configure with your [local AWS credentials file](https://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html), which is a must-have for working with AWS. 
+Second, there's ***AWS CLI***.  It's a [Python-based tool](https://aws.amazon.com/cli/) that you can install (`pip install awscli`) and run recurrent commands with. Once you run it the first time, it will also configure with your [local AWS credentials file](https://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html), which is a must-have for working with AWS. 
 
 For example, you can take a look at all of your S3 buckets with `aws s3 ls`, or bootstrap [an EMR instance](https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html) `aws emr create-cluster --release-label emr-5.3.1  --instance-groups InstanceGroupType=MASTER,InstanceCount=1,InstanceType=m3.xlarge InstanceGroupType=CORE,InstanceCount=2,InstanceType=m3.xlarge --auto-terminate` . You can customize many of these commands by passing in config files that are stored in - you guessed it- JSON in S3 buckets. 
 
