@@ -294,6 +294,8 @@ It's easy to approximate costs, but harder to pinpoint, and even harder to forec
 
 Overall, if I had to describe my experience of working with AWS, I'd say that it requires a different mindset than on-prem. Instead of having everything included and being locked into a particular environment, AWS is a lot more granular. You're trading lock-in for flexibility, with the caveat that what you get may be too flexible, and with the knowledge that AWS doesn't give you any opinions on how to work with what you have. It's on you to make the right choices, with the consequence that you can also make more mistakes along the way, but once you figure out how to best leverage the environment, you can get a lot out of it.   
 
+Thanks to [Mark Roddy](https://twitter.com/digitallogic), [Jowanza Joseph](https://twitter.com/Jowanza), and [Austin Rochford](https://twitter.com/austinrochford) for reading drafts of this post. 
+
 
 
 
