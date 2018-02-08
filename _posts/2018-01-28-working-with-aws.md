@@ -14,7 +14,7 @@ title: Working with AWS
 
 **Clouds, Isaac Levitan**
 
-_**TL;DR:** AWS is an extremely flexible environment to work in, but the flexiblity can lead to an overwhelming amount of choices that may initially overhwhelm and make someone used to working on-prem less productive until they get the hang of it._
+_**TL;DR:** AWS is an extremely flexible environment to work in, but the flexibility can lead to an overwhelming amount of choices that may initially overwhelm and make someone used to working on-prem less productive until they get the hang of it._
 
 More and more of my projects lately have been either doing data science on AWS, or moving data into AWS for data science, and I wanted to jot down some brief thoughts on coming from an on-prem background about what to expect from working in the cloud. 
 
