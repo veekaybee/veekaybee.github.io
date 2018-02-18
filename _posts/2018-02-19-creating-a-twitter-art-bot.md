@@ -453,6 +453,9 @@ And, that's it! My two one-off scripts were ready, and my bot was up and running
 
 ![high-level](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/cronedjob.png)
 
+And here's the final flow I ended up with: 
+![architecture](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/architecture.png)
+
 
 # Where to Next? 
 
