@@ -470,7 +470,7 @@ In parallel, I want to focus on testing and maintenance.
 
 ## Testing and Maintenance
 
-The first time I worked through the entire flow, I started by working in a local Python project I had started in PyCharm and had version-controlled on [GitHub](https://github.com/veekaybee/soviet-art-bot. 
+The first time I worked through the entire flow, I started by working in a local Python project I had started in PyCharm and had version-controlled on [GitHub](https://github.com/veekaybee/soviet-art-bot). 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Me, trying to explain the cases when I use PyCharm, when I use Sublime Text, and when I use Jupyter Notebooks for development. <a href="https://t.co/CEC0WlymlC">pic.twitter.com/CEC0WlymlC</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/953815826393595904?ref_src=twsrc%5Etfw">January 18, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -478,15 +478,14 @@ The first time I worked through the entire flow, I started by working in a local
 So, when I made changes to any part of the process, my execution flow would be: 
 
 1. Run Wikiart download functionality locally 
-2. Test the [lambda "locally"](https://medium.com/@bezdelev/how-to-test-a-python-aws-lambda-function-locally-with-pycharm-run-configurations-6de8efc4b206
-) with `python-lambda-local` 
+2. Test the [lambda "locally"](https://medium.com/@bezdelev/how-to-test-a-python-aws-lambda-function-locally-with-pycharm-run-configurations-6de8efc4b206) with `python-lambda-local` 
 3. Zip up the lambda and upload to Lambda
 4. Make mistakes in the Lambda code
 5. Zip up the lambda and run again. 
 
 This was not really an ideal workflow for me, because I didn't want to have to manually re-uploading the lambda every time, so I decided to use Travis CI, which [integrates with GitHub really well.](https://gizmodo.com/the-mess-at-meetup-1822243738). The problem is that there's a lot of setup involved: virtualenvs, syncing to AWS credentials, setting up IAM roles and profiles that allow Travis to access the lambda, setting up a test Twitter and AWS environment to test travis integration, and more. 
 
-For now, the bot is working in production, and while it works, I'm going to continue to automate more and more parts of deployment in my [dev branch](https://github.com/veekaybee/soviet-art-bot/tree/dev). ([This post](https://joarleymoraes.com/hassle-free-python-lambda-deployment/) was particularly helpful in zipping up a lambda, and my [deploy script is here.](https://github.com/veekaybee/soviet-art-bot/blob/dev/lambda_deploy.sh)  )
+For now, the bot is working in production, and while it works, I'm going to continue to automate more and more parts of deployment in my [dev branch](https://github.com/veekaybee/soviet-art-bot/tree/dev). ([This post](https://joarleymoraes.com/hassle-free-python-lambda-deployment/) was particularly helpful in zipping up a lambda, and my [deploy script is here.](https://github.com/veekaybee/soviet-art-bot/blob/dev/lambda_deploy.sh)  
 
 After these two are complete, I want to: 
 
