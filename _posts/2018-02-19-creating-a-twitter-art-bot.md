@@ -13,8 +13,6 @@ title: Building a Twitter art bot with Python, AWS, and socialist realism art
 <blockquote class="twitter-tweet" data-lang="en"><p lang="ht" dir="ltr">&quot;Young Naturalists&quot;<br>Sergiy Grigoriev, 1948 <a href="https://t.co/8KdwFS6PjU">pic.twitter.com/8KdwFS6PjU</a></p>&mdash; SovietArtBot (@SovietArtBot) <a href="https://twitter.com/SovietArtBot/status/964096054089134081?ref_src=twsrc%5Etfw">February 15, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-![high-level](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/weaving.jpg)
-Aleksandr Samokhvalov, 1929
 
 "Weaving workshop"
 
