@@ -14,8 +14,6 @@ title: Building a Twitter art bot with Python, AWS, and socialist realism art
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-"Weaving workshop"
-
 **TLDR:** I built a Twitter bot that tweets paintings from the WikiArt socialist realism category every 6 hours using Python and AWS Lambdas. 
 
 The post outlines why I decided to do that, architecture decisions I made, technical details on how the bot works, and my next steps for the bot.  
