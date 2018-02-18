@@ -55,8 +55,11 @@ That advice can be hard and vague, particularly when you don't have a lot of exp
 By writing out my process in detail, I'm hoping it helps more people understand:
 
 1) The steps of a software project from beginning to end. 
+
 2) The process of putting out a mininum viable project that's "good enough" and iterating over your existing code to add features.
+
 3) Picking a project that you're going to enjoy working on.
+
 4) The joy of socialist realism art.
 
 ## Technical Goals 
