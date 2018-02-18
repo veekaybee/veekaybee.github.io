@@ -265,19 +265,19 @@ Within the paintings array, each painting looked like this:
 
 ```json
 {
-id: "577271cfedc2cb3880c2de61",
-title: "Winter in Kursk",
-year: "1916",
-width: 634,
-height: 750,
-artistName: "Aleksandr Deyneka",
-image: "https://use2-uploads8.wikiart.org/images/aleksandr-deyneka/winter-in-kursk-1916.jpg",
-map: "0123**67*",
-paintingUrl: "/en/aleksandr-deyneka/winter-in-kursk-1916",
-artistUrl: "/en/aleksandr-deyneka",
-albums: null,
-flags: 2,
-images: null
+	"id": "577271cfedc2cb3880c2de61",
+	"title": "Winter in Kursk",
+	"year": "1916",
+	"width": 634,
+	"height": 750,
+	"artistName": "Aleksandr Deyneka",
+	"image": "https://use2-uploads8.wikiart.org/images/aleksandr-deyneka/winter-in-kursk-1916.jpg",
+	"map": "0123**67*",
+	"paintingUrl": "/en/aleksandr-deyneka/winter-in-kursk-1916",
+	"artistUrl": "/en/aleksandr-deyneka",
+	"albums": null,
+	"flags": 2,
+	"images": null
 }
 ```
 
