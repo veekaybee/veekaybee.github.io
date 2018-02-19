@@ -46,6 +46,7 @@ Check out its [website and code here](https://veekaybee.github.io/soviet-art-bot
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+<a name="why-build-an-art-bot"></a> 
 # Why build an art bot? 
 
 Often when you're starting out as a data scientist or developer, people will give you the well-intentioned advice of "just picking a project and doing it" as a way of learning the skills you need. 
@@ -62,6 +63,7 @@ By writing out my process in detail, I'm hoping it helps more people understand:
 
 4) The joy of socialist realism art.
 
+<a name="technical-goals"></a> 
 ## Technical Goals 
 
 I've been doing more software development as part of my data science workflows lately, and I've found that: 
@@ -73,6 +75,7 @@ A goal I've had recently is being able to take a full software development proje
 
 ![high-level](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/squadgoals.png)
 
+<a name="personal-goals"></a> 
 ## Personal Goals 
 
 But, a project that's just about "cloud architecture delivery" is really boring. In fact, I fell asleep just reading that last sentence. When I do a project, it has to have an interesting, concrete goal.
@@ -126,6 +129,7 @@ As I posted more #devart, I realized that I enjoyed looking at the source art al
 
 I decided I wanted to build a bot that tweets out paintings. Particularly, I was interested in socialist realism artworks. 
 
+<a name="why-socialist-realism"></a> 
 ##  Why Socialist Realism
 
 Socialist realism is an artform that was developed after the Russian Revolution. As the Russian monarchy fell, social boundaries dissovled,and people began experimenting with all kinds of new art forms, including futurism and [abstractionism.](http://www.wassilykandinsky.net/)  I've previously written [about this shift here.](http://blog.vickiboykis.com/2015/06/reddit-was-amazing/) 
@@ -165,6 +169,7 @@ There are several steps in traditional software development:
 5. Deployment
 6. Maintenance
 
+<a name="breaking-a-project-into-chunks"></a> 
 # Breaking a Project into Chunks
 
 This is a LOT to take in. When I first started, I made a list of everything that needed to be done: setting up AWS credentials, roles, and permissions, version control, writing the actual code, learning how to download images with requests, how to make the bot tweet on a schedule, and more. 
@@ -175,7 +180,7 @@ When you look at it from the top-down, it's overwhelming. But in ["Bird by Bird,
 
 And that's how I view software development, too. One thing at a time, until you finish that, and then move on to the next piece. So, with that in mind, I decided I'd use a mix of the steps above from the traditional waterfall approach and mix them with the agile concept of making a lot of small, quick cycles of those steps to get closer to the end result. 
 
-
+<a name="requirements-and-design-high-level-bot-architecture"></a> 
 # Requirements and Design: High-Level Bot Architecture
 
 
@@ -198,7 +203,7 @@ Eventually, I'd refactor out the dependency on my local machine entirely and pus
 
 Beyond that, I didn't have a specific idea of the tools I'd need, and made design and architecture choices as my intermediate goals became clearer to me. 
 
-
+<a name="development-pulling-paintings-from-wikiart"></a> 
 # Development: Pulling Paintings from WikiArt
 
 Now, the development work began. 
@@ -242,6 +247,7 @@ I started by using the Python [Requests library](http://docs.python-requests.org
 1) A JSON file that has all the metadata 
 2) All of the actual paintings as `png/jpg/jpeg` files 
 
+<a name="development-processing-paintings-and-metadata-locally"></a> 
 # Development: Processing Paintings and Metadata Locally
 
 The JSON I got back looked like this: 
@@ -305,6 +311,7 @@ def upload_images_to_s3(directory):
 
 As an aside, the `.iterdir()` method here is from the pretty great `pathlib` library, new to Python 3, which handles file operations better than os. Check out more about it [here.](https://github.com/arogozhnikov/python3_with_pleasure)  
 
+<a name="development-using-s3-and-lambdas"></a> 
 # Development: Using S3 and Lambdas
 
 Now that I had my files in S3, I needed some way for Twitter to read them. To do that at a regular time interval,  I decided on using an AWS Lambda function (not to be confused with Python lambda functions, a completely different animal.) Because I was already familiar with Lambdas and their capabilities  - [see my previous post on AWS](http://veekaybee.github.io/2018/01/28/working-with-aws/) - , they were a tool I could use without a lot of ramp-up time (a key component of architectural decisions.)
@@ -425,6 +432,7 @@ The `twitter.upload_media` method uploads the image and gets back a media id tha
 
 And that's it. The image and text are posted. 
 
+<a name="development-scheduling-the-lambda"></a> 
 ## Development: Scheduling the Lambda
 
 The second part was configuring the function. to run on a schedule. Lambdas can be triggered by two things: 
@@ -445,7 +453,7 @@ In my script, I have a lot of library imports. Of these, Twython is an external 
 ```
 from twython import Twython, TwythonError
 ```
-
+<a name="deployment-bot-tweets"></a> 
 # Deployment: Bot Tweets!
 
 So I packged the Lambda based on those instructions, manually the first time, by uploading a zip file to the Lambda console.  
@@ -459,7 +467,7 @@ And, that's it! My two one-off scripts were ready, and my bot was up and running
 And here's the final flow I ended up with: 
 ![architecture](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/architecture.png)
 
-
+<a name="where-to-next"></a> 
 # Where to Next? 
 
 There's a lot I still want to get to with Soviet Art Bot. 
@@ -468,6 +476,7 @@ The most important first step is tweaking the code so that no painting repeats m
 
 In parallel, I want to focus on testing and maintenance. 
 
+<a name="testing-and-maintenance"></a> 
 ## Testing and Maintenance
 
 The first time I worked through the entire flow, I started by working in a local Python project I had started in PyCharm and had version-controlled on [GitHub](https://github.com/veekaybee/soviet-art-bot). 
@@ -509,7 +518,7 @@ Other machine learning opportunities:
 
 + Extract colors from artworks by genre and see how they differ between genres and decades
 
-
+<a name="conclusion"></a> 
 # Conclusion
 
 Software development can be a long, exhausting process with a lot of moving parts and decision-making involved, but it becomes much easier and more interesting if you you break up a project into byte-sized chunks that you can continuously work on to stop yourself from getting overwhelemed with the entire task at hand. The other part, of course, is that it has to be fun and interesting for you so that you make it through all of the craziness with a fun, finished product at the end. 
