@@ -6,7 +6,7 @@ title: Building a Twitter art bot with Python, AWS, and socialist realism art
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@vboykis">
 <meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="Building a Twitter art bot with Python, AWS, and socialist realism ">
+<meta name="twitter:title" content="Building a Twitter art bot with Python, AWS, and Soviet art ">
 <meta name="twitter:description" content="I built a Twitter bot that tweets socialist realism paintings every 6 hours using Python, AWS Lambdas, and Travis CI. ">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/weaving.jpg">
 
