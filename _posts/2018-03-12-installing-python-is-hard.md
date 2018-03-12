@@ -29,7 +29,9 @@ Think about how complicated computers are in general, and how many layers of thi
 
 > That is also why it's so hard for technologists and non-technologists to communicate together: technologists know too much about too many layers and non-technologists know too little about too few layers to be able to establish effective direct communication.
 
-I went down this path when I started my journey into data science (although it definitely didn't feel like a journey at the time - more like a blindfolded freefall into the darkness of the command line. )
+Another - more recent -  post that touches on this difference, the boundary between people just at the edge of technical discovery and experts is ["Building for muggles."](https://austenallred.com/building-for-muggles-101679e12a0a) The author writes that Slack was able to become successful because they understood that most people don't know how to access IRC, or even what the word client means, and were able to successfully translate the world of distributed chat protocols into something anyone could access. 
+
+Each person gradually becoming more technical goes down this path, from not knowing anything, to [building serverless applications](http://veekaybee.github.io/2018/02/19/creating-a-twitter-art-bot/), by stumbling around and asking ][a lot of questions](https://jvns.ca/blog/good-questions/). I went down this path when I started my journey into data science (although it definitely didn't feel like a journey at the time - more like a blindfolded freefall into the darkness of the command line.)
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/pythonwhat.png)
 
@@ -94,5 +96,6 @@ If this is frustrating to people like Allen Downey and Kenneth Reitz, imagine wh
 
 is feeling. 
 
-The people that have been most important to me in my career are the ones who were able to help me navigate through the maze of questions I had and turn my own mental model to decrease the amount of unknown unknowns I had.  Even in the short time since I was a beginner, programming has both become easier, and  exponentially harder. The good news, though, is that we were all beginners once, and we have the power to remember how frustrating things can be, and make it easier for the next person coming up.  We can imagine how it felt and say, "yeah, that sucks, here let me explain this to you," and be the person we needed when we were on our fifth millionth Stack Overflow search. 
+If you are a senior person and have junior people that you work or interact on online forums with, it's a good idea to keep these things in mind. The people that have been most important to me in my career are the ones who were able to help me navigate through the maze of questions I had and turn my own mental model to decrease the amount of unknown unknowns I had.  
 
+The good news, though, is that we were all beginners once, and we have the power to remember how frustrating things can be, and make it easier for the next person coming up.  We can imagine how it felt and say, "yeah, that sucks, here let me explain this to you," and be the person we needed when we were on our fifth millionth Stack Overflow search. 
