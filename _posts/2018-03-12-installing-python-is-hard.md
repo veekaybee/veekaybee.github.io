@@ -31,6 +31,8 @@ Think about how complicated computers are in general, and how many layers of thi
 
 I went down this path when I started my journey into data science (although it definitely didn't feel like a journey at the time - more like a blindfolded freefall into the darkness of the command line. )
 
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/commandlinewhat.jpg)
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">All the roads are pointing to Python for me. <a href="https://twitter.com/hashtag/resistanceisfutile?src=hash&amp;ref_src=twsrc%5Etfw">#resistanceisfutile</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/240519556043526145?ref_src=twsrc%5Etfw">August 28, 2012</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
