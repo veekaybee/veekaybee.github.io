@@ -8,7 +8,7 @@ title: Every Python beginner you meet is fighting a battle to install 3. Be kind
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="Every Python beginner you meet is fighting a battle to install 3.">
 <meta name="twitter:description" content="It's still hard for beginners to install Python. ">
-<meta name="twitter:image" content="https://pbs.twimg.com/media/DNfrPz2XUAELnPn.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/snakes.jpg">
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;All of my local Python environments&quot;<br>M.C. Escher, 1969 <a href="https://twitter.com/hashtag/devart?src=hash&amp;ref_src=twsrc%5Etfw">#devart</a> <a href="https://t.co/iosQJnXJXj">pic.twitter.com/iosQJnXJXj</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/925467002642354176?ref_src=twsrc%5Etfw">October 31, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
