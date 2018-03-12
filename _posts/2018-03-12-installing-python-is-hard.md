@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Every Python beginner you meet is fighting a battle to install 3. Be kind. 
+title: It's still hard for beginners to get started with Python
 ---
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@vboykis">
 <meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="Every Python beginner you meet is fighting a battle to install 3.">
-<meta name="twitter:description" content="It's still hard for beginners to install Python. ">
+<meta name="twitter:title" content="It's still hard to get started with Python.">
+<meta name="twitter:description" content="New developers don't know what they don't know.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/pythonwhat.png">
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;All of my local Python environments&quot;<br>M.C. Escher, 1969 <a href="https://twitter.com/hashtag/devart?src=hash&amp;ref_src=twsrc%5Etfw">#devart</a> <a href="https://t.co/iosQJnXJXj">pic.twitter.com/iosQJnXJXj</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/925467002642354176?ref_src=twsrc%5Etfw">October 31, 2017</a></blockquote>
@@ -15,7 +15,7 @@ title: Every Python beginner you meet is fighting a battle to install 3. Be kind
 
 Python is, for a good reason, one of the easiest programming languages to get started with for people new to computational data analysis specifically, and new to programming in general. 
 
-But it's still really hard to install. [Allen Downey](http://greenteapress.com/wp/think-python/), who's been teaching Python for years, [recently wrote a great post about this](http://allendowney.blogspot.com/2018/02/learning-to-program-is-getting-harder.html). He says,  
+But it's still really hard to get started with. [Allen Downey](http://greenteapress.com/wp/think-python/), who's been teaching Python for years, [recently wrote a great post about this](http://allendowney.blogspot.com/2018/02/learning-to-program-is-getting-harder.html). He says,  
 
 > I have written several books that use Python to explain topics like Bayesian Statistics and Digital Signal Processing.  Along with the books, I provide code that readers can download from GitHub.  In order to work with this code, readers have to know some Python, but that's not enough.  They also need a computer with Python and its supporting libraries, they have to know how to download code from GitHub, and then they have to know how to run the code they downloaded.
 
