@@ -34,9 +34,6 @@ I went down this path when I started my journey into data science (although it d
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">All the roads are pointing to Python for me. <a href="https://twitter.com/hashtag/resistanceisfutile?src=hash&amp;ref_src=twsrc%5Etfw">#resistanceisfutile</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/240519556043526145?ref_src=twsrc%5Etfw">August 28, 2012</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Just went to a Python presentation. Use of it for data analysts who already have access to Oracle/SQL? It&#39;s more for bootstrapping, right?</p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/256105231421698048?ref_src=twsrc%5Etfw">October 10, 2012</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 I started installing Python in 2012 on a Windows machine: 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I must have done something pretty bad because karma is coming back to me in the form of installing Python for Windows. <a href="https://twitter.com/hashtag/attempt3?src=hash&amp;ref_src=twsrc%5Etfw">#attempt3</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/466678032200384512?ref_src=twsrc%5Etfw">May 14, 2014</a></blockquote>
