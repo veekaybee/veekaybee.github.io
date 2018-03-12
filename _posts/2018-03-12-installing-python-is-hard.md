@@ -3,7 +3,7 @@ layout: post
 title: Every Python beginner you meet is fighting a battle to install 3. Be kind. 
 ---
 
-<meta name="twitter:card" content="summary_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@vboykis">
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="Every Python beginner you meet is fighting a battle to install 3.">
