@@ -47,7 +47,7 @@ And, instead of being able to immediately write code, I was angry a lot, even mo
 
 As someone with a lot of Python experience now, my stance is that it's still incredibly hard to understand how to install Python for people new to both Python and development. The best way to get an idea of how hard it can be is to do a Google search.   
 
-If you're just Googling for Python installation instructions, you'll ge this page, which tells you how to install 3.6 on Windows, as the first result.  
+If you're just Googling for Python installation instructions, you'll get this page, which tells you how to install 3.6 on Windows, as the first result.  
 
 ![windows](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/windowspython.png)
 
