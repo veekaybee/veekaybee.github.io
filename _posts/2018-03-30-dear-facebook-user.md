@@ -53,7 +53,7 @@ I mean, yeah, ok. From the data Facebook has [automatically scraped](https://ask
 
 > All of this was perfectly normal inside my head, but it sounds perfectly stupid if you’re actually talking about it. Are all of us really living our lives for Facebook updates? So we can get a few likes on a status? 
 
-In 2013, after the Snowden reveltations, [you wrote that you were anxious](http://blog.vickiboykis.com/2013/08/facebookthink/) about the government collecting all of our Facebook activity. (Don't worry, they don't collect it anymore. We just have them [log in to Hive directly](https://www.theverge.com/2013/6/6/4403868/nsa-fbi-mine-data-apple-google-facebook-microsoft-others-prism).) 
+In 2013, after the Snowden revelations, [you wrote that you were anxious](http://blog.vickiboykis.com/2013/08/facebookthink/) about the government collecting all of our Facebook activity. (Don't worry, they don't collect it anymore. We just have them [log in to Hive directly](https://www.theverge.com/2013/6/6/4403868/nsa-fbi-mine-data-apple-google-facebook-microsoft-others-prism).) 
 
 In 2017, you wrote [what was, frankly, a really long  post](http://veekaybee.github.io/2017/02/01/facebook-is-collecting-this/) outlining what we collect, which was great, because even we have absolutely no idea or control over how much stuff we keep.  
 
