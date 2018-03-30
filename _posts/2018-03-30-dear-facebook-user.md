@@ -187,5 +187,6 @@ Honestly, I wish I could leave, too. This whole thing is way too stressful. I ha
 But, this thing is all around me now, completely out of my control. And 752461218193242, I have to tell you, I have no clue what to do next, and there is not a single predictive algorithm in my company that can help me. 
 
 Sincerely, 
+
 Zuck 
  
