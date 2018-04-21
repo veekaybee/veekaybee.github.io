@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Setting up SQL for beginners is hard
+redirect_from:
+  - /sql-is-hard/
 ---
 ![alt text](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/munch.jpg)
 
