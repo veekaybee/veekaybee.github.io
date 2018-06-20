@@ -1,6 +1,9 @@
 ---
 title: So, you want to data science
 layout: post
+redirect_from:
+  - /data-science-myths/
+---
 ---
 
 ![rake](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/rake.jpg)
