@@ -14,8 +14,7 @@ title: One month with the 2017 MacBook Pro
 <img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/angry_apple.jpg" alt="drawing" width="300px"/>
 
 
-After [reading](https://marco.org/2017/11/24/fixing-the-macbook-pro) [so](https://www.laptopmag.com/articles/macbook-pro-touch-bar-long-term) [many negative](https://www.dannyguo.com/blog/the-decline-of-the-macbook-pro/) [reviews](http://shahidkamal.com/macbook-pro-no/) of the new MacBook Pro, I've been avoiding upgrading my hardware.  
-I held out for a long time, but recently, I finally upgraded to a 15-inch 2017 MacBook Pro. I've spent the past month using it as my primary development machine for work, and I thought I'd share my experiences. 
+After [reading](https://marco.org/2017/11/24/fixing-the-macbook-pro) [so](https://www.laptopmag.com/articles/macbook-pro-touch-bar-long-term) [many negative](https://www.dannyguo.com/blog/the-decline-of-the-macbook-pro/) [reviews](http://shahidkamal.com/macbook-pro-no/) of the new MacBook Pro, I've been avoiding upgrading my hardware.  I held out for a long time, but recently, I finally upgraded to a 15-inch 2017 MacBook Pro. I've spent the past month using it as my primary development machine for work, and I thought I'd share my experiences. 
 
 ## Unboxing and first impressions
 
