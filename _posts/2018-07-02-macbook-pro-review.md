@@ -40,7 +40,7 @@ As soon as I finished reading, the letters twinkled and disappeared from the pag
 
 On the outside, the Pro is noticeably lighter, which makes sense because it weighs 1.8 kg, versus a whopping 2.04 kg for my 2015 model. It's a laptop that seems easy to pick up and take quickly into meetings, or to take to work in coffeeshops, which is a huge plus right off the bat. 
 
-However, the number of ports and the USB-C connections was an enormous disappointment. Immediately, all of my previous Mac iPhone chargers were rendered obsolete. I got that it was in favor of a better standard across all carriers, but this was a huge inconvenience. I couldn't even use the mouse I had been using minutes ago. I was also sad to see the backlit Apple logo, an iconic part of the MacBook Pro line for as long as I've been using them, gone. It did absolutely nothing to my user experience, but it did do something to my psyche to see 
+However, the number of ports and the USB-C connections was an enormous disappointment. Immediately, all of my previous Mac iPhone chargers were rendered obsolete. I got that it was in favor of a better standard across all carriers, but this was a huge inconvenience. I couldn't even use the mouse I had been using minutes ago. I was also sad to see the backlit Apple logo, an iconic part of the MacBook Pro line for as long as I've been using them, gone.
 
 
 ## Touch Bar 
