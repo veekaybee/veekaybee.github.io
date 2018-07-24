@@ -51,6 +51,6 @@ Observations = Rows
 + [Spotify Music Classification Dataset]( https://www.kaggle.com/geomack/spotifyclassification) - A dataset built for a personal project based on 2016 and 2017 songs with attributes from Spotify's API. 16 attributes, ~1000 rows. 
 
 
-Suggestions and comments are welcome!
+Suggestions/Comments either on Twitter or as a [pull request](https://github.com/veekaybee/veekaybee.github.io) are welcome!
 
 
