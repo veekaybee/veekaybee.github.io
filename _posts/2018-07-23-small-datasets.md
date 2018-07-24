@@ -48,7 +48,12 @@ Observations = Rows
 + Star Wars Characters Database - [As an API](https://swapi.co/) and [as an R package](https://dplyr.tidyverse.org/reference/starwars.html) - Includes height, weight, birth date, and several other attributes for characters from the movies. Good for text analysis.  13 features,  87 observations
 + [120 years of Olympic History](https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results) - Athletes and results. Mostly text-based, with some numerial columns, available as a CSV file.  15 attributes, 271116 rows - Can be made smaller through Kaggle. 
 + [US Census at School](http://ww2.amstat.org/censusatschool/Randomsampleconditions.cfm?CFID=55372463&CFTOKEN=8a531ab99cd68228-E155338C-155D-0261-04DF0BCA4BC7D12E&jsessionid=8430d6242925ef932b4f546b7d3b4135241d) - Random sample of anonymized students and teachers in American schools based on selection by state, years from 2010-2018, selectable by sample size of 50-1000. Has features like height, language spoken, travel time to school, and text messages received. 
-+ [Spotify Music Classification Dataset]( https://www.kaggle.com/geomack/spotifyclassification) - A dataset built for a personal project based on 2016 and 2017 songs with attributes from Spotify's API. 16 attributes, ~1000 rows. 
++ [Spotify Music Classification Dataset]( https://www.kaggle.com/geomack/spotifyclassification) - A dataset built for a personal project based on 2016 and 2017 songs with attributes from Spotify's API. 16 attributes, ~1000 rows.
+
+Other resources: 
+
++ A [great blog post](+ Two fun datasets from this great blog post) full of fun datasets like politicians having affairs and computer prices in the 1990s.
++ A whole [newsletter of datasets](https://tinyletter.com/data-is-plural), including ones like Wikipedia edits, most popular government webpages, and a database of glaciers. 
 
 
 Suggestions/Comments either on Twitter or as a [pull request](https://github.com/veekaybee/veekaybee.github.io) are welcome!
