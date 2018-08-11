@@ -1,6 +1,8 @@
 ---
 title: The demise of SoundCloud
 layout: post
+redirect_from:
+  - /soundcloud/
 ---
 
 <meta name="twitter:card" content="summary_large_image">
