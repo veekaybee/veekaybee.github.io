@@ -18,6 +18,7 @@ TL;DR: Facebook collects data about you in hundreds of ways, across numerous cha
  + Ukranian [translation here](http://texty.org.ua/pg/article/newsmaker/read/74461/Velykyj_Mark_Cukerberg_stezhyt_za_vamy_facebook)
  + French [translation here](https://medium.com/@motdiem/a-quoi-devez-vous-penser-lorsque-vous-utilisez-facebook-1a9c8dc125f6)
 + Russian [translation here](http://adjelly.ru/2018/02/25/facebook-is-collecting-this/) 
++ Chinese [translation here](https://chenmei.xyz/post/what-should-you-think-about-when-using-facebook)
 
 Contents:
 
