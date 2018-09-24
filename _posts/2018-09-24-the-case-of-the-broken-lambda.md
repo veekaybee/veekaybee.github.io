@@ -7,8 +7,8 @@ title: The Case of the Broken Lambda
 <meta name="twitter:site" content="@vboykis">
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="The Case of the Broken Lambda">
-<meta name="twitter:description" content="How do you fix a Python lambda? ">
-<meta name="twitter:image" content="https://uploads5.wikiart.org/images/vincent-van-gogh/still-life-with-drawing-board-pipe-onions-and-sealing-wax-1889.jpg!Large.jpg">
+<meta name="twitter:description" content="How do you fix a Python lambda? Sherlock Holmes knows. ">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/still-life-with-drawing-board-pipe-onions-and-sealing-wax-1889.jpg">
 
 
 <img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/still-life-with-drawing-board-pipe-onions-and-sealing-wax-1889.jpg" alt="drawing" width="300px"/>
