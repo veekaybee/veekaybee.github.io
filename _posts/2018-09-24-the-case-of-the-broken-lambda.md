@@ -84,7 +84,7 @@ The detailed workflow looked like this:
 The idea for the Lambda was relatively simple. 	
 But, as is [often the case with AWS](http://veekaybee.github.io/2018/01/28/working-with-aws/), nothing ever is.
 
-	
+## <a id="getting-s3-input-events"></a>
 ##  Getting S3 Input Events
 
 S3 buckets generate [PUT event notifications](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTnotification.html) whenever files are added to the bucket. These events can be configured as [Lambda triggers.](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-event-notifications.html)
@@ -133,7 +133,7 @@ Events look like this (Here's a sample event I pulled from Lambda's library of s
 ```
 The Lambda would see one of these `ObjectCreated:Put` events come in and use it as input into the lambda handler `event` parameter. The parameter, once passed into the Lambda, would convert `filename.json` within the Lambda function's temp space into an Avro file.
 
-
+## <a id="writing-the-lambda"></a>
 ## Writing the Lambda
 
 The code below does all of that, in sequence. 
@@ -252,6 +252,7 @@ The next step was to zip up the Lambda executable and its dependencies to the La
 
 I should note that there are lots and lots of different ways to test Lambdas. My favorite one is [this one](https://medium.com/@bezdelev/how-to-test-a-python-aws-lambda-function-locally-with-pycharm-run-configurations-6de8efc4b206), but sometimes going to the AWS console can be the path of least resistance. 
 
+## <a id="building-the-lambda-package"></a>
 ## Building the Lambda Package
 
 First, I created a virtual environment through [Pipenv]( https://twitter.com/vboykis/status/1006919179793035264) and zipped everything into the venv. I also included the Avro schema in the final zip file. 
@@ -316,7 +317,7 @@ For reference, my folder structure was:
 	├── lib
 	└── tests
 ```
-
+## <a id="the-error"></a>
 ## The Error
 
 But, when I tried to trigger a test of the Lambda using the test JSON event as an input, the console gave me the following error:  
@@ -335,6 +336,7 @@ This meant that something was weird in an imported Python module. Taking a look 
 
 What was wrong with Snappy?  
 
+## <a id="investigating-snappy-errors"></a>
 ## Investigating Snappy errors
 
 Snappy is a library that compresses and decompresses files. In the case of this package, it decompresses from json/snappy.  It was [initially build by Google in C.](https://github.com/google/snappy), but has bindings to several other [languages .](http://google.github.io/snappy/), including Python. 
@@ -358,6 +360,7 @@ With Python, having to build C dependencies, and AWS Linux's lack of Python avai
 
 By the end of the project, this was where I was: with a broken Lambda that didn't compile, dozens of shell scripts, and a very long and ungly Dockerfile. 
 
+## <a id="holmes-is-on-it"></a>
 # Holmes is on it
 
 "As she finished her story, the Datum Minder turned to me with immensely sad eyes. 'Surely you must know, Mr. Holmes, of a way around this error? I can't sleep. I can't eat. I can't deploy my Lambda.' "
@@ -368,6 +371,7 @@ By the end of the project, this was where I was: with a broken Lambda that didn'
 
 " 'And, as I have said, there is nothing more deceptive than an obvious fact. And the obvious fact here is that this problem is much better suited to you solving it rather than me mucking about.' 'But,' she began to protest, but I held up a hand for silence. 'This is why they call you the Datum Minder and pay you the big bucks. Good luck, dear,' I said, and took my leave."
 
+## <a id="how-the-error-was-fixed"></a>
 # How the error was fixed
 
 The fire had gone low, and only glowing embers remained. Watson shivered as he prodded them with the poker. "So what did you do, Holmes? Surely you didn't leave the poor lass hanging?"
@@ -415,6 +419,8 @@ private static AmazonS3 s3 = AmazonS3ClientBuilder.standard()
 
 "Given my time constraints, what I had to work with, and other Lambdas that we had that were already written in Java, Java ended up being the answer. If I had to do it again, with an unlimited schedule, I'd look into Zappa." 
 
+
+## <a id="conclusion"></a>
 # Conclusion 
 
 Holmes and Watson sat in the darkness, the tea gone cold, the pipes put aside. "I don't know how she did it, Watson," Holmes said, shaking his head. "But I do know that, after hearing that story, I decided to retire from cloud consulting entirely. It's far easier to investigate murders than Python package conflicts in the cloud."
