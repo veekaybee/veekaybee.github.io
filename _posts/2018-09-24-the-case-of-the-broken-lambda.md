@@ -350,9 +350,9 @@ What wasn't loading specifically was cffi, [the actual C module](https://cffi.re
 It turned out that this was seemingly [commonly-known issue.](https://github.com/andrix/python-snappy/issues/52), and that I should have been looking really at the [dependency on cffi.](https://issues.apache.org/jira/browse/ARROW-1293). 
 What this means is that, in theory, every Python package that has C dependencies [needs to put everything in a Docker container](https://markn.ca/2018/02/python-extension-modules-in-aws-lambda/) to build the binary, put the Docker image on a build server, and have the build server send the compiled package to AWS. 
 
-The [Linux AMI docker image](https://hub.docker.com/_/amazonlinux/) is available on Docker, but what it contains in AWS operating system nuances, it lacks in Python packages. There is, as of this post, no Amazon Linux image that I'm aware of that has Python pre-built, so people have had to resort to Dockerfiles liek [this one.](https://github.com/yunojuno/amazonlinux-lambda-python3/blob/fbc1fbeb7327fe6647b51c615a295ff07be48be8/Dockerfile), where Python is installed through wget or curl becuase yum doesn't allow specific installs of Python. 
+The [Linux AMI docker image](https://hub.docker.com/_/amazonlinux/) is available on Docker, but [Amazon Linux Extras](https://aws.amazon.com/amazon-linux-2/faqs/#Amazon_Linux_Extras), which makes Python available is still relatively new, so people have had to resort to Dockerfiles lile [this one.](https://github.com/yunojuno/amazonlinux-lambda-python3/blob/fbc1fbeb7327fe6647b51c615a295ff07be48be8/Dockerfile), where Python is installed through wget or curl.
 
-With Python, having to build C dependencies, and AWS Linux's lack of Python availability,there are too many layers where something goes wrong. 
+With Python, having to build C dependencies, and AWS Linux's lack of Python availability (up until recently),there are too many layers where something goes wrong. 
 
 By the end of the project, this was where I was: with a broken Lambda that didn't compile, dozens of shell scripts, and a very long and ungly Dockerfile. 
 
