@@ -1,20 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents** 
-
-- [Holmes takes on a new case](#holmes-takes-on-a-new-case)
-- [The Case of the Broken Lambda](#the-case-of-the-broken-lambda)
-  - [Getting S3 Input Events](#getting-s3-input-events)
-  - [Writing the Lambda](#writing-the-lambda)
-  - [Building the Lambda Package](#building-the-lambda-package)
-  - [The Error](#the-error)
-  - [Investigating Snappy errors](#investigating-snappy-errors)
-- [Holmes is on it](#holmes-is-on-it)
-- [How the error was fixed](#how-the-error-was-fixed)
-- [Conclusion](#conclusion)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 ---
 layout: post
 title: The Case of the Broken Lambda
@@ -31,6 +14,23 @@ title: The Case of the Broken Lambda
 <img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/still-life-with-drawing-board-pipe-onions-and-sealing-wax-1889.jpg" alt="drawing" width="300px"/>
 
 Vincent van Gogh, Still Life with Drawing Board, Pipe, Onions and Sealing-Wax (1889)
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents** 
+
+- [Holmes takes on a new case](#holmes-takes-on-a-new-case)
+- [The Case of the Broken Lambda](#the-case-of-the-broken-lambda)
+  - [Getting S3 Input Events](#getting-s3-input-events)
+  - [Writing the Lambda](#writing-the-lambda)
+  - [Building the Lambda Package](#building-the-lambda-package)
+  - [The Error](#the-error)
+  - [Investigating Snappy errors](#investigating-snappy-errors)
+- [Holmes is on it](#holmes-is-on-it)
+- [How the error was fixed](#how-the-error-was-fixed)
+- [Conclusion](#conclusion)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # Holmes takes on a new case
 
