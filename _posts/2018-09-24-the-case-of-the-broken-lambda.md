@@ -32,6 +32,7 @@ Vincent van Gogh, Still Life with Drawing Board, Pipe, Onions and Sealing-Wax (1
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## <a id="holmes-takes-on-a-new-case"></a>
 # Holmes takes on a new case
 
 Holmes and Watson were in Holmes's study. It was a grey, damp winter evening in London, but the fire was burning merrily, and tea was on. For a time, they sat in contented silence together. Then, Holmes reached lazily for his pipe. 
