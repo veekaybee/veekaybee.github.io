@@ -52,7 +52,7 @@ Once she calmed down, she was able to explain her situation.
 
 # The Case of the Broken Lambda
 
-The case was this. At a high level, I'd been ingesting gigabytes of log-type files of usage data per day in AWS. Eventually, I wanted to use that data to build machine learning models in Spark and TensorFlow. The data, however, was not in the format I needed. It was coming in as Snappy-compressed JSON files. 
+The case was this. At a high level, I'd been ingesting gigabytes of usage data per day in AWS. Eventually, I wanted to use that data to build machine learning models in Spark and TensorFlow. The data, however, was not in the format I needed. It was coming in as Snappy-compressed JSON files. 
 
 I, instead needed the data in Snappy-compressed Avro files.   
 
