@@ -60,7 +60,7 @@ The reason for this particular workflow is that compressed, serialzed data is [c
 
 I needed these snappy-compressed Avro files to be available downstream for simple ad-hoc analysis in Athena, and then, further on down the workflow, in machine learning jobs through Spark on EMR, and Tensorflow on EC2.
 
-Having the data partitioned by year-month-day in S3 prefixes means that data would then easier to query in [partitioned Athena tables.](https://docs.aws.amazon.com/athena/latest/ug/partitions.html)
+Having the data partitioned by year-month-day through S3 prefixes (like so: `outpath/year={year}/month={month}/day={day}/hour={hour}`) means that data would then easier to query in [partitioned Athena tables.](https://docs.aws.amazon.com/athena/latest/ug/partitions.html)
 
 So, I was looking to write a simple [AWS Lambda](http://veekaybee.github.io/2018/02/19/creating-a-twitter-art-bot/) function in Python. The function would listen on an S3 bucket for incoming JSON files, take each file, introspect it, and convert it on the fly to a Snappy-compressed Avro file. It would then put that Avro file into a different, "cleaned" S3 bucket, based on the timestamp in the file.
 
@@ -79,7 +79,7 @@ The detailed workflow looked like this:
 3. Build the Lambda deployment package
 4. Move package to AWS and test against an S3 PUT event
 
-So the idea for the Lambda was relatively simple. 	
+The idea for the Lambda was relatively simple. 	
 But, as is [often the case with AWS](http://veekaybee.github.io/2018/01/28/working-with-aws/), nothing ever is.
 
 	
@@ -230,9 +230,12 @@ def lambda_handler(event, context):
             day = datetime_ts.strftime('%d')
             hour = datetime_ts.strftime('%H')
 
-            file_path = f""
+            file_path = f"outpath/year={year}/month={month}/day={day}/hour={hour}"
 
-            writer = datafile.DataFileWriter(open(tmp_file_location, "wb"), io.DatumWriter(), schema_writer,codec="snappy")
+            writer = datafile.DataFileWriter(open(tmp_file_location, "wb"), \
+				io.DatumWriter(), \
+				schema_writer, \
+				codec="snappy")
             writer.append(json_string)
 
         writer.close()
@@ -295,21 +298,21 @@ echo "Lambda package built"
 For reference, my folder structure was: 
 
 ```bash
-lambda
-├── Dockerfile
-├── Jenkinsfile
-├── Pipfile
-├── Pipfile.lock
-├── README.md
-├── init.py
-├── bin
-	build_lambda.sh
-├── dist
-	 lambda_function.zip
-├── lambda
-	 lambda_function.py
-├── lib
-└── tests
+   lambda
+	├── Dockerfile
+	├── Jenkinsfile
+	├── Pipfile
+	├── Pipfile.lock
+	├── README.md
+	├── init.py
+	├── bin
+		build_lambda.sh
+	├── dist
+		 lambda_function.zip
+	├── lambda
+		 lambda_function.py
+	├── lib
+	└── tests
 ```
 
 ## The Error
@@ -318,7 +321,6 @@ But, when I tried to trigger a test of the Lambda using the test JSON event as a
 
 ```python
 "Traceback (most recent call last):
-File "/var/task/snappy.py", line 47, in <module>
 from _snappy import UncompressError, compress, decompress, \
 ImportError: libsnappy.so.1: cannot open shared object file: No such file or directory" 
 ```
@@ -331,13 +333,11 @@ This meant that something was weird in an imported Python module. Taking a look 
 
 What was wrong with Snappy?  
 
-
 ## Investigating Snappy errors
 
-Snappy is a library that does the compression of the created Avro file. It was [initially build by Google in C.](https://github.com/google/snappy), but has bindings to several other [languages .](http://google.github.io/snappy/), including Python. 
+Snappy is a library that compresses and decompresses files. In the case of this package, it decompresses from json/snappy.  It was [initially build by Google in C.](https://github.com/google/snappy), but has bindings to several other [languages .](http://google.github.io/snappy/), including Python. 
 
 The issue with the Python version of the module is that it has C extensions.  In this case, Python is a wrapper, or API on top of C, which does most of the actual work of compressing the file. 
-
 
 When Python libraries with C extensions are used in any given environment, they need to be compiled on an environment that exactly matches the host environment, (in this case, the Lambda.) For `snappy` specifically, it needs to be built as a 64bit x86 Linux-compiled library.  The environment the Lambda runs on is the same as the [Linux public AMI.](https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html) and the instructions say,
 
@@ -352,9 +352,9 @@ What this means is that, in theory, every Python package that has C dependencies
 
 The [Linux AMI docker image](https://hub.docker.com/_/amazonlinux/) is available on Docker, but what it contains in AWS operating system nuances, it lacks in Python packages. There is, as of this post, no Amazon Linux image that I'm aware of that has Python pre-built, so people have had to resort to Dockerfiles liek [this one.](https://github.com/yunojuno/amazonlinux-lambda-python3/blob/fbc1fbeb7327fe6647b51c615a295ff07be48be8/Dockerfile), where Python is installed through wget or curl becuase yum doesn't allow specific installs of Python. 
 
-With Python, having to build C dependencies, and AWS Linux's sloppiness, it can all become too many layers where something goes wrong. 
+With Python, having to build C dependencies, and AWS Linux's lack of Python availability,there are too many layers where something goes wrong. 
 
-By the end of the project, this was the place I was in: with a broken lambda that didn't compile, dozens of shell scripts, and a janked-up Dockerfile. 
+By the end of the project, this was where I was: with a broken Lambda that didn't compile, dozens of shell scripts, and a very long and ungly Dockerfile. 
 
 # Holmes is on it
 
