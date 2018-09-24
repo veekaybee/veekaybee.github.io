@@ -44,7 +44,7 @@ Holmes and Watson were in Holmes's study. It was a grey, damp winter evening in 
 
 "Well, it was back in '18 that a Datum Minder called me into her laboratory. When she opened the door, her hair was askance. She looked like she had not slept for several days, and her cabinet was littered with empty coffee cups and Dove chocolate bar wrappers with inspirational sayings on the inside. Soundcloud laid down a soft, thrumming beat in the background. She was at quite a low point."
 
-"I said, 'Madam, how may I be of assistance.' She just kept repeating frantically was that she 'needed this Lambda to go to prod at the end of the sprint, but that she couldn't get it to work.' "
+"I said, 'Madam, how may I be of assistance.' She just kept repeating frantically was that she needed this Lambda to go to prod at the end of the sprint, but that she just couldn't get it to work. "
 
 "I assured her that I was here to help her with all her engineering needs. After all, as I once said, when you have eliminated the impossible, whatever remains, however improbable, must be a Python packaging issue, and whatever the issue is, we'll get to the bottom of it."  
 
@@ -52,14 +52,9 @@ Once she calmed down, she was able to explain her situation.
 
 # The Case of the Broken Lambda
 
-The case was this. At a high level, in my AWS instance, I've been ingesting gigabytes of log-type files of usage data per day. Eventually, I wanted to use that data to analyze usage in Spark and TensorFlow. The data, however, was not in the format I needed. It was coming in as snappy-compressed JSON files. 
+The case was this. At a high level, I'd been ingesting gigabytes of log-type files of usage data per day in AWS. Eventually, I wanted to use that data to build machine learning models in Spark and TensorFlow. The data, however, was not in the format I needed. It was coming in as Snappy-compressed JSON files. 
 
-I needed the data in Snappy-compressed Avro files.   
-
-So, I was looking to write a simple [AWS Lambda](http://veekaybee.github.io/2018/02/19/creating-a-twitter-art-bot/) function in Python. The function would listen on an S3 bucket for incoming JSON files, take each file, introspect it, and convert it on the fly to a Snappy-compressed Avro file. It would then put that Avro file into a different, "cleaned" S3 bucket, based on the timestamp in the file.
-
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/lambdaflow.jpg)
-
+I, instead needed the data in Snappy-compressed Avro files.   
 
 The reason for this particular workflow is that compressed, serialzed data is [cheaper to store](https://aws.amazon.com/blogs/big-data/top-10-performance-tuning-tips-for-amazon-athena/) and [much faster](https://cloud.netapp.com/blog/optimizing-aws-emr-best-practices) to process downstream in almost all cases. 
 
@@ -67,7 +62,11 @@ I needed these snappy-compressed Avro files to be available downstream for simpl
 
 Having the data partitioned by year-month-day in S3 prefixes means that data would then easier to query in [partitioned Athena tables.](https://docs.aws.amazon.com/athena/latest/ug/partitions.html)
 
-So, to recap: 
+So, I was looking to write a simple [AWS Lambda](http://veekaybee.github.io/2018/02/19/creating-a-twitter-art-bot/) function in Python. The function would listen on an S3 bucket for incoming JSON files, take each file, introspect it, and convert it on the fly to a Snappy-compressed Avro file. It would then put that Avro file into a different, "cleaned" S3 bucket, based on the timestamp in the file.
+
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/lambdaflow.jpg)
+
+The detailed workflow looked like this: 
 
 1. Input S3 Bucket triggers an S3 PUT event
 2. Lambda listening to the bucket picks up the event as a JSON notification and: 
@@ -79,7 +78,6 @@ So, to recap:
 
 3. Build the Lambda deployment package
 4. Move package to AWS and test against an S3 PUT event
-
 
 So the idea for the Lambda was relatively simple. 	
 But, as is [often the case with AWS](http://veekaybee.github.io/2018/01/28/working-with-aws/), nothing ever is.
