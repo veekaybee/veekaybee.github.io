@@ -244,6 +244,8 @@ A cool thing is that all three vendors now offer certifications of their offerin
 
 Learn about the three general offerings and build something fun in the cloud before you get to your next job. 
 
+The piece that is largely missing here, is of course, the "soft skills" - knowing what to build when, knowing how to communicate in the workplace, understanding what other people want. This piece is just as important as the technical, and there are lots of blog posts devoted to it, but for the sake of keeping this post under 4,000 words, I'll skip it and let you do your own reading. 
+
 ## Last Steps
 
 Now, *deep breath* I think you're ready. 
@@ -272,10 +274,5 @@ And he got it done.
 Don't let the hype overwhelm you. Don't get clouded by the buzzwords or the images of hipsters with MacBooks.  Concentrate on a single bird, and build from there.   
 
 Go forth, and good luck! 
-
-
-
-
-
 
 
