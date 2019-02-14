@@ -7,7 +7,7 @@ title: Data science is different now
 <meta name="twitter:site" content="@vboykis">
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="Data science is different now.">
-<meta name="twitter:description" content="We owe it to juniors to tell them the truth about the field. ">
+<meta name="twitter:description" content="We owe it to juniors to tell them the truth about the field today. ">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/balance.png">
 
 
