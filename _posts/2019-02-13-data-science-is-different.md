@@ -29,7 +29,7 @@ In 2012, I lucked out by being put on an analytics/engineering team that was tra
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Is there &quot;Hadoop for Complete Morons?&quot; Hadoop for Idiots is just not cutting it for me.</p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/236200976711815169?ref_src=twsrc%5Etfw">August 16, 2012</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I volunteered to be the first of the analysts to work with Pig and Hive, mainly because I was too impatient to wait for engineering work to be completed before having access to my data.  But also, I was starstruck by this haze around data scientists - people who performed cool experiments, presented cool analyses, and got to have a MacBook for work. 
+I volunteered to be the first of the analysts to work with Pig and Hive, mainly because I was too impatient to wait for engineering work to be completed before having access to my data.  But also, I was starstruck by this glowy, mysterious aura around data scientists - people who performed cool experiments, presented cool analyses, and got to have a MacBook for work. 
 
 I wanted to be one of those people! So, I learned Python online, brushed up on all of the statistics I'd taken in undergrad, and made a lot of command line mistakes in working with HDFS. In those early years, there was no real formalized way to learn "data science," other than to see what everyone else was doing, go to meetups, and try to read the tea leaves from HR job descriptions. 
 
@@ -41,7 +41,7 @@ Since 2012, the data science industry has moved extremely quickly. It's gone thr
 
 We've been through the early adoption phase, the negative press around AI and bias, the second and third rounds of venture capital for companies like Facebook, and are now at the point of high-growth adoption: where banks, healthcare companies, and other Fortune 100 companies that move five years behind the market are also hiring for data science in machine learning. 
 
-A lot has changed. Big Data(remember Hadoop? and Pig?) is out. R has seen a meteoric rise in adoption.  Python [got written up](https://www.economist.com/graphic-detail/2018/07/26/python-is-becoming-the-worlds-most-popular-coding-language) in the Economist. The cloud has changed everything all over again.
+A lot has changed. Big Data (remember Hadoop? and Pig?) is out. R has seen a meteoric rise in adoption. Python [was written up](https://www.economist.com/graphic-detail/2018/07/26/python-is-becoming-the-worlds-most-popular-coding-language) in the Economist. Then the cloud changed everything all over again.
 
 Unfortunately, what has not changed is the mass media hype around the field of data science, which has trumpeted data scientist as the ['sexiest career of the 21st century'](https://www.entrepreneur.com/article/327162) so many times, that there is now what I believe to be an important problem that we as a community need to talk about.  That problem is an oversupply of junior data scientists hoping to enter the industry, and mismatched expectations on what they can hope to find once they do get that coveted title of "data scientist."
 
@@ -51,7 +51,7 @@ First, let's talk about the oversupply of junior data scientists. The [continuin
 
 This is purely anecdotal evidence, so take it with a large grain of salt. But, based on my own participation as a resume screener, mentor to data scientists leaving boot camps, interviewer, interviewee, and from conversations with friends and colleagues in similar positions, I've developed an intuition that the number of candidates per any given data science position, particularly at the entry level, has grown from 20 or so per slot, to 100 or more. I was talking to a friend recently who had to go through 500 resumes for a single opening. 
 
-This is not abnormal. More anecdotal evidence comes from job openings [like this one](https://twitter.com/andrewyng/status/908052152722976768?lang=en), from machine learning's godfather, Andrew Ng, whose AI startup demanded 70-80 hours a week. He was flooded with applications, after noting that previously many had tried to volunteer for free. 
+This is not abnormal. More anecdotal evidence comes from job openings [like this one](https://twitter.com/andrewyng/status/908052152722976768?lang=en), from machine learning's godfather, Andrew Ng, whose AI startup demanded 70-80 hours a week. He was flooded with applications, after blithely noting that previously many people had tried to volunteer for free. As of this latest writing, they [ran out of space](https://twitter.com/andrewyng/status/1086419269502390272) in their current office.  
 
 It's very, very hard to estimate the true gap between market demand and supply, but [here's a starting point](https://www.wired.com/story/andrew-ngs-new-online-school/). 
 
