@@ -1,12 +1,12 @@
 ---
 layout: post
-title: In the attic and the basement of computer science
+title: The attic and the basement of apps
 ---
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@vboykis">
 <meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="In the attic and the basement of computer science">
+<meta name="twitter:title" content="The attic and the basement of apps">
 <meta name="twitter:description" content="As developers, we need good blueprints to deal with the enormous amount of abstraction we encounter every day.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/winterstudio.png">
 
