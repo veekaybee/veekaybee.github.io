@@ -8,7 +8,7 @@ title: Breaking down Apple's iOS Screen Time report
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="Breaking down Apple's iOS Screen Time feature">
 <meta name="twitter:description" content="How bad does a report have to get and have people still get something out of it?">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/sleeping-woman-1935.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/getoffphone2.png">
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/getoffphone2.png) 
 
