@@ -6,8 +6,8 @@ title: Breaking down Apple's iOS Screen Time report
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@vboykis">
 <meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="Breaking down Apple's iOS Screen Time report">
-<meta name="twitter:description" content="Can a bad chart still work? ">
+<meta name="twitter:title" content="Breaking down Apple's iOS Screen Time feature">
+<meta name="twitter:description" content="How bad does a report have to get and have people still get something out of it?">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/sleeping-woman-1935.jpg">
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/getoffphone.jpg) 
@@ -80,37 +80,37 @@ The colors are great and [color-safe](https://design.google/library/designing-gl
 4. It's hard to see which apps are in these categories. Personally, I'd rather see a breakdown of time spent on a daily basis by app on the chart, like is available below, so I can focus on those specific apps instead of categories. 
 
 
-
-
 ### Data glossary and sources
 
 This brings me to the next part: explaining data metrics and sources. It was drilled into me by a well-meaning supervisor at an internship long, long ago that each chart should have a source, a footnote into when the data was pulled, and any additional information that would help the decision-maker be comfortable with the source data. 
 
-Apple is Apple, so they can do whatever they want. There are no definitions for how [any of the metrics](https://discussions.apple.com/thread/250129083) are calculated. For example, what does "time spent" in the app include? What is a [pick-up? ](https://apple.stackexchange.com/questions/338123/what-are-pickups-in-the-screen-time-report) When does tracking start and end? 
+Apple is Apple, and they have the power, not the consumer, so they can do whatever they want. There are no definitions for how [any of the metrics](https://discussions.apple.com/thread/250129083) are calculated. For example, what does "time spent" in the app include? What is a [pick-up? ](https://apple.stackexchange.com/questions/338123/what-are-pickups-in-the-screen-time-report) When does tracking start and end? 
 
-There are so many questions I have that could be answered by putting a simple gray question mark at the top of the metric without increasing the amount of clutter in the application.  
+I'd really love to see a methodology section. But, even simpler than that, there are so many questions that could have been answered by putting a simple gray question mark at the top of the metric without increasing the amount of clutter in the application.  
 
 ### Ability to drill down
 
-This is probably the worst part of the Screen Time feature. In line with Apple's overall approach to selective simplicity, the app allows you to see what you did today, or what you did for the past 7 days. The 7 days screen only shows you the data in aggregate. It doesn't show you the breakdown for each day. 
+This is probably the worst part of the Screen Time feature. In line with Apple's overall approach to selective simplicity, the app doesn't allow you to control several key things: [which apps fall into which categories](https://discussions.apple.com/thread/8566718) (i.e. "Reading and Reference"), or the ability to allot an amount of time to a single app versus splitting it for multiple apps. 
 
-Speaking of which, there is no way to sort the chart by apps instead of categories, and no way to change which apps fall into each of the categories. 
+As a result, the report reflects what Apple thinks is a "good" use of your time, even though that might not be the case. It tracks intent as Apple understands it, but not intentionality. For example, the app always tracks phone and messaging usage, which I personally don't count as "screen time." It also tracks YouTube, but for me personally, I use it as a streaming music app in the car rather than to watch videos, which the app and report also don't allow toggles for.
 
-There is almost no ability to control any of the content in this report in meaningful ways that would help the consumer make decisions about whether they're spending their time efficiently, particularly since Apple makes decisions on which apps fall into which categories, and since the report is very much category-based. 
+The app itself is a blunt instrument, and the report is even blunter. It allows you to see what you did today, or what you did for the past 7 days. The 7 days screen only shows you the data in aggregate. It doesn't show you the breakdown for each day, and you can't see any breakdown by week-over-week or month over month. There's no ability to annotate days to intelligently understand patterns of usage.
 
-There is also no ability in the feature itself to control which apps are tracked and which are not. For example, I don't care how long I'm on the phone or messaging, because they're core functions of the phone to me. I also don't care how long I'm looking at audiobooks, because that's mostly passive. None of that is taken into account. 
-
-
-## Summary: But is it a good report?
-
-
-All in all, here's how I'd change this chart around a bit, while still preserving the clean interface that Apple so craves: 
+All in all, here's how I'd change the main chart around a bit, while still preserving the clean interface that Apple so craves: 
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/new_screentime.png) 
 
-Even though the charts fail on most of the criteria I talk about, they still succeed in a big way: I'm spending less time. Or, at least I think I am. 
+
+## But is it a good report?
+
+There are a number of problems with the report, where the user's intent misaligns with Apple's intent (and, to an extent, iOS's architecture. For some of the tracking features I talked about, it's probably hard to discern when a user is doing x,y, or z on the screen.) There needs to be a great deal more user education going into the feature, which, as of now, seems to be extremely neglected (even though it's just been released). My hunch is that Apple didn't release this for the consumer's benefit - after all, why does Apple benefit if you spend less time on its phone - but to [thwart off competitors in the app store.](https://techcrunch.com/2019/04/28/apple-defends-its-takedown-of-some-apps-monitoring-screen-time/). As such, it's not a great report. 
+
+However, even though the charts fail on most of the criteria I talk about, they still succeed in a big way: I'm spending less time. Or, at least I think I am (based on the limited weekly data.)
 
 Ever since I opted into Screen Time about 2 months ago, I've been using it to incentivize myself to decrease screen time usage on my phone, and I've been relatively successful - I'm now down to less than 2 hours a day.
 
-This poses an interesting dilemma: Would I have reduced my time even further with some of the changes I suggested? How bad does a report have to get and have people still get something out of it? In the case of the Screen Time feature, it seems like Apple is really trying to test that boundary. 
+This poses an interesting dilemma: Would I have reduced my time even further with some of the changes I suggested? 
 
+How bad does a report have to get and have people still get something out of it? 
+
+In the case of the Screen Time feature, it seems like Apple is really trying to test that boundary. 
