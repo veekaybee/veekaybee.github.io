@@ -10,7 +10,7 @@ title: Breaking down Apple's iOS Screen Time report
 <meta name="twitter:description" content="How bad does a report have to get and have people still get something out of it?">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/sleeping-woman-1935.jpg">
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/getoffphone.jpg) 
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/getoffphone2.png) 
 
 One of the most valuable things I've learned in the early part of my career spent as a ~~data janitor~~ business analyst is how to put together visuals that are actionable. After all, as data professionals, we're not putting together charts for the sake of looking good. If we were, we'd be the ["Data is Ugly" subreddit](https://www.reddit.com/r/dataisugly/).  The point of a good chart is drive a person (usually the executive you're presenting the chart to) to commit to an action. 
 
