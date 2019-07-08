@@ -72,7 +72,7 @@ To understand what the Python core developers are trying to do here with type hi
 
 Programming languages, at their core, are a way of doing things to data using the CPU, and storing both the input and output in memory.
 
-![](https://github.com/veekaybee/veekaybee.github.io/master/images/computer.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/computer.png)
 
 The CPU is pretty stupid. It can do really powerful stuff, but it only understands machine language, which, at its core, is electricity. A representation of machine language is 1s and 0s. 
 
@@ -82,7 +82,7 @@ When languages are either [compiled or executed ](http://openbookproject.net/thi
 
 There are a couple ways to translate your code into machine-legible code: you can either build a binary and have a compiler translate it (C++, Go, Rust, etc.), or run the code directly and have the interpreter do it. The latter is how Python (and PHP, Ruby,and similar "scripting" languages) works.  
 
-![](https://github.com/veekaybee/veekaybee.github.io/master/images/interpret.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/interpret.png)
 
 How does the hardware know how to store those 0s and 1s in memory? The software, our code, needs to tell it how to allocate memory for that data. What kind of data? That's dicated by the language's choice of data types. 
 
@@ -90,7 +90,7 @@ Every language has data types. They're usually one of the first things you learn
 
 You might see a tutorial like this (from Allen Downey's excellent book, ["Think Like a Computer Scientist."](http://openbookproject.net/thinkcs/python/english3e/)),that talks about what they are. Simply put, they're different ways of representing data laid out in memory.  
 
-![](https://github.com/veekaybee/veekaybee.github.io/master/images/datatypes.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/datatypes.png)
 
 
 There are strings, integers, and many more, depending on which language you use. For example, [Python's basic data types](https://en.wikibooks.org/wiki/Python_Programming/Data_Types) include: 
