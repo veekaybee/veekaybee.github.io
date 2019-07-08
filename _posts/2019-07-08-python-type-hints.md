@@ -13,8 +13,6 @@ Presser, Konstantin Makovsky 1900
 <meta name="twitter:description" content="What are they? Why are they? ">
 <meta name="twitter:image" content="presser.png">
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  
 
 - [Introduction](#introduction)
