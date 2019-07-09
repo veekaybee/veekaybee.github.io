@@ -205,8 +205,9 @@ public class CreatingVariables {
 		double rate = calculateRainfallRate(seconds, rainfall);
 	
 	}
-private static double calculateRainfallRate(double seconds, double rainfall) {
-	return rainfall/seconds;
+	private static double calculateRainfallRate(double seconds, double rainfall) {
+		return rainfall/seconds;
+	}
 }
 ```
 
