@@ -260,6 +260,9 @@ For example, if we try to do:
 name = 'Vicki'
 seconds = 4.71;
 
+
+name + seconds
+
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
 <ipython-input-9-71805d305c0b> in <module>
@@ -389,8 +392,8 @@ Let's say we're adding names to a dictionary
 names = {'Vicki': 'Boykis',
          'Kim': 'Kardashian'}
 
-def append_name(dict, first_name, last_name):
-    dict[first_name] = last_name
+def append_name(dic, first_name, last_name):
+    dic[first_name] = last_name
     
 
 append_name(names,'Kanye',9)
@@ -434,29 +437,31 @@ from typing import Dict
 
 class rainfallRate:
 
-    def __init__(self, hours, inches):
-        self.hours= hours
+    def __init__(self, hours:int, inches:int):
+        self.hours = hours
         self.inches = inches
 
 
-    def calculateRate(self, inches:int, hours:int) -> float:
-        return inches/hours
+    def calculateRate(self) -> float:
+        return self.inches / self.hours
 
 
-rainfallRate.calculateRate()
+rate = rainfallRate(4, 2)
+rate.calculateRate()
 
 
 class addNametoDict:
 
-    def __init__(self, first_name, last_name):
+    def __init__(self, dic:Dict[str, str], first_name:str, last_name:str):
         self.first_name = first_name
         self.last_name = last_name
-        self.dict = dict
+        self.dict = dic
 
-    def append_name(dict:Dict[str, str], first_name:str, last_name:str):
-        dict[first_name] = last_name
+    def append_name(self):
+        self.dict[self.first_name] = self.last_name
 
-addNametoDict.append_name()
+addName = addNametoDict(names, "Kanye", "West")
+addName.append_name()
 ```
 A neat thing is that, now that we have (liberally) added types, we can actually see what's going on with them when we call the class methods: 
 
