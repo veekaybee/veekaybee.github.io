@@ -62,7 +62,7 @@ However, there's still a lot of confusion around what they are (and what they're
 
 When I started to investigate and weigh whether type hints made sense for me to use, I became super confused. So, like I usually do with things I don't understand, I decided to dig in further, and am hopeful that this post will be just as helpful for others. 
 
-As usual, if you see something and want to comment, feel free to submit a pull request. 
+As usual, if you see something and want to comment, feel free to [submit a pull request](https://github.com/veekaybee/veekaybee.github.io). 
 
 # <a id="how-computers-build-our-code"></a> How Computers Build Our Code
 
