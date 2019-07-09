@@ -11,7 +11,7 @@ Presser, Konstantin Makovsky 1900
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="A deep dive on Python type hints">
 <meta name="twitter:description" content="What are they? Why are they? ">
-<meta name="twitter:image" content="presser.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/presser.png">
 
 **Table of Contents**  
 
