@@ -181,7 +181,7 @@ This is problably [the best explanation of the difference between the two](http:
 
 > I’ve used statically typed languages in the past, but my programming for the past few years has mostly been in Python. The experience was somewhat annoying at first, it felt as though it was simply slowing me down and forcing me to be excessively explicit whereas Python would just let me do what I wanted, even if I got it wrong occasionally. Somewhat like giving instructions to someone who always stops you to ask you to clarify what you mean, versus someone who always nods along and seems to understand you, though you’re not always sure they’re absorbing everything.
 
-A small caveat here that took me a while to understand: static and dynamically-typed languages are closely linked, but not synonymous with compiled or interpeted languages. You can have an interpreted language, like Python, that is compiled, and you can have static languages, like Java, that are interpreted, for example if you use the Java REPL. 
+A small caveat here that took me a while to understand: static and dynamically-typed languages are closely linked, but not synonymous with compiled or interpeted languages. You can have a dynamic language, like Python, that is compiled, and you can have static languages, like Java, that are interpreted, for example if you use the Java REPL. 
 
 # <a id="data-types-in-statically-versus-dynamically-typed-languages"></a> Data types in statically versus dynamically typed languages 
 
