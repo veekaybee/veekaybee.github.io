@@ -74,7 +74,7 @@ Programming languages, at their core, are a way of doing things to data using th
 
 The CPU is pretty stupid. It can do really powerful stuff, but it only understands machine language, which, at its core, is electricity. A representation of machine language is 1s and 0s. 
 
-To get to those 1s and 0s, we need to move from our high-level, to low-level langugage. This is where compiled and interepreted languages come in. 
+To get to those 1s and 0s, we need to move from our high-level, to low-level language. This is where compiled and interepreted languages come in. 
 
 When languages are either [compiled or executed ](http://openbookproject.net/thinkcs/python/english2e/ch01.html) (python is executed via interpreter), the code is turned into lower-level machine code that tells the lower-level components of the computer i.e. the hardware, what to do.
 
