@@ -370,7 +370,7 @@ Type hints were previously just comments. But what happened was that Python star
 	
 	The only way that annotations take on meaning is when they are interpreted by third-party libraries. These annotation consumers can do anything they want with a function's annotations. For example, one library might use string-based annotations to provide improved help messages, like so:
 
-With the development of PEP 484 is that it was developed in conjunction with mypy, a project out of DropBox, which checks the types as you run the program. Remember that types are not checked at run-time. You'll only get an issue if you try to run a method on a type that's incompatible. For example, trying to slice a dictionary or trying to pop values from a string. 
+PEP 484, which introduced type hints, was developed in conjunction with mypy, a project out of DropBox, which checks the types as you run the program. Remember that types are not checked at run-time. You'll only get an issue if you try to run a method on a type that's incompatible. For example, trying to slice a dictionary or trying to pop values from a string. 
 
 From the implementation details, 
 
