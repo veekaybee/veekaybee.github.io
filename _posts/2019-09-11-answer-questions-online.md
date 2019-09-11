@@ -25,7 +25,7 @@ Often, I'll get messages like these:
 "I'm getting into machine learning. Do you have any book recommendations?"
 
 "I'm looking to switch into data science as a career.
-[5-10 paragraphs of background, including every course the person has taken and a detailed description of each job] an you tell me what to do?"
+[5-10 paragraphs of background, including every course the person has taken and a detailed description of each job] Can you tell me what to do?"
 
 "I want to learn Python. Can you give some links to blog posts that you like?"
 
@@ -48,7 +48,7 @@ As Trey writes in his [fantastic post](https://medium.com/@treycausey/do-you-hav
 So, how do I deal with this? I triage based on a set of internal heuristics, namely: 
 
 1. Questions are well-written
-2. The question is respectful of the reader's time constraints
+2. The question is respectful of the reader's time constraints and easy to act on
 
 Asking good questions is a critical skill, both online and at work, because asking a good question gets you a good answer. 
 
@@ -57,7 +57,7 @@ There are two great resources for figuring out how to ask good questions:
 + Julia's excellent post on [how to ask questions](https://jvns.ca/blog/good-questions/)
 + Stack Overflow's [guidelines on asking questions on their platform](https://stackoverflow.com/help/how-to-ask)
 
-But these are specific to in-person and the Stack Overflow platform, so I want to write something specifically about email/Twitter. Here are some of my (fast and loose) guidelines for asking good questions that have a higher probability of being answered: 
+But these are specific to in-person and the Stack Overflow platform, so I wanted to write something specifically about email/Twitter. Here are some of my (fast and loose) guidelines for asking good questions that have a much higher probability of being answered: 
 
 1. Good questions make it obvious that the person has already done some basic research on their own. If me Googling for half an hour gives the same result as you doing it, it's not a good question. 
 
