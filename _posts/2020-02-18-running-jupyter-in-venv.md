@@ -44,3 +44,5 @@ sys.version
 ```
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/myvenv2.png)
+
+*To edit this post, [open a pull request](https://github.com/veekaybee/veekaybee.github.io).* 
