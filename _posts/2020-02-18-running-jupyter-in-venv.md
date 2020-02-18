@@ -30,7 +30,7 @@ Bash code:
 
 ```bash
 shell > mkdir envtests && cd envtests
-shell > virtualenv virtualenv -p python3.7 myproject
+shell > virtualenv -p python3.7 myproject
 shell > source myproject/bin/activate 
 (myproject) shell > python -m pip install ipykernel
 (myproject) shell > ipython kernel install --user --name=myproject
