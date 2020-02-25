@@ -45,4 +45,10 @@ sys.version
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/myvenv2.png)
 
+Editing to add the Twitter thread, where people added great comments: 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Got tired of Googling this, so here&#39;s how to open a Jupyter notebook from within a virtual environment: <a href="https://t.co/1y2Jdu8TrN">https://t.co/1y2Jdu8TrN</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/1229813718776786944?ref_src=twsrc%5Etfw">February 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+
+
 *To edit this post, [open a pull request](https://github.com/veekaybee/veekaybee.github.io).* 
