@@ -109,7 +109,7 @@ If that is the kind of work you need, make it clear up-front, or your hire, who 
 
 This is probably the most pervasive myth of the hype cycle. Just as you don't always need a software developer to work with Go and microservices on containers, you don't need a machine learning engineer specializing in Julia who works on neural nets.
 
-Remember what I wrote before - most data science problems are similar and simple, and both Ferraris and Civics can travel on the same highway, Civics sometimes more efficiently.  I've also written before about [big data problems](http://veekaybee.github.io/hadoop-or-laptop/), and why you should think long and hard about whether you need that Hadoop cluster.
+Remember what I wrote before - most data science problems are similar and simple, and both Ferraris and Civics can travel on the same highway, Civics sometimes more efficiently.  I've also written before about [big data problems](http://veekaybee.github.io/2017/03/20/hadoop-or-laptop/), and why you should think long and hard about whether you need that Hadoop cluster.
 
 7) **Data science is a growing field and there is a lot of opportunity.** 
 
