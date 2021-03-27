@@ -55,6 +55,8 @@ This is probably the first time I've personally seen something formally stated a
 
 Mulling over this fact, I wondered what else was ghost knowledge in the data community, [and so I asked.](https://twitter.com/vboykis/status/1358126499489058819)
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What is something that you know to important and true about data work (could be DS, DE, MLE, stats,etc) that you’ve never seen written in a book, blog post, or covered in a course? In other words, you learned it only at work.</p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/1358126499489058819?ref_src=twsrc%5Etfw">February 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
 What I found was a wealth of learnings that people wrote from painful personal experience. The replies generally fall into two categories: the ghost knowledge in dealing with data and the ghost knowledge in dealing with people.
  
 Inspired by the replies, I wanted to write about a few key important implicit observations I've made in my own data career. 
