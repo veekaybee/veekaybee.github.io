@@ -39,14 +39,10 @@ Implicit knowledge is also what David [has called](https://twitter.com/drmaciver
 Here's his [full post on it](https://notebook.drmaciver.com/posts/2020-02-16-14:22.html) and why it happens:
 
 >The core problem that causes all of this is that there's a leaky pipeline of knowledge from epistemic communities to the outside world. In order for you to discover a piece of knowledge:
-
->It has to be interesting enough for someone to think it is worth writing down.
-    
->It has to be interesting enough that it gets accepted (though if not, it may end up on a random blog post if you're lucky).
-
->It has to be interesting or well organised enough that it gets surfaced in a way you can find.
-
->It has to be accessible enough for you to be able to find it (e.g. it can't use super technical terms that you'll have no way to ever discover without access to an expert).
+It has to be interesting enough for someone to think it is worth writing down.
+It has to be interesting enough that it gets accepted (though if not, it may end up on a random blog post if you're lucky).
+It has to be interesting or well organised enough that it gets surfaced in a way you can find.
+It has to be accessible enough for you to be able to find it (e.g. it can't use super technical terms that you'll have no way to ever discover without access to an expert).
     
 Having clean data is in this category of "ghost knowledge" that, if you've been working in data for a long time, you know painfully from your own experience.  It's only extremely recently that this knowledge started being written down in a codified way.
 And by recently, I mean that there was [a paper published by Google](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/0d556e45afc54afeb2eb6b51a9bc1827b9961ff4.pdf) in January 2021.
@@ -70,8 +66,8 @@ There is a whole set of implications in assuming your data is distributed this w
 
 Real life phenomena, as I've seen them in industry, mostly do not follow a bell curve. Most of the data that people deal with across industries involves activities that people do: people on your platform, people clicking things, people receiving vaccines or medical treatments, restaurant visits, etc.
 And all of that [data looks like this](https://en.wikipedia.org/wiki/Power_law#/media/File:Long_tail.svg):
-![powerlaw.png]
-This essentially means that people do some activity a lot, and the [rest not as much at all. ](https://towardsdatascience.com/the-power-law-distribution-346085302cd4)
+
+This essentially means that a few people do some activity a lot, and the [rest not as much at all. ](https://towardsdatascience.com/the-power-law-distribution-346085302cd4)
  
 Here are some real world examples:
  
@@ -80,11 +76,9 @@ Here are some real world examples:
 + [Twitter engagement](https://www.marketingcharts.com/digital/social-media-108364)
 + [Covid spread](https://twitter.com/EricTopol/status/1264594385284427777?s=20)
   
- And much, much more.
-This means that [we can't deal with the data in the same way](https://edgeperspectives.typepad.com/edge_perspectives/2007/05/the_power_of_po.html
-), particularly for smaller samples of data, because
+ And much, much more.  This means that [we can't deal with the data in the same way](https://edgeperspectives.typepad.com/edge_perspectives/2007/05/the_power_of_po.html), particularly for smaller samples of data, because
 
-  Gaussian and Paretian distributions differ radically.  The main feature of the Gaussian distribution . . . can be entirely characterized by its mean and variance . . . A Paretian distribution does not show a well-behaved mean or variance.  A power law, therefore, has no average that can be assumed to represent the typical features of the distribution and no finite standard deviations upon which to base confidence intervals . .
+>  Gaussian and Paretian distributions differ radically.  The main feature of the Gaussian distribution . . . can be entirely characterized by its mean and variance . . . A Paretian distribution does not show a well-behaved mean or variance.  A power law, therefore, has no average that can be assumed to represent the typical features of the distribution and no finite standard deviations upon which to base confidence intervals . .
 
 There are both statistical and business implications for how you deal with this rule. In particular, it means that paying attention to tail-end phenomena is just as as important as understanding an "average" user. 
 
@@ -155,20 +149,16 @@ And finally, there is Venkatesh's excellent (but cynical) post, [from over 10 ye
  
 ## People usually do not operate based on the data
 
-The final thing I've learned is that companies operate mostly on gut instinct. Companies and individuals will tell you that they're data-driven. People love this idea and want to belive it about themselves. I want to believe this about myself! 
+The final thing I've learned is that companies operate mostly on gut instinct. Many will tell you that they're data-driven. People love this idea, of making decisions based on The Numbers, and want to belive it about themselves. I want to believe this about myself! 
 
-But oftentimes, data will serve as supporting evidence for a gut check, and the gut check depends on a lot of factors, including whether you trust the person presenting the data, what your view of the company is, and what corporate politics are currently at play. 
+But oftentimes, data will serve mostly as supporting evidence for a gut check, and the gut check depends on a lot of factors, including whether you trust the person presenting the data, what your view of the company is, and what corporate politics are at play. 
 
-This is not to end on a discouraging note - it doesn't mean that you can [just make up numbers](https://vicki.substack.com/p/all-numbers-are-made-up-some-are) and expect to get somewhere. 
+This is not to end on a discouraging note - it doesn't mean that you can [just make up numbers](https://vicki.substack.com/p/all-numbers-are-made-up-some-are) and expect to get somewhere. What it means is that it's important to establish yourself as knowledgeable, trustworthy, and able to clearly communicate what you're talking about, regardless of what job you're in, because the discussion around the data will be just as important as the data itself. 
 
-What it means is that it's important to establish yourself as knowledgeable, trustworthy, and able to clearly communicate what you're talking about, regardless of what job you're in, because the discussion around the data will be just as important as the data itself. 
-
-Or rather, a more optimistic way to think about this is that the analysis or dashboard is (and should be) the beginning and framing of a conversation, not the end of it. 
+Or rather, a more optimistic way to think about this is that the analysis or dashboard is (and should be) the beginning and framing of a conversation, not the end of it. And if you frame it correctly, it's yours to lead. 
 
 
-
- 
-If you have any other pieces of ghost knowledge, feel free to shoot me an email or a tweet.
+_If you have any other pieces of ghost knowledge, feel free to shoot me an email or a tweet._
  
  
  
