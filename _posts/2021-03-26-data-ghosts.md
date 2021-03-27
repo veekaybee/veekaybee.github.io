@@ -61,7 +61,7 @@ What I found was a wealth of learnings that people wrote from painful personal e
  
 Inspired by the replies, I wanted to write about a few key important implicit observations I've made in my own data career. 
  
-# The power law
+## The power law
 What they tell you in statistics classes is that you're assuming the population you're drawing from is normally distributed. In other words, your data follows a [bell curve](https://en.wikipedia.org/wiki/Normal_distribution), where most of the people fall somewhat close to the mean, with a few outliers. 
 
 There is a whole set of implications in assuming your data is distributed this way. I.e. if you assume a "normal" model of society, you can do [this kind of math on it](http://www2.psychology.uiowa.edu/faculty/mordkoff/GradStats/part%201/I.07%20normal.pdf) to get the answers you need from data. 
@@ -122,7 +122,7 @@ Developers writing apps need them to be stable and traceable. Analysts looking a
 This means that there will always be a conflict between moving quickly to ship features on a given application and logging those features and making sense of them. It's up to the data professional to navigate that chasm and make sense of it. 
  
  
-# Working with people is hardest of all
+## Working with people is hardest of all
 
 Software engineering is really, really hard. There is a lot of thinking involved, a lot of moving parts. You have to understand how complex systems work, reason through the statistics, and keep up with the latest frameworks in the field.
 
