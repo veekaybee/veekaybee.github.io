@@ -109,7 +109,7 @@ A couple subsets of the data is a hard problem: Dealing with dates is going to b
  
 ## Data work is programming work
  
-[I've been talking about this for a while](http://veekaybee.github.io/2019/02/13/data-science-is-different/), but [the longer we are](https://vicki.substack.com/p/the-rise-of-the-non-expert-expert) into this thing called machine learning, and we're just in the (steam-powered days)[https://vicki.substack.com/p/were-still-in-the-steam-powered-days], still. The further we get away from working with small data sets, and more with large, complicated  (often) cloud-based, based distributed systems, the more we'll [all have to become developers](http://veekaybee.github.io/2019/04/11/attic-compsci/) and adapt development best practices.
+[I've been talking about this for a while](http://veekaybee.github.io/2019/02/13/data-science-is-different/), but [the longer we are](https://vicki.substack.com/p/the-rise-of-the-non-expert-expert) into this thing called machine learning, and we're just in the [steam-powered days](https://vicki.substack.com/p/were-still-in-the-steam-powered-days), still. The further we get away from working with small data sets, and more with large, complicated  (often) cloud-based, based distributed systems, the more we'll [all have to become developers](http://veekaybee.github.io/2019/04/11/attic-compsci/) and adapt development best practices.
  
 What are the best practices of data development today? Good work that is easily named and easily reproducible. Notebooks where applicable, written, tested modules the rest of the way. Version control for code. And documentation.
  
