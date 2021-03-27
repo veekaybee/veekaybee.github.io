@@ -26,9 +26,11 @@ Explicit knowledge is anything that you can read about, knowledge that's easy to
  
  
 Some time ago, Caitlin tweeted,
-https://twitter.com/beeonaposy/status/1353735905962577920
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The summation of my decade of data work is that the data matters more than the model. Every time.</p>&mdash; Caitlin Hudon 👩‍💻 (@beeonaposy) <a href="https://twitter.com/beeonaposy/status/1353735905962577920?ref_src=twsrc%5Etfw">January 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
 I've tweeted similar observations a while back:
-https://twitter.com/vboykis/status/1306671146541215744
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The difference between data science and MLE is that you go from spending 80% of your time cleaning data to spending 80% of your time cleaning Dockerfiles.</p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/1306671146541215744?ref_src=twsrc%5Etfw">September 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
 The basic block of labor of machine learning is [cleaning data and setting up engineering pipelines, the detailed and tedious work of making all the pieces fit together]( https://vicki.substack.com/p/neural-nets-are-just-people-all-the).
  
 However, there is no way you can learn this, except to have to deal with a lot of data that's not clean, and to build a lot of models. So, this very fundamental fact is not immediately obvious to people new to the field until they've gained the experience. And, what's worse is that there's no guide, pamphlet, textbook, or course that will give you this piece of implicit knowledge.
