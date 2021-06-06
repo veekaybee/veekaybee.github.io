@@ -33,7 +33,7 @@ The same is true for adults, too, and doubly so for those of us who work with da
  
 This is one of the reasons that most software engineering (and, now, machine learning engineer) interviews now have a portion around whiteboarding algorithms. Algorithms are the way we understand and pass down patterns in software engineering.
  
-But what about data interviews? Why, so often, do MLE interviews, particularly in FAANG companies, come up with the same list of algorithms to discuss as software engineers - linked lists, graphs, and binary trees - when much of the work we do is only tangentially related? How does knowledge of these patterns and sharing that knowledge back out in interviews help us at work on a day-to-day basis?
+But what about data interviews? Why, so often, do MLE interviews, [particularly in FAANG companies](https://igotanoffer.com/blogs/tech/facebook-machine-learning-engineer-interview), come up with the same list of algorithms to discuss as software engineers - linked lists, graphs, and binary trees - when much of the work we do is only tangentially related? How does knowledge of these patterns and sharing that knowledge back out in interviews help us at work on a day-to-day basis?
  
 There's been a lot of digital ink spilled, [including by me](https://twitter.com/vboykis/status/1316019970032070661), about how clumsy and inefficient these kinds of interviews are for actually assessing what you want to find: a technically competent person who is eager to learn and who you wouldn't mind working with day in and day out. 
  
