@@ -393,7 +393,7 @@ def append_name(dict, first_name, last_name):
     dict[first_name] = last_name
     
 
-append_name(names,'Kanye',9)
+append_name(names,'Kanye',9.7)
 ```
 
 If we allow this to happen, we'll have a bunch of malformed entries in our dictionary.
