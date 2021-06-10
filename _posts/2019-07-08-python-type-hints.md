@@ -257,7 +257,8 @@ For example, if we try to do:
 
 ```
 name = 'Vicki'
-seconds = 4.71;
+seconds = 4.71
+name + seconds;
 
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
