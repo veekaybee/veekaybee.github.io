@@ -30,7 +30,7 @@ We possess an entire universe, and we command it with precision and grace as we 
 
 And yet, there is chaos at the edges. There is a place that is not as full of certainty and bluster, a place full of edge cases and ghosts, and that place is “going to production.”
 
-The production deploy is highly rigorous. You have some code that’s been tested and rewritten and tested again by others and approved, and then, as you merge a branch into production, you watch the code sprawl out across tens or hundreds or thousands of servers, you start watching the metrics and logs for impact. It’s all part of a very scientific checklist. 
+The production deploy process is highly rigorous. You have some code that’s been tested and rewritten and tested again by others and approved, and then, as you merge a branch into production, you watch the code sprawl out across tens or hundreds or thousands of servers, you start watching the metrics and logs for impact. It’s all part of a very scientific checklist. 
 
 But on the way to production,  there is much that can go wrong, and does. An [intern sends out an email to 30 million people](https://www.bleepingcomputer.com/news/technology/hbo-max-blames-mistaken-integration-test-email-on-an-intern/). A [missing config file](https://www.fastly.com/blog/summary-of-june-8-outage) brings down half the internet. Someone runs an [rm rf](https://twitter.com/vboykis/status/1406039229520613382). Someone else’s system impacts yours. The liminal space of the production deploy is filled with all possible combinations of human and computer error that can potentially occur. 
 
