@@ -38,7 +38,7 @@ And when you go into it, no matter how much you think you control the production
 
 ---
 
-I spend eight hours a day, mostly silent and alone in front of a large monitor in my basement. But that time is never quiet for me. My daily life at work is lively and chaotic and wonderful - lots of original writing and responses to people's comments and RFCs, submitting my own pull requests and reviewing others', Slack messages, meetings, Jira updates, all of the digital detritus of an always-on heartbeat that continues to pulse even when I’m not awake.
+I spend eight hours a day, mostly silent and alone, in front of a large monitor in the coolness of my semi-dark basement. But that time is never quiet for me. My daily life at work is lively and chaotic and wonderful - lots of original writing and responses to people's comments and RFCs, submitting my own pull requests and reviewing others', Slack messages, meetings, Jira updates, all of the digital detritus of an always-on heartbeat that continues to pulse even when I’m not awake.
 
 But, when I am deploying to production, I am still.    "We're going to prod."  When developers say it this way, it sounds like a faraway place, a destination that will take some time and effort to reach, but also an endpoint, a culmination.
 
