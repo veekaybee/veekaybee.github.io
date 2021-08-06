@@ -15,7 +15,7 @@ title: The local minima of suckiness
 
 **Key and Hand, Tamara Lempicka, 1941**
 
-I don't usually deal in absolutes, but I now know this one thing to be fundamentally true: no one becomes a good software engineer by themselves. But in an industry that has always prided itself on the myth of the lone cowboy, the [lone wolf](https://randsinrepose.com/archives/the-wolf/), the self-taught bootcamp grad, it can seem like good developers are not born - they rise out of the ground, fully-formed and churning out PRs their wake.
+I don't usually deal in absolutes, but I now know this one thing to be fundamentally true: no one becomes a good software engineer by themselves. But in an industry that has always prided itself on the myth of the superstar ninja, the [lone wolf](https://randsinrepose.com/archives/the-wolf/), the self-taught genius, it can seem like good developers are not born - they rise out of the ground, fully-formed and churning out PRs their wake.
 
 In my career so far, I haven't seen a single person who has been able to grow successfully as a competent developer without learning from others. And, I'm concerned that, as an industry, we don't often actively talk about the fact that [we need other people at work](https://increment.com/software-architecture/architecture-for-generations/) to help us learn things, and that we need room for this learning in our development and work planning processes.
 
