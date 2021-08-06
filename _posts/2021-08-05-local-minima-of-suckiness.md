@@ -53,7 +53,7 @@ The anecdote is about a developer, Bill, who was working on (ostensibly) a missi
 
 Code review was still in the nascent stages in those days, and Weinberg  writes, "His value system, when it came to programming, dictated that secretive, possessive programming was bad and that open, shared programming was good. Errors that might be found in code he had written - not "his code" for the terminology was not used here - were simply facts to be exposed to investigation with an eye to future improvement, not attacks on his person. "
 
-Marily found 17 bugs in the 13 lines of code. Instead of fuming, Bill's reaction was to go around and tell everyone how crazy this code was, and how hilarious it was that she had found 13 bugs. While he was doing that, a few people joined in, for at this point, it was a game, and found a few more bugs.  A scenario that could have ended with Bill accusing Marilyn of blocking him or of Bill hiding his code because he thought others would think he was a bad developer ended up much better because things were out in the open.
+Marilyn found 17 bugs in the 13 lines of code. Instead of fuming, Bill's reaction was to go around and tell everyone how crazy this code was, and how hilarious it was that she had found 13 bugs. While he was doing that, a few people joined in, for at this point, it was a game, and found a few more bugs.  A scenario that could have ended with Bill accusing Marilyn of blocking him or of Bill hiding his code because he thought others would think he was a bad developer ended up much better because things were out in the open.
 
 Good companies leave room for bugs and rough drafts.  It doesn't mean that work can be sloppy. On the contrary, the more people that check a piece of code (up to a certain number n where more code reviews actually start to be detrimental), the more error-proof the code becomes. Good teams, instead, leave the developer room for some slack. They know it's going to take any developer, regardless of skill level, time to onboard, and that, ultimately, developers are humans with biases and different skill levels of code.
 
@@ -82,7 +82,7 @@ We've so far talked about the role of the organization, the team, and senior-lev
 
 [Learning how to ask the right questions at the right time](http://veekaybee.github.io/2019/09/11/answer-questions-online/) is one of the fundamental skills of being a developer. Formulating the right question takes a lot of time, a lot of trial and effort, and a lot of tinkering with different solutions until the question even makes sense.
 
-Especially as a junior, it can be very daunting to ask good questions,
+Especially as a junior, it can be very daunting to ask good questions.
 Something I realized recently is that one of the reasons senior people are good at asking questions is that they already know the shape of their expertise.  
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;I&#39;m a senior developer and I just looked up how to create a NumPy array, etc.&quot; But there&#39;s a problem here that I just realized from this comment: As senior people we can do this because we know what we need to look up. <a href="https://t.co/KZT6nrWyaC">https://t.co/KZT6nrWyaC</a> <a href="https://t.co/iZsQZIHzCl">pic.twitter.com/iZsQZIHzCl</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/1420704079035109384?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
