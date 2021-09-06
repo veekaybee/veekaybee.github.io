@@ -22,7 +22,7 @@ In my spare time, I write, read, run and enjoy Nutella. More at my [main site](h
 
 ### Contact me
 
-I love getting emails. 
+You can send me email!
 
 [vickiboykis@gmail.com](mailto:vickiboykis@gmail.com)
 
