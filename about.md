@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Hi! I'm Vicki. I do data science. I work mostly in Python, R, Spark, and SQL, and really enjoy building end-to-end data products. 
+Hi! I'm Vicki. I'm a [machine learning engineer at Tumblr.](https://applyingml.com/mentors/vicki-boykis/) 
 
-I also like to think about what technology means in the context of society, and write about that, here, as well. 
+I also like to think about what technology means in the context of society, and write about that,  as well. 
 
 Talks I've Given Recently: 
 
