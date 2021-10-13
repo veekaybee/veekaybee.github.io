@@ -28,7 +28,7 @@ I decided to riff on that and make a plane that you can customize:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I didn&#39;t figure out emojis yet (turns out cross-system fonts are complicated), but here it is, good enough for shitposting. Just waiting for that Streamlit Cloud invite. <a href="https://t.co/43nlvhyXXX">https://t.co/43nlvhyXXX</a> want me to do a PR into your demo, or would you prefer to keep it Pristine? <a href="https://t.co/BPYy8v06CI">pic.twitter.com/BPYy8v06CI</a></p>&mdash; Apache Scareflow (@vboykis) <a href="https://twitter.com/vboykis/status/1444707530471575560?ref_src=twsrc%5Etfw">October 3, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-[Here it is in Streamlit](https://share.streamlit.io/veekaybee/plane_lmao/main/planelit.py), and [here is the code if you want to riff on it.(https://github.com/veekaybee/plane_lmao) 
+[Here it is in Streamlit](https://share.streamlit.io/veekaybee/plane_lmao/main/planelit.py), and [here is the code if you want to riff on it.](https://github.com/veekaybee/plane_lmao) 
 
 Enjoy!
 
