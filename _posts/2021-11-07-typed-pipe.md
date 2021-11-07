@@ -62,7 +62,7 @@ As a quick primer, the human brain has several types of memory, short-term, work
 
 <img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/brain.png" alt="brain" width="500px"/>
 
-When we’re working on code, (and by working on, we mean most often[ reading someone else’s code](https://twitter.com/bol_com_techlab/status/1447568765525405698?s=28),) all of these processes are going on in our brain simultaneously to try to help us make sense of the programming environment. 
+When we’re working on code, (and by working on, we mean most often[ reading someone else’s code](https://twitter.com/bol_com_techlab/status/1447568765525405698?s=28)) all of these processes are going on in our brain simultaneously to try to help us make sense of the programming environment. 
 
 If it’s a programming language we know and a paradigm we’re familiar with, everything works together smoothly.  But if it’s something new, we have the potential to get overwhelmed on multiple levels.  Here are just a few ways that we can get confused: 
 
@@ -136,10 +136,16 @@ However, what’s happening more and more is two things. First, [more and more o
 
 Where learning Scalding caught me was, as is the case for much data tooling these days, coming from the land of exploration, to the land of production, and the differences were very large. 
 
-**Get one small thing that works**
+**Overcoming the programmer's brain**
 
 Back to our brains: how can we make sure that any codebase we work with becomes less confusing for us?  The Programmer’s Brain gives some wonderful high-level ideas about how to combat confusion at work, and there are a couple that have really struck with me as I make my way through Scalding and Scala. First is to write down code syntax so that your brain remembers it for next time, and processes it, instead of copying and pasting, which is something that I’m constantly guilty of.
 
-Second, is reading and adding what "Programmer's Brain" calls beacons in the code, which could be comments, but, more generally, are places in the code that your mind can anchor against and do the work of chunking, or [processing groups of information](https://techleadjournal.dev/episodes/61/). These could be very clear variable names, or well-defined methods.  Something that helped me with this was installing and using [Ammonite](https://ammonite.io/), a very, very good Scala repl that breaks down syntax and functions in the same way that using a notebook might, as well as reading a lot of other Scalding code internally for comments and examples. 
+Second, is reading and adding what "Programmer's Brain" calls beacons in the code, which could be comments, but, more generally, are places in the code that your mind can anchor against and do the work of chunking, or [processing groups of information](https://techleadjournal.dev/episodes/61/). These could be very clear variable names, or well-defined methods.  
+
+Something that helped me with this was installing and using [Ammonite](https://ammonite.io/), a very, very good Scala repl that breaks down syntax and functions in the same way that using a notebook might. For example, here's a small script I put together to actually get the input data for my Scalding job. 
+
+{% gist 562ccb414726bf84cb2b8f7b1f0014ac %}
+
+What also helped tremendously was reading a lot of other Scalding code in our internal repo for comments and examples. 
 
 And third, when you’re overwhelmed, go easy on yourself and understand that you’re overwhelmed and why that’s the case, and then work on addressing that by climbing out of the [local minima of suckiness](http://veekaybee.github.io/2021/08/05/local-minima-of-suckiness/), which is what this post was all about. 
