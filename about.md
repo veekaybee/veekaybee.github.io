@@ -6,18 +6,7 @@ permalink: /about/
 
 Hi! I'm Vicki. I'm a [machine learning engineer at Tumblr.](https://applyingml.com/mentors/vicki-boykis/) 
 
-I also like to think about what technology means in the context of society, and write about that,  as well. 
-
-Talks I've Given Recently: 
-
-+ [Hadoop on Your Laptop](http://veekaybee.github.io/2017/03/20/hadoop-or-laptop/)
-+ [SQL for beginners](http://veekaybee.github.io/2017/04/20/sql-is-hard/)
-+ Skeptech: [Manuscripts don't burn](http://blog.vickiboykis.com/2017/06/19/skeptech/)
-+ [Breaking the Internet Bubble](https://www.icp.org/browse/archive/media/breaking-the-internet-bubble)
-+ [How to pick a data architecture strategy](https://www.youtube.com/watch?v=o-kbwKX3dus) 
-
-
-In my spare time, I write, read, run and enjoy Nutella. More at my [main site](http://www.vickiboykis.com). 
+I also like to think about what technology means in the context of society, and write about that,  as well.  In my spare time, I write, read, run and enjoy Nutella. More at my [main site](http://www.vickiboykis.com). 
 
 
 ### Contact me
