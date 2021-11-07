@@ -75,7 +75,7 @@ If it’s a programming language we know and a paradigm we’re familiar with, e
 
 This happens when we try to understand what the variables are that are set in a program. If we see something like this:  `n: Int = 5`, it’s easy for us to understand that n is a number and move on to tracing the rest of the activity related to n. However, if we see `n: TypedPipe = TypedPipe.from(TextLine("posts.txt"))`, we might not understand what that returned object looks like, particularly if we don’t know the format of `posts.txt`.  
 
-The most amazing part of the human brain is that it can only store about[ seven items concurrently](http://www2.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf) (some recent research has found that it’s even less, about a byte of memory), which is why short-term memory often leans very heavily on long-term memory to add context to variables   
+The most amazing part of the human brain is that it can only store about[seven items concurrently](http://www2.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf). Some recent research has found that it’s even less, about a byte of memory, which is why short-term memory often leans very heavily on long-term memory to add context to variables   
 
 **Lack of knowledge - Long term memory issue**
     
@@ -91,7 +91,7 @@ The final type of confusion happens when you can’t follow the code through a p
 
 In addition to the three issues you’re dealing with at any given time, you also have the cognitive overhead of not  just the language’s syntax, stored variables in memory, and language features, but you’re learning the ecosystem of the language, as well.  I’ve argued before that the ecosystem you’re programming in is just as essential as the code and the very first thing you encounter when you start to write any new code: 
 
-[https://twitter.com/vboykis/status/1434477775193317377](https://twitter.com/vboykis/status/1434477775193317377)
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Programming language communities spend a lot of time focusing on docs and landing pages for how to create a good &quot;Hello World!&quot; executable experience for users, but the true the entry point into any given language will most likely be the Stack Overflow page for its build tool.</p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/1434477775193317377?ref_src=twsrc%5Etfw">September 5, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 For example, for Scalding, one of the first things I had to understand was not only how to build and iterate on building an SBT project, , but also [how to read from a file that’s not a website](https://scalding.readthedocs.io/en/readthedocs/tutorials/01-Beginner/02-Alice-in-Wonderland.html) (which is the canonical example given in the Scalding documentation), how to start up the Scalding REPL and how to understand where it’s reading files from (it’s the directory that you download and place the REPL into.)  
 
