@@ -75,7 +75,7 @@ If it’s a programming language we know and a paradigm we’re familiar with, e
     * This happens when we try to understand what the variables are that are set in a program. If we see something like this:  \
 n: Int = 5, it’s easy for us to understand that n is a number and move on to tracing the rest of the activity related to n. However, if we see n: TypedPipe = TypedPipe.from(TextLine("posts.txt")), we might not understand what that returned object looks like, particularly if we don’t know the format of `posts.txt`.  
 
-The most amazing part of the human brain is that it can only store about[ seven items concurrently](http://www2.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf) (some recent research has found that it’s even less, about a byte of memory), which is why short-term memory often leans very heavily on long-term memory to add context to variables   
+    * The most amazing part of the human brain is that it can only store about[ seven items concurrently](http://www2.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf) (some recent research has found that it’s even less, about a byte of memory), which is why short-term memory often leans very heavily on long-term memory to add context to variables   
 
 * **Lack of knowledge - Long term memory issue**
     * While short-term memory stores intermediate program variable names  and short-term information, long-term memory stores language syntax and processing, it’s where our knowledge about how programming languages are structured look. This includes what specific functions do, how a programming language is structured, its API, and common architecture patterns.  
