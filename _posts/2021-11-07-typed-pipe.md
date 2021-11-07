@@ -64,7 +64,7 @@ In the book, Dr. Hermans asserts that when we get confused about the code we’r
 As a quick primer, the human brain has several types of memory, short-term, working, and long-term. Short-term memory gathers information temporarily and processes it quickly, like RAM. Long-term memory are things you’ve learned previously and tucked away, like database storage. Working memory takes the information from short-term memory and long-term memory and combines them to synthesize, or process the information and come up with a solution. 
 
 
-<img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/brain.png" alt="brain" width="300px"/>
+<img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/brain.png" alt="brain" width="500px"/>
 
 When we’re working on code, (and by working on, we mean most often[ reading someone else’s code](https://twitter.com/bol_com_techlab/status/1447568765525405698?s=28),) all of these processes are going on in our brain simultaneously to try to help us make sense of the programming environment. 
 
