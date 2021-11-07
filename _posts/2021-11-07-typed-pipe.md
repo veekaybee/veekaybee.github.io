@@ -72,19 +72,20 @@ If it’s a programming language we know and a paradigm we’re familiar with, e
 
 
 **Lack of information - Short-term issue**
-    * This happens when we try to understand what the variables are that are set in a program. If we see something like this:  `n: Int = 5`, it’s easy for us to understand that n is a number and move on to tracing the rest of the activity related to n. However, if we see `n: TypedPipe = TypedPipe.from(TextLine("posts.txt"))`, we might not understand what that returned object looks like, particularly if we don’t know the format of `posts.txt`.  
 
-    * The most amazing part of the human brain is that it can only store about[ seven items concurrently](http://www2.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf) (some recent research has found that it’s even less, about a byte of memory), which is why short-term memory often leans very heavily on long-term memory to add context to variables   
+This happens when we try to understand what the variables are that are set in a program. If we see something like this:  `n: Int = 5`, it’s easy for us to understand that n is a number and move on to tracing the rest of the activity related to n. However, if we see `n: TypedPipe = TypedPipe.from(TextLine("posts.txt"))`, we might not understand what that returned object looks like, particularly if we don’t know the format of `posts.txt`.  
+
+The most amazing part of the human brain is that it can only store about[ seven items concurrently](http://www2.psych.utoronto.ca/users/peterson/psy430s2001/Miller%20GA%20Magical%20Seven%20Psych%20Review%201955.pdf) (some recent research has found that it’s even less, about a byte of memory), which is why short-term memory often leans very heavily on long-term memory to add context to variables   
 
 **Lack of knowledge - Long term memory issue**
     
-    * While short-term memory stores intermediate program variable names  and short-term information, long-term memory stores language syntax and processing, it’s where our knowledge about how programming languages are structured look. This includes what specific functions do, how a programming language is structured, its API, and common architecture patterns.  
+While short-term memory stores intermediate program variable names  and short-term information, long-term memory stores language syntax and processing, it’s where our knowledge about how programming languages are structured look. This includes what specific functions do, how a programming language is structured, its API, and common architecture patterns.  
 
-    * So if you’ve never worked with Scala and Scalding before , you may be completely thrown off by both its syntactic sugar  (when you don’t know what  =>  does and you may not know what a Job is (the way you set up a Scalding run)) and struggle with understanding how you can run the job.  
+So if you’ve never worked with Scala and Scalding before , you may be completely thrown off by both its syntactic sugar  (when you don’t know what  =>  does and you may not know what a Job is (the way you set up a Scalding run)) and struggle with understanding how you can run the job.  
 
 **Lack of processing power - Issue in working memory**  
 
-    * The final type of confusion happens when you can’t follow the code through a program because there are too many variables and, quite simply, you can’t hold enough ideas about the program in memory . For example, it can be hard to understand what resulting data structures or Scala collections you get from each part of a chained TypedPipe operation using .groupBy { word => word } changes the underlying data structure and what it returns, and so on through the call chain. There are ways around this,[ for example with the help of your IDE](https://alaiacano.github.io/data-engineering/2020/11/28/data-eng-tips.html),but it still relies on you personally carrying a high cognitive load. 
+The final type of confusion happens when you can’t follow the code through a program because there are too many variables and, quite simply, you can’t hold enough ideas about the program in memory . For example, it can be hard to understand what resulting data structures or Scala collections you get from each part of a chained TypedPipe operation using .groupBy { word => word } changes the underlying data structure and what it returns, and so on through the call chain. There are ways around this,[for example with the help of your IDE](https://alaiacano.github.io/data-engineering/2020/11/28/data-eng-tips.html),but it still relies on you personally carrying a high cognitive load. 
 
 **Our hol-ey neural nets**
 
