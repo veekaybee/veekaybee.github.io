@@ -22,30 +22,7 @@ Once you have access to large sets of data in a datastore like S3 or HDFS, you c
 
 Here’s the canonical [hello world example](https://scalding.readthedocs.io/en/readthedocs/tutorials/01-Beginner/02-Alice-in-Wonderland.html), that I used to do the Map/Reduce example for wordcount of all the words in my blog. 
 
-```scala
-
-import com.twitter.scalding._
-import com.twitter.scalding.source.TypedText
-
-class WordCountJob(args: Args) extends Job(args) {
-
-val lines = TypedPipe.from(TextLine("posts.txt"))
- 
-lines.flatMap { line => tokenize(line) } 
-    .groupBy { word => word }
-    .size
-    .groupAll
-    .sortBy{ case (word, count) => -count}
-    .take(50)
-    .dump
-
-  // Split a piece of text into individual words.
-  def tokenize(text: String): Array[String] = {
-	// Lowercase each word and remove punctuation.
-	text.toLowerCase.replaceAll("[^a-zA-Z0-9\\s]", "").split("\\s+")
-  }
-}
-```
+{% gist 783fd4a9ccca555a716de46af698733a %}
 
 (By the way, it's fun to see that, once you filter the stop words [out of my top 50](https://gist.github.com/veekaybee/a12e5b7c372d5c5c506b470d92a69c5f), the "real" words are python, data, and people, which I think sums up my blog pretty well.) 
 
