@@ -36,7 +36,7 @@ lines.flatMap { line => tokenize(line) }
     .size
     .groupAll
     .sortBy{ case (word, count) => -count}
-    .take(10)
+    .take(50)
     .dump
 
   // Split a piece of text into individual words.
@@ -46,6 +46,10 @@ lines.flatMap { line => tokenize(line) }
   }
 }
 ```
+
+(By the way, it's fun to see that, once you filter the stop words [out of my top 50](https://gist.github.com/veekaybee/a12e5b7c372d5c5c506b470d92a69c5f), the "real" words are python, data, and people, which I think sums up my blog pretty well.) 
+
+
 
 On the face of it, it’s a very small and simple example.  if you’re just getting started with Scalding, it should be easy to get going. But, when I started learning Scalding for working with [machine learning code](https://applyingml.com/mentors/vicki-boykis/) a few months ago and came across this example code, I was completely lost. 
 
