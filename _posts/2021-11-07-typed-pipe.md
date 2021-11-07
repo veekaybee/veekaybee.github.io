@@ -27,9 +27,9 @@ Here’s the canonical [hello world example](https://scalding.readthedocs.io/en/
 (By the way, it's fun to see that, once you filter the stop words [out of my top 50](https://gist.github.com/veekaybee/a12e5b7c372d5c5c506b470d92a69c5f), the "real" words are python, data, and people, which I think sums up my blog pretty well.) 
 
 
-On the face of it, it’s a very small and simple example.  if you’re just getting started with Scalding, it should be easy to get going. But, when I started learning Scalding for working with [machine learning code](https://applyingml.com/mentors/vicki-boykis/) a few months ago and came across this example code, I was completely lost. 
+On the face of it, it’s a very small and simple example.  If you’re just getting started with Scalding, it should be easy to get going. But, when I started learning Scalding for working with [machine learning code](https://applyingml.com/mentors/vicki-boykis/) a few months ago and came across this example code, I was completely lost. 
 
-How hard this came to me was a surprise since I’ve now been writing production-grade distributed systems code using the standard [hash aggregate](http://veekaybee.github.io/2021/06/06/hashaggregate/) workflows, for the last 10 years, and I was just as interested in understanding why I didn’t understand the code as I was in learning to read it. 
+Understanding the concepts that underly the simple example came extremely hard to me, which was a surprise since I’ve now been writing production-grade distributed systems code using the standard [hash aggregate](http://veekaybee.github.io/2021/06/06/hashaggregate/) workflows, for the last 10 years. And, I was just as interested in understanding why I didn’t understand the code as I was in learning to read it. 
 
 **This Programmer’s Brain**
 
