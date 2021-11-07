@@ -43,12 +43,8 @@ lines.flatMap { line => tokenize(line) }
   def tokenize(text: String): Array[String] = {
 	// Lowercase each word and remove punctuation.
 	text.toLowerCase.replaceAll("[^a-zA-Z0-9\\s]", "").split("\\s+")
-
   }
-
 }
-
-
 ```
 
 On the face of it, it’s a very small and simple example.  if you’re just getting started with Scalding, it should be easy to get going. But, when I started learning Scalding for working with [machine learning code](https://applyingml.com/mentors/vicki-boykis/) a few months ago and came across this example code, I was completely lost. 
