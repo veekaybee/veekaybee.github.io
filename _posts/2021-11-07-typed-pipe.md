@@ -14,7 +14,7 @@ title: The programmer's brain in the lands of exploration and production
 <img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/typedpipe.png" alt="wheat field" width="500px"/>
 
 
-A lot of my brain space lately has been occupied by [TypedPipes](https://appdoc.app/artifact/com.twitter/scalding-core_2.9.3/0.9.0/com/twitter/scalding/typed/TypedPipe.html). A TypedPipe is the main object type that you work with in [Scalding](https://www.cascading.org/projects/scalding/), a distributed data framework written as a wrapper in Scala around [Cascading](https://www.cascading.org/). Scalding was originally developed at Twitter, and adopted by many companies around the same time [Apache Spark](https://spark.apache.org/)became popular. 
+A lot of my brain space lately has been occupied by [TypedPipes](https://appdoc.app/artifact/com.twitter/scalding-core_2.9.3/0.9.0/com/twitter/scalding/typed/TypedPipe.html). A TypedPipe is the main object type that you work with in [Scalding](https://www.cascading.org/projects/scalding/), a distributed data framework written as a wrapper in Scala around [Cascading](https://www.cascading.org/). Scalding was originally developed at Twitter, and adopted by many companies around the same time [Apache Spark](https://spark.apache.org/) became popular. 
 
 A TypedPipe is a distributed array that “may or may not have been materialized to disk”, aka it’s a very large list of elements that exists mainly in the memory space of your program, where the memory space is usually the nodes of a distributed computational cluster.
 
