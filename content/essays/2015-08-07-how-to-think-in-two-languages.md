@@ -1,13 +1,5 @@
 +++
-author = 'Vicki'
-categories = ['identity', 'raising russian']
 date = '2015-08-07T07:29:51+00:00'
-excerpt = 'Just a single word can paint an entire world. '
-guid = 'https://vkblog.github.io/?p=10052'
-id = 10052
-layout = 'post'
-permalink = '/2015/08/how-to-think-in-two-languages/'
-tags = ['baby', 'culture', 'cynicism', 'english', 'literature', 'raising russian', 'reading', 'Russian', 'war and peace']
 title = 'How to think in two languages'
 
 +++
