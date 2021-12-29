@@ -67,7 +67,7 @@ The final type of confusion happens when you can’t follow the code through a p
 
 In addition to the three issues you’re dealing with at any given time, you also have the cognitive overhead of not  just the language’s syntax, stored variables in memory, and language features, but you’re learning the ecosystem of the language, as well.  I’ve argued before that the ecosystem you’re programming in is just as essential as the code and the very first thing you encounter when you start to write any new code: 
 
-{< tweet 1434477775193317377 >}}
+{{< tweet 1434477775193317377 >}}
 
 For example, for Scalding, one of the first things I had to understand was not only how to build and iterate on building an SBT project, but also [how to read from a file that’s not a website](https://scalding.readthedocs.io/en/readthedocs/tutorials/01-Beginner/02-Alice-in-Wonderland.html) (which is the canonical example given in the Scalding documentation), how to start up the Scalding REPL and how to understand where it’s reading files from (it’s the directory that you download and place the REPL into.)  
 
@@ -105,7 +105,7 @@ I think this tradeoff is at the heart of the [“two-language” problem in data
 In other words, you can either be easy for prototyping or easy for production. You usually can’t be both. Now, some will argue that there are languages that fit both purposes, and it’s true, there are cases of prototyping languages in production and production languages used for prototypes, but by trying to fit one in another, we lose something of the properties of both. 
 
 
-{< tweet 1099467902447730688 >}}
+{{< tweet 1099467902447730688 >}}
 
 
 A very recent example of this is the implementation of [type annotations for Python](http://veekaybee.github.io/2019/07/08/python-type-hints/ ).  They are wonderful and [I cannot function without them in any of my codebases anymore](https://twitter.com/vboykis/status/1404862236947103751?s=20), but I would never use them in exploration, because at that stage I just don’t know enough about my data to guarantee them, and they slow me down as I’m playing and learning about my data. 
