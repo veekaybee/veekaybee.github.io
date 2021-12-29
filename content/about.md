@@ -17,8 +17,11 @@ I also love tweeting terrible puns and doodling tech logos.
 
 {{< tweet 1471282749780770817 >}}
 
-## Writing
+## Writing and Editing
 
++ [SQL for Data Scientists](https://www.amazon.com/SQL-Data-Scientists-Beginners-Building/dp/1119669367), Technical Editor
++  [The Best-Laid Plans](https://increment.com/planning/the-best-laid-plans-tech-careers/), Increment Mag
++ [Architecture for Generations](https://increment.com/software-architecture/architecture-for-generations/), Increment Mag
 
 
 
