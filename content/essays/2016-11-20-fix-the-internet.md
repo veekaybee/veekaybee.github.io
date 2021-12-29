@@ -1,7 +1,7 @@
 +++
 layout = 'post'
 title = 'Fix the internet by writing good stuff and being nice to people'
-
+date = '2016-11-20'
 +++
 
 *Today's internet is mean.  It's hard to pinpoint exactly when everyone online became a jerk, but to me it seems that the tipping point occurred right when making money off content started being worth more than the content itself. I wrote the following post before the election but never got around to publishing it. Now, it seems more necessary than ever.*

@@ -1,5 +1,4 @@
 +++
-layout = 'post'
 title = "Good things don't scale"
 date = '2017-05-10'
 +++
