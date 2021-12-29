@@ -5,7 +5,7 @@ title = "Let's work on the hard stuff"
 +++
 
 
-<center><img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/rockwell.jpg" style="width: 400px;"/></center>
+<center><img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/rockwell.jpg" style="width: 400px;"/></center>
 
 Last week, I got an email from a friend about a new startup that
 "hand-picks a box of snacks and sends it to your home," started by a group

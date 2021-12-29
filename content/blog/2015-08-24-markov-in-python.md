@@ -4,7 +4,7 @@ title = 'Generating fake Hacker News headlines with Python'
 
 +++
 
-![hn](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/hn.png)
+![hn](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/hn.png)
 
 ###**TL;DR: All the code for this post [is here](https://github.com/veekaybee/markovhn).** 
 
@@ -41,10 +41,10 @@ and, probably my personal absolute favorite, the [Benedict Cumberbatch name gene
 
 There is something about fake Markov chain-generated Hacker News headlines that just hits the spot for me as a writer, data scientist, and tech news reader:    
 
-![venn](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/venn.png) 
+![venn](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/venn.png) 
 
 
-##Understanding Markov Chains 
+## Understanding Markov Chains 
 
 Markov chains have been covered to death by people much smarter than me, but a quick explanation:  
 
@@ -56,7 +56,7 @@ Markov chains have been covered to death by people much smarter than me, but a q
 
 Here's a [similar graphical example of a person's morning routine](http://www.marcusgraf.com/?p=410) that I also like a lot:  
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/mcexample.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/mcexample.png)
 
 Not all of these things will happen every day (which is why some of the ebooks tweets are so nonsensical), but if you create a [large enough sample](http://veekaybee.github.io/how-big-of-a-sample-size-do-you-need/), it should approximate real life. 
 

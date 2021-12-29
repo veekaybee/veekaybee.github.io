@@ -113,7 +113,9 @@ object CountIPs {
 
 And the cli options: 
 
-`spark-submit \--class name.CountIps \--master yarn-client \ target/countIps-1.0.jar /logdata/*`
+`spark-submit \
+--class name.CountIps \
+--master yarn-client \ target/countIps-1.0.jar /logdata/*`
 
 
 While working through the Scala example, I learned something that was interesting to me as someone who is new to Scala, coming from a Python background, related to var/val assignment. 
@@ -135,7 +137,7 @@ So it surprised me to see some documentation in a recent Spark class I took assi
 
 I looked into why you might ostensibly use var over val within the context of Spark's immutable RDD paragigm, and didn't find anything specific, until I saw this note in Advanced Analytics with Spark: 
 
- ![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/varval.png)
+ ![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/varval.png)
 
 So, basically it's ok when you're writing throw-away commands in the REPL where it doesn't make much of a difference. 
 

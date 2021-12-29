@@ -1,7 +1,6 @@
 +++
 date = '2015-06-15T00:00:00Z'
 title = 'How many people are actually using your stuff?'
-
 +++
 
 [Five million years](http://nymag.com/news/intelligencer/spotify-2012-5/) after it became popular, I've gotten into Spotify. The thing I like the most about the service is the curated content. 
@@ -18,11 +17,11 @@ Spotify is really great at building channels not only by genre, but by intangibl
 
 Every day, there is a new collection of playlists up on my app. Because they are so carefully managed to show relevant lists by time of day, I love this section and check it out first: 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/confidence.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/confidence.png)
 
 Last week, Spotify created a list called "20 Million Thank Yous," which it created when the service reached 75 million active users and 20 million premium subscribers. 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/20mil.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/20mil.png)
 
 This number is pretty impressive, but, as a data person, I was immediately curious how they came up with it, because there is no such thing as active users. 
 
@@ -49,7 +48,7 @@ Because of this, it's important to be critical of any usage number you hear abou
 
 For example, [Facebook usually says ](http://newsroom.fb.com/company-info/) they have almost a billion active users for any given month. 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/fbstats.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/fbstats.png)
 
 That's 13% of the world's total population logging in every month! That's enormous! How does anyone get any work done when almost 1/7 of the entire world is just reposting gifs of slow lorises? 
 
