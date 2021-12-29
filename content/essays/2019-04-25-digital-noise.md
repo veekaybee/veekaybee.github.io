@@ -1,16 +1,9 @@
 +++
+date = '2019-04-25'
 layout = 'post'
 title = 'The luxury of opting out of digital noise'
 
 +++
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@vboykis">
-<meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="The luxury of opting out of social media">
-<meta name="twitter:description" content="Being truly rich today means being able to quit social media. ">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/sleeping-woman-1935.jpg">
-
 
 <img src="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/sleeping-woman-1935.jpg" alt="drawing" width="300px"/>
 

@@ -6,7 +6,6 @@ title = 'The demise of SoundCloud'
 +++
 
 
-
 ![gramophone](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/gramophone.jpg)
 
 **[They listen to the gramophone, Makovsky](https://www.wikiart.org/en/vladimir-makovsky/they-listen-the-gramophone-1910)**

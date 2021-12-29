@@ -1,7 +1,6 @@
 +++
-layout = 'post'
 title = 'Me and Markov'
-
+date = '2016-06-03'
 +++
 
 ![image](https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/2016/03/the-writer.jpg)

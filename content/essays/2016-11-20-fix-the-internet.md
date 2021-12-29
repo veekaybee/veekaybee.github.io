@@ -1,5 +1,4 @@
 +++
-layout = 'post'
 title = 'Fix the internet by writing good stuff and being nice to people'
 date = '2016-11-20'
 +++

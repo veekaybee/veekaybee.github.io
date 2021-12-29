@@ -1,7 +1,6 @@
 +++
-layout = 'post'
 title = "Russia's window to the West"
-
+date = '2016-06-22'
 +++
 
 <img src="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/2016/03/volga.jpeg"  height="500" width="600">

@@ -1,14 +1,7 @@
 +++
-layout = 'post'
 title = 'America Online and off'
-
+date = '2018-08-23'
 +++
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@vboykis" />
-<meta name="twitter:title" content="America Online and off" />
-<meta name="twitter:description" content="What happens when we lose our public spaces, both on the internet and in real life? " />
-<meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/valleyforge.jpg" />
 
 ![](https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/valleyforge.jpg)
 

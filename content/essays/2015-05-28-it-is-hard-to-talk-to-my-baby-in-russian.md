@@ -1,12 +1,5 @@
 +++
-author = 'Vicki'
-categories = ['Uncategorized']
 date = '2015-05-28T07:56:44+00:00'
-guid = 'https://vkblog.github.io/?p=9933'
-id = 9933
-layout = 'post'
-permalink = '/2015/05/it-is-hard-to-talk-to-my-baby-in-russian/'
-tags = ['baby', 'ben yehuda', 'culture', 'family', 'language', 'Russian']
 title = 'It is hard to talk to my baby in Russian'
 
 +++

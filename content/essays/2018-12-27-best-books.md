@@ -1,16 +1,7 @@
 +++
-layout = 'post'
 title = 'My Favorite Books of 2018'
-
+date = '2018-12-27'
 +++
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="@vboykis" />
-<meta property="og:url" content="" />
-<meta property="og:title" content="My favorite books of 2018" />
-<meta property="og:description" content="I looked for an escape in literature and found the truth." />
-<meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/2018books.png">
-
 
 ![books](https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/2018books.png)
 

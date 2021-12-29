@@ -1,12 +1,5 @@
 +++
-author = 'Vicki'
-categories = ['Uncategorized']
 date = '2015-06-11T11:56:37+00:00'
-excerpt = 'The old internet,whatever it was, is gone. The revolution is over. '
-guid = 'https://vkblog.github.io/?p=9977'
-id = 9977
-layout = 'post'
-permalink = '/2015/06/reddit-was-amazing/'
 title = 'Reddit was amazing'
 
 +++

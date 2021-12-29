@@ -1,5 +1,4 @@
 +++
-layout = 'post'
 title = 'My Favorite Books of 2017'
 date = '2018-01-02'
 +++

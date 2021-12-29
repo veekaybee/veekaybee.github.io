@@ -1,14 +1,9 @@
 +++
 layout = 'post'
 title = 'On competence'
-
+date = '2018-03-07'
 +++
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@vboykis" />
-<meta name="twitter:title" content="On competence" />
-<meta name="twitter:description" content="I just want to watch my Les Miserables in peace." />
-<meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/cosette.jpg" />
 
 ![](https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/cosette.jpg)
 
