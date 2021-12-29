@@ -1,15 +1,9 @@
 +++
 layout = 'post'
 title = "It didn't taste like Pamplemousse"
-
+date = '2018-02-18'
 +++
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@vboykis">
-<meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="It didn't taste like Pamplemousse ">
-<meta name="twitter:description" content="What does LaCroix taste like? the past.  ">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/seltzer.jpg">
 
 ![seltzer](https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/seltzer.jpg)
 

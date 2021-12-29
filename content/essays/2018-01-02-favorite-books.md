@@ -1,15 +1,8 @@
 +++
 layout = 'post'
 title = 'My Favorite Books of 2017'
-
+date = '2018-01-02'
 +++
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="@vboykis" />
-<meta property="og:url" content="http://blog.vickiboykis.com/2018/01/02/favorite-books/" />
-<meta property="og:title" content="My favorite books of 2017" />
-<meta property="og:description" content="What I've learned over time is that I love books that teach me something about the invisible systems that govern how the world works." />
-<meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/2017books.png">
 
 
 ![books](https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/2017books.png)
@@ -53,9 +46,3 @@ It's a dense read, but today, as we grapple with what it means to be human and t
 **[Yaqui Delgado Wants to Kick Your Ass](https://www.goodreads.com/book/show/15798660-yaqui-delgado-wants-to-kick-your-ass) by By Meg Medina** Purchased solely for the title, was not disappointed. Really great YA (which I don't read a lot of.)
 
 
-Past favorite lists: 
-
-+ [2016](http://blog.vickiboykis.com/2016/12/26/books-of-2016/)
-+ [2014](http://blog.vickiboykis.com/2015/01/my-favorite-books-of-2014/)
-+ [2013](http://blog.vickiboykis.com/2013/12/my-favorite-books-of-2013/)
-+ [2011](http://blog.vickiboykis.com/2012/01/the-best-books-i-read-in-2011/)

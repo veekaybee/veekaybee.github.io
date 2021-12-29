@@ -1,7 +1,7 @@
 +++
 layout = 'post'
 title = "Good things don't scale"
-
+date = '2017-05-10'
 +++
 
 ![viking](https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/viking.jpeg)
@@ -11,7 +11,7 @@ title = "Good things don't scale"
 **Table of Contents**  
 
 - [Flyover Country](#flyover-country)
-- [Welcome to Iceland. Here's some Júníus Meyvant](#welcome-to-iceland-heres-some-j%C3%BAn%C3%ADus-meyvant)
+- [Welcome to Iceland. Here's some Júníus Meyvant](#welcome-to-iceland-heres-some-júníus-meyvant)
 - [Iceland is for humans](#iceland-is-for-humans)
 - [From lice to nice](#from-lice-to-nice)
 - [Small is weird. Small is good.](#small-is-weird-small-is-good)

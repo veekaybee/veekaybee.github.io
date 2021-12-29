@@ -1,15 +1,7 @@
 +++
 date = '2017-12-14T00:00:00Z'
 title = 'Logs populi or, Thanks, Netflix!'
-
 +++
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@vboykis">
-<meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="Logs populi, or thanks, Netflix!">
-<meta name="twitter:description" content="Tech is already cynical about data collection, but the public is just starting to understand its implications. ">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/creepynetflix.png">
 
 Earlier this week, Netflix tweeted out a seemingly-innocuous throw-away joke about how comforting it is to watch terrible Lifetime-like movies. 
 
@@ -21,8 +13,8 @@ There is a small caveat: having worked previously with streaming viewing data, I
 
 Regardless of the truth, the way it came across to the public was that someone, somewhere, had run a SQL query and come up with a small, potentially uniquely-identifiable data set of viewing habits. The internet immediately became angry, and a lot of prominent tech journalists started calling Netflix out.
 
-![creepynetflix](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/roose.png)
-![creepynetflix](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/timm.png)
+![creepynetflix](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/roose.png)
+![creepynetflix](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/timm.png)
 
 Unfortunately for anyone familiar with data, this isn't anything new. Spotify [did something similar last year](http://www.adweek.com/creativity/spotify-crunches-user-data-fun-ways-new-global-outdoor-ad-campaign-174826/).
 
@@ -34,7 +26,7 @@ Not [all data collection is bad.](https://gist.github.com/veekaybee/b15985328bee
 
 However, it's becoming increasingly hard to differentiate necessary from "We can do this just because we have it," which is the territory Netflix seems to have wandered into. For example, in a booth at [NIPS](https://nips.cc/), an increasingly-popular artificial intelligence and deep learning conference a couple weeks ago, Netflix mentioned that they had a team of 300 ML experts and data scientists essentially creating an algorithm for each separate row of recommendations. Given that the recommendations are, frankly, not that great, is it really necessary? 
 
-![creepynetflix](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/netflixml.png)
+![creepynetflix](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/netflixml.png)
 
 All of this is a debate data people have been having for at least the last five years. Many rolled their eyes at the tweet: this was nothing new, especially with the latest trend in the media to suddenly become critical of large internet-centric companies. 
 

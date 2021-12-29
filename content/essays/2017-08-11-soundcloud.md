@@ -5,15 +5,9 @@ title = 'The demise of SoundCloud'
 
 +++
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@vboykis">
-<meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="The demise of SoundCloud">
-<meta name="twitter:description" content="Soundcloud is in trouble. But,how do you monetize joy?">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/gramophone.jpg">
 
 
-![gramophone](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/gramophone.jpg)
+![gramophone](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/gramophone.jpg)
 
 **[They listen to the gramophone, Makovsky](https://www.wikiart.org/en/vladimir-makovsky/they-listen-the-gramophone-1910)**
 

@@ -1,17 +1,11 @@
 +++
 date = '2018-03-30T00:00:00Z'
 title = 'Dear Facebook user 752461218193242'
-
 +++
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@vboykis">
-<meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="Dear Facebook user 752461218193242">
-<meta name="twitter:description" content="The apology letter I wish Zuck would write.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/cry.png">
 
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/cry.png)
+
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/cry.png)
 
 Apologies to [Roy Lichtenstein](https://www.wikiart.org/en/roy-lichtenstein/thinking-of-him-1963)
 
