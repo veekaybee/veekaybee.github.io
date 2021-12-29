@@ -126,7 +126,7 @@ Checking the content to make sure it pulled correctly (I checked against the fro
 	Hints on Programming Language Design (1973) [pdf]
 	Programming the Quantum Future
 
-##Generating the chains
+## Generating the chains
 
 There are tons of Python libraries [for Markov chains](http://martin-thoma.com/python-markov-chain-packages/).  There is also a pretty good explanation [here](http://agiliq.com/blog/2009/06/generating-pseudo-random-text-with-markov-chains-u/). 
 

@@ -17,12 +17,30 @@ Often times, this data is only available at a granular level (i.e. you have a ba
 
 Here's the CSV file you're given to work with: (also available in [the associated GitHub repo](https://github.com/veekaybee/cumtotal) for all the code in this post.) 
 
-	Company	Month	New Employees	Hooli	    14-Jan	 123,456	Hooli	    14-Feb	   1,434	Hooli	    14-Mar	   2,455	Pied Piper	14-Jan	       1	Pied Piper	14-Feb	       2	Pied Piper	14-Mar	       2	Raviga	    14-Jan	      50	Raviga	    14-Feb	      -2	Raviga	    14-Mar	      17
+	Company	Month	New Employees
+	Hooli	    14-Jan	 123,456
+	Hooli	    14-Feb	   1,434
+	Hooli	    14-Mar	   2,455
+	Pied Piper	14-Jan	       1
+	Pied Piper	14-Feb	       2
+	Pied Piper	14-Mar	       2
+	Raviga	    14-Jan	      50
+	Raviga	    14-Feb	      -2
+	Raviga	    14-Mar	      17
 
 
 But what we really want is this: 
 
-	Company	Month	New Employees	Hooli	    14-Jan	 123,456	Hooli	    14-Feb	 124,890	Hooli	    14-Mar	 127,345	Pied Piper	14-Jan	       1	Pied Piper	14-Feb	       3	Pied Piper	14-Mar	       5	Raviga	    14-Jan	      50	Raviga	    14-Feb	      48	Raviga	    14-Mar	      65
+	Company	Month	New Employees
+	Hooli	    14-Jan	 123,456
+	Hooli	    14-Feb	 124,890
+	Hooli	    14-Mar	 127,345
+	Pied Piper	14-Jan	       1
+	Pied Piper	14-Feb	       3
+	Pied Piper	14-Mar	       5
+	Raviga	    14-Jan	      50
+	Raviga	    14-Feb	      48
+	Raviga	    14-Mar	      65
 
 
 

@@ -1,7 +1,6 @@
 +++
 date = '2015-08-04T00:00:00Z'
 title = 'How large should your sample size be?'
-
 +++
 
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/statelibraryqueensland/3197460723/in/photolist-5SxPFa-59qMqQ-63FpTG-7Mz8DZ-63Ba3B-bQFWMt-5SxPEa-6DgPCX-7VEZcu-5SxPzT-bzgRnN-9rk79o-9PvnKB-nhRgK8-6DkXvC-6DkXaE-8agbki-6DkXeS-drAnsh-ssmEWP-otizPX-6nBFEg-saMi8A-ssbNwq-orgG7o-obNSav-ssjRj2-bzgRoh-owchHW-ot6t4W-orgzdy-oya5Fa-otgY61-ssbNub-aUzkqM-81kDDd-9D27ZY-ssmEUe-otisNc-ovxBe9-obNW5V-orgzj5-vHNDGX-orgJxf-avjAM5-otiu8B-otgXhN-ot6uq3-obNWAV-obNVF7" title="Four boys riding goats, ca. 1918"><img src="https://farm4.staticflickr.com/3091/3197460723_861311ec62.jpg" width="500" height="398" alt="Four boys riding goats, ca. 1918"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>

@@ -1,7 +1,6 @@
 +++
 date = '2015-08-26T00:00:00Z'
 title = 'How non-technical teams work together'
-
 +++
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/uw_digital_images/4670205658/in/photolist-87G2rd-nxDbAc-Fk7SA-j7W8Fs-nAbb65-4jyiS6-nfqZmM-m47Jk6-s8YWAM-4jyiHr-pKfTZE-nRF7UP-bzMsVi-bmDkbj-q42AoA-qgoLmq-pXsfe1-i9pFhn-q2MbC7-4jyiLr-bzNSx2-sSd555-ndojN9-acvTQR-7XQhX2-4jCmKf-9e565s-hLztNx-7ZJAhA-bmDk5h-88u6P9-ndoiCJ-9e21tk-pCK3Yp-pAvnht-bg9GG2-pvXHbs-pHdrHE-9c3FZA-aDSk8D-t3WEVZ-7ZFqbP-rw6TxR-ndohL2-qb8ms-egpM3S-agKkeD-rW93n5-nbWNPA-cj2EGy" title="Packing Carsten&#x27;s weiner sausages on an assembly line, Tacoma, Washington"><img src="https://farm2.staticflickr.com/1298/4670205658_2b4d9b3d55.jpg" width="500" height="397" alt="Packing Carsten&#x27;s weiner sausages on an assembly line, Tacoma, Washington"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>

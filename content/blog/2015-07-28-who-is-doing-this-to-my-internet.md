@@ -2,7 +2,6 @@
 date = '2015-07-28T00:00:00Z'
 redirect_from = ['/who-is-doing-this-to-my-internet/']
 title = 'Who is doing this to my internet?'
-
 +++
 
 <center><a data-flickr-embed="true" href="https://www.flickr.com/photos/x-ray_delta_one/4017369159/in/album-72157622484925510/" title="1956 ... &#x27;Our Friend the Atom&#x27; - Disney"><img src="https://farm3.staticflickr.com/2713/4017369159_c5c25ec6e1_z.jpg" width="640" height="524" alt="1956 ... &#x27;Our Friend the Atom&#x27; - Disney"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></center>
@@ -15,7 +14,7 @@ At the time of the talk, the internet was still relatively intact. Twitter was n
 
 In 2012, the internet was still, to some extent, carrying on in the traditional manner it was intended to: as [an easier way](http://www.nethistory.info/History%20of%20the%20Internet/origins.html) for humans to communicate with and learn from each other.  The internet of 2015, though, seems to be completely broken. Today's web is littered with terrible practices at both the government and commercial level that are continuously eroding its immense usefulness to humanity. 
 
-##The web in 2012 and today
+## The web in 2012 and today
 
 In 2012, only a small community deeply involved with the development of software and  network infrastructure was interested in the question of "who controls the tubes, and is it in our collective best interests?" Today, the fight for control of the  internet has exploded into a huge battle involving telecoms, as well as the government.  SOPA, PIPA, and the NSA have gone from mentions in tech blog posts to  headlines national headlines in the New York Times. 
 
@@ -39,7 +38,7 @@ All of this is a long preamble to say that I've been pretty angry with SoundClou
 
 <center><a data-flickr-embed="true" href="https://www.flickr.com/photos/x-ray_delta_one/4419329320/" title="... polyphonic zounds!"><img src="https://farm5.staticflickr.com/4023/4419329320_2c00c0b919.jpg" width="500" height="491" alt="... polyphonic zounds!"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></center>
 
-##Soundcloud
+## Soundcloud
 
 
 Ever since I discovered [SoundCloud](https://en.wikipedia.org/wiki/SoundCloud), I've really enjoyed listening to it to find music that's never played on the radio. It's particularly good for amazing remixes of songs you think you've heard a million times, for ambient programming music, and for electronic, pop, and folk songs from artists no one has ever heard of. For example: 
@@ -90,7 +89,7 @@ After these two songs, I gave up. I'll just risk being on SoundCloud until the o
 For those looking to back up their favorites, exodus from SoundCloud will be extremely hard.  Because,  not only does SoundCloud want to make money, but so do the thousands of middlemen who exist solely to funnel music to consumers.  Another bastion of the weird, creative, wonderful open internet: closing. Who's doing this to my internet, and why? 
 
 
-##What's the solution?
+## What's the solution?
 
 So where are we in 2015? With an internet largely controlled by Google and thousands of ad networks, one that's slow,even on mobile, and one that provides content that advertisers want us to click through to pay them instead of truly learning something or being inspired by something creative.  
 
