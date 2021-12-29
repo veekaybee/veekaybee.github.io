@@ -3,7 +3,7 @@ date = '2016-08-24T00:00:00Z'
 title = 'Walkthrough of Jupyter Lab Alpha'
 
 +++
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/moving.jpg)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/moving.jpg)
 
 I love [Jupyter notebooks](http://jupyter.org/) as a replacement for REPL work, quick data manipulation with pandas, and visualization with matplotlib. I've also had great experiences sharing them with executives, who need to look at multiple pieces of data quickly to make decisions. 
 

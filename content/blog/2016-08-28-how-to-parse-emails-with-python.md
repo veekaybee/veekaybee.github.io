@@ -1,6 +1,6 @@
 +++
 date = '2016-08-28T00:00:00Z'
-title = 'How to parse emails with Python (or, how I liberated my Strata schedule)'
+title = 'How to parse emails with Python'
 
 +++
 

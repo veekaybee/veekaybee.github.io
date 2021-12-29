@@ -2,10 +2,9 @@
 date = '2017-02-01T00:00:00Z'
 redirect_from = ['/facebook-is-collecting-this/']
 title = 'What should you think about when using Facebook?'
-
 +++
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/winnowers.jpg)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/winnowers.jpg)
 
 **Courbet, The Winnowers**
 
@@ -66,7 +65,7 @@ To understand how Facebook data collection works, I drew a (very, very) simplifi
  
 The data that users see in the front-end is a subset of the backend data. 
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/facebookui.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/facebookui.png)
 
 If you're interested in more of the technical specs, there are lots of architecture diagrams on the googles. Facebook is at the cutting edge of working with big data, and their stack includes [Hive, Hadoop, HBase, BigPipe, MySQL, Memcached, Thrift,](https://www.quora.com/What-is-Facebooks-architecture-6) and much, much more. All of this is housed in lots of massive data centers, such as one in [Prineville, Oregon](https://www.facebook.com/PrinevilleDataCenter/).  
 
@@ -77,7 +76,7 @@ Facebook data collection potentially begins before you press "POST". As you are 
 
 Facebook [has previously used to use this data to study self-censorship](http://www.aaai.org/ocs/index.php/ICWSM/ICWSM13/paper/viewFile/6093/6350) (PDF.)
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/prepost.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/prepost.png)
 
 The researchers write, 
 
@@ -88,7 +87,7 @@ Meaning, that if you posted something like, "I just HATE my boss. He drives me N
 
  Here are the data points they used to conduct their study: 
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/prethought.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/prethought.png)
 
 Something of interest here is: deleted posts, deleted comments, and deleted checkins. Just like there's no guarantee that things you didn't write won't be stored, there's no guarantee that,if you delete data, the data is actually deleted. 
 
@@ -97,7 +96,7 @@ So, even if you delete a post, Facebook keeps track of that post. Facebook keeps
 For Facebook, metadata is just as important as real data, and it uses that data to make extrapolations about who you are. Using Developer Tools on Chrome, it's relatively easy to see the plethora of data passed to Facebook from your client to their backend via xhr. I'm not a front-end ninja (but would actually love to talk to one to see what else we could pull), but from 
 one image, you can see that facebook is tracking the time you spend doing ...something? Not clear what, but it probably figures into time spent on the site, [which Facebook reports out](https://www.nytimes.com/2016/05/06/business/facebook-bends-the-rules-of-audience-engagement-to-its-advantage.html?_r=0). 
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/xhr-fb.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/xhr-fb.png)
 
 Incidentally, this is true for account deletions, as well. 
 
@@ -125,7 +124,7 @@ In my personal subset, I was able to see:
 
 And, which ads I would be interested in. This is not something I put in myself. This is something Facebook generated algorithmically based on every single thing I've posted: 
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/ads.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/ads.png)
 
 But we'll get to that in the advertising section. 
 
@@ -183,7 +182,7 @@ Another thing Facebook likes to study, is, understandably, [faces](https://www.b
 
 >Facebook encourages users to "tag" people in photographs they upload in their personal posts and the social network stores the collected information. The company uses a program it calls DeepFace to match other photos of a person.
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/selfie.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/selfie.png)
 
 This program, called DeepFace, is a fantastic way to get more accurate tags. This is also a fantastic way to violate someone's privacy. For example, what if you don't want to be tagged? Like, if you're at a government protest? Or, even, simply, if you went to a concert with one friend instead of the other and didn't want to let one know? 
 
@@ -229,7 +228,7 @@ How does Facebook know this? By making [some assumptions about you](https://www.
 
 This data can then be used to target Facebook users in the form of ads.  The kinds of targeting you can do on Facebook tells you a lot about the data they keep behind the scenes. For example, you can not only target by location/age/gender/language, you can also do hobbies and life stages (i.e. just engaged, engaged 6 months ago, children in early school age). It's possible to target someone this narrowly and still it have reach a certain number of people (in my example, it was 100-200). 
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/targeted.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/targeted.png)
 
 This data can then be resold downstream, where it's blended with other data that exists about you through credit cards and other marketing sources, to create sites [like this](http://www.familytreenow.com/) that will try to build out a full profile of you.  There is no easy way to get out of this, because once data is created, [it's much harder to delete.](http://idlewords.com/talks/haunted_by_data.htm) This is why one of the primary concerns of privacy activists is getting companies to bulk-delete data after a certain period.  
 

@@ -43,7 +43,7 @@ Like most data scientists, I am leery of any platform that purports to be an end
 
 This tweet encapsulates that frustration pretty well: 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/jeremytweet.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/jeremytweet.png)
 
 
 However, I'm open to trying anything as long as it gets the job done. And there is [a lot to try today](http://veekaybee.github.io/data-strategy/). 
@@ -86,19 +86,19 @@ Once you log in, the product takes you through how to drag concepts and ideas on
 
 AML is structured around experiments, which are GUI workspaces that consist of imported data, algorithm steps, notebook analysis, and annotation, and, can be shared with others with a Microsoft log-in, with different levels of permissioning. 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/visualize.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/visualize.png)
 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/split.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/split.png)
 
 
 There are a number of different algorithms and data sources, and you can launch either R or Python (2 or 3) Jupyter notebooks to quickly visualize/incorporate data at each step, although it is harder incorporating that analysis or sharing it with other people unless you activate workspace sharing correctly. 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/jupyter.png) 
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/jupyter.png) 
 
 The [Cortana Intelligence Gallery](https://gallery.cortanaintelligence.com/) also has a bunch of "experiments", or what I would call data products that you can import and use as templates for your projects. This is probably the best feature of the platform, the fact that you can build on others' pre-existing work and figure out the best way to structure your machine learning. 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/summarysteps.png) 
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/summarysteps.png) 
 
 At first glance, it's pretty impressive, even if overwhelming to navigate: the Cortana Gallery is related to AML but located in a completely different location separate from the main product, and which takes a bit of time to find.  There are also way too many options of what you can do.  But in general, it seems extremely usable. I begrudgingly admitted that Microsoft was doing something with user experience in mind, something that had really cool potential.  
 

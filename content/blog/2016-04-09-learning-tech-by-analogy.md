@@ -1,10 +1,9 @@
 +++
 date = '2016-04-09T00:00:00Z'
 title = 'Learning tech by analogy'
-
 +++
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/jenga.jpeg)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/jenga.jpeg)
 
 
 I entered the tech industry through SQL. When I came to work as a business analyst, I was handed the credentials to an Oracle database, pointers to some tables, and let loose. 
