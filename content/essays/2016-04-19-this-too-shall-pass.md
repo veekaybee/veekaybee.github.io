@@ -1,5 +1,5 @@
 +++
-layout = 'post'
+date = '2016-04-19'
 title = 'This, too, shall pass'
 +++
 

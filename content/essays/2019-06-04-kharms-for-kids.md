@@ -1,15 +1,9 @@
 +++
+date = '2019-06-04'
 layout = 'post'
 title = 'Keeping the world away'
 
 +++
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@vboykis">
-<meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="Keeping the world away ">
-<meta name="twitter:description" content="Reading in Russian to my daughter's no so easy">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/runandfly.jpeg">
 
 ![](https://raw.githubusercontent.com/vkblog/vkblog.github.io/master/public/img/runandfly.jpeg) 
 

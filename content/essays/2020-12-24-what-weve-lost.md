@@ -1,15 +1,8 @@
 +++
 date = '2020-12-24'
-layout = 'post'
 title = "What we've lost"
 
 +++
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="@vboykis" />
-<meta property="og:url" content="" />
-<meta property="og:title" content="Alone together in 2020" />
-<meta property="og:description" content="We lost a lot of time in 2020.  " />
 
 This started as a Twitter thread, but [one of my long-time goals](http://blog.vickiboykis.com/2016/11/20/fix-the-internet/) has been to not put stuff in Twitter threads, so here it is in longer form. Hopefully this is the start of a nice return to blogging for 2021!
 

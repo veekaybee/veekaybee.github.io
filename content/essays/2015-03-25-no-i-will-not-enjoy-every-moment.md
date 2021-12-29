@@ -1,13 +1,5 @@
 +++
-author = 'Vicki'
-categories = ['Uncategorized']
 date = '2015-03-25T07:24:12+00:00'
-excerpt = '"Enjoy every moment!" Nope. I refuse. '
-guid = 'https://vkblog.github.io/?p=9925'
-id = 9925
-layout = 'post'
-permalink = '/2015/03/no-i-will-not-enjoy-every-moment/'
-tags = ['baby', 'culture', 'development', 'family', 'house of cards', 'mandala']
 title = 'No, I will not enjoy every moment'
 
 +++
