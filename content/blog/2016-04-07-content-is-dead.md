@@ -7,7 +7,7 @@ It's 2016. I shouldn't have to write  a scraping script to extract the informati
 
 I was wondering what the transfer process was like (for phone numbers, specifically) from Android to iPhone, so I went to the Googles and searched for ""Android to iOS" or something similar. The third or fourth result (now fifth or sixth based on whatever magic Google constantly performs on search results - completely opaque at this point by personalizes search, cookies, and PageRank refactoring) was this Wired article: 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/androidtoios.png)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/androidtoios.png)
 
 I haven't intentionally gone to Wired in a while, since the quality of their journalism has gone down significantly in the years since they published [the story](http://www.newyorker.com/culture/culture-desk/the-wired-origins-of-argo) "Argo", in 2007. 
 
@@ -15,11 +15,11 @@ In the [post-Anderson years](http://mediadecoder.blogs.nytimes.com/2012/11/16/fo
 
 However, nostalgia means I still have a semi-favorable opinion of them as a reliable arbiter of technical advice and opinoin, so I clicked on the link. But I'd forgotten that, like many other sites, Wired has resorted to begging for pageviews. 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/adblocker.jpg)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/adblocker.jpg)
 
 Normally, I'd just close the tab and move on. But I've gotten so many of these paywall guilt-trip messages lately from a digital media that is terrified it is falling off a cliff, that I got angry. Here's one from Forbes: 
 
-![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/forbes-ad-blocker.jpg)
+![image](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/forbes-ad-blocker.jpg)
 
 So I did what any semi-literate tech person would do:  I decided to cURL the article. 
 
