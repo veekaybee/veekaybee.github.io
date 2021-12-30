@@ -4,16 +4,11 @@ title = 'How to make sure your question gets answered online'
 
 +++
 
- <img src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/question.png" alt="question" height="400" width="500"> 
+
+ {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/question.png" width="600px">}}
  
 **Saul Steinberg, Untitled (Question Marks) (1961)**
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@vboykis">
-<meta name="twitter:creator" content="@vboykis">
-<meta name="twitter:title" content="Asking good questions online">
-<meta name="twitter:description" content="Getting answers is a skill. Here's how to do it.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/question.png">
 
 Since writing my post on [data science being different](https://veekaybee.github.io/2019/02/13/data-science-is-different/), a lot of people have emailed/DMed me asking for advice on Python, data science, machine learning, and careers.  
 

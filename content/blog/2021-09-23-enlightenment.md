@@ -10,7 +10,7 @@ title = 'Reaching MLE (machine learning enlightenment)'
 
 +++
 
-{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/thefieldofwheat.png" alt="wheat field" width="300px" >}}
+{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/thefieldofwheat.png" alt="wheat field" width="300px" >}}
 Ivan Shishkin, The Field of Wheat
 
 

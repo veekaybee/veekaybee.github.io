@@ -11,7 +11,8 @@ title = 'Data ex machina'
 <meta name="twitter:description" content="We shouldn't throw away the current software development process for a new paradigm based on neural nets.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/washing-machine-1961.jpg">
 
-![lichtenstein](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/washing-machine-1961.jpg)
+![lichtenstein](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/washing-machine-1961.jpg)
+
 
 Washing Machine (1961), Roy Lichtenstein 
 
