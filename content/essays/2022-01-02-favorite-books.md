@@ -3,7 +3,7 @@ date = '2022-01-02'
 title = 'My Favorite Books of 2021'
 +++
 
-This year, just like last year, I got pretty distracted, both with the panedmic, and with work, which I did a ton of technical reading for. As a resutl, I didn't get [to nearly as much fiction as I wanted to.](https://www.goodreads.com/user_challenges/26349328). But I still found a few really high-quality reads that I'm still thinking about as the new year begins. 
+This year, just like last year, I got pretty distracted, both with the panedmic, and with work, which I did a ton of technical reading for. As a result, I didn't get [to nearly as much fiction as I wanted to.](https://www.goodreads.com/user_challenges/26349328). But I still found a few really high-quality reads that I'm still thinking about as the new year begins. 
 
 [Piranesi by Susanna Clarke](https://www.goodreads.com/book/show/50202953-piranesi) - I cannot overemphasize how good this book was. Clarke's sprawling original fantasy classic, Jonathan Strange and Mr. Norrell is a book that has remained in my top ten books of all time decades after I've read it, so I was very, very, very excited to see this come out. 
 
