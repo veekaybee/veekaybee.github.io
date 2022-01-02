@@ -28,7 +28,6 @@ So how do we get everyone on our teams to that place? How do we help others get 
 
 {{< tweet 1419630880813879298 >}}
 
-
 There are three things that I've noticed in my own career that developers need to become better:
 
 + the room to make mistakes
@@ -40,7 +39,7 @@ There are three things that I've noticed in my own career that developers need t
 This is the best recent description I've found of the phenomenon we now call psychological safety:
 
 
-{< tweet 1416606239392403458 >}}
+{{< tweet 1416606239392403458 >}}
 
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/safety.png" width="300px" >}}
@@ -49,8 +48,7 @@ The simple story is that, in a good, productive software environment, you have t
 
 Here's another real one one, from an amazing book I'm reading, Gerald Weinberg's ["The Psychology of Computer Programming"](https://books.google.com/books/about/The_Psychology_of_Computer_Programming.html?id=j_MJAQAAMAAJ), which I strongly encourage everyone who works in or near development to read because it addresses most of the issues we think about when we think about programming on a daily basis  - project planning, team structure, and blockers,  with the additional mindblowing caveat that all of this was already discussed and written about in 1971.
 
-{{< tweet 1421631165891555330? >}}
-
+{{< tweet 1421631165891555330 >}}
 The anecdote is about a developer, Bill, who was working on (ostensibly) a missile defense system, with instructions written in machine code. He got to a point where he thought he figured it out, but since you probably need a second set of eyes on a missile defense system, he asked Marilyn to review his code.
 
 Code review was still in the nascent stages in those days, and Weinberg  writes, "His value system, when it came to programming, dictated that secretive, possessive programming was bad and that open, shared programming was good. Errors that might be found in code he had written - not "his code" for the terminology was not used here - were simply facts to be exposed to investigation with an eye to future improvement, not attacks on his person. "
@@ -87,7 +85,7 @@ We've so far talked about the role of the organization, the team, and senior-lev
 Especially as a junior, it can be very daunting to ask good questions.
 Something I realized recently is that one of the reasons senior people are good at asking questions is that they already know the shape of their expertise.  
 
-{< tweet 1420704079035109384? >}}
+{{< tweet 1420704079035109384 >}}
 
 This is why an evnironment where it's ok to ask stupid questions is important. One of the best ways I've seen of dealing with this is having a #dumbquestions channel on Slack. Another is having the Good Senior People ask seemingly simple questions in meetings to empower others.
 
