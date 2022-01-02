@@ -26,7 +26,7 @@ You can write print statements in any language pretty quickly (given that [you g
 
 So how do we get everyone on our teams to that place? How do we help others get out of the dark, frustrating place that is the local minima of suckiness that is the expert beginner, past the stars, and into the cloud? And, how can we help ourselves become better developers?
 
-{{< tweet 1419630880813879298? >}}
+{{< tweet 1419630880813879298 >}}
 
 
 There are three things that I've noticed in my own career that developers need to become better:
