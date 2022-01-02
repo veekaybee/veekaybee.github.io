@@ -26,7 +26,7 @@ You can write print statements in any language pretty quickly (given that [you g
 
 So how do we get everyone on our teams to that place? How do we help others get out of the dark, frustrating place that is the local minima of suckiness that is the expert beginner, past the stars, and into the cloud? And, how can we help ourselves become better developers?
 
-{< tweet 1419630880813879298? >}}
+{{< tweet 1419630880813879298? >}}
 
 
 There are three things that I've noticed in my own career that developers need to become better:
@@ -49,7 +49,7 @@ The simple story is that, in a good, productive software environment, you have t
 
 Here's another real one one, from an amazing book I'm reading, Gerald Weinberg's ["The Psychology of Computer Programming"](https://books.google.com/books/about/The_Psychology_of_Computer_Programming.html?id=j_MJAQAAMAAJ), which I strongly encourage everyone who works in or near development to read because it addresses most of the issues we think about when we think about programming on a daily basis  - project planning, team structure, and blockers,  with the additional mindblowing caveat that all of this was already discussed and written about in 1971.
 
-{< tweet 1421631165891555330? >}}
+{{< tweet 1421631165891555330? >}}
 
 The anecdote is about a developer, Bill, who was working on (ostensibly) a missile defense system, with instructions written in machine code. He got to a point where he thought he figured it out, but since you probably need a second set of eyes on a missile defense system, he asked Marilyn to review his code.
 
