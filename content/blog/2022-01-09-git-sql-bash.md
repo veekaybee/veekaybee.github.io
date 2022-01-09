@@ -10,6 +10,8 @@ twitterImage = 'https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/git-sql-cli.jpeg" width="600px">}}
 
+{{<tweet 1451985733867216898>}}
+
 
 I've now written data-centric code across 6 different companies (12 if you count the different companies I consulted for when I was in consulting). I've so far worked in Python, Scala, Java, SAS, Eviews, R, and, for brief time in undergrad econometrics,Stata. I've had Macbooks where I could do whatever I wanted and completely locked-down Windows environments where I had to open a ticket with Ops to get access to [Java 8.](https://vickiboykis.com/2019/05/10/it-runs-on-java-8/) I've used SVN and Git, Postgres and Redshift and Hive, [Google Sheets](https://vicki.substack.com/p/google-drive-is-production) and Excel, [Spark and Bash.](https://vickiboykis.com/2017/03/20/should-you-replace-hadoop-with-your-laptop/) 
 
