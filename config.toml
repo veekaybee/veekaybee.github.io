@@ -50,7 +50,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   # file. See [Hugo's Format function docs](https://gohugo.io/functions/format/)
   # for details. An example TOML config that uses [ISO
   # 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
-  dateFormat = "Jan 1 2006"
+  dateFormat = "Jan 2 2006"
 
   twitter_cards = "true"
 
