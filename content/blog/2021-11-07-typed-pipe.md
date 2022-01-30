@@ -131,4 +131,4 @@ Something that helped me with this was installing and using [Ammonite](https://a
 
 What also helped tremendously was reading a lot of other Scalding code in our internal repo for comments and examples. 
 
-And third, when you’re overwhelmed, go easy on yourself and understand that you’re overwhelmed and why that’s the case, and then work on addressing that by climbing out of the [local minima of suckiness](http://veekaybee.github.io/2021/08/05/local-minima-of-suckiness/), which is what this post was all about. 
+And third, when you’re overwhelmed, go easy on yourself and understand that you’re overwhelmed and why that’s the case, and then work on addressing that by climbing out of the [local minima of suckiness](https://vickiboykis.com/2021/08/05/the-local-minima-of-suckiness/), which is what this post was all about. 
