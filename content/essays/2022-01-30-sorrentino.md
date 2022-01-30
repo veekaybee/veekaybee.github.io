@@ -14,8 +14,6 @@ I am an [avid reader](https://vickiboykis.com/essays/2022-01-02-favorite-books/)
 
 And so over the winter holidays, I closed my work laptop and I watched movies and read books and listened to music. Instead of producing code, I consumed art. 
 
-{{ < tweet 1474446814422126595 >}}
-
 In doing so, I stumbled across the films of [Paolo Sorrentino](https://en.wikipedia.org/wiki/Paolo_Sorrentino), an Italian director who became acclaimed when "La Grande Bellezza," The Great Beauty, won the Best Foreign Film Oscar in 2014. 
 
 Sorrentino's directorial style is very demanding on the viewer, in no small part because his films are 2+ hours long, and for me, with the extra work of subtitles so I can't just zone out on my phone, as I do when I'm usually watching TV. 
