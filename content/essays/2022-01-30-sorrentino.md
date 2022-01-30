@@ -7,13 +7,11 @@ title = 'Sorrentino'
 
 I have been doing [so much learning and growing at work over the past year](https://vickiboykis.com/2022/01/02/2021-work-recap-or-the-conjoined-triangles-of-success/) that I have entirely neglected an important part of my life.  
 
-I am an [avid reader](https://vickiboykis.com/essays/2022-01-02-favorite-books/), I love art, and I love thinking about technology as more than just code, but as an [expression of humanity](https://vicki.substack.com/). 
-
-At least, I used to. Every single brain cell I had went to learning this year. But in focusing purely on technical implementatation, I felt entirely empty inside. It's my belief that, in order to produce good, well-rounded knowledge work of any kind, we need to be connected to both the hard sciences and humanities, and I completely failed in that this year. 
+I am an [avid reader](https://vickiboykis.com/essays/2022-01-02-favorite-books/), I love art, and I love thinking about technology as more than just code, but as an [expression of humanity](https://vicki.substack.com/). At least, I used to. Every single brain cell I had went to learning this year. But in focusing purely on technical implementatation, I felt empty inside. It's my belief that, in order to produce good, well-rounded knowledge work of any kind, we need to be connected to both the hard sciences and humanities, and I completely failed in that this year. 
 
 And so over the winter holidays, I closed my work laptop and I watched movies and read books and listened to music. Instead of producing code, I consumed art. 
 
-{{ < tweet vboykis  1474446814422126595 >}}
+{{ < tweet 1474446814422126595 >}}
 
 In doing so, I stumbled across the films of [Paolo Sorrentino](https://en.wikipedia.org/wiki/Paolo_Sorrentino), an Italian director who became acclaimed when "La Grande Bellezza," The Great Beauty, won the Best Foreign Film Oscar in 2014. 
 
@@ -23,7 +21,7 @@ His movies are long and meandering and often centered on the main character goin
 
 > Sorrentino is justifiably famous for his films’ consistent visual beauty, their combination of quirky narrative, oddball protagonists, and spectacular image. All of his films feature long mobile takes in which the camera swoops around for no apparent reason, with close-ups of unusual faces or objects cut into the flow.
 
-There is, eventually a point to the movies, but it takes them a long time to get there, and in the meantime, you can just enjoy the visual scope. 
+There is, eventually a point to the movies, but it takes them a long time to get there. In the meantime, you can just enjoy the visual scope. 
 
 La Grande Bellezza is about Jep Gambardella, an aging journalist and theater critic in Rome, who essentially just wanders through the Roman social circuit for the entire movie. 
 
@@ -33,9 +31,9 @@ Not much happens - he meets people he knows, interviews people, falls in and out
 
 ![bellezza](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/bellezza1.png)
 
-![bellezza](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/bellezza2.png)
-
 ![bellezza](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/bellezza3.png)
+
+![bellezza](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/bellezza4.png)
 
 Sorrentino's latest movie, "È stata la mano di Dio", It was the hand of God, in reference to Diego Maradona's [1986 FIFA World Cup goal](https://www.youtube.com/watch?v=1MgZv6EXP7g) against England as a part of Naples' football club, where he scored an impossible winning goal using, accidentally, his hand.
 
