@@ -1,6 +1,9 @@
 +++
+card = 'summary'
+creator = '@vboykis'
 date = '2022-01-30'
 title = 'Sorrentino'
+description = "On watching Paolo Sorrentino"
 +++
 
 ![bellezza](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/bellezza3.png)
