@@ -18,7 +18,7 @@ In doing so, I stumbled across the films of [Paolo Sorrentino](https://en.wikipe
 
 Sorrentino's directorial style is very demanding on the viewer, in no small part because his films are 2+ hours long, and for me, with the extra work of subtitles so I can't just zone out on my phone, as I do when I'm usually watching TV. 
 
-His movies are long and meandering and often centered on the main character going on a journey and [finding a truth about themselves within the lens of the world.])https://www.lavocedinewyork.com/en/arts/2020/06/23/paolo-sorrentino-attracting-an-audience-with-visual-beauty-and-quirky-narrative/) 
+His movies are long and meandering and often centered on the main character going on a journey and [finding a truth about themselves within the lens of the world.](https://www.lavocedinewyork.com/en/arts/2020/06/23/paolo-sorrentino-attracting-an-audience-with-visual-beauty-and-quirky-narrative/) 
 
 > Sorrentino is justifiably famous for his films’ consistent visual beauty, their combination of quirky narrative, oddball protagonists, and spectacular image. All of his films feature long mobile takes in which the camera swoops around for no apparent reason, with close-ups of unusual faces or objects cut into the flow.
 
