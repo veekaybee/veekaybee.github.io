@@ -1,7 +1,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2022-01-09'
+date = '2022-02-09'
 site = '@vboykis'
 title = "On owning a software problem"
 description = 'What are vertical screws for developers?'
@@ -9,13 +9,15 @@ description = 'What are vertical screws for developers?'
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/lightswitch.jpeg" width="600px">}}
 
-{{<tweet 1495224029724258305>}}
+
 
 This weekend, I saw a tweet that really resonated with me, and judging by the comments, resonated with a lot of others, too. 
 
 It reads,
 
 > "My buddy is an electrician and told me a few months ago that he always leaves the screws in a vertical position on jobs as a sign of craftsmanship. Been thinking ever since what my “vertical screws” equivalent is for product design."
+
+{{<tweet 1495224029724258305>}}
 
 Tweaking the screws in a light plate is a relatively low-friction small thing that most people will not notice, but that when they do, it's a sign of craftsmanship, expertise, and pride in your work. 
 
