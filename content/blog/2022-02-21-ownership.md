@@ -30,7 +30,7 @@ I wondered out loud what the equivalent of that was for machine learning and dat
 + Opening a ticket to improve documentation on someone else's project
 + Editing typos and inaccuracies in old communications
 + Carefully reasoning about corner cases in public
-+ Explaning acronyms and industry jargon when in an audience that might not be familiar with it, and being cognizant of when they're in that audience
++ Explaining acronyms and industry jargon when in an audience that might not be familiar with it, and being cognizant of when they're in that audience
 + The code recognizes the multitude of variations in data that can happen and handles those cases
 + If you're putting together a SQL query, saving that query in the accompanying spreadsheet so others can reproduce it
 
