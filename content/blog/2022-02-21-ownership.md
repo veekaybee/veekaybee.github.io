@@ -1,7 +1,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2022-02-09'
+date = '2022-02-21'
 site = '@vboykis'
 title = "On owning a software problem"
 description = 'What are vertical screws for developers?'
