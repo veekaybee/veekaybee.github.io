@@ -12,7 +12,8 @@ title = "It's still hard for beginners to get started with Python"
 <meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/snakes.jpg">
 
 
-{{ <tweet 925467002642354176> }}
+{{< tweet 925467002642354176 >}}
+
 
 Python is, for a good reason, one of the easiest programming languages to get started with for people new to computational data analysis specifically, and new to programming in general. 
 
@@ -89,7 +90,7 @@ A senior developer's mental model of a language and its environments looks somet
 And, even senior developers (aka developers who wrote the book on how to install Python) get frustrated toggling between different versions of Python: 
 
 
-{{ <tweet 972106533596168192> }}
+{{< tweet 972106533596168192 >}}
 
 If this is frustrating to people like Allen Downey and Kenneth Reitz, imagine what a new person starting with an open command line running 
 
