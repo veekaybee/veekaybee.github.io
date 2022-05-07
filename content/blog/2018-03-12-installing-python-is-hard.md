@@ -12,7 +12,7 @@ title = "It's still hard for beginners to get started with Python"
 <meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/snakes.jpg">
 
 
-{{< tweet 925467002642354176 >}}
+{{< tweet vboykis 925467002642354176 >}}
 
 
 Python is, for a good reason, one of the easiest programming languages to get started with for people new to computational data analysis specifically, and new to programming in general. 
@@ -45,6 +45,9 @@ I started installing Python in 2012 on a Windows machine:
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I must have done something pretty bad because karma is coming back to me in the form of installing Python for Windows. <a href="https://twitter.com/hashtag/attempt3?src=hash&amp;ref_src=twsrc%5Etfw">#attempt3</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/466678032200384512?ref_src=twsrc%5Etfw">May 14, 2014</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+{{< tweet vboykis 466678032200384512 >}}
+
 And, instead of being able to immediately write code, I was angry a lot, even more than Twitter would have you believe. In fact, it was so frustrating, that I channeled all of my energy into [this post](http://vickibwrites.com/2015/06/05/implementation/). 
 
 As someone with a lot of Python experience now, my stance is that it's still incredibly hard to understand how to install Python for people new to both Python and development. The best way to get an idea of how hard it can be is to do a Google search.   
@@ -69,7 +72,7 @@ For example, try asking a novice what this means:
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-{{< tweet 972192919489826816 >}}
+{{< tweet MacHomebrew 972192919489826816 >}}
 
 What's PEP? What's a symlink? How does Homebrew work? (True story: In writing this blog post, I tried to create a new user on my computer that didn't have Python so I could see what the experience was like for a beginner and ended up somehow uninstalling and reinstalling Homebrew because I overestimated my understanding of how it works across users on MacOS. )
 
@@ -77,7 +80,7 @@ What's PEP? What's a symlink? How does Homebrew work? (True story: In writing th
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-{{< tweet 968315412579520513 >}}
+{{< tweet vboykis 968315412579520513 >}}
 
 The main problem with the communication gap between beginners and experts is that junior developers have [a whole hierarchy of things they don't understand](http://web.stanford.edu/~himalv/unknownunknownsws.pdf), and aren't even aware of the right way to ask the question. 
 
@@ -93,16 +96,6 @@ A senior developer's mental model of a language and its environments looks somet
 
 ![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/juniorvssenior.jpg)
 
-And, even senior developers (aka developers who wrote the book on how to install Python) get frustrated toggling between different versions of Python: 
-
-
-{{< tweet 972106533596168192 >}}
-
-If this is frustrating to people like Allen Downey and Kenneth Reitz, imagine what a new person starting with an open command line running 
-
-`export PYTHONPATH=/path/to/dir:$PYTHONPATH"` 
-
-is feeling. 
 
 If you are a senior person and have junior people that you work or interact on online forums with, it's a good idea to keep these things in mind. The people that have been most important to me in my career are the ones who were able to help me navigate through the maze of questions I had and turn my own mental model to decrease the amount of unknown unknowns I had.  
 
