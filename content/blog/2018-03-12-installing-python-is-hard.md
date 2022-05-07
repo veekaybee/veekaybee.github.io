@@ -68,10 +68,16 @@ For example, try asking a novice what this means:
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">We have heard your feedback on Python 3 and tomorrow will be making `brew install python` and `brew install python@2` PEP 394 compliant: <a href="https://t.co/Euhy1v33MO">https://t.co/Euhy1v33MO</a>. We will not change this again until PEP 394 has changed. Sorry for the pain; we&#39;ve tried our best ❤️</p>&mdash; Homebrew (@MacHomebrew) <a href="https://twitter.com/MacHomebrew/status/972192919489826816?ref_src=twsrc%5Etfw">March 9, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+{{< tweet 972192919489826816 >}}
+
 What's PEP? What's a symlink? How does Homebrew work? (True story: In writing this blog post, I tried to create a new user on my computer that didn't have Python so I could see what the experience was like for a beginner and ended up somehow uninstalling and reinstalling Homebrew because I overestimated my understanding of how it works across users on MacOS. )
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Working on a post about how it can be hard for beginners to install Python and just hosed my own environment.  🐍</p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/968315412579520513?ref_src=twsrc%5Etfw">February 27, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+{{< tweet 968315412579520513 >}}
 
 The main problem with the communication gap between beginners and experts is that junior developers have [a whole hierarchy of things they don't understand](http://web.stanford.edu/~himalv/unknownunknownsws.pdf), and aren't even aware of the right way to ask the question. 
 
