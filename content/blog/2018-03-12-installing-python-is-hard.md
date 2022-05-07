@@ -9,7 +9,7 @@ title = "It's still hard for beginners to get started with Python"
 <meta name="twitter:creator" content="@vboykis">
 <meta name="twitter:title" content="It's still hard to get started with Python.">
 <meta name="twitter:description" content="New developers don't know what they don't know.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/snakes.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/snakes.jpg">
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;All of my local Python environments&quot;<br>M.C. Escher, 1969 <a href="https://twitter.com/hashtag/devart?src=hash&amp;ref_src=twsrc%5Etfw">#devart</a> <a href="https://t.co/iosQJnXJXj">pic.twitter.com/iosQJnXJXj</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/925467002642354176?ref_src=twsrc%5Etfw">October 31, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -34,7 +34,7 @@ Another - more recent -  post that touches on this difference, the boundary betw
 
 Each person gradually becoming more technical goes down this path, from not knowing anything, to [building serverless applications](http://veekaybee.github.io/2018/02/19/creating-a-twitter-art-bot/), by stumbling around and asking [a lot of questions](https://jvns.ca/blog/good-questions/). I went down this path when I started my journey into data science (although it definitely didn't feel like a journey at the time - more like a blindfolded freefall into the darkness of the command line.)
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/pythonwhat.png)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/pythonwhat.png)
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">All the roads are pointing to Python for me. <a href="https://twitter.com/hashtag/resistanceisfutile?src=hash&amp;ref_src=twsrc%5Etfw">#resistanceisfutile</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/240519556043526145?ref_src=twsrc%5Etfw">August 28, 2012</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -50,7 +50,7 @@ As someone with a lot of Python experience now, my stance is that it's still inc
 
 If you're just Googling for Python installation instructions, you'll get this page, which tells you how to install 3.6 on Windows, as the first result.  
 
-![windows](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/windowspython.png)
+![windows](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/windowspython.png)
 
 It doesn't tell you anything about why you should be installing Python 3.6 over anything else. The second link is the [official Python download page.](https://www.python.org/downloads/), which has [a helpful link](https://wiki.python.org/moin/Python2orPython3) to an overview of why you'd want to use Python 2 or 3, and says that the version you want to use depends on what you want to get done. But what if you don't know what you want to get done? You can look around, and [you'll see some articles](https://www.dataquest.io/blog/python-2-or-3/) that tell you to start with 3, some that say [it doesn't matter](http://www.practicepython.org/blog/2017/02/09/python2-and-3.html), and [as late as 2016](https://learnpythonthehardway.org/book/nopython3.html), the author of Learn Python the Hard Way didn't advocate switching, and [even when he rewrote the course](https://news.ycombinator.com/item?id=14722349), there was controversy. 
 
@@ -74,7 +74,7 @@ What's PEP? What's a symlink? How does Homebrew work? (True story: In writing th
 
 The main problem with the communication gap between beginners and experts is that junior developers have [a whole hierarchy of things they don't understand](http://web.stanford.edu/~himalv/unknownunknownsws.pdf), and aren't even aware of the right way to ask the question. 
 
-![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/images/unknowns.jpg)
+![](https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/unknowns.jpg)
 
 For example, [after you install Python on a Mac](https://gist.github.com/patriciogonzalezvivo/77da993b14a48753efda), you have to set the Python path. The instructions in this particular tutorial tell you to, 
 
