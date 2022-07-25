@@ -16,18 +16,16 @@ The usual disclaimer in the age of [context collapse and hyperbole](https://vick
 
 ## On Engineering and Machine Learning
 
-+ In the tech industry, [there is a vast scope of engineering work](https://vickiboykis.com/2019/05/10/it-runs-on-java-8/) that people don't talk about in conferences or on Twitter or in blog posts. For me, this work involved [a lot of PHP](https://boringml.com/docs/languages/php/arrays/). 
-
-Since Wordpress.com and Tumblr are PHP-based monoliths, [you simply will not be able to make impactful feature changes or get to A/B test](https://twitter.com/vboykis/status/1397291014461829126) if you don't dive in. Abstracting away from PHP specifically, as a machine learning engineer, the closer you can get to working on code that impacts [production](https://twitter.com/vboykis/status/1436048726703972360), the clearer it will become what the value of your work is. Strive to move well across the stack in these systems.   
++ In the tech industry, [there is a vast scope of engineering work](https://vickiboykis.com/2019/05/10/it-runs-on-java-8/) that people don't talk about in conferences or on Twitter or in blog posts. For me, this work involved [a lot of PHP](https://boringml.com/docs/languages/php/arrays/). Since Wordpress.com and Tumblr are PHP-based monoliths, [you simply will not be able to make impactful feature changes or get to A/B test](https://twitter.com/vboykis/status/1397291014461829126) if you don't dive in. Abstracting away from PHP specifically, as a machine learning engineer, the closer you can get to working on code that impacts [production](https://twitter.com/vboykis/status/1436048726703972360), the clearer it will become what the value of your work is. Strive to move well across the stack in these systems.   
 
 + Cache rules everything around me. If you are working on sites with any kind of load at all, [it's in your best interest to become super friendly with Redis.](https://cachingexplained.com/)
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/cache_tweet.png" width="600px">}}
 
-+ Along the same lines, as an engineer in 2022, regardless of where your area of depth is, you will also need to acquire an understanding of the breadth of the system that you operate in.  There are a lot of moving parts and you don't need to intimately know all of them, but the more you are able to see your work through [a systems perspective](https://twitter.com/vboykis/status/1249054452134354947), the more valuable you will be.  This means, if you don't understand how something works (i.e. aforementioned cache), it's a good idea to stop and learn it or ask someone about it. Here is a good post about [how to ask questions.](https://jvns.ca/blog/2021/10/21/how-to-get-useful-answers-to-your-questions/).
++ Along the same lines, as an engineer in 2022, regardless of where your area of depth is, you will also need to acquire an understanding of the breadth of the system that you operate in.  There are a lot of moving parts and you don't need to intimately know all of them, but the more you are able to see your work through [a systems perspective](https://twitter.com/vboykis/status/1249054452134354947), the more valuable you will be.  This means, if you don't understand how something works (i.e. aforementioned cache), it's a good idea to stop and learn it or ask someone about it. Here is a good post about [how to ask questions.](https://jvns.ca/blog/2021/10/21/how-to-get-useful-answers-to-your-questions/)
 
 
-+ The best way to work through impostor syndrome is to [write and ship a lot of code that's reviewed in a supportive environment.](https://vickiboykis.com/2021/08/05/the-local-minima-of-suckiness/). 
++ The best way to work through impostor syndrome is to [write and ship a lot of code that's reviewed in a supportive environment.](https://vickiboykis.com/2021/08/05/the-local-minima-of-suckiness/)
 
 
 + When in doubt, [cosine similarity](https://twitter.com/vboykis/status/1523848599691530242) as your distance measure in recsys will take you a pretty long way.
