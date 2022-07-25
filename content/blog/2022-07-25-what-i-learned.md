@@ -1,7 +1,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2022-02-21'
+date = '2022-07-25'
 site = '@vboykis'
 title = "Looking back at two years at Automattic and Tumblr"
 description = 'Lessons in life and engineering'
