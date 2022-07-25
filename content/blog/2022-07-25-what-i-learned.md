@@ -83,6 +83,4 @@ The usual disclaimer in the age of [context collapse and hyperbole](https://vick
 
 + If you find a [product you love that intersects with an organization that has purpose and good people](https://vickiboykis.com/2022/01/02/2021-work-recap-or-the-conjoined-triangles-of-success/), working on it really will not seem like work. It will seem like a big, joyful game, a puzzle to solve. Seek out these spaces in your career and reflect on what it is about these settings that make them work for you.  
 
-+ Making something work and run for other people is one of the greatest joys you can experience as an engineer. 
-
-The second greatest joy is having Jenkins turn green on the first deploy. 
++ Making something work and run for other people is one of the greatest joys you can experience as an engineer. The second greatest joy is having Jenkins turn green on the first deploy. 
