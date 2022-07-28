@@ -3,13 +3,13 @@ card = 'summary'
 creator = '@vboykis'
 date = '2022-07-25'
 site = '@vboykis'
-title = "How to prepare an AWS environment for deep learning"
+title = "How to prepare an AWS EC2 image for PyTorch"
 description = 'Easy once you already know how to do it'
 +++
 
-I've been getting started in open-source development with PyTorch, starting with [running and testing the examples for Pytorch in distributed mode.](https://github.com/pytorch/examples/pull/988). Big thanks [to Mark](https://twitter.com/marksaroufim) for reviewing and merging my first PR! 
+I've been getting started in open-source development with PyTorch, starting with [running and testing the examples for Pytorch in distributed mode.](https://github.com/pytorch/examples/pull/988) Big thanks [to Mark](https://twitter.com/marksaroufim) for reviewing and merging my first PR. 
 
-My current Macbook Pro doesn't support using PyTorch with GPUs, although as of [1.12 that's changed!](https://pytorch.org/blog/introducing-accelerated-pytorch-training-on-mac/) and you can read Sebastian's [review of his experience with it here](https://sebastianraschka.com/blog/2022/pytorch-m1-gpu.html). But for me, the easiest way to run PyTorch and its associated tests is to spin up a relatively small GPU-based instance in AWS for testing (GCP offers similar functionality) and then tear it down. 
+My current Macbook Pro doesn't support using PyTorch with GPUs, although as of [1.12 that's changed](https://pytorch.org/blog/introducing-accelerated-pytorch-training-on-mac/) and you can read Sebastian's [review of his experience with it here](https://sebastianraschka.com/blog/2022/pytorch-m1-gpu.html). But for me, the easiest way to run PyTorch and its associated tests is to spin up a relatively small GPU-based instance in AWS for testing (GCP offers similar functionality) and then tear it down. 
 
 I've updated the instructions [in the official docs](https://github.com/pytorch/examples/blob/main/CONTRIBUTING.md#for-bug-fixes), but thought I'd add them here as well, mostly as reference to myself for how to do it. 
 
@@ -40,9 +40,9 @@ aws ec2 run-instances --image-id ami-0403bb4876c18c180 --instance-type g4dn.4xla
 
 Once it's set up, ssh into it using: 
 
-`ssh -i "yourkey.pem" ubuntu@theinstancename.compute-1.amazonaws.co` (rememeber that Ubuntu is the user here)
+`ssh -i "yourkey.pem" ubuntu@theinstancename.compute-1.amazonaws.com` (`ubuntu` is the user here)
 
-```
+```bash
 =============================================================================
        __|  __|_  )
        _|  (     /   Deep Learning AMI (Ubuntu 18.04) Version 59
@@ -65,7 +65,7 @@ The deep learning instance comes with PyTorch build in in a conda environment, b
 
 So then you can run: 
 
-```
+```bash
 conda create --name pytorchenv 
 conda install  -c pytorch torchvision cudatoolkit=10.1 
 mkdir my_examples 
@@ -75,7 +75,15 @@ git clone https://github.com/pytorch/examples.git ./run_python_examples.sh "inst
 
 And you should be good to go!
 
-If you want to avoid having to run a bunch of bash commands, you can also package the commands as part of the install command using `--user-data`, [which pushes data to your image at launch.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html). Here's [more on how user-data works.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) 
+If you want to avoid having to run a bunch of bash commands, you can also package the commands as part of the install command using `--user-data`, [which pushes data to your image at launch.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) 
+
+
+```bash
+aws ec2 run-instances --image-id ami-0403bb4876c18c180 --instance-type g4dn.4xlarge --key-name pytorch  --security-groups [your security group]
+--user-data file://mybashfile.sh
+```
+
+Here's [more on how user-data works.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) 
 
 
 
