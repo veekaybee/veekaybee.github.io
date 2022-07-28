@@ -70,7 +70,8 @@ conda create --name pytorchenv
 conda install  -c pytorch torchvision cudatoolkit=10.1 
 mkdir my_examples 
 cd my_examples 
-git clone https://github.com/pytorch/examples.git ./run_python_examples.sh "install_deps"
+git clone https://github.com/pytorch/examples.git 
+./run_python_examples.sh "install_deps"
 ```
 
 And you should be good to go!
