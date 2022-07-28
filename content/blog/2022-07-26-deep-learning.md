@@ -4,7 +4,7 @@ creator = '@vboykis'
 date = '2022-07-25'
 site = '@vboykis'
 title = "How to prepare an AWS environment for deep learning"
-description = 'There's a lot of steps'
+description = 'It's easy once you already know how to do it'
 +++
 
 I've been getting started in open-source development with PyTorch, starting with [running and testing the examples for Pytorch in distributed mode.](https://github.com/pytorch/examples/pull/988). Big thanks [to Mark](https://twitter.com/marksaroufim) for reviewing and merging my first PR! 
