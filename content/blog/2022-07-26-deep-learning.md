@@ -21,7 +21,7 @@ These instructions assume you have:
 
 We'll be spinning up  a `g4dn.4xlarge` [instance](https://aws.amazon.com/ec2/instance-types/g4/). This is the lowest-cost GPU instance and is fine for a couple hours of testing example runs. If your model is large and memory-intensive, you'll want something larger. 
 
-Current specs (as of summer 2022) are: `1 GPU, 16 vCPUs, 64 GiB of memory, 225 NVMe SSD, up to 25 Gbps network performance`. The cost is $1.20/hour, so if you accidentally leave it running for a month, [it's going to cost ~$560.](https://calculator.aws/#/estimate). One quick way to pre-empt this is to set up [billing alarms.](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html) 
+Current specs (as of summer 2022) are: `1 GPU, 16 vCPUs, 64 GiB of memory, 225 NVMe SSD, up to 25 Gbps network performance`. The cost is $1.20/hour, so if you accidentally leave it running for a month, [it's going to cost ~$560.](https://calculator.aws/#/estimate) One quick way to pre-empt this is to set up [billing alarms.](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html) 
 
 We'll be creating this instance from the AWS CLI, although you can also do this from the console, just takes a bit longer. 
 
@@ -61,7 +61,7 @@ for PyTorch (+AWS Neuron) with Python3 _________________________________________
 for AWS MX(+Amazon Elastic Inference) with Python3 ______________________________________ source activate amazonei_mxnet_p36
 for base Python3 (CUDA 11.0) _______________________________________________________________________ source activate python3
 ```
-The deep learning instance comes with PyTorch build in in a conda environment, but these dependencies tend to fall out of sync with each other. Usually it's easier to start from scratch, especially since `examples` [installs its own dependencies.](https://github.com/pytorch/examples/blob/7ed7ac7b01add7ca29d45f25700e73a4b517ccea/run_python_examples.sh#L41) 
+The deep learning instance comes with PyTorch pre-buildt in a conda environment, but these dependencies tend to fall out of sync with each other. Usually it's easier to start from scratch, especially since `examples` [installs its own dependencies.](https://github.com/pytorch/examples/blob/7ed7ac7b01add7ca29d45f25700e73a4b517ccea/run_python_examples.sh#L41) 
 
 So then you can run: 
 
