@@ -76,15 +76,23 @@ git clone https://github.com/pytorch/examples.git
 
 And you should be good to go!
 
-If you want to avoid having to run a bunch of bash commands, you can also package the commands as part of the install command using `--user-data`, [which pushes data to your image at launch.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) 
+There is an even easier way to do this if you want to avoid having to run a bunch of bash commands, you can also package the commands as part of the install command using `--user-data`, [which pushes data to your image at launch.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) Here's [more on how user-data works.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) 
+
+In order to push data to the image, you have to use an instance profile, [which is tied to an IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html),and which you can set up using the command line.  
 
 
-```bash
-aws ec2 run-instances --image-id ami-0403bb4876c18c180 --instance-type g4dn.4xlarge --key-name pytorch  --security-groups [your security group]
---user-data file://mybashfile.sh
+```
+aws ec2 run-instances --image-id ami-0403bb4876c18c180 --instance-type g4dn.4xlarge --key-name pytorch --security-groups [your security group] --iam-instance-profile '{"Name": "EC2_Access" }' --user-data file://install_pytorch.sh 
 ```
 
-Here's [more on how user-data works.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) 
+In order to make sure that your bash script ran correctly, you can tail the image setup logs, which are located in hese two places: 
+
+```
+/var/log/cloud-init.log 
+/var/log/cloud-init-output.log
+```
+
+
 
 
 
