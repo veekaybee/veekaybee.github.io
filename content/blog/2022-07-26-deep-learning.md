@@ -34,6 +34,8 @@ From the command line, run the command to create a new EC2 instance:
 --security-groups [your security group] - make sure this security group has ingress/egress for port 80, 22, and 443
 ```
 
+Note: the ID of the image gets updated every several days, [here's a script](https://gist.github.com/daveadams/8b67859c577f069b62fbea844c67d68a) to find out what it is when you create the image. thanks, [David](https://twitter.com/daveadams/status/1553003799454810113)!
+
 ```bash
 aws ec2 run-instances --image-id ami-0403bb4876c18c180 --instance-type g4dn.4xlarge --key-name pytorch  --security-groups [your security group]
 ```
