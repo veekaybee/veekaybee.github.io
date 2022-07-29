@@ -68,12 +68,16 @@ The deep learning instance comes with PyTorch pre-buildt in a conda environment,
 So then you can run: 
 
 ```bash
-conda create --name pytorchenv 
-conda install  -c pytorch torchvision cudatoolkit=10.1 
-mkdir my_examples 
-cd my_examples 
+mkdir -p /home/ubuntu/my_examples 
+cd /home/ubuntu/my_examples 
 git clone https://github.com/pytorch/examples.git 
-./run_python_examples.sh "install_deps"
+cd examples
+echo ". /home/ubuntu/anaconda3/etc/profile.d/conda.sh" >> /home/ubuntu/.bashrc
+. /home/ubuntu/anaconda3/etc/profile.d/conda.sh
+source /home/ubuntu/.bashrc
+conda create --name pytorchenv 
+conda activate pytorchenv
+conda install  -c pytorch torchvision cudatoolkit=10.1 
 ```
 
 And you should be good to go!
