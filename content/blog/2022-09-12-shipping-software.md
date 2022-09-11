@@ -1,7 +1,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2022-09-212'
+date = '2022-09-12'
 site = '@vboykis'
 title = "On the team as a system"
 description = 'How humans work together to build software'
