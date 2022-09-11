@@ -12,7 +12,6 @@ description = 'How humans work together to build software'
 
 I read [this great post over the weekend ](https://jacobian.org/2022/sep/9/quality-is-systemic/)and this sentence is the heart of understanding how to operate a great software team: 
 
-
     Software quality is more the result of a system designed to produce quality, and not so much the result of individual performance. 
 
 The whole post is good and you should read it, but for me it immediately brought to mind a podcast from 2019 called “[The Dysfunction of Organizations](https://podlodka.io/132)” on the same topic. The content of that podcast has become an important part of my development philosophy. Unfortunately, it is only in Russian (unless someone wants to entirely transcribe it, which they should, because the content is really good), so I re-listened to it and took key notes. 
