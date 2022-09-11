@@ -3,7 +3,7 @@ card = 'summary'
 creator = '@vboykis'
 date = '2022-07-26'
 site = '@vboykis'
-title = "How to prepare an AWS EC2 image for PyTorch"
+title = "How to prepare an AWS test image for PyTorch"
 description = 'Easy once you already know how to do it'
 +++
 

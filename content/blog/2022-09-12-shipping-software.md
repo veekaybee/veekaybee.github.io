@@ -1,11 +1,12 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2022-09-12'
+date = '2022-09-10'
 site = '@vboykis'
 title = "On the team as a system"
 description = 'How humans work together to build software'
 +++
+
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/crowdedboat.png" width="600px">}}
 
 **Crowded Boat II, Robert Goodnough**
