@@ -55,7 +55,7 @@ One day, I stood looking at the pile of books and papers in dismay, and my husba
 
 When I started thinking of learning as a process that involves going extremely wide on core fundamentals, then going deep and building links across fundamentals, it made it the process a LOT more manageable. 
 
-Here's a concrete example: Let's take the idea of the graph data structure. Here's a small, friendly graph. (This is actually a binary search tree, but let's roll with it for now.)
+Here's a concrete example: Let's take the idea of the graph data structure. Here's a small, friendly graph. (This is actually a binary tree, but let's roll with it for now.)
 
 ```
         5         
