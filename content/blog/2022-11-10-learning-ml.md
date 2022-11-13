@@ -10,13 +10,11 @@ description = "1. Learn broadly. 2. Learn deeply. 3. Don't be afraid to re-learn
 
 "Almost all advice is contextual, yet it is rarely delivered with any context", [writes Justin in this post](https://www.simplethread.com/20-things-ive-learned-in-my-20-years-as-a-software-engineer/) of things he's learned in 20 years as a developer. 
 
-The context for the advice I'm about to share is: I started without an engineering background and [through hard work and a lot of luck](https://increment.com/planning/the-best-laid-plans-tech-careers/) ended up as a machine learning engineer. 
+The context for the advice I'm about to share is: I started without an engineering background and [through hard work and a lot of luck](https://increment.com/planning/the-best-laid-plans-tech-careers/) became a machine learning engineer. 
 
 My overarching goal as an MLE is to continuously work towards designing and deploying well-designed, and transparent machine learning systems and to learn the best software engineering practices to do so. 
 
-[The best engineers I know that do this well ](https://vickiboykis.com/2021/08/05/the-local-minima-of-suckiness/) are constantly asking questions and learning, and this is a goal I have for myself in my career, as well. It's important for me to understand the machine learning stack end to end, and I've felt [most valuable and fulfilled](https://vickiboykis.com/2022/01/02/2021-work-recap-or-the-conjoined-triangles-of-success/) in roles where I can contribute to both modeling and infrastructure. The way I do this best is [by thinking in patterns.](https://vickiboykis.com/2021/06/06/the-humble-hash-aggregate/) 
-
-I am also (painfully) realizing that most machine learning work, at its core, is [software engineering fundamentals and gruntwork](https://vickiboykis.com/2021/09/23/reaching-mle-machine-learning-enlightenment/). 
+[The best engineers I know that do this well ](https://vickiboykis.com/2021/08/05/the-local-minima-of-suckiness/) are constantly asking questions and learning, and this is a goal I have for myself in my career, as well. It's important for me to understand the machine learning stack end to end, and I've felt [most valuable and fulfilled](https://vickiboykis.com/2022/01/02/2021-work-recap-or-the-conjoined-triangles-of-success/) in roles where I can contribute to both modeling and infrastructure. The way I do this best is [by thinking in patterns.](https://vickiboykis.com/2021/06/06/the-humble-hash-aggregate/)  I am also (painfully) realizing that most machine learning work, at its core, is [software engineering fundamentals and gruntwork](https://vickiboykis.com/2021/09/23/reaching-mle-machine-learning-enlightenment/). 
 
 So, as always, take this blog post mostly as advice to my past self that may or may not work for you based on your goals.
 
