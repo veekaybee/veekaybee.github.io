@@ -81,7 +81,7 @@ And once we understand trees, we understand that DAGs, one of the canonical data
 
 This gets us now from abstract data structures to things that we work with every single day:  [Airflow DAGs](https://airflow.apache.org/docs/apache-airflow/1.10.12/concepts.html), [execution plans in Spark](https://stackoverflow.com/questions/7423401/whats-the-difference-between-the-data-structure-tree-and-graph), and Tensorflow/PyTorch [computational graphs.](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html) 
 
-We can also work with graphs themselves, i.e. [GraphX and Pregel.](https://spark.apache.org/docs/3.2.1/api/java/org/apache/spark/graphx/Pregel.html), if we're dealing with data that examines social networks or connections. 
+We can also work with graphs themselves, i.e. [GraphX and Pregel](https://spark.apache.org/docs/3.2.1/api/java/org/apache/spark/graphx/Pregel.html), if we're dealing with data that examines social networks or connections. 
 
 So just by learning one foundational concept, we unlock being able to work with it across various domains within machine learning and relating concepts to each other. We can also now reason about what data structure might work best where and what kinds of engineering tradeoffs we make when implementing X or Y.  
 
@@ -99,11 +99,7 @@ And, another thing: everything you read in machine learning and engineering repe
 
 So, if you don't understand the first time, don't feel bad. Just pick up a different book (or three). You will already have the foundations of the first book to guide you. 
 
-So, how did I figure out what's foundationally important in the broad sense? 
-
-I wish I had a concrete answer for this. Like for a lot of people, I think it's just a LOT of reading of different things that reinforce concepts from different directions and building things in industry. 
-
-But if I had to relearn some of these concepts, I'd want to use heuristics, the first one of which is how to think about machine learning areas of expertise. 
+So, how did I figure out what's foundationally important in the broad sense? I wish I had a concrete answer for this. Like for a lot of people, I think it's just a LOT of reading of different things that reinforce concepts from different directions and building things in industry. But if I had to relearn some of these concepts, I'd want to use heuristics, the first one of which is how to think about machine learning areas of expertise. 
 
 ## The Envelope and the Letter
 
@@ -212,12 +208,12 @@ Some recent ones I've done:
 + [End to End ML with GPT-2](https://vickiboykis.com/2020/06/09/getting-machine-learning-to-production/)
   
   
-You'll notice that for me, two of these projects ended up being [the equivalent of keeping research notebooks.](https://jamesmckay.net/2017/02/how-to-keep-lab-notes-as-a-software-developer/). Actively taking notes has been really important in my process of memorization. 
+You'll notice that for me, two of these projects ended up being [the equivalent of keeping research notebooks](https://jamesmckay.net/2017/02/how-to-keep-lab-notes-as-a-software-developer/). Actively taking notes has been really important in my process of memorization. 
 
 I am now gearing up to do a side project that involves embeddings, streaming, and semantic search that should be a ton of fun. The important thing is that these projects are interesting to you and that you set an end goal in line, and that you learn something from them. 
 
 
-## wrap-up
+## Wrap-up
 
 Learning machine learning is hard and can be frustrating sometimes. But if I can summarize the post, it would be these this: 
 
@@ -235,4 +231,4 @@ Thanks to Julia for prompting this post with her tweet,
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/handson.png" width="600px">}}
 
-And also a big thank you to [Sebastian](https://twitter.com/rasbt) for his list of resources and generally being an amazing source of machine learning knowledge. 
+A big thank you to [Sebastian](https://twitter.com/rasbt) for his list of resources and generally being an amazing source of machine learning knowledge, and thank you to everyone who [replied to this tweet!](https://twitter.com/vboykis/status/1591600366113918976)
