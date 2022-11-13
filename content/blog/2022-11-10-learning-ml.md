@@ -4,7 +4,7 @@ creator = '@vboykis'
 date = '2022-11-10'
 site = '@vboykis'
 title = "How I learn machine learning"
-description = '1. Learn broadly. 2. Learn deeply. 3. Don't be afraid to re-learn'
+description = "1. Learn broadly. 2. Learn deeply. 3. Don't be afraid to re-learn"
 +++
 
 
