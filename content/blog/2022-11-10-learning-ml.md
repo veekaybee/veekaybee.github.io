@@ -21,7 +21,7 @@ So, as always, take this blog post mostly as advice to my past self that may or 
 ---
 As a machine learning engineer, staying up-to-date with my field is an absolute nightmare. 
 
-On the one hand, there is the explosive rise of [deep learning](https://vickiboykis.com/2017/12/11/data-ex-machina/), [transformers](https://e2eml.school/transformers.html), and t[text-to-image models](https://jalammar.github.io/illustrated-stable-diffusion/) that are pushing the rest of the field forward.  As a result of these new ways of working with data for machine learning, new ways of thinking about and storing data for these models, such as [vector databases](https://dmitry-kan.medium.com/landscape-of-vector-databases-d241b279f486), have also grown over the past five yeas. 
+On the one hand, there is the explosive rise of [deep learning](https://vickiboykis.com/2017/12/11/data-ex-machina/), [transformers](https://e2eml.school/transformers.html), and [text-to-image models](https://jalammar.github.io/illustrated-stable-diffusion/) that are pushing the rest of the field forward.  As a result of these new ways of working with data for machine learning, new ways of thinking about and storing data for these models, such as [vector databases](https://dmitry-kan.medium.com/landscape-of-vector-databases-d241b279f486), have also grown over the past five yeas. 
 
 On the infrastructure side, the proliferation of machine learning across and within companies has led to [the rise of MLOps,](https://www.mihaileric.com/posts/mlops-is-a-mess/) an ML-adjacent discipline that tries to wrangle data-centric workflows into streamlined production scopes of work. Then, there is [modern data stack](https://www.moderndatastack.xyz/), [data mesh](https://aws.amazon.com/blogs/architecture/lets-architect-modern-data-architectures/), and now, [data contracts.](https://mlops.community/an-engineers-guide-to-data-contracts-pt-1/) 
 
@@ -41,7 +41,7 @@ So, just to summarize, all you have to know as an MLE is:
 
 When I first started making sense of this landscape, this learning task felt insurmountable. So, I did what I always do, which was to [stress-buy books and hope I learn through osmosis](https://vickiboykis.com/2022/01/02/2021-work-recap-or-the-conjoined-triangles-of-success/). 
 
-I bought a lot (a LOT) of different books across a lot of different disciplines and also started very widely reading academic literature.
+I bought a lot (a LOT) of different books across a lot of different disciplines and also started very widely reading academic literature. (the stack on the left is the ones I'm done with, my stacks overflow)
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/bookstack.jpeg" width="600px">}}
 
