@@ -12,11 +12,9 @@ description = '1. Learn broadly. 2. Learn deeply. 3. Don't be afraid to re-learn
 
 The context for the advice I'm about to share is: I started without an engineering background and [through hard work and a lot of luck](https://increment.com/planning/the-best-laid-plans-tech-careers/) ended up as a machine learning engineer. 
 
-My overarching as an MLE is to continuously work towards designing and deploying well-designed, and transparent machine learning systems. 
+My overarching goal as an MLE is to continuously work towards designing and deploying well-designed, and transparent machine learning systems and to learn the best software engineering practices to do so. 
 
-[The best engineers I know that do this well ](https://vickiboykis.com/2021/08/05/the-local-minima-of-suckiness/) are constantly asking questions and learning, and this is a goal I have for myself in my career, as well.
-
-It's important for me to understand the machine learning stack end to end, and I've felt [most valuable and fulfilled](https://vickiboykis.com/2022/01/02/2021-work-recap-or-the-conjoined-triangles-of-success/) in roles where I can contribute to both modeling and infrastructure. The way I do this best is [by thinking in patterns.](https://vickiboykis.com/2021/06/06/the-humble-hash-aggregate/) 
+[The best engineers I know that do this well ](https://vickiboykis.com/2021/08/05/the-local-minima-of-suckiness/) are constantly asking questions and learning, and this is a goal I have for myself in my career, as well. It's important for me to understand the machine learning stack end to end, and I've felt [most valuable and fulfilled](https://vickiboykis.com/2022/01/02/2021-work-recap-or-the-conjoined-triangles-of-success/) in roles where I can contribute to both modeling and infrastructure. The way I do this best is [by thinking in patterns.](https://vickiboykis.com/2021/06/06/the-humble-hash-aggregate/) 
 
 I am also (painfully) realizing that most machine learning work, at its core, is [software engineering fundamentals and gruntwork](https://vickiboykis.com/2021/09/23/reaching-mle-machine-learning-enlightenment/). 
 
@@ -81,7 +79,7 @@ And once we understand trees, we understand that DAGs, one of the canonical data
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/dagsdfs.png" width="600px">}}
 
-This gets us now from abstract data structures to things that we work with every single day:  [Airflow DAGs](https://airflow.apache.org/docs/apache-airflow/1.10.12/concepts.html), [execution plans in Spark](https://stackoverflow.com/questions/7423401/whats-the-difference-between-the-data-structure-tree-and-graph), and Tensorflow/PyTorch [computational graphs.](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html). 
+This gets us now from abstract data structures to things that we work with every single day:  [Airflow DAGs](https://airflow.apache.org/docs/apache-airflow/1.10.12/concepts.html), [execution plans in Spark](https://stackoverflow.com/questions/7423401/whats-the-difference-between-the-data-structure-tree-and-graph), and Tensorflow/PyTorch [computational graphs.](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html) 
 
 We can also work with graphs themselves, i.e. [GraphX and Pregel.](https://spark.apache.org/docs/3.2.1/api/java/org/apache/spark/graphx/Pregel.html), if we're dealing with data that examines social networks or connections. 
 
