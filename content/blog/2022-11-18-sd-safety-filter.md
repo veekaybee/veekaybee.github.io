@@ -11,7 +11,7 @@ In time for [NeurIPS 2022](https://nips.cc/), there are a lot of interesting pap
 
 One I ran into recently was ["Red-Teaming the Stable Diffusion Safety Filter."](https://arxiv.org/abs/2210.04610v5)
 
-Having worked in content moderation before, the concept of how to moderate the content of a deep learning model was interesting to me and I thought it benefitted from a broader look. 
+Having worked on content moderation before, the concept of how to moderate the content of a deep learning model was interesting to me and I thought it benefitted from a broader look. 
 
 Let's dive in by starting with the paper title. The concept of "red-teaming" comes from cybersecurity. A red team is a group of people who have been authorized to act as an attacker in a given organization and probe for threats against a company's security set-up. What they do can range from social engineering to penetration testing.  The counter to this is the blue team, who defends against the red-team in this simulated scenario.  
 
@@ -29,10 +29,10 @@ At an extremely high level, diffusion models work by learning to add statistical
 
 Stable Diffusion works by: 
 
-1. Taking a large training set of real images (StableDiffusion itself was trained on 2.3 Billion images that are part of the [LAION dataset](https://simonwillison.net/2022/Sep/5/laion-aesthetics-weeknotes/) and selected based on images that match a threshold for ["aesthetic score"](https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md). 
-2. To make the pre-processing faster, The images are compressed into a smaller-dimension representation using a [variational autoencoder](https://ermongroup.github.io/cs228-notes/extras/vae/) - the paper romantically calls this "departure to latent space"
+1. Taking a large training set of real images (StableDiffusion itself was trained on 2.3 Billion images that are part of the [LAION dataset](https://simonwillison.net/2022/Sep/5/laion-aesthetics-weeknotes/) and selected based on images that match a threshold for ["aesthetic score"](https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md).)
+2. To make the pre-processing steps faster, the images are compressed into a smaller-dimension representation using a [variational autoencoder](https://ermongroup.github.io/cs228-notes/extras/vae/) - the paper romantically calls this "departure to latent space."
 3. During the pre-processing used to generate the model's input data, Gaussian noise is applied to the images' latent representation. 
-4. [Each time we add noise in a step](https://jalammar.github.io/illustrated-stable-diffusion/), we generatively build the part of the model called a "noise predictor", which then allows us, for any given image, to probabilistically predict how much noise was added and how far it deviates from the original image.  That prediction allows us to compare to the known noise from the original training data. 
+4. [Each time we add noise to a step](https://jalammar.github.io/illustrated-stable-diffusion/), we generatively build the part of the model called a "noise predictor", which then allows us, for any given image, to probabilistically predict how much noise was added and how far it deviates from the original image.  That prediction allows us to compare to the known noise from the original training data. 
 5. Once we train this noise predictor  we can then run a decoder to denoise the data in small increments, which will remove that noise from a given image until we get a different image than the training set, but one that is semantically similar to the training set. 
    
 Here's the overall image-specific architecture: 
@@ -46,7 +46,7 @@ How do we now incorporate text? During inference, diffusion models work by addin
 
 ## HuggingFace Diffusers
 
-As I mentioned, there are several ways to work with this model. If you are lucky enough to have at least 6GB of VRAM, you can download the model and [work with it locally.](https://github.com/CompVis/stable-diffusion). Since there is no safety filter on that model, [in the model card](https://github.com/CompVis/stable-diffusion/blob/main/Stable_Diffusion_v1_Model_Card.md), there are a number of different caveats for misuse. 
+As I mentioned, there are several ways to work with this model. If you are lucky enough to have at least 6GB of VRAM, you can download the model and [work with it locally.](https://github.com/CompVis/stable-diffusion) Since there is no safety filter on that model, [in the model card](https://github.com/CompVis/stable-diffusion/blob/main/Stable_Diffusion_v1_Model_Card.md), there are a number of different caveats for misuse. 
 
 ```
 Misuse and Malicious Use
