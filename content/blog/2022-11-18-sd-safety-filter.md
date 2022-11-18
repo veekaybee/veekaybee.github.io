@@ -30,19 +30,19 @@ At an extremely high level, diffusion models work by learning to add statistical
 Stable Diffusion in particular is a trained by: 
 
 1. Taking a large training set of real images (StableDiffusion itself was trained on 2.3 Billion images that are part of the [LAION dataset](https://simonwillison.net/2022/Sep/5/laion-aesthetics-weeknotes/) and selected based on images that match a threshold for ["aesthetic score"](https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md). 
-2. To make processing faster, The images are compressed into a smaller-dimension representation using a [variational autoencoder](https://ermongroup.github.io/cs228-notes/extras/vae/) - the paper romantically calls this "departure to latent space"
-3. During the model's forward pass, aka traversal through a model's layers from start to finish,  Gaussian noise is applied to the images' latent representation. 
-4. [Each time we add noise in a step](https://jalammar.github.io/illustrated-stable-diffusion/), we generatively build the part of the model called a "noise predictor", which then allows us, for any given image, to probabilistically predict how much noise was added and how far it deviates from the original image. 
-5. Once we train this noise predictor in the forward pass, we can then, on the backward pass where we update the model weights and perform gradient descent, run a decoder to denoise the data, which will remove that noise from a given image until we get a different image than the training set, but one that is semantically similar to the training set. 
+2. To make the pre-processing faster, The images are compressed into a smaller-dimension representation using a [variational autoencoder](https://ermongroup.github.io/cs228-notes/extras/vae/) - the paper romantically calls this "departure to latent space"
+3. During the pre-processing used to generate the model's input data, Gaussian noise is applied to the images' latent representation. 
+4. [Each time we add noise in a step](https://jalammar.github.io/illustrated-stable-diffusion/), we generatively build the part of the model called a "noise predictor", which then allows us, for any given image, to probabilistically predict how much noise was added and how far it deviates from the original image.  That prediction allows us to compare to the known noise from the original training data. 
+5. Once we train this noise predictor  we can then run a decoder to denoise the data in small increments, which will remove that noise from a given image until we get a different image than the training set, but one that is semantically similar to the training set. 
    
 Here's the overall image-specific architecture: 
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/diffusion.png" width="600px">}}
 
-How do we now incorporate text? During inference, diffusion models work by:
+How do we now incorporate text? During inference, diffusion models work by adding guidance (otherwise, we'd just get random images without ability to steer from a text prompt):
 
 1. The model uses a Transformer language model, ClipText, to generate textual embeddings for the specific text prompt. Here's a lot more information on [how that model was trained](https://openai.com/blog/clip/), but the general idea is that you have captioned images in which both the image and the caption, separately, are embedded into the same latent space using an encoder and compare the embeddings for the text and image using [cosine similarity.](https://gist.github.com/veekaybee/32b121eceaa1dbfb6a268ea544893bd0)
-2. We pass these embeddings also into the Unet noising encoder that includes specific attention to the text, as well, and incorporate it in processing so that when we pass in a text prompt, we include that information in inference. 
+2. We pass these embeddings also into the UNet noising encoder that includes specific attention to the text, as well, and incorporate it in processing so that when we pass in a text prompt, we include that information in inference. 
 
 ## HuggingFace Diffusers
 
@@ -53,13 +53,13 @@ Misuse and Malicious Use
 
 Using the model to generate content that is cruel to individuals is a misuse of this model. This includes, but is not limited to:
 
-    Generating demeaning, dehumanizing, or otherwise harmful representations of people or their environments, cultures, religions, etc.
-    Intentionally promoting or propagating discriminatory content or harmful stereotypes.
-    Impersonating individuals without their consent.
-    Sexual content without consent of the people who might see it.
+    + Generating demeaning, dehumanizing, or otherwise harmful representations of people or their environments, cultures, religions, etc.
+    + Intentionally promoting or propagating discriminatory content or harmful stereotypes.
+    + Impersonating individuals without their consent.
+    + Sexual content without consent of the people who might see it.
     Mis- and disinformation
     Representations of egregious violence and gore
-    Sharing of copyrighted or licensed material in violation of its terms of use.
+    + Sharing of copyrighted or licensed material in violation of its terms of use.
     Sharing content that is an alteration of copyrighted or licensed material in violation of its terms of use.
 ```
 
@@ -78,9 +78,7 @@ The blog post notes,
 
 > If at some point you get a black image, it may be because the content filter built inside the model might have detected an NSFW result. If you believe this shouldn't be the case, try tweaking your prompt or using a different seed. In fact, the model predictions include information about whether NSFW was detected for a particular result. Let's see what they look like:
 
-Why would dolphins be censored though? That's what this paper goes into, in detail. 
-
-The way the safety filter works, as described by the paper is:
+Why would dolphins be censored though? The way the safety filter works, as described by the paper is:
 
 1. The user inputs a text prompt for inference
 2. An image is generated by Stable Diffusion for the user
@@ -142,9 +140,11 @@ And, in an additional piece of really impressive work, reverse-engineering the C
 
 There are a couple of very, very interesting parts of this paper for me. 
 
-1. Even though machine learning models are,  in theory, very, very good at detecting NSFW content, and in fact it's one of the main use-cases for ML, this is an entirely new space we're still learning how to navigate for these new deep-learning based approaches to computer vision and the policy has not yet caught up with the tech
-2. As such we are still relying on very manual human judgment lists to filter out bad content in deep learning, an area that's just getting started with this. If you've ever worked in content safety, you know that these lists can be miles long. 17 means you have a baby content safety list :)
-3. There is an ENORMOUS amount of context that you need to evaluate these models. I am not a deep learning expert but I do know machine learning and the amount of reading I had to do to get caught up with what the paper is presenting was a fair amount. we need a lot more education for laypeople that may be exposed to the results of models like these to clarify them, and this paper is a fantastic starting point. 
+1. Even though machine learning models are,  in theory, very, very good at detecting NSFW content (in fact it's one of the key actually-useful use-cases for ML), this is an entirely new space we're still learning how to navigate for these new deep-learning based approaches to computer vision. The policy has in no way caught up with the tech yet. 
+2. As such we are still relying on very manual human judgment lists to filter out bad content in deep learning, an area that's just getting started with this. If you've ever worked in content safety, you know that these lists can be miles long. 17 is just the very start of what will eventually become a very long list :). 
+3. There is an ENORMOUS amount of context that you need to evaluate these models, and there is still much about them that is extremely opaque and resistant to evaluation. I am not a stable diffusion expert but I do know machine learning, and even still, I had to do a fair amount of reading to get caught up withthe context of this particular paper. 
+
+It's we need a lot more introspection, simplification, and education about these models, and this paper is a fantastic starting point. 
 
 
 
