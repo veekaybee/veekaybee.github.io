@@ -4,7 +4,7 @@ creator = '@vboykis'
 date = '2022-11-18'
 site = '@vboykis'
 title = "Some notes on the Stable Diffusion safety filter"
-description = "Open source doesn't mean open
+description = "How deep learning models are moderated"
 +++
 
 In time for [NeurIPS 2022](https://nips.cc/), there are a lot of interesting papers and preprints being published on ArXiv. 
