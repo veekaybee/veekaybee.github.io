@@ -27,7 +27,7 @@ At an extremely high level, diffusion models work by learning to add statistical
 [source](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
 
 
-Stable Diffusion in particular is a trained by: 
+Stable Diffusion works by: 
 
 1. Taking a large training set of real images (StableDiffusion itself was trained on 2.3 Billion images that are part of the [LAION dataset](https://simonwillison.net/2022/Sep/5/laion-aesthetics-weeknotes/) and selected based on images that match a threshold for ["aesthetic score"](https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md). 
 2. To make the pre-processing faster, The images are compressed into a smaller-dimension representation using a [variational autoencoder](https://ermongroup.github.io/cs228-notes/extras/vae/) - the paper romantically calls this "departure to latent space"
