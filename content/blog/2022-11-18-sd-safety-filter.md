@@ -129,11 +129,21 @@ logger.warning(
 return images, has_nsfw_concepts
 ```
 
-The researchers note the opaqueness of this classification (i.e. why did my dolphin image get flagged, what was it close to in the latent space?) and do a bunch of additional work in testing prompts to find out what bypasses the safety filter
+The researchers note the opaqueness of this classification (i.e. why did my dolphin image get flagged, what was it close to in the latent space?) and do a bunch of additional work in testing prompts to find out what bypasses the safety filter.
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/filterbypass.png" width="600px">}}
 
 And, in an additional piece of really impressive work, reverse-engineering the CLIP embeddings to find out what the sensitive terms actually are ([last page of the linked paper here.](https://arxiv.org/pdf/2210.04610v5.pdf))
+
+So what are the hypotheses for why my prompt could have been filtered? The simple answer is that the generated image's embedding representation ended up being close to the embedding representation one of 17 sexually-oriented terms from the CLIP model space, as measured by some cosine similarity.
+
+Probably easier to just put 
+
+```
+"Potential NSFW content was detected in one or more images. A black image will be returned instead."
+```
+
+instead. 
 
 
 ## The Takeaway
