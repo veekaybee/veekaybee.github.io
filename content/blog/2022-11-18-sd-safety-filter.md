@@ -142,9 +142,9 @@ There are a couple of very, very interesting parts of this paper for me.
 
 1. Even though machine learning models are,  in theory, very, very good at detecting NSFW content (in fact it's one of the key actually-useful use-cases for ML), this is an entirely new space we're still learning how to navigate for these new deep-learning based approaches to computer vision. The policy has in no way caught up with the tech yet. 
 2. As such we are still relying on very manual human judgment lists to filter out bad content in deep learning, an area that's just getting started with this. If you've ever worked in content safety, you know that these lists can be miles long. 17 is just the very start of what will eventually become a very long list :). 
-3. There is an ENORMOUS amount of context that you need to evaluate these models, and there is still much about them that is extremely opaque and resistant to evaluation. I am not a stable diffusion expert but I do know machine learning, and even still, I had to do a fair amount of reading to get caught up withthe context of this particular paper. 
+3. There is an ENORMOUS amount of context that you need to evaluate these models, and there is still much about them that is extremely opaque and resistant to evaluation. I am not a stable diffusion expert but I do know machine learning, and even still, I had to do a fair amount of reading to get caught up with the context of this particular paper. 
 
-It's we need a lot more introspection, simplification, and education about these models, and this paper is a fantastic starting point. 
+We need a lot more introspection, simplification, and education about these models, and this paper is a fantastic starting point. 
 
 
 
