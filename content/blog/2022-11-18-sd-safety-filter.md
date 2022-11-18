@@ -94,41 +94,41 @@ There are a number of interesting parts here, but the takeaway is that, ultimate
 
 Check this out, [for example](https://github.com/huggingface/diffusers/blob/5dcef138bf9addd53a9abc80c5436ea948bb22d0/src/diffusers/pipelines/stable_diffusion/safety_checker.py#L66), the piece of code that is responsible for tuning the filter, right now very manual and based on a human-judgment threshold, as well as the 17 concepts (unclear what these are, only what their embedding representations are):
 
-```
-            # increase this value to create a stronger `nfsw` filter
-            # at the cost of increasing the possibility of filtering benign images
-            adjustment = 0.0
+```python
+# increase this value to create a stronger `nfsw` filter
+# at the cost of increasing the possibility of filtering benign images
+adjustment = 0.0
 
-            for concept_idx in range(len(special_cos_dist[0])):
-                concept_cos = special_cos_dist[i][concept_idx]
-                concept_threshold = self.special_care_embeds_weights[concept_idx].item()
-                result_img["special_scores"][concept_idx] = round(concept_cos - concept_threshold + adjustment, 3)
-                if result_img["special_scores"][concept_idx] > 0:
-                    result_img["special_care"].append({concept_idx, result_img["special_scores"][concept_idx]})
-                    adjustment = 0.01
+for concept_idx in range(len(special_cos_dist[0])):
+    concept_cos = special_cos_dist[i][concept_idx]
+    concept_threshold = self.special_care_embeds_weights[concept_idx].item()
+    result_img["special_scores"][concept_idx] = round(concept_cos - concept_threshold + adjustment, 3)
+    if result_img["special_scores"][concept_idx] > 0:
+        result_img["special_care"].append({concept_idx, result_img["special_scores"][concept_idx]})
+        adjustment = 0.01
 
-            for concept_idx in range(len(cos_dist[0])):
-                concept_cos = cos_dist[i][concept_idx]
-                concept_threshold = self.concept_embeds_weights[concept_idx].item()
-                result_img["concept_scores"][concept_idx] = round(concept_cos - concept_threshold + adjustment, 3)
-                if result_img["concept_scores"][concept_idx] > 0:
-                    result_img["bad_concepts"].append(concept_idx)
+for concept_idx in range(len(cos_dist[0])):
+    concept_cos = cos_dist[i][concept_idx]
+    concept_threshold = self.concept_embeds_weights[concept_idx].item()
+    result_img["concept_scores"][concept_idx] = round(concept_cos - concept_threshold + adjustment, 3)
+    if result_img["concept_scores"][concept_idx] > 0:
+        result_img["bad_concepts"].append(concept_idx)
 
-            result.append(result_img)
+result.append(result_img)
 
-        has_nsfw_concepts = [len(res["bad_concepts"]) > 0 for res in result]
+has_nsfw_concepts = [len(res["bad_concepts"]) > 0 for res in result]
 
-        for idx, has_nsfw_concept in enumerate(has_nsfw_concepts):
-            if has_nsfw_concept:
-                images[idx] = np.zeros(images[idx].shape)  # black image
+for idx, has_nsfw_concept in enumerate(has_nsfw_concepts):
+if has_nsfw_concept:
+    images[idx] = np.zeros(images[idx].shape)  # black image
 
-        if any(has_nsfw_concepts):
-            logger.warning(
-                "Potential NSFW content was detected in one or more images. A black image will be returned instead."
-                " Try again with a different prompt and/or seed."
-            )
+if any(has_nsfw_concepts):
+logger.warning(
+    "Potential NSFW content was detected in one or more images. A black image will be returned instead."
+    " Try again with a different prompt and/or seed."
+)
 
-        return images, has_nsfw_concepts
+return images, has_nsfw_concepts
 ```
 
 The researchers note the opaqueness of this classification (i.e. why did my dolphin image get flagged, what was it close to in the latent space?) and do a bunch of additional work in testing prompts to find out what bypasses the safety filter
