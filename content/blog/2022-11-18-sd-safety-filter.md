@@ -19,7 +19,7 @@ In this case, the researchers acting as the red team are trying to understand if
 
 ## Quick notes on diffusion models and Stable Diffusion
 
-[Stable Diffusion](https://github.com/CompVis/stable-diffusion) is a text-to-image model released publicly in mid-2022 (seems like forever ago) that generates images based on text prompts that the user inputs. Other, earlier models [in the diffusion family](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) include [DALL-E and Midijourney,](https://danielmiessler.com/blog/battle-of-the-ai-art-engines-midjourney-vs-dall-e/) both of which were gated behind websites without a chance to inspect the code. 
+[Stable Diffusion](https://github.com/CompVis/stable-diffusion) is a text-to-image model released publicly in mid-2022 (seems like forever ago) that generates images based on text prompts that the user inputs. Other, earlier models [in the diffusion family](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) include [DALL-E and Midjourney,](https://danielmiessler.com/blog/battle-of-the-ai-art-engines-midjourney-vs-dall-e/) both of which were gated behind websites without a chance to inspect the code. 
 
 At an extremely high level, diffusion models work by learning to add statistically distributed noise to an image or a representation of an image and then, again, statistically removing noise until you get a picture that matches the properties of the input dataset but is, statistically, not the same image that was input.
 
