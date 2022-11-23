@@ -156,7 +156,7 @@ There are a couple of very, very interesting parts of this paper for me.
 
 We need a lot more introspection, simplification, and education about these models, and this paper is a fantastic starting point. 
 
-
+[HackerNews discussion](https://news.ycombinator.com/item?id=33656785)
 
 
 
