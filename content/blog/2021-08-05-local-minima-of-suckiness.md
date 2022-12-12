@@ -74,7 +74,7 @@ There is a way, though, to tell who those people are in your organization, and t
 
 Once you find them, find ways to be near them and absorb their knowledge. Listen when they talk, and watch how they review code.  One great way to do this is to ask to tag-team on PR reviews. If you're not at the point where you can do code reviews yet, help them write documentation. If you can take even one small thing off their plate, they'll be grateful for your help next time.
 
-If you, yourself are the good,senior person in this situation, be aware that being a good, senior person is a responsibility that is more than just writing good, correct code, although that in itself is a large, important responsibility. It's also training other people to be as productive as you are.
+If you, yourself are the good, senior person in this situation, be aware that being a good, senior person is a responsibility that is more than just writing good, correct code, although that in itself is a large, important responsibility. It's also training other people to be as productive as you are.
 
 ## The ability to learn
 
@@ -87,7 +87,7 @@ Something I realized recently is that one of the reasons senior people are good 
 
 {{< tweet 1420704079035109384 >}}
 
-This is why an evnironment where it's ok to ask stupid questions is important. One of the best ways I've seen of dealing with this is having a #dumbquestions channel on Slack. Another is having the Good Senior People ask seemingly simple questions in meetings to empower others.
+This is why an environment where it's ok to ask stupid questions is important. One of the best ways I've seen of dealing with this is having a #dumbquestions channel on Slack. Another is having the Good Senior People ask seemingly simple questions in meetings to empower others.
 
 ## Easy as 1,2,3
 
