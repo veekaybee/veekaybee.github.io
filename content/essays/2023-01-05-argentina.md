@@ -1,7 +1,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2022-01-30'
+date = '2023-01-05'
 title = 'Argentina Trip'
 description = "Buenos Aires and beyond"
 +++
