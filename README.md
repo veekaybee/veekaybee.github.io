@@ -1,2 +1,5 @@
 # My personal blog!
-www.vickiboykis.com
+
+banditelol.github.io
+
+(forked from vickyboykis.com)

@@ -4,9 +4,9 @@ baseURL = "https://veekaybee.github.io/"
 theme = 'hugo-bearblog'
 
 # Basic metadata configuration for your blog.
-title = "★❤✰ Vicki Boykis ★❤✰ "
-author = "Vicki Boykis"
-copyright = "Copyright © 2021, Vicki Boykis."
+title = "Aditya Rachman Putra"
+author = "Aditya Rachman Putra"
+copyright = "Copyright © 2023, Aditya Rachman Putra."
 languageCode = "en-US"
 rssLimit = 20
 
@@ -20,11 +20,11 @@ ignoreErrors = ["error-disable-taxonomy"]
   blog = '/:year/:month/:day/:slug/'
 
 [Social]
-  twitter = "vboykis"
+  twitter = "banditelolRP"
 
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
-  description = "★★Vicki Boykis★★"
+  description = "Aditya Rachman Pura"
 
   # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
   # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
@@ -39,7 +39,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   # Another "title" :-). This one is used as the site_name on the Hugo's internal
   # opengraph structured data template.
   # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-  title = "★ Vicki Boykis ★ "
+  title = "Aditya Rachman Putra"
 
   # This theme will, by default, inject a made-with-line at the bottom of the page.
   # You can turn it off, but we would really appreciate if you don’t :-).

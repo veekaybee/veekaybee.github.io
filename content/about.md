@@ -8,25 +8,14 @@ title = 'About'
 
 +++
 
-{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/headshot.jpeg" alt="image" width="200px">}}
+Hi, my name is Aditya Rachman Putra and I'm currently a Data Scientist in [Pitik](https://pitik.id). I have always been passionate about solving problem using programming and data, which led me to pursue a career in this field. Over the years, I have gained extensive experience and knowledge in Product Development and End to End Data Stack, and have had the opportunity to work with a diverse range of clients and projects.
 
+In my free time, I enjoy Writing and Doodling in my notebooks and spending time with my family and friends. I am committed to making a positive impact in both my personal and professional life, and I look forward to connecting with you and exploring new possibilities together. 
 
-Hi! I'm Vicki. I'm a machine learning engineer at Duo. working on ML platforms with deep expertise in YAML indentation.  I live in Philly with my family. In my free time, I love to write about Life. I also like to think about [what technology means](https://vicki.substack.com/) in the context of society, and write about that, as well. 
-
-I also love tweeting terrible puns and doodling tech logos. 
-
-{{< tweet 1471282749780770817 >}}
-
-## Writing and Editing
-
-+ [SQL for Data Scientists](https://www.amazon.com/SQL-Data-Scientists-Beginners-Building/dp/1119669367), Technical Editor
-+  [The Best-Laid Plans](https://increment.com/planning/the-best-laid-plans-tech-careers/), Increment Mag
-+ [Architecture for Generations](https://increment.com/software-architecture/architecture-for-generations/), Increment Mag
-
-
+I'm quite active in twitter, so if you're searching for someone to discuss about Data Science or deploying model to production, You can hit me up at [@banditelolRP](https://twitter.com/banditelolRP)
 
 ## Contact me
 
-[vickiboykis@gmail.com](mailto:vickiboykis@gmail.com)
+[adityarputra@gmail.com](mailto:adityarputra@gmail.com)
 
 
