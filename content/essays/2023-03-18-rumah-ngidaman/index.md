@@ -2,7 +2,6 @@
 title: (ID) Rumah Ngidam-ngidaman
 date: "2023-03-18T00:00:00.000Z"
 description: "Karena kepengen sesuatu itu enak dan seru, tinggal nanti aja mikirin realisasinya gimana hahaha"
-featuredImage: './facebook_devc_Jan.jpg'
 ---
 
 # Rumah Ngidam-ng(idaman)
