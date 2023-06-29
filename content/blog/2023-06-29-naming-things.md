@@ -21,7 +21,7 @@ I recently started to work on [Viberary](https://github.com/veekaybee/viberary),
 
 Since it's my personal project, I can shape it however I want. But starting with a blank slate is just as paralyzing as working with a 500K LOC monolith, and I was surprised to find that, just like when I was a preteen writing in my diary, one of my biggest blockers was naming things. 
 
-For example, what should you call a class that fetches [embeddings you generate](https://vickiboykis.com/what_are_embeddings) via `sentence-transformers` and writes them to redis for nearest-neighbors search? Luckily, I've worked in search, so it was easy for me to call this the `Indexer`, a short, idiomatic name for a concept that has existed for a long time in search and recommendations, as we can see from the [Tapestry paper architecture](https://dl.acm.org/doi/pdf/10.1145/138859.138867), one of the first recommender systems, written in 1992. 
+For example, what should you call a class that fetches [embeddings](https://vickiboykis.com/what_are_embeddings) generated via `sentence-transformers` and writes them to redis for nearest-neighbors search? Luckily, I've worked in search, so it was easy for me to call this the `Indexer`, a short, idiomatic name for a concept that has existed for a long time in search and recommendations, as we can see from the [Tapestry paper architecture](https://dl.acm.org/doi/pdf/10.1145/138859.138867), one of the first recommender systems, written in 1992. 
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/tapestry_arch.png" width="600px">}}
 
@@ -33,11 +33,11 @@ but that classes
 
 There's a reason we often joke that naming things is [one of the two hard things](https://martinfowler.com/bliki/TwoHardThings.html) in programming, but we often say it in kind of a hopeless, "Haha, this is crazy, what can we do about it" kind of way. 
 
-Luckily, I recently came across a gem of a book in my Amazon recommendations, ["Naming Things" by Tom Benner(https://www.namingthings.co/), that aims to address this. The book is super short, but I strongly recommend it for anyone looking to get more understanding behind [the ghost knowledge](https://vickiboykis.com/2021/03/26/the-ghosts-in-the-data/) that guides naming conventions in programming. 
+Luckily, I recently came across a gem of a book in my Amazon recommendations, ["Naming Things" by Tom Benner](https://www.namingthings.co/), that aims to address this. The book is super short, but I strongly recommend it for anyone looking to get more understanding behind [the ghost knowledge](https://vickiboykis.com/2021/03/26/the-ghosts-in-the-data/) that guides naming conventions in programming. 
 
 Here are some of my favorite highlights: 
 
-+ Naming things is hard because not only does the namer need to know exactly what the code does, but the audience for the code changes. We also have different terms for things across the industry and across different lines of business, and there's not enough cross-polination, so we end up reinventing the same terms over and over again. 
++ Naming things is hard because not only does the namer need to know exactly what the code does, but the audience for the code changes. We also have different terms for things across the industry and across different lines of business, and there's not enough cross-pollination, so we end up reinventing the same terms over and over again. 
 
 + A name will be used again and again in a codebase, and the more we use it, the harder it is to refactor and rip it out, so it's important to pick a good name right from the beginning. 
   
@@ -55,7 +55,7 @@ After reading the book, I was keen to put some of the guidelines into practice f
 
 This seemed exactly like the kind of thing it could help with, and it didn't do a bad job helping me pick a name for my training data modules.  
 
-{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/chat_gpt_names.png" width="600px">}}
+{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/chatgpt_names.png" width="600px">}}
 
 What was most interesting to me in this exchange was not the answer, but the process I went through to get to it. I first had to understand the problem space I was dealing with "a group of classes that generate training data" - that it would be a group versus a single module and that I needed a name to encompass all of them. 
 
@@ -67,4 +67,4 @@ In a recent fun video on why he doesn't use ChatGPT, a Go developer said somethi
 
 {{< youtube T3cxUhptzaI >}}
 
-When we program by ourselves, we are building patterns. By the time we've been programming five, ten, fifteen years, our minds are full of patterns we can apply to different problems. Picking good names it turns out, is mostly the process of constantly observing the world and providing good abstractions. and the people who are best at this have seen thousands of cases that they can generalize. [This is not unlike](https://gist.github.com/veekaybee/6f8885e9906aa9c5408ebe5c7e870698) what the neural network underlying ChatGPT does, but when I think about what I'd like to train more and get better at naming, it's me rather than the machine.
+When we program by ourselves, we are building patterns. By the time we've been programming five, ten, fifteen years, our minds are full of patterns we can apply to different problems. Picking good names it turns out, is mostly the process of constantly observing the world and providing good abstractions. and the people who are best at this have seen thousands of cases that they can generalize. [This is not unlike](https://gist.github.com/veekaybee/6f8885e9906aa9c5408ebe5c7e870698) what the neural network underlying ChatGPT does, but when I think about what I'd like to train more and get better at naming things, it's me rather than the machine.
