@@ -1,7 +1,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2023-02-26'
+date = '2023-06-29'
 site = '@vboykis'
 title = 'Naming things'
 description = 'Choosing representations is hard'
