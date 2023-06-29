@@ -55,7 +55,7 @@ After reading the book, I was keen to put some of the guidelines into practice f
 
 This seemed exactly like the kind of thing it could help with, and it didn't do a bad job helping me pick a name for my training data modules.  
 
-{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/chatgpt_names.png" width="600px">}}
+{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/chagpt_names.png" width="600px">}}
 
 What was most interesting to me in this exchange was not the answer, but the process I went through to get to it. I first had to understand the problem space I was dealing with "a group of classes that generate training data" - that it would be a group versus a single module and that I needed a name to encompass all of them. 
 
