@@ -13,7 +13,7 @@ I am currently building a [semantic search application](https://viberary.pizza),
 
 From the technical perspective, here's what we don't discuss when we talk about deep learning applications. Or, more specifically, here are pain points I've come across that I don't see being discussed a lot - if you are developing deep learning apps and don't have any of these issues, let me know which god you offered a sacrifice to in the woods under the pale light of the waning crescent:
 
-+ Docker images for anything involving deep learning with GPUs are enormous, sometimes as big as 10GB. {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/docker_gpu.png" width="600px">}}. 
++ Docker images for anything involving deep learning with GPUs are enormous, sometimes as big as 10GB. {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/dockergpu.png" width="600px">}}. 
 
 People spend an inordinate amount of time engineering these Docker images to work correctly in the cloud and on production environments
 
