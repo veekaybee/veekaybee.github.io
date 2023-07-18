@@ -39,10 +39,13 @@ Which leads me to [more Docker issues](https://www.youtube.com/watch?v=I4wkCSd7i
 
 If I do somehow get it to work, I'll need to develop two Docker images now: one for local development and one for my staging server that runs on DigitalOcean, which means more GitHub actions. And you can't test GitHub actions locally, anyway. [Maybe kind of?](https://github.com/nektos/act) But not entirely. 
 
-
 I don't think I'm alone here. My project is just a small hobby project, but the normcore problems of neural nets and LLMs in production are a whole genre of issues that are not getting coverage proportional to what people are actually experiencing. [Just take a look at this logbook](https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chronicles/OPT175B_Logbook.pdf) of researchers training an LLM, OPT-175 at Meta, which reads like a thriller. 
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/ops_edge.png" width="600px">}}
+
+This also doesn't include any of the traditional, normcore concerns of machine learning in production: concept drift, SLAs for large services, working with Kubernetes, guarantees of distributed systems, and YAML config file drift. Finally, we haven't talked at all about the UI involved for users navigating search bars and text boxes, which I've spend just as much time thinking about as the model itself. 
+
+{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/vibe_search.png" width="600px">}}
 
 I am not blaming anyone who develops in the ecosystem for these problems. Everyone is working with a [very deep and cloudy stack](https://vickiboykis.com/2022/12/05/the-cloudy-layers-of-modern-day-programming/) and doing the best they can, particularly in the pressure cooker environment of open-source ML tooling that has only accelerated since the release of ChatGPT. 
 
