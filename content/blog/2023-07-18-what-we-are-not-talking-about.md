@@ -24,7 +24,7 @@ People spend an inordinate amount of time engineering these Docker images to wor
 [Build times are one of the top productivity killers in 2023](https://newsletter.abinoda.com/p/build-times-and-developer-productivity), and deep learning is at the forefront of it. 
 
 
-+ The amount [you need to learn about CPUs/GPUs](https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/) is not insignificant and takes a long time on top of all the general MLE concerns: good modeling 
++ The amount [you need to learn about CPUs/GPUs](https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/) is not insignificant and takes a long time on top of all the general MLE concerns: good modeling, ML architecture, data engineering, distributed systems, statistics, and monitoring.  
 
 + If you are doing anything where you embed vectors in an n-dimensional dense space, you need to be mindful that the model you encode with and the model you run inference on have the same vector size. This might seem like a ridiculously obvious observation at first, but I've now seen an entire category of silent failures because the query and lookup reference vector were not exactly the same size. 
 
