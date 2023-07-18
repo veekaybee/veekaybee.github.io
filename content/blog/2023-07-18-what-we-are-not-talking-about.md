@@ -29,7 +29,7 @@ People spend an inordinate amount of time engineering these Docker images to wor
 
 + Model artifact storage and versioning takes forever, even if you're using tooling. It's a pain to move around 5GB parquet files. This of course becomes easier once you have an ML platform and is exactly the reason many feature and model stores were developed but dealing with model artifacts generally is very clunky, particularly since we generally don't version control them.  
 
-{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/senior_tech_role.png" width="600px">}}
+{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/data_discovery.png" width="600px">}}
 
 + The speed with which anything in the deep learning ecosystem evolves, particularly in libraries like HuggingFace, combined with how hard it is to create reproducible Python environments when versions don't align leads to a [special kind of dependency hell](https://news.ycombinator.com/item?id=20672201) that sometimes ensures the only good way to have a reproducible version of an environment is to freeze it in a docker image. I can't find the tweet anymore, but this is exactly what I saw someone suggest to do for academic papers published with Python so they remained reproducible long after the packages were no longer maintained. 
 
@@ -39,8 +39,6 @@ Which leads me to [more Docker issues](https://www.youtube.com/watch?v=I4wkCSd7i
 
 If I do somehow get it to work, I'll need to develop two Docker images now: one for local development and one for my staging server that runs on DigitalOcean, which means more GitHub actions. And you can't test GitHub actions locally, anyway. [Maybe kind of?](https://github.com/nektos/act) But not entirely. 
 
-
-{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/senior_tech_role.png" width="600px">}}
 
 I don't think I'm alone here. My project is just a small hobby project, but the normcore problems of neural nets and LLMs in production are a whole genre of issues that are not getting coverage proportional to what people are actually experiencing. [Just take a look at this logbook](https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chronicles/OPT175B_Logbook.pdf) of researchers training an LLM, OPT-175 at Meta, which reads like a thriller. 
 
