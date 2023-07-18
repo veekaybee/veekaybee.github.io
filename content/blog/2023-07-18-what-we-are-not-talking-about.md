@@ -19,9 +19,10 @@ People spend an inordinate amount of time engineering these Docker images to wor
 
 + These same images [take forever to start on CI runners](https://blog.allenai.org/python-caching-in-github-actions-e9452698e98d) and as a result increase the iteration time of deep learning work, which is already very handwavey and as a result needs to be iterative
 
+{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/ml_nondeterm.png" width="600px">}}
+
 [Build times are one of the top productivity killers in 2023](https://newsletter.abinoda.com/p/build-times-and-developer-productivity), and deep learning is at the forefront of it. 
 
-{{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/ml_nondeterm.png" width="600px">}}
 
 + The amount [you need to learn about CPUs/GPUs](https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/) is not insignificant and takes a long time on top of all the general MLE concerns: good modeling 
 
@@ -43,7 +44,7 @@ I don't think I'm alone here. My project is just a small hobby project, but the 
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/ops_edge.png" width="600px">}}
 
-This also doesn't include any of the traditional, normcore concerns of machine learning in production: concept drift, SLAs for large services, working with Kubernetes, guarantees of distributed systems, and YAML config file drift. Finally, we haven't talked at all about the UI involved for users navigating search bars and text boxes, which I've spend just as much time thinking about as the model itself. 
+This also doesn't include any of the traditional, normcore concerns of machine learning in production: concept drift, SLAs for large services, working with Kubernetes, guarantees of distributed systems, and YAML config file drift. Finally, we haven't talked at all about the UI involved for users navigating search bars and text boxes, which I've spent just as much time thinking about as the model itself. 
 
 {{< figure src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/vibe_search.png" width="600px">}}
 
