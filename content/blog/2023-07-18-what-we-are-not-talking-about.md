@@ -3,7 +3,7 @@ card = 'summary'
 creator = '@vboykis'
 date = '2023-06-29'
 site = '@vboykis'
-title = 'What we don\'t talk about when we talk about building AI apps'
+title = "What we don't talk about when we talk about building AI apps"
 description = 'Deep learning and LLMs are messy'
 +++
 
