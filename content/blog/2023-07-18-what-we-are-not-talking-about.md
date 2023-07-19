@@ -26,7 +26,7 @@ People spend an inordinate amount of time engineering these Docker images to wor
 
 + The amount [you need to learn about CPUs/GPUs](https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/) is not insignificant and takes a long time on top of all the general MLE concerns: good modeling, ML architecture, data engineering, distributed systems, statistics, and monitoring.  
 
-+ If you are doing anything where you embed vectors in an n-dimensional dense space, you need to be mindful that the model you encode with and the model you run inference on have the same vector size. This might seem like a ridiculously obvious observation at first, but I've now seen an entire category of silent failures because the query and lookup reference vector were not exactly the same size. 
++ If you are doing anything where you embed vectors in an n-dimensional dense space, you need to be mindful that the model you encode with and the model you run inference on have the same vector size. This might seem like a ridiculously obvious observation at first, but I've now seen an entire category of silent failures because the query and lookup reference vector were not exactly the same size. It's equally important that the query and corpus vectors are encoded with the same model so that embedding lookup happens in the same embedding space, otherwise the results won't make sense. 
 
 + Model artifact storage and versioning takes forever, even if you're using tooling. It's a pain to move around 5GB parquet files. This of course becomes easier once you have an ML platform and is exactly the reason many feature and model stores were developed but dealing with model artifacts generally is very clunky, particularly since we generally don't version control them.  
 
