@@ -18,9 +18,6 @@ Good morning PyData Amsterdam! An enormous thank you to the organizers, the spon
 I’m Vicki, and I’m a machine learning platform engineer at Duo Security.  You might know me from previous hits like the [Normcore Tech](https://vicki.substack.com/), the newsletter, [NormConf](https://normconf.com/), the conference about totally boring problems in machine learning, [What are Embeddings](https://vickiboykis.com/what_are_embeddings/), a paper about weird numbers, and [Viberary](https://viberary.pizza/), a semantic search engine that surfaces books to read based on vibe.
 
 
-{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0dc4d23b-06dd-4213-a7e2-6d7d04b737b41">}}
-
-
 I also used to make bad jokes on Twitter and do #devart, and you'll see some of that here. 
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/e5486a0d-a1b6-4fdb-ae6a-c06c5f874772">}}
@@ -91,34 +88,44 @@ There is one other person, a well-dressed man who comes every so often to give t
 
 This is not explained in the book, but the allusion of “Piranesi” is to the second Piranesi, the Venetian artist,sculptor, and archaeologist, Giovanni Battista Piranesi, who drew imagined landscapes of grandiose prisons in the style of Greco-Roman civilization. 
 
-<img width="817" alt="Screenshot 2023-09-12 at 8 45 15 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/364cab33-d066-4709-8398-4eaec6a5764f">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/364cab33-d066-4709-8398-4eaec6a5764f">}}
+
+
 
 Piranesi was born in The republic of Venice in 1720 and introduced to Latin literature by his brother Andrea. He worked with his uncle in the *Magistrato delle Acque*, the organization responsible for restoring historic buildings. He went on to Rome to study under classical Italian engravers.
 
 While he was studying and sketching views of the city of Rome, he was very precisely measuring all of the antique buildings in the city, which led to the publication of his book, "Roman Antiquities of the Time of the First Republic and the First Emperors.”
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 46 36 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/698644c4-df41-4c78-ad88-0f755dd4c61a">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/698644c4-df41-4c78-ad88-0f755dd4c61a">}}
+
 
 He fell in love with classical structures and styles and always longed for a return to Roman engineering principles. Some of his most lasting contributions are his sketches of imaginary prisons and monuments of the greatness of the Roman empire, things that could never be built in reality, but look like they could have been. He spent a great deal of time studying classical Rome to recreate these architectural elements as they should have been.
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 47 04 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8377cd4a-b223-4f4a-b872-5140e14d74a1">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8377cd4a-b223-4f4a-b872-5140e14d74a1">}}
+
+
 
 In completing these drawings, he preserved a sense of respect and love for the classical style of architecture. In addition to these, he also meticulously documented past Roman monuments, which were, at the time, mostly abandoned. 
 
 Because he had a strong foundation in the past, he was able to stand on that past and build beautiful new things, and, additionally, preserve the past for even us today to study.  He wrote, 
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 47 41 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a86f1fc1-1abc-4c72-bd05-1f75e78bac47">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a86f1fc1-1abc-4c72-bd05-1f75e78bac47">}}
+
 
 These skills in perserving real buildings then led him to be able to riff on the classics and create his famous series of Carceri, imaginary prisons, which is what The Other alluded to. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 50 42 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/83854436-432d-4759-a582-d17ba014664f">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/83854436-432d-4759-a582-d17ba014664f">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 51 01 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/937468c7-05a3-4e84-9247-35ee181f539f">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/937468c7-05a3-4e84-9247-35ee181f539f">}}
+
 
 What do Piranesi the book, and Piranesi the archaeologist and artist have to do with the way we do engineering in the data space today? They both revolve around the concept of the importance of keeping historical memory of context. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 52 52 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ae2e0374-08ef-4393-b11c-08344d6a7ae8">
-84-9247-35ee181f539f">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ae2e0374-08ef-4393-b11c-08344d6a7ae8">}}
 
 [Image Source](https://www.tumblr.com/sairobee/700841194633265152/lilies-for-the-dead-piranesi?source=share)
 
@@ -128,21 +135,26 @@ Our second Piranesi would have not been able to create beautiful, haunting new w
 
 What do either of these Piranesis have to do with the two fundamental problems of computer science?  Industrial software engineering is still a brand new field compared to hard sciences like math and physics - thousands of years old, and electrical engineering is 250 years old at most . Depending on how we define it, software engineering as a discipline has only been around since Ada Lovelace built the first computer. Alan Turing, the father of computer logic and Vannevar Bush, one of the fathers of information retrieval,  only worked in the 1940s.  The first internet connection only happened in the 1970s. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 53 58 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/56a0e6aa-5790-402e-a0dc-c4191d2fc0ac">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/56a0e6aa-5790-402e-a0dc-c4191d2fc0ac">}}
+
 
 [Hadoop Image Source](http://www.notecolon.info/2015/07/hadoop-is-new-black.html)
 
 Modern machine learning is, at most 50 years old, which means the churn for ideas is unbelievably high and results in needless noise in our engineering processes. Hadoop, which we consider ancient in machine learning conferences (and which is still running in production in many places!), was released in 2006.  
 
-<img width="800" alt="Screenshot 2023-09-12 at 8 54 44 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7ebb7d3a-b558-463a-8b0a-99d6fc3d53c1">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7ebb7d3a-b558-463a-8b0a-99d6fc3d53c1">}}
+
+
 
 The data space particularly is vulnerable to this: data science is only 10 years old and already losing mindshare to areas like AI research and machine learning engineering. AI research changes every week. Everyone is talking about RAG like it’s a household term that we didn’t learn about last week and read up on just so we could make joke tweets about it. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 59 14 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4f2a5e4e-7d07-4f7e-b45f-8980935df3f8">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4f2a5e4e-7d07-4f7e-b45f-8980935df3f8">}}
 
 We, like the book Piranesi, are being flooded with new terminology, new concepts, and a new landscape being created around us without any of our own input. We are at the mercy of the House of Data. Look at the latest AI landscape chart - can you even see it? (Surprisingly, this is less services than Amazon currently has in Sagemaker.) 
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 01 40 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4e7daa60-5fb8-42ea-b317-10483648813c">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4e7daa60-5fb8-42ea-b317-10483648813c">}}
 [Image Source](https://mattturck.com/mad2023/)
 
 
@@ -150,97 +162,104 @@ Thank you to Chris Albon, Luca Belli, Dan Boykis, Roy Keyes, James Kirk, and Rav
 
 ## Taking Control of the Flood
 
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8359677d-4aff-4690-9362-b028670ad9e1">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 02 50 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8359677d-4aff-4690-9362-b028670ad9e1">
 
 Unless, we take control and start adding to our historical knowledge of these systems by dissecting them, we will be swept away in the flood. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 03 22 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/32329e68-25bf-463b-9e38-99293c8cb260">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/32329e68-25bf-463b-9e38-99293c8cb260">}}
+
 
 Ellen Ullman,  a software engineer who worked on complex systems starting in the late 1970s including at startups and large companies, does this in an essay called: “The Dumbing Down of Programming: Some thoughts on Programming, Knowing, and the Nature of Easy”, which she wrote in 1998, when she wanted to uninstall Microsoft Windows NT and install Slackware Linux on her desktop. 
 
-
-<img width="600" alt="Screenshot 2023-09-12 at 9 04 21 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6d00aea5-46f3-44d9-a16f-b5b0ce2e7bb6">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6d00aea5-46f3-44d9-a16f-b5b0ce2e7bb6">}}
 
 In order to understand the insanity of what she was doing, you have to remember the situation of computers at the time. Microsoft, like it is today, was riding an all-time high in the market and in public perception.  Windows was extremely popular - people even lined up at midnight to buy Windows 98. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 38 06 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/46f3abcf-4f7b-4b2b-a17d-55d825049328">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/46f3abcf-4f7b-4b2b-a17d-55d825049328">}}
+
 
 Microsoft Windows NT Workstation reached an installed base of 15 million units. To understand how significant this was in an era where applications have hundreds of millions of users, you have to understand that only about 43% of households had personal computers at the time.  
 
 Linux, on the other hand, was new and written by a random dude who created a “free” operating system that he meant to be “just a hobby, won’t be big and professional like gnu”, and [only nerds wanted it. ](https://groups.google.com/g/comp.os.minix/c/dlNtH7RRrGA/m/SwRavCzVE7gJ)
 
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/b9098ec3-5a95-4e25-b7bc-164a413daa08">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 38 57 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/b9098ec3-5a95-4e25-b7bc-164a413daa08">
 
 What was different was that Linux was open, the operating system available to all to introspect. But, there was a price to pay to get to Linux. In order to do this, Ullman first has to purge Windows NT from her machine. Because she was several versions behind the latest, and Microsoft wouldn’t allow her to delete without all of the components being on the same version, Ullman first had to upgrade some software, through bundles of floppy disks, then completely downgrade to a compatible version that could be deleted. Then, she had to actively reformat her hard drive. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 39 33 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9eed7e41-ff5c-4094-847b-6a9785fda462">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9eed7e41-ff5c-4094-847b-6a9785fda462">}}
 
 
 She started this process in the morning and, finally, in the middle of the night, she had just a bare machine. But, there was a cryptic error message.  “no ROM basic, system halted.” 
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 40 02 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/2c38a66a-f572-47c7-a643-76c28dd5d507">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/2c38a66a-f572-47c7-a643-76c28dd5d507">}}
+
 
 It turns out that the very first IBM-compatible PCs, were written in the BASIC language. The coding facility was located in the ROM. In the 1990s, there was no BASIC ROM in PCs but the message had never been taken out. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 48 36 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/951c3dbb-7cec-4e25-b5ab-eef5b94d941a">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/951c3dbb-7cec-4e25-b5ab-eef5b94d941a">}}
+
 
 “No operating system, look for basic” is what the computer was saying. She said, “I had not seen a PC with built-in BASIC in sixteen years, yet here it still was, a vestigial trace.”
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 46 28 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4af68dcf-b2d9-43d0-9dbd-e0e72031041a">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4af68dcf-b2d9-43d0-9dbd-e0e72031041a">}}
 
 There are vestigial traces, previous patterns, archaeological remnants and clues, the Roman empire of computing around us everywhere we look. Ullman has written,
 
-<img width="893" alt="Screenshot 2023-09-12 at 9 48 48 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7898fc85-6bae-445f-a8f6-946b2b3e66df">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7898fc85-6bae-445f-a8f6-946b2b3e66df">}}
 
 But it doesn’t have to be this way. 
 
 ## The Context Window
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 49 14 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1a6fe6d5-5df6-4aa0-b3b4-d15a467ee4dc">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1a6fe6d5-5df6-4aa0-b3b4-d15a467ee4dc">}}
+
 
 When humans have no external context as guardrails, we end up recreating what’s already been done or, on the other hand, throwing away things that work and glomming onto hype without substance. This is a real problem in production data systems. In order to do this, we need to understand how to build one. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 50 02 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a815f8d4-c755-441f-91e2-7847c7d54947">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a815f8d4-c755-441f-91e2-7847c7d54947">}}
+
 
 Let’s start by talking about cache invalidation. When we build a data-intensive application,  we have two problems we need to overcome: the cost of moving data and the cost of processing it, also known as understanding whether our process is I/O bound or CPU-bound. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 50 43 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6cfbedee-0d7c-4ead-b462-3cd9a4cba60c">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6cfbedee-0d7c-4ead-b462-3cd9a4cba60c">}}
+
 
 Usually, in today’s distributed and cloud-based industrial architectures, the data we need is located on one machine and the place we’d like to process it is located on a different machine. In data-intensive workloads, we incur the cost of computation and network calls when we perform expensive queries or machine learning inference on one service that calls out to our model. 
 
-This is a problem at every level of computing, and even at the level of training neural networks. For example, a [recent article from ACM](https://dl.acm.org/doi/pdf/10.1145/3607891) about [model distillation](https://arxiv.org/abs/1503.02531), which is the process of large, teacher models compressed passed down to smaller, more flexible student models for inference. 
+This is a problem at every level of computing, and even at the level of training neural networks. For example, a [recent article from ACM](https://dl.acm.org/doi/pdf/10.1145/3607891) about [model distillation](https://arxiv.org/abs/1503.02531), which is the process of large, teacher models compressed passed down to smaller, more flexible student models for inference.
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 51 37 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/be7254be-8f77-4fd3-bfdd-720d62f234fa">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/be7254be-8f77-4fd3-bfdd-720d62f234fa">}}
 
 This is part of what Sarah Hooker refers to in the [Hardware Lottery](https://arxiv.org/abs/2009.06489) as a limitation of the deep learning software and hardware architectures when she says that research ideas win because they are compatible with available software and hardware and not because the idea is superior to alternative research directions. This is true in the industrial space as well - we are always constrained by our hardware, our software, (and our budgets).
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 53 29 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/41d965de-05de-4df6-bb4e-8a02efaf794f">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/41d965de-05de-4df6-bb4e-8a02efaf794f">}}
 
 However, processing power is not a new problem - it’s been happening since the invention of the Jacquard loom, which essentially solved the problem by hard-coding global variables. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 53 49 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9eed69e9-a02c-4384-9fa1-de9db48bcd4c">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9eed69e9-a02c-4384-9fa1-de9db48bcd4c">}}
 
 To prevent this limitation, we can pre-compute a set of results and put it into a cache, which is software that typically processes data much more quickly, with the limitation that it can only process data that fits into the memory of our machine.
 
- <img width="600" alt="Screenshot 2023-09-12 at 9 54 15 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4573a77a-db53-4505-b902-313ff2291d82">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4573a77a-db53-4505-b902-313ff2291d82">}}
 
- <img width="687" alt="Screenshot 2023-09-12 at 9 54 36 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/5e60b540-04ab-4df6-bef8-9f5c20f77a7e">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/5e60b540-04ab-4df6-bef8-9f5c20f77a7e">}}
 
 
 A cache is, essentially, an in-memory lookup table that’s faster than retrieving values from a hard drive.  Or, in other words, it’s a dictionary. 
 
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/bbe00503-1be1-49fc-9d1c-097cc63d6871">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 55 19 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/bbe00503-1be1-49fc-9d1c-097cc63d6871">
 
 Instead of constantly hitting the database to get our values, we can save some of the computation and movement overhead by keeping that data in cache and doing a lookup at inference time.   We’ve been using caches forever, in fact since the days of Netscape, and in the browser, which is why Phil Karlton joked about them. Any given time you access any web application, you’re accessing several levels of cache. 
 
 Let’s take an app like ChatGPT as an example. When we ask it a question, the application has to authenticate, reach out to the chat endpoint, and query an instance of the model, perform the lookup, and return results and add them to cache, all within milliseconds based on the user’s expectations of latency for a search/chat app.  This becomes really expensive to engineer well at scale. So expensive in fact, that some estimate that it costs OpenAI about [$700k a day to run ChatGPT](https://futurism.com/the-byte/chatgpt-costs-openai-every-day), or $70 million over the time that it’s been online.
 
-<img width="600" alt="Screenshot 2023-09-12 at 9 56 42 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ad64cd9f-b93a-458f-bd62-fc87125627d3">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ad64cd9f-b93a-458f-bd62-fc87125627d3">}}
 
-<img width="1123" alt="Screenshot 2023-09-12 at 10 00 02 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ae2df0a2-204e-4571-bc54-ebd913cf988b">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ae2df0a2-204e-4571-bc54-ebd913cf988b">}}
+
 
 What we can do is cache some of this. We can’t predict a future user query: who knows what types of stuff we’ve all put into ChatGPT. But, we can cache past queries, which is how ChatGPT keeps track of all of your past conversations and can bring them up quickly. And, we can cache common enough queries for single words, or we can also cache different queries, but ones that happen in the same timeframe. Elasticsearch does this on a per-query basis, as an example. 
 
@@ -249,7 +268,7 @@ This access pattern is really useful because we often need to move elements in a
 
 Now our data is accessible quickly and we have what are known as cache hits: a query hits the cache and returns results immediately in response. However, now we have a problem: we are relying on the cache to consistently be up-to-date when we ask it for data. Otherwise, if there is no data in the cache, the application will try to reach out to the database, which can take a long time. Or, it will simply error out and stop running, depending on how it’s written. This is a cache miss. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 01 33 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/023087a5-2d3a-46a9-b659-62017702743b">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/023087a5-2d3a-46a9-b659-62017702743b">}}
 
 Without the cache, which condenses the data from the global state, the system is much slower and is flying blind. The system becomes our first Piranesi. 
 In machine learning, and particularly in LLMs, this pattern of building up a cache to populate fast-retrieval for app data  is similar to building a context window. The “context window” is a term that comes to us from the natural language processing community. The context window, very simply, is a range of tokens or words around a given word that allow us to understand the meaning of that word. 
