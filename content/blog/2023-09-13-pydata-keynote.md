@@ -568,7 +568,7 @@ When we look at any engineering system, we need to look hard, but find that it h
 
 Thank you and have an amazing conference.  Enjoy Pydata Amsterdam!
 
-{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/094b0bbe-56d7-4109-a0ab-381ddd0ed20d"">}}
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/094b0bbe-56d7-4109-a0ab-381ddd0ed20d">}}
 
 
 
