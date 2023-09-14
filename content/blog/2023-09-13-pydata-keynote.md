@@ -273,18 +273,20 @@ Now our data is accessible quickly and we have what are known as cache hits: a q
 Without the cache, which condenses the data from the global state, the system is much slower and is flying blind. The system becomes our first Piranesi. 
 In machine learning, and particularly in LLMs, this pattern of building up a cache to populate fast-retrieval for app data  is similar to building a context window. The “context window” is a term that comes to us from the natural language processing community. The context window, very simply, is a range of tokens or words around a given word that allow us to understand the meaning of that word. 
 
-<img width="1007" alt="Screenshot 2023-09-12 at 10 06 58 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/b4181653-c634-4e4e-9b0f-eac443bc73cf">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/b4181653-c634-4e4e-9b0f-eac443bc73cf">}}
 
 
 We keep that context window “in memory” when we train models, and again, in LLMs, when we formulate our queries against them. For example when we say, “Susanna Clarke is an author. She wrote Piranesi”, in our minds, we need the context window of the first sentence, Susanna Clarke,” to understand that, in the second sentence, "She" is referring to Susanna.
 
-<img width="1087" alt="Screenshot 2023-09-12 at 10 06 28 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ae9a5d51-c39c-4ad2-98c9-55c528777119">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ae9a5d51-c39c-4ad2-98c9-55c528777119">}}
+
 
 Humans can infer this because our brains are constantly processing things in cache. In [The Programmer’s Brain](https://vickiboykis.com/2021/11/07/the-programmers-brain-in-the-lands-of-exploration-and-production/), Felinne Hermans, a professor of computer science whose research focuses on how people learn to program writes that when we get confused about the code we’re writing, there are actually multiple types of confusion happening at the same time.
 
 As a quick primer, the human brain has several types of memory, short-term, working, and long-term. Short-term memory gathers information temporarily and processes it quickly, like RAM, or much like a cache. Long-term memory are things we’ve learned previously and tucked away, like database storage patterns. Working memory takes the information from short-term memory and long-term memory and combines them to synthesize, or process the information and come up with a solution.
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 08 04 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1c221672-4d1f-4331-9b7f-93cbd7e19ddc">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1c221672-4d1f-4331-9b7f-93cbd7e19ddc">}}
 
 When we’re working on building software, (and by working on, we mean most often reading someone else’s code) all of these processes are going on in our brain simultaneously to try to help us make sense of the programming environment.
 
@@ -294,51 +296,56 @@ It turns out that humans can also lose our context windows pretty quickly, becau
 
 If you were following the news in November of last year, even as ML practitioners, ChatGPT seems like it came out of nowhere. The entire industry turned on its ear. The fact that it could generate limericks in the style of Shakespeare made it an unbelievable party trick that started slowly to turn into potentially useful applications. One of my friends said, “I’ve been working in machine learning for 15 years and I’m not sure I understand how to now interpret what this means for modeling.”  At the time, [I wrote,](https://gist.github.com/veekaybee/6f8885e9906aa9c5408ebe5c7e870698) 
 
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a9e78cdb-9a34-4e71-a032-1aeb64a84b7e">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 09 18 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a9e78cdb-9a34-4e71-a032-1aeb64a84b7e">
 
 I, myself, like a lot of the industry overnight, became Clarke’s Piranesi. My context window for reacting to ChatGPT was just this: 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 09 42 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/72092d32-cd37-405c-af5e-cd6959337aed">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/72092d32-cd37-405c-af5e-cd6959337aed">}}
 
 
 However, once we got over the initial shock and started to look into it, it became clear that what LLMs are doing with context windows is nothing new. If we start building our information cache with the very beginning of understanding documents in context, if we dig deep into the collective memory bank of engineering and science culture, we will find Markov chains. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 10 19 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/237c2e13-d330-407e-ad42-6a443a6f7be3">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/237c2e13-d330-407e-ad42-6a443a6f7be3">}}
+
 
 Markov chains are a classical method in statistics that  predict the next action given the previous action. First-order Markov chains don’t carry any more state than the previous action. So if we know there is a .7 chance to move from E to A, and a .3 chance that we’ll experience E again, we can predict what the next action is. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 10 33 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/080c60f7-96d6-4c45-934b-5a048fabd29a">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/080c60f7-96d6-4c45-934b-5a048fabd29a">}}
+
 
 LLMs are not Markov chains. But they are similar enough that it matters, and moreover,  Markov chains have been favorite toy problems for programming. In [The Practice of Programming](), a classic book by Kerninghan and Pike released in 1999, they go over Markov chains as a way to statistically generate words. 
 LLMs are not Markov chains. But they are similar enough that it matters, and moreover,  Markov chains have been favorite toy problems for programming. In [The Practice of Programming](https://www.amazon.com/Practice-Programming-Addison-Wesley-Professional-Computing/dp/020161586X), a classic book by Kerninghan and Pike released in 1999, they go over Markov chains as a way to statistically generate words. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 19 54 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/42c1fd70-60bb-4cea-a6c8-e50da2de00f6">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/42c1fd70-60bb-4cea-a6c8-e50da2de00f6">}}
+
 
 In 2015, I created a Markov chain generating probable Hacker News headlines based on a training data set with an insanely simple and embarrassing script that I’m only going to show for a second and then never again to the internet at large. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 20 23 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8c12934f-f172-4f17-947c-56264e0fa79e">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8c12934f-f172-4f17-947c-56264e0fa79e">}}
 
 Using this script, I was able to generate probable sounding Hacker news headlines: You can see the results are not very good, and Markov chains were a baby GPT, but I was also only a baby machine learning engineer, so we were perfect for each other. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 21 05 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/f007df55-538d-407e-a771-71561555a6bf">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/f007df55-538d-407e-a771-71561555a6bf">}}
+
 
 Markov chains are nowhere near LLMs  if you know that we’ve been trying to do context prediction for a long time, and probabilistic models of text sequences (and not only, Markov chains have been used extensively in physics, economics, and math), large language models slowly start to lose some of their mystique. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 21 32 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7c7e37f6-8430-4339-96f2-5be61aae7764">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7c7e37f6-8430-4339-96f2-5be61aae7764">}}
 
 So, ok we’ve built the first stage of our context window.
 
-<img width="897" alt="Screenshot 2023-09-12 at 10 21 47 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/35cf5824-cf1b-4489-b164-e436ce72ff69">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/35cf5824-cf1b-4489-b164-e436ce72ff69">}}
 
 From Markov chain generation, we moved on to ngrams, which, instead of looking only at the previous state, look at the state of n-1 words, building the context around the word we care about. [Google started to use these](https://blog.research.google/2006/08/all-our-n-gram-are-belong-to-you.html) for statistical machine translation, speech recognition, and spelling correction.  
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 22 38 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7cbdc5e2-6271-427a-b99b-d1aaa4fddfb3">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7cbdc5e2-6271-427a-b99b-d1aaa4fddfb3">}}
 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 22 53 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8473526c-10c6-4506-b180-a56f0ece6549">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8473526c-10c6-4506-b180-a56f0ece6549">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 23 17 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/3d98f969-eb4e-414d-a5ad-c11fa0ea2a39">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/3d98f969-eb4e-414d-a5ad-c11fa0ea2a39">}}
 
 However, as our vocabularies and context windows became larger, so did our computation sizes. To get around the limitations of earlier textual approaches and keep up with growing size of text corpuses, in 2013, researchers at Google came up with an elegant solution to this problem using neural networks, Word2Vec.  
 
@@ -346,43 +353,49 @@ Word2Vec is a family of models that has several implementations, each of which f
 
 There are two modeling approaches to Word2Vec - cbow and skipgrams, both of which generate dense vectors of embeddings but model the problem slightly differently. The end-goal of the Word2Vec model in either case is to learn the parameters that maximize that probability of a given word or group of words being an accurate prediction in the text. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 27 13 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a4f8f8c9-feaf-4d92-a0b5-abc2c4e4abf6">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a4f8f8c9-feaf-4d92-a0b5-abc2c4e4abf6">}}
+
 
 Let’s look at the case of CBOW: In training CBOW, we take a phrase, let’s say for example, "Hold fast to dreams for if dreams die, life is a broken-winged bird that cannot fly" and we we remove a word from the middle of a phrase known as the context window, for example, fast. When we train our model, we train it to predict the probability that a given word fills in the blank. 
 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 27 34 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/c780abc2-cb03-46f0-b947-117cdcee8a68">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/c780abc2-cb03-46f0-b947-117cdcee8a68">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 27 58 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9995cf8f-3f84-45c9-a0ba-6cca3564b391">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9995cf8f-3f84-45c9-a0ba-6cca3564b391">}}
+
 
 Word2Vec became one of the first neural network architectures to use the concept of embedding to create a fixed feature vocabulary. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 28 25 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/15f03164-e2df-45bb-9584-808487d077e6">
 
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/15f03164-e2df-45bb-9584-808487d077e6">}}
 
 However, in Word2Vec, information flows from encoding to embedding and output layers without feedback between the latter two. This limitation prevents the model from understanding long-range context and handling out-of-vocabulary words, or text that wasn’t in the original input.  Word2Vec also struggles with polysemy, where words have multiple meanings in different contexts. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 29 04 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/bbfbe194-9ef9-4a2c-92fc-566d1a4b3941">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/bbfbe194-9ef9-4a2c-92fc-566d1a4b3941">}}
+
 
 An important concept allowed researchers to overcome computationally expensive
 issues with remembering long vectors for a larger context window than what was available in RNNs and Word2Vec before it: the attention mechanism, combined with previous ideas like the encoder/decoder architecture. The encoder/decoder architecture is a neural network architecture comprised of two neural networks, an encoder that takes the input vectors from our data and creates an embedding of a fixed length, and a decoder, also a neural network, which takes the embeddings encoded as input and generates a static set of outputs such as translated text or a text summary. In between the two types of layers is the attention mechanism, a way to hold the state of the entire input by continuously performing weighted matrix multiplications that highlight the relevance of specific terms in relation to each other in the vocabulary. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 29 37 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/bc964950-1d56-4988-abee-3a5981619c4b">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/bc964950-1d56-4988-abee-3a5981619c4b">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 32 23 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/646b9360-8211-4e03-9f5b-437c8bd167ed">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/646b9360-8211-4e03-9f5b-437c8bd167ed">}}
 
 
 We can think of attention as a very large, complex hash table that keeps track of the words in the text and how they map to different representations both in the input and the output.
 
-<img width="1117" alt="Screenshot 2023-09-12 at 10 32 44 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0d2c3758-3054-4a7e-ba67-8326ead156cd">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0d2c3758-3054-4a7e-ba67-8326ead156cd">}}
 
 So what attention is really just a hashmap or since this is PyData, a dictionary. Which is what a cache also is at its very heart. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 32 58 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/3e023b52-8399-4fd4-8854-294f73a607cc">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/3e023b52-8399-4fd4-8854-294f73a607cc">}}
+
 
 In fact, there is a reason that Redis, one of the most-often used pieces of software in caching, expands to Remote Dictionary Server.  
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 33 51 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9e1080aa-aecb-4a37-8b25-50aa5d8798f1">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9e1080aa-aecb-4a37-8b25-50aa5d8798f1">}}
 
 In ChatGPT4, Bard, and other Large Language Models what we are doing when we train them is increasing the scope or richness of the context window so that they know about the text, and also the input vocabulary we have.  And in, retrieval, we’re also trying to increase the context windows we pass in. 
 
