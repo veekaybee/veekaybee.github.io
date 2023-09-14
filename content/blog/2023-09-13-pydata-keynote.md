@@ -466,29 +466,30 @@ For example, let’s hypothetically say we’re working on, a semantic search li
 
 Something you might want to write is a module or class that [repopulates the cache with embeddings.](https://vickiboykis.com/what_are_embeddings/) What would you call such a class, one that takes a static file of embeddings generated via sentence-transformers and writes them to redis, where an API call will perform a nearest-neighbors search?
 
-
-<img width="1066" alt="Screenshot 2023-09-12 at 10 45 13 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/21f363be-fc7e-463c-9c70-044b6bd899b1">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/21f363be-fc7e-463c-9c70-044b6bd899b1">}}
 
 If we look about rules for how we should name classes, we ideally want classes to be “nouns”, consistent with the rest of our codebase. 
 
 We could call it something like EmbeddingsWriter. Seems ok, but what if we want to write something other than embeddings later on? How about DataWriter? Too Generic because we could be writing different kinds of data, and it’s not clear where. How about VectorPutter. Next time, absolutely. If we were working in Java, instead of Python, I’d be giving this presentation at JavaData Amsterdam, and likely we could use some term like VectorSetterFactory, which makes complete sense in the context of that language. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 46 20 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/f439f55c-6ea0-4af6-9121-773dbee6dce7">
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 46 37 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/90c75d68-edf9-4e27-aaf6-9e8d3d277d02">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/f439f55c-6ea0-4af6-9121-773dbee6dce7">}}
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/90c75d68-edf9-4e27-aaf6-9e8d3d277d02">}}
 
 What helps us here is building our context window. For decades in information retrieval, both within search and recommendations a common pattern has been to write a large amount of data to a data structure called an index. For example, in one of the first papers on industrial recommendation systems, [Tapestry paper architecture](https://dl.acm.org/doi/pdf/10.1145/138859.138867), one of the first recommender systems, written in 1992, which was used to recommend email messages from newsgroups to read (it turns out we were overwhelmed with data even at the very beginning of the internet), has a structure it calls an Indexer, which the paper describes as, 
 
 
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/958836cf-e26b-4ab2-bc79-964f28e2be3d">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 47 18 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/958836cf-e26b-4ab2-bc79-964f28e2be3d">
 
 “Reads documents from external sources such as electronic mail, NetNews, or newswires and
 adds them to the document store. The indexer is responsible for parsing documents into a set of indexed fields that can be referenced in queries.” 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 47 38 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8a895570-5bfa-4576-ae1b-cbcbf6b37c0c">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8a895570-5bfa-4576-ae1b-cbcbf6b37c0c">}}
 
- In search, particularly, this is known as an inverted index. And there we have it. We now have an indexer class. 
+
+In search, particularly, this is known as an inverted index. And there we have it. We now have an indexer class. 
 
 One of the ways we are good (or bad) at naming things is all the different naming patterns we’ve come up with for our data practices.  We often talk about phenomena in the data sphere as happening in the watery realms. 
 
@@ -498,7 +499,7 @@ But, underneath the waters, if we decide to dive in, under the data lakehouse, t
 
 ## How to build and keep your context window
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 48 48 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6ce8f4cf-f5c2-49f8-bab0-bd64f44cf307">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6ce8f4cf-f5c2-49f8-bab0-bd64f44cf307">}}
 
 Now that we have named our problems, what can we do about this so that we, as humans who are swimming in the deluge of new data, new concepts, and new terminology, are not cast adrift? 
 
@@ -510,7 +511,8 @@ One day, I stood looking at the pile of books and papers in dismay, and my husba
 “I have to learn ALL of this,” I wailed.
 “It’s not so bad,” he said. “You know why? Because all of these books are not distinctly unique in their contents. For example, once you learn OOP in Python, you’re going to have a much easier time learning it in Java and now you can throw away half the book. And once you know Java, you’re already 60% of the way to Scala (except the weird monad-y parts, but don’t touch those). And so on.”
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 50 51 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/12626f82-a5cd-4df5-a270-ba59e416baed">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/12626f82-a5cd-4df5-a270-ba59e416baed">}}
+
 
 When I started thinking of learning as a process that involves going extremely wide on core fundamentals, then going deep and building links across fundamentals, it made the process a LOT more manageable.
 
@@ -519,16 +521,19 @@ What also helps here is not reading blog posts, but reading books, particularly 
 Within those blog posts and papers, look for links to previous works. For example, just the other day I saw a paper that talked about transformers really being SVMs - support vector machines - which were models that were used heavily just before Word2Vec came into the picture. Learn these fundamentals and see how they link together. 
 Learn foundational things, fill your context window with good breadcrumbs that will allow you to see the larger picture. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 51 10 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4610d078-49cf-4d86-8814-796c7d9aef62">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4610d078-49cf-4d86-8814-796c7d9aef62">}}
+
 
 And, just as we should be reading books, we should be reading code. As engineers we spend most of our days reading rather than writing code and it’s a skill we can improve on.   In any given library, click through the methods. Look at them. Write down the code. Go down the rabbit hole. 
 
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9748eb68-fccd-49e1-b850-f4c32a5c9d64">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 51 26 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9748eb68-fccd-49e1-b850-f4c32a5c9d64">
 
 That’s what we’re here for at this conference! It’s so rare to get the ability to openly talk to other people about what they do at work. Do it here! Piranesi wandered through the hallways, unmoored, until he found other people to anchor his point of reference to.  As he writes in his diary, “This experience led me to form a hypothesis: perhaps the wisdom of birds resides, not in the individual, but in the flock, the congregation.”
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 51 59 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/5b179dc4-33a9-40bd-b7d1-1dfa594a8fd5">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/5b179dc4-33a9-40bd-b7d1-1dfa594a8fd5">}}
+
 
 If you go to an interesting talk, and you see people gathering after the talk, discuss the talk. Ask questions, come up to people after the talk. Ask what other people are working on, what problems they’re having, what technologies they’re using. Presumably you’re here because you were looking to seek out the power of connection - do it! 
 
@@ -536,21 +541,26 @@ Particularly in an era of social media fracture, in-person events are so importa
 
 Finally, build from fundamentals. Become close to the machine. Ellen Ullman writes, low is good. Understanding is good. The further away we get from abstractions and understand the code we're writing, the better developers we become. 
 
-<img width="1129" alt="Screenshot 2023-09-12 at 10 54 51 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/087e4e91-ba3e-476a-bedb-85b1808994bb">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/087e4e91-ba3e-476a-bedb-85b1808994bb">}}
+
 
 Whether that's building a vector database out of np.vector or 
-<img width="1027" alt="Screenshot 2023-09-12 at 10 55 28 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/88956223-a871-4767-b662-34454b83012d">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/88956223-a871-4767-b662-34454b83012d">}}
+
 
 [coding your own algorithms from scratch](https://sebastianraschka.com/faq/docs/implementing-from-scratch.html) like Sebastian does,
-<img width="1158" alt="Screenshot 2023-09-12 at 10 55 54 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a323ad39-b1d8-43f3-92ec-d320abb75632">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a323ad39-b1d8-43f3-92ec-d320abb75632">}}
 
 each of these moves concepts from your short-term to long-term memory and allows you to master your craft.  [The best engineers I know that do this well](https://vickiboykis.com/2021/08/05/the-local-minima-of-suckiness/) are constantly asking questions and learning, and, most importantly, taking things apart and digging deep into them to see how they work. 
 
 Finally, build with joy. Ship things!
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 57 58 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/e3e1a8f4-5389-40de-af62-c23cea86d364">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/e3e1a8f4-5389-40de-af62-c23cea86d364">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 58 12 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1ec85315-0154-4300-8946-6aea72ab158e">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1ec85315-0154-4300-8946-6aea72ab158e">}}
+
 
 
 ## Conclusion
@@ -558,13 +568,7 @@ When we look at any engineering system, we need to look hard, but find that it h
 
 Thank you and have an amazing conference.  Enjoy Pydata Amsterdam!
 
-
-
-
-<img width="1110" alt="Screenshot 2023-09-12 at 10 53 35 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/094b0bbe-56d7-4109-a0ab-381ddd0ed20d">
-
-
-
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/094b0bbe-56d7-4109-a0ab-381ddd0ed20d"">}}
 
 
 
