@@ -15,40 +15,45 @@ Good morning PyData Amsterdam! An enormous thank you to the organizers, the spon
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/14a24237-acf4-42da-8180-b1016e405ac1">}}
 
-I’m Vicki, and I’m a machine learning platform engineer at Duo Security.  You might know me from previous hits like the [Normcore Tech](https://vicki.substack.com/), the newsletter, [NormConf](https://normconf.com/), the conference about totally boring problems in machine learning, [What are Embeddings](https://vickiboykis.com/what_are_embeddings/), a paper about weird numbers, and [Viberary](https://viberary.pizza/), a semantic search engine that surfaces books to read based on vibe.  
+I’m Vicki, and I’m a machine learning platform engineer at Duo Security.  You might know me from previous hits like the [Normcore Tech](https://vicki.substack.com/), the newsletter, [NormConf](https://normconf.com/), the conference about totally boring problems in machine learning, [What are Embeddings](https://vickiboykis.com/what_are_embeddings/), a paper about weird numbers, and [Viberary](https://viberary.pizza/), a semantic search engine that surfaces books to read based on vibe.
 
-<img width="600" alt="Screenshot 2023-09-10 at 9 15 26 PM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0dc4d23b-06dd-4213-a7e2-6d7d04b737b4">
+
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0dc4d23b-06dd-4213-a7e2-6d7d04b737b41">}}
+
 
 I also used to make bad jokes on Twitter and do #devart, and you'll see some of that here. 
 
-<img width="600" alt="Screenshot 2023-09-10 at 9 16 17 PM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/e5486a0d-a1b6-4fdb-ae6a-c06c5f874772">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/e5486a0d-a1b6-4fdb-ae6a-c06c5f874772">}}
+
 
 Today though, I want to talk to you about something I’ve been worried about over the past year.  As someone who is Eastern European and works on ML infra, there are a number of things I’m worried about at any given time. Data drift,unpinned dependencies, service uptime alerts,  red CI/CD builds, NaNs, and cell execution order in notebooks and whether I left GPUs instances running overnight.
 
-<img width="600" alt="Screenshot 2023-09-10 at 9 19 14 PM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/697ff2fa-2bf0-4038-b8d0-015d2a987d54">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/697ff2fa-2bf0-4038-b8d0-015d2a987d54">}}
+
 
 But I have something I’m worried about even more than all these things: I’m worried that, in data land, we have forgotten how to deal with the two fundamental problems of computer engineering.  You might know them already: Cache invalidation and naming things.
 
-<img width="600" alt="Screenshot 2023-09-10 at 9 20 04 PM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d0fad0ed-d2c0-4b22-b866-9e1dee8289f6">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d0fad0ed-d2c0-4b22-b866-9e1dee8289f6">}}
+
 
 This joke concept was originally coined by Phil Karlton, a computer scientist at Netscape, in the 1990s. 
 
-
-<img width="874" alt="Screenshot 2023-09-10 at 9 20 43 PM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8fa63eab-20e8-4038-b384-aa38ac20d54a">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8fa63eab-20e8-4038-b384-aa38ac20d54a">}}
 
 A lot of important ideas that came out of Netscape at the time that shape the way we use the Internet today: JavaScript the language (unfortunately), HTTP cookies, and SSL. Karlton was responsible for architecture at Netscape, the browser. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 37 21 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/df8b4c3a-b6e8-4eb4-8416-bbb8c2e9af4f">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/df8b4c3a-b6e8-4eb4-8416-bbb8c2e9af4f">}}
 
-Why are we taking a side track into early 1990s internet history?  Because history is context and context is power. After all, machine learning, as Russell and Norvig write in [Artificial Intelligence: A Modern Approach](https://aima.cs.berkeley.edu/) is the art of extrapolating patterns based on past data. And are we, humans not the initial thinking and learning machines? 
+Why are we taking a side track into early 1990s internet history?  Because history is context and context is power. After all, machine learning, as Russell and Norvig write in [Artificial Intelligence: A Modern Approach](https://aima.cs.berkeley.edu/) is the art of extrapolating patterns based on past data. And are we, humans not the initial thinking and learning machines?
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 38 03 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6774c820-1eeb-40a5-9d53-2f7ff580f154">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6774c820-1eeb-40a5-9d53-2f7ff580f154">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 38 16 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/05ed2021-c00b-42cf-bf42-1945e49e5e8a">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/05ed2021-c00b-42cf-bf42-1945e49e5e8a">}}
 
 Without past context, we cannot make valuable inferences about the future. We cannot train our own mental model. And training our own internal machine is just as, if not even more important than the models and data we work with. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 39 25 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/2269ddb7-3de2-4c66-bac6-82479249dfe7">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/2269ddb7-3de2-4c66-bac6-82479249dfe7">}}
+
 
 In computer science, like in all other disciplines,  ideas don’t live in isolation. They are recycled, reused and repurposed constantly, and the more we understand about where they came from, the more we can benefit from the richness of hundreds of years of past human experience to master our current tools and ecosystems. 
 
@@ -57,11 +62,13 @@ In computer science, like in all other disciplines,  ideas don’t live in isola
 ## Two Piranesis
 To understand what we lose when we lose context, I want to talk about the two Piranesis. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 39 42 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/dc2e89b9-65c5-4546-922b-a2dfbbd55806">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/dc2e89b9-65c5-4546-922b-a2dfbbd55806">}}
+
 
 The first Piranesi is a character from a fantasy book by Susanna Clarke, about an unnamed man who is lost in a remote, but semi-familiar world.  The unnamed narrator lives in what seems to be an enormous palace. The house he describes is infinite, has hundreds of corridors and levels and halls of statues, and ceaseless rushing waters that flood different corridors and carry away the narrator’s few belongings.
 
-<img width="800" alt="Screenshot 2023-09-12 at 8 40 24 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/567cc24f-a322-4ed2-a12f-31ccb2d4429f">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/567cc24f-a322-4ed2-a12f-31ccb2d4429f">}}
+
 
 [Image Source](https://www.tumblr.com/sennetrip/725447247668641792/alternative-book-cover-for-piranesi-by-susanna?source=share)
 
@@ -69,14 +76,16 @@ We learn both through his internal monologue and diary entries that he uses to m
 
 One of his most notable activities is looking at the statues, of which there are infinitely many in the house, many of which are allusions to classical statues or to books like Narnia, which he doesn’t understand. He lives unmoored, at the mercy of the house. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 42 25 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0b4d43df-588e-4870-b1ce-e2e81e862dc8">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0b4d43df-588e-4870-b1ce-e2e81e862dc8">}}
+
 
 [Image Source](https://www.tumblr.com/werian-wintertid/698758728538849280/its-beauty-immeasurable-its-kindness?source=share)
 
 
 There is one other person, a well-dressed man who comes every so often to give the unnamed narrator clues about the house. We gradually learn that the narrator, in reality, has suffered from enormous memory loss, which is why he has no idea of where he is in the house or how he can get out, and also why he doesn’t recognize anything from the world we know. The man who observes the unnamed narrator, The Other calls him, jokingly, Piranesi.
 
-<img width="600" alt="Screenshot 2023-09-12 at 8 43 23 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d5f0789a-70af-4fd8-ac20-27d93946d851">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d5f0789a-70af-4fd8-ac20-27d93946d851">}}
+
 
 [Image Source](https://www.tumblr.com/thinkanamelater/714277015713366016/i-am-sorry-that-i-was-angry-with-you-forgive-me?source=share)
 
