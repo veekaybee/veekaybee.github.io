@@ -13,7 +13,7 @@ The text here isn't exactly what I said, it was my notes ahead of time.  My slid
 
 Good morning PyData Amsterdam! An enormous thank you to the organizers, the sponsors, to PyData, and to you, the attendees, for coming!  It’s wonderful to be able to see everyone in person again. This talk is about building and defending our context windows. 
 
-<img width="600" alt="Screenshot 2023-09-10 at 9 12 00 PM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/14a24237-acf4-42da-8180-b1016e405ac1">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/14a24237-acf4-42da-8180-b1016e405ac1">}}
 
 I’m Vicki, and I’m a machine learning platform engineer at Duo Security.  You might know me from previous hits like the [Normcore Tech](https://vicki.substack.com/), the newsletter, [NormConf](https://normconf.com/), the conference about totally boring problems in machine learning, [What are Embeddings](https://vickiboykis.com/what_are_embeddings/), a paper about weird numbers, and [Viberary](https://viberary.pizza/), a semantic search engine that surfaces books to read based on vibe.  
 
