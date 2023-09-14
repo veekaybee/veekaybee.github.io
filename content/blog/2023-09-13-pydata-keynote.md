@@ -1,7 +1,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2023-09-16'
+date = '2023-09-13'
 site = '@vboykis'
 title = "Build and keep your context window"
 description = 'My keynote at PyData Amsterdam 2023'
