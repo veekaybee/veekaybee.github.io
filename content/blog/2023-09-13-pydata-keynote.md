@@ -403,37 +403,41 @@ And now, to bring this all back to LLMs and ChatGPT it turns out that, just like
 
 In March, [ChatGPT experienced a data leak](https://openai.com/blog/march-20-chatgpt-outage) precisely because of cache invalidation. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 34 51 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fbe92a20-9873-4b75-833f-d061b7c21d38">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fbe92a20-9873-4b75-833f-d061b7c21d38">}}
+
 
 ChatGPT uses Redis  to keep track of your chat history state and user information so that it doesn’t have to perform expensive queries to retrieve your chat history every time. The chat history, on the sidebar, is hot-loaded from Redis using the py-redis library.  Py-Redis uses asyncio, a Python async management framework, to maintain connections between the Python server and the Redis cluster, which recycles stale connections. Those connections behave as two queues, where the caller pushes a request onto the queue and pops a response from the outgoing queue, which returns a connection to the pool. 
 
 If the request is canceled after it’s pushed onto the queue but before the response is popped, the connection is corrupted and the next, unrelated response that’s dequeued can receive stale data. If that data happens to match, it will return bad data to unrelated users. So it’s a cache miss, but where the cache miss propagates other user’s chat titles into your chat history: a context window of the very, very wrong kind. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 35 33 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fc9ef757-7b7c-4445-b653-5d34af10c484">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fc9ef757-7b7c-4445-b653-5d34af10c484">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 35 53 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/c7861fd7-c631-4589-ae2d-a8ab714d10e8">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/c7861fd7-c631-4589-ae2d-a8ab714d10e8">}}
+
 
 Now we’ve made a full circle, cache, context window, and how our minds work are interconnected. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 37 01 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6ba263de-4928-406e-bdfd-a240b8f935dc">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6ba263de-4928-406e-bdfd-a240b8f935dc">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 37 18 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/2384ba91-ff1f-4358-a230-6783663b2be6">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/2384ba91-ff1f-4358-a230-6783663b2be6">}}
 
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/389ee345-b3c3-4d1c-992b-6dc78ee407bc">}}
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 37 59 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/389ee345-b3c3-4d1c-992b-6dc78ee407bc">
 
 ## Naming Things
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 38 24 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/98960757-5351-43d6-bf2e-999a51afa674">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/98960757-5351-43d6-bf2e-999a51afa674">}}
 
 
 So much depends on the context window: how we understand LLMs, how we process them, and even how we deploy them.  In order to work through the hype of LLMs and do good data work today, we need a good context window.  And, if we don’t have a good context window, we also can’t do the second part, which is naming things.  
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 38 47 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0b56e67d-7d8c-4018-b8aa-847e547aed84">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0b56e67d-7d8c-4018-b8aa-847e547aed84">}}
+
 
 Let’s start by talking about just why it is that [naming things is really important](https://vickiboykis.com/2023/06/29/naming-things/), and equally hard Think about how many times you’ve sat over a variable name. Should it be Cache or DataStore? Vector or List? GetActions or PullActions? Why is this process so challenging? 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 39 30 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a9a9c64e-d25d-4d1c-ae28-32177b21ae72">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a9a9c64e-d25d-4d1c-ae28-32177b21ae72">}}
+
 
 There’s a neat little book that came out recently  called, appropriately, “Naming Things” by Tom Benner that talks about this process. Benner writes that naming things is hard because there are a lot of expectations on us, the namer.  We, the namer, need to know 
 1. exactly what the thing does
@@ -442,10 +446,10 @@ There’s a neat little book that came out recently  called, appropriately, “N
 
 When we name things, we need to think about how easy the name is to understand - aka the name should not have multiple meanings and can’t be redundant throughout the codebase, the name needs to be consistent with other parts of our codebase, and yet it also needs to be distinct enough to name the context of that thing. 
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 40 14 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6e7bde5e-9d1b-4c2d-bdad-f179540e9f84">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/6e7bde5e-9d1b-4c2d-bdad-f179540e9f84">}}
 
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1c023642-a0ed-40cf-9798-6abb9f2fc7b3">}}
 
-<img width="979" alt="Screenshot 2023-09-12 at 10 40 50 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1c023642-a0ed-40cf-9798-6abb9f2fc7b3">
 
 Then, we also have the external industry context of the name, particularly if we’re working with code that’s open-source, or will be read by practitioners like us across the organization. And finally, when we look at names, it should make sense
 
@@ -455,9 +459,10 @@ It turns out that, when we name things, we really are just also building up a co
 
 Of course, we could just do this with ChatGPT.  But we won’t be as successful!
 
-For example, let’s hypothetically say we’re working on, a semantic search library that takes a vibe query, vectorizes the query and performs lookup, in, say a cache, that also has a search module which stores all your learned embedding vectors and then returns the results via a Flask API.  
+For example, let’s hypothetically say we’re working on, a semantic search library that takes a vibe query, vectorizes the query and performs lookup, in, say a cache, that also has a search module which stores all your learned embedding vectors and then returns the results via a Flask API.
 
-<img width="600" alt="Screenshot 2023-09-12 at 10 44 49 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ebd740ba-d414-4931-9c52-4fb0750bfaad">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ebd740ba-d414-4931-9c52-4fb0750bfaad">}}
+
 
 Something you might want to write is a module or class that [repopulates the cache with embeddings.](https://vickiboykis.com/what_are_embeddings/) What would you call such a class, one that takes a static file of embeddings generated via sentence-transformers and writes them to redis, where an API call will perform a nearest-neighbors search?
 
