@@ -292,8 +292,6 @@ When we’re working on building software, (and by working on, we mean most ofte
 
 It turns out that humans can also lose our context windows pretty quickly, because we can really only hold 7 things in working memory. 
 
-It turns out that humans can also lose our context windows pretty quickly, because we can really only hold 7 things in working memory. 
-
 If you were following the news in November of last year, even as ML practitioners, ChatGPT seems like it came out of nowhere. The entire industry turned on its ear. The fact that it could generate limericks in the style of Shakespeare made it an unbelievable party trick that started slowly to turn into potentially useful applications. One of my friends said, “I’ve been working in machine learning for 15 years and I’m not sure I understand how to now interpret what this means for modeling.”  At the time, [I wrote,](https://gist.github.com/veekaybee/6f8885e9906aa9c5408ebe5c7e870698) 
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a9e78cdb-9a34-4e71-a032-1aeb64a84b7e">}}
