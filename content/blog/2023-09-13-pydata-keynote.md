@@ -158,8 +158,6 @@ We, like the book Piranesi, are being flooded with new terminology, new concepts
 [Image Source](https://mattturck.com/mad2023/)
 
 
-Thank you to Chris Albon, Luca Belli, Dan Boykis, Roy Keyes, James Kirk, and Ravi Mody for reviewing versions of this talk.
-
 ## Taking Control of the Flood
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8359677d-4aff-4690-9362-b028670ad9e1">}}
@@ -282,7 +280,7 @@ We keep that context window “in memory” when we train models, and again, in 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ae9a5d51-c39c-4ad2-98c9-55c528777119">}}
 
 
-Humans can infer this because our brains are constantly processing things in cache. In [The Programmer’s Brain](https://vickiboykis.com/2021/11/07/the-programmers-brain-in-the-lands-of-exploration-and-production/), Felinne Hermans, a professor of computer science whose research focuses on how people learn to program writes that when we get confused about the code we’re writing, there are actually multiple types of confusion happening at the same time.
+Humans can infer this because our brains are constantly processing things in cache. In [The Programmer’s Brain](https://vickiboykis.com/2021/11/07/the-programmers-brain-in-the-lands-of-exploration-and-production/), Felienne Hermans, a professor of computer science whose research focuses on how people learn to program writes that when we get confused about the code we’re writing, there are actually multiple types of confusion happening at the same time.
 
 As a quick primer, the human brain has several types of memory, short-term, working, and long-term. Short-term memory gathers information temporarily and processes it quickly, like RAM, or much like a cache. Long-term memory are things we’ve learned previously and tucked away, like database storage patterns. Working memory takes the information from short-term memory and long-term memory and combines them to synthesize, or process the information and come up with a solution.
 
@@ -313,7 +311,7 @@ Markov chains are a classical method in statistics that  predict the next action
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/080c60f7-96d6-4c45-934b-5a048fabd29a">}}
 
 
-LLMs are not Markov chains. But they are similar enough that it matters, and moreover,  Markov chains have been favorite toy problems for programming. In [The Practice of Programming](), a classic book by Kerninghan and Pike released in 1999, they go over Markov chains as a way to statistically generate words. 
+ 
 LLMs are not Markov chains. But they are similar enough that it matters, and moreover,  Markov chains have been favorite toy problems for programming. In [The Practice of Programming](https://www.amazon.com/Practice-Programming-Addison-Wesley-Professional-Computing/dp/020161586X), a classic book by Kerninghan and Pike released in 1999, they go over Markov chains as a way to statistically generate words. 
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/42c1fd70-60bb-4cea-a6c8-e50da2de00f6">}}
