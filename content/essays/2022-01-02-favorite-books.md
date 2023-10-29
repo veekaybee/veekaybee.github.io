@@ -9,14 +9,7 @@ This year, just like last year, I got pretty distracted, both with the panedmic,
 
 Piranesi is a wonder, a jewel of a book, suspenseful and sad and hopeful and interesting. It is extremely atmospheric.  I don't want to describe it without giving it away other than to say we meet the narrator as he is in a ruined castle with the tides coming in and going out, and as the camera zooms out, we learn more and more about him as a person, and why he is in this castle.  I have zero personal time and I read this book in one day. This book is a testament to the true power of fiction over us. 
 
-[The Pyschology of Computer Programming by Gerald Weinberg](https://www.goodreads.com/book/show/1660754.The_Psychology_of_Computer_Programming) - This is a must-read for anyone working with computers and thinking about teams, team dynamics, and how to produce code.   It covers every single thing we talk about in industry today. Here's a quick excerpt on psychological safety
-
-{{< tweet 1421631165891555330 >}}
-
-and here's one on benchmarking programs: 
-
-{{< tweet 1421632728240431105 >}}
-
+[The Pyschology of Computer Programming by Gerald Weinberg](https://www.goodreads.com/book/show/1660754.The_Psychology_of_Computer_Programming) - This is a must-read for anyone working with computers and thinking about teams, team dynamics, and how to produce code.   It covers every single thing we talk about in industry today. 
 If you can get your hands on a hardcover, do it and mark it up. 
 
 

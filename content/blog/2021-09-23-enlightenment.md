@@ -14,7 +14,6 @@ title = 'Reaching MLE (machine learning enlightenment)'
 Ivan Shishkin, The Field of Wheat
 
 
-
 Once, on a crisp cloudless morning in early fall, a machine learning engineer left her home to seek the answers that she could not find, even in the [newly-optimized](https://blog.google/products/search/search-language-understanding-bert/) Google results.
 
 She closed her laptop, put on her backpack and hiking boots, and walked quietly out her door and past her mailbox, down a dusty path that led past a stream, until the houses around her gave way to broad fields full of ripening corn. 
