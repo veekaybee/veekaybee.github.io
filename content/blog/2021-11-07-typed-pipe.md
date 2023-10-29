@@ -23,7 +23,6 @@ Here’s the canonical [hello world example](https://scalding.readthedocs.io/en/
 
 {{< gist veekaybee 783fd4a9ccca555a716de46af698733a  >}}
 
-
 (By the way, it's fun to see that, once you filter the stop words [out of my top 50](https://gist.github.com/veekaybee/a12e5b7c372d5c5c506b470d92a69c5f), the "real" words are python, data, and people, which I think sums up my blog pretty well.) 
 
 
