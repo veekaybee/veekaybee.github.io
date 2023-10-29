@@ -23,14 +23,13 @@ Explicit knowledge is anything that you can read about, knowledge that's easy to
  
 > This is a difference between explicit and implicit knowledge—ask a young child how to form a plural and she says she doesn't know; ask her“ here is a wug, here is another wug, what have you got?”and she is able to reply,“two wugs.” The acquisition of L1 grammar is implicit and is extracted from experience of usage rather than from explicit rules.
  
- 
 Some time ago, Caitlin tweeted,
 
-{{< tweet 1353735905962577920 >}}
+{{< figure src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7561fae1-e091-4ae1-939f-9443276463af" width="300px" >}}
 
 I've tweeted similar observations a while back:
 
-{{< tweet 1306671146541215744 >}}
+{{< figure src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/f714c2cd-a316-4895-9ed7-0273f0890995" width="300px" >}}
 
 The basic block of labor of machine learning is [cleaning data and setting up engineering pipelines, the detailed and tedious work of making all the pieces fit together]( https://vicki.substack.com/p/neural-nets-are-just-people-all-the).
  
@@ -55,8 +54,6 @@ Here's the first part of the abstract:
 This is probably the first time I've personally seen something formally stated about the need for having clean data as impacting model performance.
 
 Mulling over this fact, I wondered what else was ghost knowledge in the data community, [and so I asked.](https://twitter.com/vboykis/status/1358126499489058819)
-
-{{< tweet 1358126499489058819 >}}
 
 What I found was a wealth of learnings that people wrote from painful personal experience. The replies generally fall into two categories: the ghost knowledge in dealing with data and the ghost knowledge in dealing with people.
  
