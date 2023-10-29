@@ -59,7 +59,7 @@ But first, [we didn’t even know that customers were churning](https://vicki.su
 
 “Once I had that data available to me, I needed a place that our security team allowed so that I could combine the two data sources. They suggested using Spark on AWS to write out to S3, which they’d then send back to HDFS. Our Spark workloads run on K8s on AWS Spot Instances, but some of the pods were hanging, so I used kubectl to take a look at them and figure out what the issue was.”
 
-{{< tweet 1438900066949939206 >}}
+{{< figure src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ef0ac2c5-4b0b-4cf4-84d2-77a8ac87a464" alt="wheat field" width="300px" >}}
 
 “Now, I had all of the data in a single place, and it was time to build my XGBoost model and iterate on it . But the Python available to me on the machine that could access the HDFS server didn’t have all the dependencies I needed to run XGBoost, so I-”
 
@@ -72,7 +72,6 @@ The machine learning engineer sighed deeply herself and stopped, as if whatever 
 Finally, the machine learning engineer said, in a very small voice, “I still haven’t gotten to machine learning engineering.”
 
 The Staff Engineer scratched his head. “Well, hang on.  Let’s list out all of the things that you just said. You said you were:”
-
 
 * Working with serialization formats
 * Evaluating modeling requirements and selecting the right model for the business case
@@ -99,8 +98,6 @@ The Staff Engineer scratched his head. “Well, hang on.  Let’s list out all o
 The machine learning engineer frowned. “But how can it be?”
 
 “Machine learning systems are new. [We’re still in the steam-powered days of machine learning](https://vicki.substack.com/p/were-still-in-the-steam-powered-days), and yet machine learning is not simply machine learning. It is, at this stage, more [engineering](http://veekaybee.github.io/2019/02/13/data-science-is-different/) than simply machine learning. We’re building more and more on older systems, [abstracting away complexity and in the process creating newer and newer levels of it](http://veekaybee.github.io/2019/04/11/attic-compsci/) that we now have to manage and hold in our heads. Many of the algorithms have been written. Much of the work we do, both in machine learning, and in development today in general, will be [glue work and vendor work.](https://rachelbythebay.com/w/2020/08/14/jobs/) 
-
-{{< tweet 1113512466795900929 >}}
 
 “So what does this mean for me?”
 
