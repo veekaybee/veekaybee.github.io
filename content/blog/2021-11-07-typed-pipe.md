@@ -66,7 +66,7 @@ The final type of confusion happens when you can’t follow the code through a p
 
 In addition to the three issues you’re dealing with at any given time, you also have the cognitive overhead of not  just the language’s syntax, stored variables in memory, and language features, but you’re learning the ecosystem of the language, as well.  I’ve argued before that the ecosystem you’re programming in is just as essential as the code and the very first thing you encounter when you start to write any new code: 
 
-{{< tweet 1434477775193317377 >}}
+{{< figure src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fd9f8d92-b206-46df-961f-9e6ed71811c4" width="600px">}}
 
 For example, for Scalding, one of the first things I had to understand was not only how to build and iterate on building an SBT project, but also [how to read from a file that’s not a website](https://scalding.readthedocs.io/en/readthedocs/tutorials/01-Beginner/02-Alice-in-Wonderland.html) (which is the canonical example given in the Scalding documentation), how to start up the Scalding REPL and how to understand where it’s reading files from (it’s the directory that you download and place the REPL into.)  
 
@@ -103,10 +103,6 @@ I think this tradeoff is at the heart of the [“two-language” problem in data
 
 In other words, you can either be easy for prototyping or easy for production. You usually can’t be both. Now, some will argue that there are languages that fit both purposes, and it’s true, there are cases of prototyping languages in production and production languages used for prototypes, but by trying to fit one in another, we lose something of the properties of both. 
 
-
-{{< tweet 1099467902447730688 >}}
-
-
 A very recent example of this is the implementation of [type annotations for Python](http://veekaybee.github.io/2019/07/08/python-type-hints/ ).  They are wonderful and [I cannot function without them in any of my codebases anymore](https://twitter.com/vboykis/status/1404862236947103751?s=20), but I would never use them in exploration, because at that stage I just don’t know enough about my data to guarantee them, and they slow me down as I’m playing and learning about my data. 
 
 Where all of this gets interesting is understanding where the data landscape is moving. Data work in companies started with statistics, with compiled analyses, with hand-crafted libraries. A lot of this work took place in prototypable languages and ecosystems, and a lot of the developers who worked in the early days of data science, yours truly included, are used to operating mostly in prototype languages and environments with regards to data. 
@@ -124,7 +120,6 @@ Back to our brains: how can we make sure that any codebase we work with becomes 
 Second, is reading and adding what "Programmer's Brain" calls beacons in the code, which could be comments, but, more generally, are places in the code that your mind can anchor against and do the work of chunking, or [processing groups of information](https://techleadjournal.dev/episodes/61/). These could be very clear variable names, or well-defined methods.  
 
 Something that helped me with this was installing and using [Ammonite](https://ammonite.io/), a very, very good Scala repl that breaks down syntax and functions in the same way that using a notebook might. For example, here's a small script I put together to actually get the input data for my Scalding job. 
-
 
 {{< gist veekaybee  562ccb414726bf84cb2b8f7b1f0014ac >}}
 
