@@ -17,8 +17,6 @@ It reads,
 
 > "My buddy is an electrician and told me a few months ago that he always leaves the screws in a vertical position on jobs as a sign of craftsmanship. Been thinking ever since what my “vertical screws” equivalent is for product design."
 
-{{<tweet 1495224029724258305>}}
-
 Tweaking the screws in a light plate is a relatively low-friction small thing that most people will not notice, but that when they do, it's a sign of craftsmanship, expertise, and pride in your work. 
 
 I wondered out loud what the equivalent of that was for machine learning and data science work, and got a wide variety of answers, ranging from:
