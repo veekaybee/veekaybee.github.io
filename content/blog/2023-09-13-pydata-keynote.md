@@ -11,6 +11,9 @@ This is the keynote I prepared for PyData Amsterdam 2023. The TL;DR is that we m
 
 The text here isn't exactly what I said, it was my notes ahead of time.  My slide template is by [Barbara Asboth](https://barbasboth.com/), who [also did the templates for Normconf.](https://normconf.com/) 
 
+Video: 
+[![Talk](https://img.youtube.com/vi/icGHT7MiaFY/0.jpg)](https://www.youtube.com/watch?v=icGHT7MiaFY)
+
 Good morning PyData Amsterdam! An enormous thank you to the organizers, the sponsors, to PyData, and to you, the attendees, for coming!  It’s wonderful to be able to see everyone in person again. This talk is about building and defending our context windows. 
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/14a24237-acf4-42da-8180-b1016e405ac1">}}
