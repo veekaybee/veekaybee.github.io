@@ -114,7 +114,7 @@ In order to capture this level of meticulousness at the level of the typechecker
 So, what does this all mean in a TL;DR: 
 
 1. Python type-checking is very strongly decoupled from the actual runtime code and is largely a user-level mechanism to make reading code much easier.
-2. Typechecking is more meticulous than the checking that happens runtime, so we have to do hacks in order to get code that would otherwise run to pass typechecking, particularly when working with circular dependencies. 
+2. Typechecking by mypy is more meticulous than the checking that happens at runtime, so we have to do hacks in order to get code that would otherwise run to pass typechecking, particularly when working with circular dependencies. 
 3. Python doesn't care about types at runtime, so we do another hack (types as strings) to make sure the code gets interpolated correctly using forward references [during typechecking and ignored at runtime.](https://peps.python.org/pep-0484/#forward-references). We can do this because MyPy will attempt to parse strings into their respective types. 
 4. Be very careful when using type annotations. You should use them! But also understand that they are also built on some very loose guarantees.  
 
