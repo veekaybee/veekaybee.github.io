@@ -9,7 +9,7 @@ description = 'Typechecking is brittle yet important'
 
 I saw [this tweet](https://twitter.com/charliermarsh/status/1733865143694487769) over the weekend and wanted to dive into the fundamental question behind this: Given this potential error, why do we use conditional imports at all, or, more specifically, when might we use this pattern? 
 
-<img width="601" alt="Screenshot 2023-12-11 at 10 19 41 AM" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/038f3695-4651-45e6-b47c-47ec25da9690">
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/038f3695-4651-45e6-b47c-47ec25da9690">}}
 
 The TL;DR is that we use this pattern to hedge between the differences in typechecking enforced by mypy and typechecking as it happens at runtime, particularly when we have large sets of custom classes that depend on each other and could result in circular dependencies. 
 
@@ -32,11 +32,11 @@ First, [a quick primer on Python type hints.](https://vickiboykis.com/2019/07/08
 > For types like strings, Python assumes that anything with single or double quotes around it will be a string. For numbers, Python picks a number type. If we try to do something to that type and Python can’t perform the operation, it’ll tell us later on.
 Let's start at the beginning. When we write a program, we have two places we can check it for correctness: at compile time, and at runtime. 
 
-![runtime](https://github.com/veekaybee/veekaybee.github.io/assets/3837836/69105b9b-af35-4f46-bc43-49daf31f8da7)
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/69105b9b-af35-4f46-bc43-49daf31f8da7">}}
 
 However, Python doesn't have the compile-time check, because it's an interpreted language that is dynamically-typed, which means its only real place to check is at runtime, i.e. when we type `python my_program.py`
 
-![untitled@2x](https://github.com/veekaybee/veekaybee.github.io/assets/3837836/2945fed1-b49a-4ba2-b2ab-9c8f6e02c6f0)
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/2945fed1-b49a-4ba2-b2ab-9c8f6e02c6f0">}}
 
 What do we do to try to find errors before we run the program? We run [type checking](https://stackoverflow.com/a/61548894), which does everything except execute the actual program code: 
 
@@ -44,7 +44,7 @@ What do we do to try to find errors before we run the program? We run [type chec
 
 So the type checker, mypy in our case, is broad and smart but slow and has no execution power (we don't even have to run it as a pre-lint step, [it's completely optional in any codebase](https://mypy-lang.org/)!), and the Python implementation that runs when the code is run, is fast, but blunt and limited in its scope. It looks like this: 
 
-![untitled@2x(1)](https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fa152460-7d1e-4340-8e5d-396d21248494)
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fa152460-7d1e-4340-8e5d-396d21248494)">}}
 
 Another way to think about this is as a funnel for errors where the top of the funnel is MyPy and the bottom is CPython. (an unfortunate side effect of working in recommendations is that everything starts to look like a filter and funnel.)
 
