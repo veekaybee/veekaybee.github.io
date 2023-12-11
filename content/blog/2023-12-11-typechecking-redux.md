@@ -44,7 +44,7 @@ What do we do to try to find errors before we run the program? We run [type chec
 
 So the type checker, mypy in our case, is broad and smart but slow and has no execution power (we don't even have to run it as a pre-lint step, [it's completely optional in any codebase](https://mypy-lang.org/)!), and the Python implementation that runs when the code is run, is fast, but blunt and limited in its scope. It looks like this: 
 
-{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fa152460-7d1e-4340-8e5d-396d21248494)">}}
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fa152460-7d1e-4340-8e5d-396d21248494">}}
 
 Another way to think about this is as a funnel for errors where the top of the funnel is MyPy and the bottom is CPython. (an unfortunate side effect of working in recommendations is that everything starts to look like a filter and funnel.)
 
