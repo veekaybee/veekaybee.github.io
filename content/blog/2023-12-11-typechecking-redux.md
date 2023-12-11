@@ -55,7 +55,7 @@ What are the implications of this? When Type Checking is happening, that [TYPE_C
 TYPE_CHECKING = False
 ```
 
-One of the things we can do when type checking is happening is include conditional imports. Conditional imports are packages that are only imported when we're doing typchecking. Why would we want to do this? [To avoid circular references.](https://stackoverflow.com/questions/61545580/how-does-mypy-use-typing-type-checking-to-resolve-the-circular-import-annotation). If you have two classes that depend on each other, mypy will try to go through and sequentially find class by class and substitute null references with placeholders. 
+One of the things we can do when type checking is happening is include conditional imports. Conditional imports are packages that are only imported when we're doing typchecking. Why would we want to do this? [To avoid circular references.](https://stackoverflow.com/questions/61545580/how-does-mypy-use-typing-type-checking-to-resolve-the-circular-import-annotation) If you have two classes that depend on each other, mypy will try to go through and sequentially find class by class and substitute null references with placeholders. 
 
 The example in the tweet doesn't contain this:  
 
