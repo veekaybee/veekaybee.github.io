@@ -8,7 +8,7 @@ description = 'Do fun projects'
 +++
 <center><img src="http://viberary.pizza/static/assets/img/vibe_book.png" alt="drawing" class="img-fluid" width="300"/></center>
 
-Viberary is a side project that I worked on in 2023, which does semantic search for books by vibe.  It was hosted at viberary.pizza. 
+Viberary is a side project that I worked on in 2023, which does semantic search for books by vibe.  It was hosted at [viberary.pizza.](http://viberary.pizza/) 
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/0c8fddcb-3bb1-4b67-8d0e-7b2462c6d561">}}
 
