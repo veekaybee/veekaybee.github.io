@@ -209,7 +209,7 @@ The third factor was to try to ignore [the hype blast of the current ML ecsystem
 
 Finally, I wanted to build everything as a traditional self-contained app with various components that were [easy to understand](https://vickiboykis.com/2023/06/29/naming-things/), and reusable components across the app. The architecture as it stands looks like this:
 
-<script src="https://gist.github.com/veekaybee/0b2974c18b11f6b436b7fc620234c98a.js"></script>
+{{< gist veekaybee 0b2974c18b11f6b436b7fc620234c98a>}}
 
 
 I wish I could say that I planned all of this out in advance, and the project that I eventually shipped was exactly what I had envisioned. But, like with any engineering effort, I had a bunch of false starts and dead ends. I started out [using Big Cloud](https://vickiboykis.com/2022/12/05/the-cloudy-layers-of-modern-day-programming/), a strategic mistake that cost me a lot of time and frustration because I couldn't easily introspect the cloud components. This slowed down development cycles.  I eventually moved to local data processing using DuckDB, but [it still look a long time to make this change and get to data understanding](https://vickiboykis.com/2023/01/17/welcome-to-the-jungle-we-got-fun-and-frames/), as is typically the case in any data-centric project.
@@ -260,7 +260,7 @@ The data is stored in several gzipped-JSON files:
 
 Sample row: Note these are all encoded as strings!
 
-<script src="https://gist.github.com/veekaybee/83448409245b1336eabd76c29e3c7e23.js"></script>
+{{< gist veekaybee 83448409245b1336eabd76c29e3c7e23>}}
 
 There is a lot of good stuff in this data! So, like any good data scientist, I initially [did some data exploration](https://github.com/veekaybee/viberary/blob/main/src/notebooks/03_duckdb_eda.ipynb) to get a feel for the data I had at hand. I wanted to know how full the dataset was, how many missing data I had, what language most of the reviews are in, and other things that will help understand what the model's embedding space looks like.
 
@@ -270,7 +270,8 @@ The data input generally looks like this:
 
 Then,  I constructed several tables that I'd need to send to the embeddings model to generate embeddings for the text. I did this all in DuckDB. The final relationships between the tables look like this:
 
-<script src="viberary.pizza/https://gist.github.com/veekaybee/56509569e2583d84415722cc26323c60.js"></script>
+{{< gist veekaybee 56509569e2583d84415722cc26323c60>}}
+
 
 The `sentence` column which concatenates ```review_text || goodreads_auth_ids.title || goodreads_auth_ids.description``` is the most important because it's this one that is used as a representation of the document to the embedding model and the one we use to generate numerical representations and look up similarity between the input vector.
 
@@ -324,7 +325,7 @@ I then tried Paperspace but found its UI hard to navigate, although, ironically,
 
 The process turned out to be much less painless than I anticipated, with the exception that P3 instances run out very quickly due to everyone training on them. [But it only took about 20 minutes to generate embeddings for my model](https://github.com/veekaybee/viberary/blob/main/src/model/generate_embeddings.ipynb), which is a really fast feedback loop as far as ML is concerned. I then wrote that data out to a snappy-compressed parquet file that I then load manually to the server where inference is performed.
 
-<script src="https://gist.github.com/veekaybee/75faca3b51b1fbfaea424d8faf3083e4.js"></script>
+{{< gist veekaybee 75faca3b51b1fbfaea424d8faf3083e4>}}
 
 # Redis and Indexing
 
@@ -359,17 +360,17 @@ Now that we have the data in Redis, we can perform lookups within the request-re
 
  Since we'll be doing this in the context of a web app, we write a small [Flask application](https://github.com/veekaybee/viberary/tree/main/src/api) that has several routes and captures the associated static files of the home page, the search box, and images, and takes a user query, runs it through the created search index object after cleaning the query, and returns a result:
 
- <script src="https://gist.github.com/veekaybee/fdaeb6ca5b564227e7cfe6fe2c364b41.js"></script>
+{{< gist veekaybee fdaeb6ca5b564227e7cfe6fe2c364b41>}}
 
 that data gets passed into the model through a KNN Search object which takes a Redis connection and a config helper object:
 
-<script src="https://gist.github.com/veekaybee/bf25025bc1c7c6e398e4564a1beccbe5.js"></script>
+{{< gist veekaybee bf25025bc1c7c6e398e4564a1beccbe5>}}
 
 The [search class](https://github.com/veekaybee/viberary/blob/main/src/search/knn_search.py#L13) is where most of the real work happens. First, the user query string is parsed and sanitized, although in theory, in BERT models, you should be able to send the text as-is, since BERT was originally trained on data that does not do text clean-up and parsing, like traditional NLP does.
 
 Then, that data is rewritten into the Python dialect for the Redis query syntax. The search syntax is can be a little hard to work with  originally, both in the Python API and on the Redis CLI, so I spent a lot of time playing around with this and figuring out what works best, as well as tuning the hyperparameters passed in [from the config file](https://github.com/veekaybee/viberary/blob/9f55493e0c8f77c0727df9c0e9191033469e468a/config.yml#L24), such as the number of results, the vector size, and the float type (very important to make sure all these hyperparameters are correct given the model and vector inputs, or none of this works correctly.)
 
-<script src="https://gist.github.com/veekaybee/fdd340a2d1362d33166b402529af3dec.js"></script>
+{{< gist veekaybee fdd340a2d1362d33166b402529af3dec>}}
 
 [HNSW is the algorithm, initially written at Twitter,  implemented in Redis](https://github.com/RediSearch/RediSearch) that actually peforms the query to find [approximate nearest neighbors](https://en.wikipedia.org/wiki/Nearest_neighbor_search#Approximation_methods) based on cosine similarity. [It looks for an approximate solution](https://arxiv.org/abs/1603.09320) to the k-nearest neighbors problem by formulating nearest neighbors as a graph search problem to be able to find nearest neighbors at scale. Naive solutions here would mean comparing each element to each other element, a process which computationally scales linearly with the number of elements we have. HNSW bypasses this problem by using skip list data structures to  create multi-level linked lists to keep track of nearest neighbors. During the navigation process, HNSW traverses through the layers of the graph to find the shortest connections, leading to finding the nearest neighbors of a given point.
 
@@ -419,7 +420,7 @@ On top of all of this, I worked to make the site load quickly both on web and mo
 
  My deployment story works like this. The web app is developed in a Docker container that I have symlinked via bind mounts to my local directory so that I write code in PyCharm and changes are reflected in the Docker container. The web docker container is networked to Redis via Docker's internal network. The web app is available at 8000 on the host machine, and, in production in Nginx, proxies port 80 so we can reach the main domain without typing in ports and hit Viberary.  In the app dockerfile, I want to make sure to have the fastest load time possible, so I follow [Docker best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) of having the layers that change the most last, caching, and mounting files into the Docker image so I'm not constantly copying data.
 
- <script src="https://gist.github.com/veekaybee/9a514e89847a1d0b6fcd3910ad56c39e.js"></script>
+ {{< gist veekaybee 9a514e89847a1d0b6fcd3910ad56c39e>}}
 
  The docker image base for the web is `bitnami:pytorch` and it installs requirements via `requirements.txt`
 
@@ -438,7 +439,7 @@ On top of all of this, I worked to make the site load quickly both on web and mo
 
 The Docker compose takes this Dockerfile and networks it to the Redis container.
 
-<script src="https://gist.github.com/veekaybee/c661b50e364e4f6d1dc283a57eb6a6d9.js"></script>
+{{< gist veekaybee c661b50e364e4f6d1dc283a57eb6a6d9>}}
 
 All of this is run through a Makefile that has commands to build, serve, spin down, and run onnx model creation from the root of the directory. Once I'm happy with my code, I push a branch to GitHub where github actions runs basic tests and linting on code that should, in theory, already be checked since I have `precommit` set up. [The pre-commit hook](https://github.com/veekaybee/viberary/blob/main/.pre-commit-config.yaml) lints it and cleans everything up, including black, ruff, and isort, before I even push to a branch.
 
@@ -449,12 +450,12 @@ Then, once the branch passes, I merge into main. The main branch does tests and 
 
 Finally, on the server, I have a very scientific shell script that helps me configure each additional machine. Since I only needed to do two, it's fine that it's fairly manual at the moment.
 
-<script src="https://gist.github.com/veekaybee/f5ff921355e6cd3970bd097dcb0fbc35.js"></script>
+{{< gist veekaybee f5ff921355e6cd3970bd097dcb0fbc35>}}
 
 Finally everything is routed to port 80 via nginx, which I configured on each DigitalOcean droplet that I created. I load balanced two droplets behind a load balancer, pointing to the same web address, a domain I bought from Amazon's Route 53. I eventually had to transfer the domain to Digital Ocean, because it's easier to manage SSL and HTTPS on the load balancer when all the machines are on the same provider.
 
 <script src="https://gist.github.com/veekaybee/f18ce09aa50c7cfdcb61300770ef8f52.js"></script>
-
+{% gist fc6a1b345c82ec4967e9dc3c4d8bba4f %}
 
 Now, we have a working app. The final part of this was load testing, which I did with [Python's Locust library](https://locust.io/), which provides a nice interface for running any type of code against any endpoint that you specify. One thing that I realized as I was load testing was that my model was slow, and search expects instant results, so I converted it to an [ONNX artifact](https://blog.vespa.ai/stateful-model-serving-how-we-accelerate-inference-using-onnx-runtime/) and had to change the related code, as well.
 
@@ -487,7 +488,7 @@ The important thing is to keep benchmarking the current model against previous m
 
 # Citations
 
-{% gist fc6a1b345c82ec4967e9dc3c4d8bba4f %}
+{{< gist veekaybee fc6a1b345c82ec4967e9dc3c4d8bba4f >}}
 
 # Resources
 
