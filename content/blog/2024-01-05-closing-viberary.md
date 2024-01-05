@@ -35,7 +35,9 @@ There were SO many, SO many things I learned from this project. Most of them are
 
 For much, much more, read on!
 
-{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/static/assets/img/learningtired.png">}}
+{{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/learningtired.png">}}
+
+
 
 ### August 5, 2023
 
