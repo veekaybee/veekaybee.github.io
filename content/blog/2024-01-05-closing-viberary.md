@@ -392,11 +392,11 @@ the dataset is new to you. Additionally, [the UX of the SERP page matters greatl
 The hard part for me was in getting users to understand how to write a successful vibe query that focused on semantic rather than direct search. I started out with a fairly simple results page that had the title and the rank of the results.
 
 
- {{< figure  width="600" src="http://viberary.pizza/static/assets/img/cats.png">}}
+ {{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/viberary/main/assets/cats.png">}}
 
  It became clear that this was not satisfactory: there was no way to reference the author or to look up the book, and the ranking was confusing, particularly to non-developers who were not used to zero indexing.  I then iterated to including the links to the books so that people could introspect the results.
 
-{{< figure  width="600" src="http://viberary.pizza/static/assets/img/vibe2.png">}}
+{{< figure  width="600" src="http://viberary.pizza/static/assets/img/vibe2.jpeg">}}
 
  I removed the ranking because it felt more confusing and took up more computational power to include it, and additionally people generally understand that best search results are at the top. Finally, I added button suggestions for types of queries to write. I did this by looking at the list of Netflix original categories to see if I could create some of my own, and also by asking friends who had tested the app.
 
@@ -458,7 +458,7 @@ Finally everything is routed to port 80 via nginx, which I configured on each Di
 
 Now, we have a working app. The final part of this was load testing, which I did with [Python's Locust library](https://locust.io/), which provides a nice interface for running any type of code against any endpoint that you specify. One thing that I realized as I was load testing was that my model was slow, and search expects instant results, so I converted it to an [ONNX artifact](https://blog.vespa.ai/stateful-model-serving-how-we-accelerate-inference-using-onnx-runtime/) and had to change the related code, as well.
 
-{{< figure  width="600" src="http://viberary.pizza/static/assets/img/locust.png">}}
+{{< figure  width="600" src="http://viberary.pizza/static/assets/img/locust.jpeg">}}
 
  Finally, I wrote a small logging module that propogates across the app and keeps track of everything in the docker compose logs.
 
