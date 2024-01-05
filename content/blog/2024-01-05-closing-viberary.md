@@ -15,10 +15,10 @@ Viberary is a side project that I worked on in 2023, which does semantic search 
 
 I'm shutting down the running app and putting the codebase in maintenance mode because:
 
-+ A lot of what I want to continue to do there (i.e. changing embedding models, modifying training data) involves building out more complex infra: a model store, a feature store, data management, evaluation infra, and that's going to take longer than I have
++ A lot of what I want to continue to do there (i.e. changing embedding models, modifying training data) involves building out more complex infra: a model store, a feature store, data management, evaluation infra, and all of that's going to take longer than I have
 + There's a lot of maintenance that needs to happen for a running app (Python dependencies, etc. ) I.e. [all code is technical debt.](https://blog.professorbeekums.com/all-code-is-debt/) 
 + Cost! I don't want to maintain an app that is currently losing $100+ a month to maintenance costs unless I'm also planning to make money from it. I'm not planning to, but I have learned a LOT from this project and I have loved building and sharing it. 
-+ I have a new project idea I'd like to work on! , so I need to make space for it.  
++ I have a new project idea I'd like to work on, so I need to make space for it.  
 
 There were SO many, SO many things I learned from this project. Most of them are outlined in the post below, so read on. But, if you want a list of high-level bullets: 
 
@@ -59,7 +59,6 @@ Viberary's machine learning architecture is a [two-tower](https://blog.reachsumi
 
 {{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/viberary_arch.png">}}
 
-https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/
 
 The training data is generated locally by [proessing JSON in DuckDB](https://github.com/veekaybee/viberary/blob/main/src/model/generate_training_data.py) and the model is converted to ONNX for performant inference, with [corpus embeddings learned on AWS P3 instances](https://github.com/veekaybee/viberary/blob/main/src/model/generate_embeddings.ipynb) against the same model and stored in Redis. Retrieval happens using the [Redis Search](https://redis.io/docs/interact/search-and-query/) set with the [HNSW algorithm](https://arxiv.org/abs/1603.09320) to search on cosine similarity. Results are served through a Flask API running four [Gunicorn](https://gunicorn.org/) workers and served to a [Bootstrap front-end.](https://getbootstrap.com) using Flask's ability to statically reder [Jinja templates](https://jinja.palletsprojects.com/en/3.1.x/). There is no Javascript dependencies internal to the project.
 
