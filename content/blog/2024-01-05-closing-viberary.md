@@ -55,17 +55,17 @@ I hope with this write-up to not only remind myself of what I did, but outline w
 Viberary's machine learning architecture is a [two-tower](https://blog.reachsumit.com/posts/2023/03/two-tower-model/) semantic retrieval model that encodes the user search query and the Goodreads book corpus using the
 [Sentence Transformers pretrained asymmetric MSMarco Model](https://www.sbert.net/docs/pretrained-models/msmarco-v3.html).
 
-{{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/static/assets/img/viberary_arch.png">}}
+{{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/viberary_arch.png">}}
 
 https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/
 
 The training data is generated locally by [proessing JSON in DuckDB](https://github.com/veekaybee/viberary/blob/main/src/model/generate_training_data.py) and the model is converted to ONNX for performant inference, with [corpus embeddings learned on AWS P3 instances](https://github.com/veekaybee/viberary/blob/main/src/model/generate_embeddings.ipynb) against the same model and stored in Redis. Retrieval happens using the [Redis Search](https://redis.io/docs/interact/search-and-query/) set with the [HNSW algorithm](https://arxiv.org/abs/1603.09320) to search on cosine similarity. Results are served through a Flask API running four [Gunicorn](https://gunicorn.org/) workers and served to a [Bootstrap front-end.](https://getbootstrap.com) using Flask's ability to statically reder [Jinja templates](https://jinja.palletsprojects.com/en/3.1.x/). There is no Javascript dependencies internal to the project.
 
-{{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/static/assets/img/tactical_app.png">}}
+{{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/tactical_app.png">}}
 
 It's served from two [Digital Ocean droplets](https://www.digitalocean.com/products/droplets) behind a [Digital Ocean load balancer](https://www.digitalocean.com/products/load-balancer) and [Nginx](https://vicki.substack.com/p/when-you-write-a-web-server-but-you), as a Dockerized application with networking spun up through Docker compose between the web server and Redis Docker image, with data persisted to [external volumes in DigitalOcean](https://docs.digitalocean.com/products/volumes/),  with [Digital Ocean] serving as the domain registrar and load balancer router.
 
-{{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/master/static/images/static/assets/img/physical_arch_2.png">}}
+{{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/physical_arch_2.png">}}
 
 The deployable code artifact is generated through [GitHub actions](https://github.com/veekaybee/viberary/tree/main/.github/workflows) on the main branch of the repo and then I manually refresh the docker image on the droplets through a set of Makefile commands. This all works fairly well at this scale for now.
 
