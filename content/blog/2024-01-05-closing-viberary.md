@@ -487,7 +487,7 @@ The important thing is to keep benchmarking the current model against previous m
 
 # Citations
 
-<script src="https://gist.github.com/veekaybee/fc6a1b345c82ec4967e9dc3c4d8bba4f.js"></script>
+{% gist fc6a1b345c82ec4967e9dc3c4d8bba4f %}
 
 # Resources
 
