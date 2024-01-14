@@ -159,7 +159,7 @@ What I realized is that the user would have to provide the query context to seed
 {{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/searchrecscontext.png">}}
 
 
-An additional consideration was that recommendation surfaces are also traditionally rows of cards or lists that are loaded when the user is logged in, something that I don't also don't have and don't want to implement from the front-end perspective. I'd like the user to be able to enter their own search query.
+An additional consideration was that recommendation surfaces are also traditionally rows of cards or lists that are loaded when the user is logged in, something that I also don't have and don't want to implement from the front-end perspective. I'd like the user to be able to enter their own search query.
 
 This idea eventually evolved into the thinking that, given my project constraints and preferences, what I had was really a semantic search problem aimed specifically at a non-personalized way of surfacing books.
 
@@ -253,12 +253,12 @@ My project tech stack, as it now stands is primarily Python developed in [virtua
 # Training Data
 
 ---
-The original book data comes from [UCSD Book Graph](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/books), which scraped it from Goodreads for research papers in 2017-2019.
+The original book data comes from [UCSD Book Graph](https://mengtingwan.github.io/data/goodreads), which scraped it from Goodreads for research papers in 2017-2019.
 
 The data is stored in several gzipped-JSON files:
 
-+ [books](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/books) -  detailed meta-data about 2.36M books
-+ [reviews](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/reviews?authuser=0) - Complete 15.7m reviews (~5g):15M records with detailed review text
++ [books](https://mengtingwan.github.io/data/goodreads#datasets) -  detailed meta-data about 2.36M books
++ [reviews](https://mengtingwan.github.io/data/goodreads#datasets) - Complete 15.7m reviews (~5g):15M records with detailed review text
 
 
 Sample row: Note these are all encoded as strings!
@@ -458,7 +458,6 @@ Finally, on the server, I have a very scientific shell script that helps me conf
 Finally everything is routed to port 80 via nginx, which I configured on each DigitalOcean droplet that I created. I load balanced two droplets behind a load balancer, pointing to the same web address, a domain I bought from Amazon's Route 53. I eventually had to transfer the domain to Digital Ocean, because it's easier to manage SSL and HTTPS on the load balancer when all the machines are on the same provider.
 
 <script src="https://gist.github.com/veekaybee/f18ce09aa50c7cfdcb61300770ef8f52.js"></script>
-{% gist fc6a1b345c82ec4967e9dc3c4d8bba4f %}
 
 Now, we have a working app. The final part of this was load testing, which I did with [Python's Locust library](https://locust.io/), which provides a nice interface for running any type of code against any endpoint that you specify. One thing that I realized as I was load testing was that my model was slow, and search expects instant results, so I converted it to an [ONNX artifact](https://blog.vespa.ai/stateful-model-serving-how-we-accelerate-inference-using-onnx-runtime/) and had to change the related code, as well.
 
