@@ -279,6 +279,7 @@ In the world of GPU training and serving, we now have a different problem. We ne
 As a result, it makes sense to have special GPU clusters that we now need to manage [with specific considerations.](https://github.com/stas00/ml-engineering/blob/master/insights/ai-battlefield.md#ml-engineers-hell) 
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1c2a48a7-de84-4ce7-a05c-5587615042cc">}}
+from [Making GPUs go BRRR](https://horace.io/brrr_intro.html)
 
 
 # TL;DR
