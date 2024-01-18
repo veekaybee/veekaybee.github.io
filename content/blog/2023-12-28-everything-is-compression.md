@@ -109,7 +109,7 @@ There was a lot of conversation around this paper, and then everyone forgot it i
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/33ef2ef7-4461-406f-9d33-8d8e783cea71">}}
 
-These compression tasks take on any number of shapes: as [iterative combinations of trees](https://www.nvidia.com/en-us/glossary/xgboost/) in gradeint boosting, as [user-item matrices in collaborative filtering](https://proceedings.neurips.cc/paper_files/paper/2014/file/feab05aa91085b7a8012516bc3533958-Paper.pdf), or as [attention mechanisms](https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html) in deep learning models.  
+These compression tasks take on any number of shapes: as [iterative combinations of trees](https://www.nvidia.com/en-us/glossary/xgboost/) in gradient boosting, as [user-item matrices in collaborative filtering](https://proceedings.neurips.cc/paper_files/paper/2014/file/feab05aa91085b7a8012516bc3533958-Paper.pdf), or as [attention mechanisms](https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html) in deep learning models.  
 
 The rest of machine learning is a layer of software engineering around the model artifacts to keep them working in production settings. In other words, we have the [Task and the Platform.](https://www.sh-reya.com/blog/phd-year-one/) 
 
@@ -235,7 +235,7 @@ We started with mainframe processing. Once we broke apart the mainframe into per
 
 Now that training is the bottleneck and bandwidth is cheap, we rely on external LLM artifacts that create generalized paradigms of compression not specific to our busines use-cases. We've outsourced the model creation to a few large companies (OpenAI, Meta, Mistral, etc.) and these base model artifacts now live either behind an API or are available somewhere like the HuggingFace model hub. 
 
-LLM [model artifacts right now come in three flavors](https://www.artfintel.com/p/the-evolution-of-the-llm-api-market-dcf): 
+LLM [model artifacts right now come in two-ish flavors](https://www.artfintel.com/p/the-evolution-of-the-llm-api-market-dcf): 
 
 1. API-based calls to models hosted with proprietary vendors, most likely OpenAI these days, and with [OpenAI-interfacing APIs like Together](https://docs.together.ai/docs/openai-api-compatibility) or using model artifacts hosted on model hubs like HuggingFace
 2. Using your own trained, or more likely, fine-tuned model artifacts starting with a base model as an API or model hub model on your own public cloud GPU-based instances or in an HPC Slurm-style cluster.  This is only now starting to pick up steam in 2024, but I expect it will grow, a lot. 
