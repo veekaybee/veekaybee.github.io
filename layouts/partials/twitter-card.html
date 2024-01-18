@@ -1,0 +1,23 @@
+{{ if .Params.twitter_card }}
+<meta name="twitter:card" content="{{ .Params.twitter_card }}">
+{{ else }}
+<meta name="twitter:card" content="summary_large_image">
+{{ end }}
+
+{{ with .Params.twitter_image }}
+<meta name="twitter:image" content="{{ . | absURL }}">
+{{ else }}
+<meta name="twitter:image" content="{{ .Site.Params.twitter.image | absURL }}">
+{{ end }}
+
+{{ if .Params.twitter_title }}
+<meta name="twitter:title" content="{{ .Params.twitter_title }}">
+{{ else }}
+<meta name="twitter:title" content="{{ .Title }}">
+{{ end }}
+
+{{ if .Params.twitter_description }}
+<meta name="twitter:description" content="{{ .Params.twitter_description }}">
+{{ else }}
+<meta name="twitter:description" content="{{ .Summary | htmlEscape }}">
+{{ end }}
