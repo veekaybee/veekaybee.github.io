@@ -243,7 +243,7 @@ LLM [model artifacts right now come in three flavors](https://www.artfintel.com/
 So what we've done is changed the amount of the model we have agency over in the tradeoff for more generalizable compression. All of our data now does not live in-house, it only does in the case that we're fine-tuning it, and even then, we are likely using also at least some public datasets that have been put together specifically for the purporses for fine-tuning.  
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ce90319f-f17b-4b0b-8eac-c3a8880be4ef">}}
 
-In each of the cases, in gaining a larger amount of compressed data, we give up some degree of internal control over our model state. This is also the reason why [RAG as an architecture](https://arxiv.org/abs/2312.10997) is so popular. At least 50% of LLM use-cases are straight-up search, becuase web search (except for Kagi, [everyone should use Kagi](https://kagi.com/) it's great) is in a very bad state. 
+In each of the cases, in gaining a larger amount of compressed data, we give up some degree of internal control over our model state. This is also the reason why [RAG as an architecture](https://arxiv.org/abs/2312.10997) is so popular. At least 50% of LLM use-cases are straight-up search, because web search (except for Kagi, [everyone should use Kagi](https://kagi.com/) it's great) is in a very bad state. 
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/99a28ef1-aaa3-4fb9-ab9b-676bafcd3252">}}
 
