@@ -31,28 +31,28 @@ When one of the men is debriefed afterwards, he says, "I probably went with what
 
 This reminded me a lot of [one of my favorite essays](https://danluu.com/wat/) about how this applies to work, called, "normalization of deviance." The author describes behaviors coming into companies that were completely normal in those companies but seemed completely strange to him coming from the outside. The essay's main thrust is engineering cultures can be optimized, but my takeaway has always been that new people joining companies and teams are the best possible opportunity to get a sense for what the company and team's values are and how they should operate:
 
-	People don't automatically know what should be normal, and when new people are onboarded, they can just as easily learn deviant processes that have become normalized as reasonable processes.
+> People don't automatically know what should be normal, and when new people are onboarded, they can just as easily learn deviant processes that have become normalized as reasonable processes.
 
-	[Julia Evans](https://jvns.ca/) described to me how this happens:
+>[Julia Evans](https://jvns.ca/) described to me how this happens:
 
-	new person joins
-	new person: WTF WTF WTF WTF WTF
-	old hands: yeah we know we're concerned about it
-	new person: WTF WTF wTF wtf wtf w...
-	new person gets used to it
-	new person #2 joins
-	new person #2: WTF WTF WTF WTF
-	new person: yeah we know. we're concerned about it.
+> new person joins
+>new person: WTF WTF WTF WTF WTF
+>old hands: yeah we know we're concerned about it
+>new person: WTF WTF wTF wtf wtf w...
+>new person gets used to it
+>new person #2 joins
+>new person #2: WTF WTF WTF WTF
+>new person: yeah we know. we're concerned about it.
 
-	The thing that's really insidious here is that people will really buy into the WTF idea, and they can spread it elsewhere for the duration of their career. Once, after doing some work on an open source project that's regularly broken and being told that it's normal to have a broken build, and that they were doing better than average, I ran the numbers, found that project was basically worst in class, and wrote something about the idea that it's possible to have a build that nearly always passes with relatively low effort. The most common comment I got in response was, "Wow that guy must work with superstar programmers. But let's get real. We all break the build at least a few times a week", as if running tests (or for that matter, even attempting to compile) before checking code in requires superhuman abilities. But once people get convinced that some deviation is normal, they often get really invested in the idea.
+>The thing that's really insidious here is that people will really buy into the WTF idea, and they can spread it elsewhere for the duration of their career. Once, after doing some work on an open source project that's regularly broken and being told that it's normal to have a broken build, and that they were doing better than average, I ran the numbers, found that project was basically worst in class, and wrote something about the idea that it's possible to have a build that nearly always passes with relatively low effort. The most common comment I got in response was, "Wow that guy must work with superstar programmers. But let's get real. We all break the build at least a few times a week", as if running tests (or for that matter, even attempting to compile) before checking code in requires superhuman abilities. But once people get convinced that some deviation is normal, they often get really invested in the idea.
 
-There are two interesting orthongonal things going on here: when we onboard onto a new company, we are bringing all of the baggage of our past career in tech. A lot of times, we lean on what we've seen work well in certain contexts.   "At my last company, [we used Kafka](https://newsletter.vickiboykis.com/archive/you-dont-need-kafka/) and it was great, so we should do that here."  "The best place I know only uses test-driven-development." "Go or nothing." "We should do kanban (or we should not do kanban) Sometimes, this is useful. Sometimes, it's a [form of reminiscing](https://lethain.com/reminiscing/).  
+There are two interesting orthongonal things going on here: first, when we onboard onto a new company, we are bringing all of the experience and baggage of our past career in tech. A lot of times, we lean on what we've seen work well in certain contexts.   "At my last company, [we used Kafka](https://newsletter.vickiboykis.com/archive/you-dont-need-kafka/) and it was great, so we should do that here."  "The best place I know only uses test-driven-development." "Go or nothing." "We should do kanban (or we should not do kanban) Sometimes, this is useful. Sometimes, it's a [form of reminiscing](https://lethain.com/reminiscing/).  
 
 > Beyond snacking, which can be valuable when it helps you manage your energy levels, there is a similar pattern that happens when a business or individual goes through a difficult moment: under pressure, most people retreat to their area of highest perceived historical impact, even if it isn’t very relevant to today’s problems. Let’s call this reminiscing. 
 
 Sometimes this is helfpul, sometimes, it's not. 
 
-At the same time as we are trying to prove ourselves, remind our company and team why they picked us - for our expertise, our history, our skills - we are also trying to fit into our new team, because [you have two jobs](https://jacobian.org/2017/nov/1/you-have-two-jobs/):
+Second, at the same time as we are trying to prove ourselves, remind our company and team why they picked us - for our expertise, our history, our skills - we are also trying to fit into our new team, because [you have two jobs](https://jacobian.org/2017/nov/1/you-have-two-jobs/):
 
 	You were hired to write code. Many developers make the mistake and think that their job stops there. That’s not true. In fact, you have two jobs:
 
@@ -60,7 +60,7 @@ At the same time as we are trying to prove ourselves, remind our company and tea
     Be easy to work with.
 
 
-These two ideas, of trying to both stand out and fit in, are extremely strong, and both work at odds with each other throughout our careers. 
+These two ideas, of trying to both stand out and fit in, are extremely strong, and both work at odds with each other throughout our careers and our lives. 
 
 It's hard to find a balance and let the intermediate state win, but I find that, just as helpful as working through it, it's really important even to be aware that both pyramids, the white and black, exist.  
 
