@@ -36,12 +36,19 @@ This reminded me a lot of [one of my favorite essays](https://danluu.com/wat/) a
 >[Julia Evans](https://jvns.ca/) described to me how this happens:
 
 > new person joins
+
 >new person: WTF WTF WTF WTF WTF
+
 >old hands: yeah we know we're concerned about it
+
 >new person: WTF WTF wTF wtf wtf w...
+
 >new person gets used to it
+
 >new person #2 joins
+
 >new person #2: WTF WTF WTF WTF
+
 >new person: yeah we know. we're concerned about it.
 
 >The thing that's really insidious here is that people will really buy into the WTF idea, and they can spread it elsewhere for the duration of their career. Once, after doing some work on an open source project that's regularly broken and being told that it's normal to have a broken build, and that they were doing better than average, I ran the numbers, found that project was basically worst in class, and wrote something about the idea that it's possible to have a build that nearly always passes with relatively low effort. The most common comment I got in response was, "Wow that guy must work with superstar programmers. But let's get real. We all break the build at least a few times a week", as if running tests (or for that matter, even attempting to compile) before checking code in requires superhuman abilities. But once people get convinced that some deviation is normal, they often get really invested in the idea.
