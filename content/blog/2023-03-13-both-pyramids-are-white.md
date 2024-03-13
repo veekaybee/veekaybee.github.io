@@ -15,7 +15,7 @@ In the introduction [for example](https://www.youtube.com/watch?v=_LYe58b-3HM), 
 
 This is fairly similar, but years ahead of the ["Awareness test"](https://www.youtube.com/watch?v=Ahg6qcgoay4) video. 
 
-One of the most compelling and very sweet parts of the video is a Юsection called "Both pyramids are white,"Ж(https://www.youtube.com/watch?v=35w7MV5j_ao) where a group of children is shown two pyramids, a white and black one, and then a white and white pyramid. After they verify the colors, the leader of the experiment instructs them to always say that both pyramids are white, even if one is white, for any newcomers who join the group. 
+One of the most compelling and very sweet parts of the video is a [section called "Both pyramids are white,"](https://www.youtube.com/watch?v=35w7MV5j_ao) where a group of children is shown two pyramids, a white and black one, and then a white and white pyramid. After they verify the colors, the leader of the experiment instructs them to always say that both pyramids are white, even if one is white, for any newcomers who join the group. 
 
 {{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/58ecfa5d-5b36-4325-884b-0adbcaf67676">}}
 
