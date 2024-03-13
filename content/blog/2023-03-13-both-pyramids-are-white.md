@@ -1,7 +1,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2024-01-05'
+date = '2024-03-13'
 site = '@vboykis'
 title = "Both pyramids are white"
 description = 'On how groups collectively think'
