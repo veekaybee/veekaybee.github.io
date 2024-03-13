@@ -54,10 +54,10 @@ Sometimes this is helfpul, sometimes, it's not.
 
 Second, at the same time as we are trying to prove ourselves, remind our company and team why they picked us - for our expertise, our history, our skills - we are also trying to fit into our new team, because [you have two jobs](https://jacobian.org/2017/nov/1/you-have-two-jobs/):
 
-	You were hired to write code. Many developers make the mistake and think that their job stops there. That’s not true. In fact, you have two jobs:
+>You were hired to write code. Many developers make the mistake and think that their job stops there. That’s not true. In fact, you have two jobs:
 
-    Write good code.
-    Be easy to work with.
+>Write good code.
+>Be easy to work with.
 
 
 These two ideas, of trying to both stand out and fit in, are extremely strong, and both work at odds with each other throughout our careers and our lives. 
