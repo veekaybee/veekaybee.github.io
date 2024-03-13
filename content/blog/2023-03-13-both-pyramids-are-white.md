@@ -15,13 +15,13 @@ In the introduction [for example](https://www.youtube.com/watch?v=_LYe58b-3HM), 
 
 This is fairly similar, but years ahead of the ["Awareness test"](https://www.youtube.com/watch?v=Ahg6qcgoay4) video. 
 
-One of the most compelling and very sweet parts of the video is a section called "Both pyramids are white," where a group of children is shown two pyramids, a white and black one, and then a white and white pyramid. After they verify the colors, the leader of the experiment instructs them to always say that both pyramids are white, even if one is white, for any newcomers who join the group. 
+One of the most compelling and very sweet parts of the video is a Юsection called "Both pyramids are white,"Ж(https://www.youtube.com/watch?v=35w7MV5j_ao) where a group of children is shown two pyramids, a white and black one, and then a white and white pyramid. After they verify the colors, the leader of the experiment instructs them to always say that both pyramids are white, even if one is white, for any newcomers who join the group. 
 
-{{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/pyramids_are_white.png">}}
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/58ecfa5d-5b36-4325-884b-0adbcaf67676">}}
 
 The new children who join after the instructions are relayed can see that something is wrong, but they also say that both pyramids are white.  In the debrief after the experiment, where the leader reveals that the children were tricking them, she asks gently why the children said that both pyramids were black, and the girl says, "Because everyone else said so."  "And you repeated after them?" the leader asks. "Yes," the girl nods. 
 
-{{< figure  width="600" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/pyramids_are_white.png">}}
+{{< figure  width="600" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/3286d400-f292-4549-80d3-e33d39c6bee5">}}
 
 What's even more striking is that the test is then repeated in a group of adults, who react exactly the same way. 
 
