@@ -7,6 +7,8 @@ title = "Both pyramids are white"
 description = 'On how groups collectively think'
 +++
 
+edit: Huge thanks to Vamsi for digging into [how to translate this into English!](https://vamsiuppala.github.io/2024/03/15/speaker_recognition_and_translation.html)
+
 I recently came across a really great Soviet video from 1971 called ["Myself and Others"](https://ru.wikipedia.org/wiki/%D0%AF_%D0%B8_%D0%B4%D1%80%D1%83%D0%B3%D0%B8%D0%B5)  (unfortunately only in Russian so far) where the creators examine how people react psychologically to different situations and how we see ourselves in light of a group. 
 
 In the introduction [for example](https://www.youtube.com/watch?v=_LYe58b-3HM), a professor starts giving a lecture, then a group of robbers storm in, fire fake guns, and take the professor away. Afterwards, the students have to recount what happened: i.e. how many robbers they were, what they did, what they were holding, etc, and a room full of people could not accurately paint a depiction of the entire scene, because, as the professor explains, we are prone to make mistakes, particularly if we are focused on something else. 
