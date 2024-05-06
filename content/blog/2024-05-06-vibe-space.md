@@ -2,7 +2,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2024-04-25'
+date = '2024-05-06'
 site = '@vboykis'
 title = "We've been put in the vibe space"
 description = 'Search+recs+open-ended text boxes'
