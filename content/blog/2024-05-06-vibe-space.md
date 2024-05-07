@@ -8,7 +8,7 @@ title = "We've been put in the vibe space"
 description = 'Search+recs+open-ended text boxes'
 +++
 
-[Jakob’s Law of UX](https://twitter.com/corychainsman/status/1786574177333334431) goes something [like this](https://lawsofux.com/jakobs-law/).  I as a user online spend my time on many sites. As such, when I come to your site, I am already used to the way they work, and don’t want to learn new paradigms. [Some also call these preconcieved notions](https://twitter.com/vboykis/status/1786557956617601486) user mental models or affordances. 
+[Jakob’s Law of UX](https://twitter.com/corychainsman/status/1786574177333334431) goes something [like this](https://lawsofux.com/jakobs-law/).  I, as a user online, spend my time on many sites. As such, when I come to your site, I am already used to the way the other sites work, and I don’t want to learn new paradigms. [Some also call these preconceived notions](https://twitter.com/vboykis/status/1786557956617601486) user mental models or affordances. 
 
 I like to call it the user-site contract. 
 
