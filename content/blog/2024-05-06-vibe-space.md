@@ -55,8 +55,8 @@ Even when we open up Instagram search to perform a directed search, we’re gree
 
 {{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/llamabar2.png">}}
 
- But I don’t want to ask Meta AI about the best history podcasts or ask about k-pop, I want to find the [video of the trained raven I saw a couple weeks ago.](https://www.youtube.com/watch?v=JBMLHFSZlEg) - I want to perform social keyword search. And on Whatsapp,  I want to talk to people on Whatsapp directly, without a chatbot in the middle. 
+ But I don’t want to ask Meta AI about the best history podcasts or ask about k-pop, I want to find the [video of the trained raven I saw a couple weeks ago.](https://www.youtube.com/watch?v=JBMLHFSZlEg) I want to perform social keyword search. And on Whatsapp,  I want to talk to people on Whatsapp directly, without a chatbot in the middle. 
  
- I want to be in my four quadrants, and because I’ve been conditioned by 15 years of past internet history to be in those quadrants, and I’m annoyed by being pushed to the middle everywhere across all interfaces.  
+ I want to be in my four quadrants.  And, because I’ve been conditioned by 15 years of past internet history to be in those quadrants, I’m annoyed by being pushed to the middle everywhere across all interfaces.  
 
 This is going to be a frustrating time for consumers until we get specific LLM use-cases sorted out and made less general. Interestingly enough, [this is already happening to some extent in the enterprise space](https://www.wired.com/story/unsexy-future-generative-ai-enterprise-apps/). It will be interesting to see what happens for us end-users and the contract. Until then, see you in the middle at the ✨.
