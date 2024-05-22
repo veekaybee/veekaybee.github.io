@@ -22,15 +22,15 @@ Per adesso posso parlare soltanto di gelato o colori. Perché non so ancora dire
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/5de1044d-3dd7-4acc-a53c-9cb66a8f21fa">}}
 
-[I’m Vicki](https://vickiboykis.com/) and I work as a machine learning engineer at Mozilla.ai, building a platform to enable developers to evaluate and select between different LLMs. Before working on LLMs, I’ve built large-scale ML systems in security, social recommenders, tv content recommendations, and search. 
+[I’m Vicki](https://vickiboykis.com/) and I work as a machine learning engineer [at Mozilla.ai](https://blog.mozilla.ai/author/vicki/), building a platform to enable developers to evaluate and select between different LLMs. Before working on LLMs, I’ve built large-scale ML systems in security, social recommenders, and tv content recommendations 
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/006ba830-8a5d-46ac-b0ee-072a6ef218de">}}
 
-After working with LLMs for over a year, what I've found is that the new engineering systems we’re building around these LLMs are a lot like the old ones. Once we cut away the hype, what we’re usually left with are plain engineering and machine learning problems. 
+After working with LLMs for the past year, what I've found is that the new engineering systems we’re building around these LLMs are a lot like the old ones. Once we cut away the hype, what we’re usually left with are plain engineering and machine learning problems. 
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7847edbf-f92e-4c37-811d-d35661dfd2dd">}}
 
-But how do we as practitioners cut away the hype?  Since we are in Firenze, I want to tell a story I recently heard while talking to other tech folks that took place here that might help us to navigate this. Around town,sounds like there is a company called Medici Corp. 
+But how do we as practitioners cut away the hype?  Since we are in Firenze, I want to tell a story I recently heard while talking to other tech folks that took place here that might help us to navigate this. Around town, there is a company called Medici Corp. 
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d55cf74f-4194-4fd8-a6c5-73863e659d11">}}
 
@@ -102,7 +102,7 @@ Gradient descent minimizes the loss function by iteratively adjusting the model'
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/df855cd4-3bed-4048-a034-788eca2b5dbe">}}
 
-For example, [let’s say that we produce artisinal hazlenut spread](http://vickiboykis.com/test_blog/2024/02/26/gguf-the-long-way-around/) for statisticians, Nulltella. We want to predict how many jars of Nulltella we’ll produce on any given day. Let’s say we have some data available to us, and that is, how many hours of sunshine we have per day, and how many jars of Nulltella we’ve been able to produce every day.
+For example, [let’s say that we produce artisanal hazelnut spread](http://vickiboykis.com/test_blog/2024/02/26/gguf-the-long-way-around/) for statisticians, Nulltella. We want to predict how many jars of Nulltella we’ll produce on any given day. Let’s say we have some data available to us, and that is, how many hours of sunshine we have per day, and how many jars of Nulltella we’ve been able to produce every day.
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7727470d-a6f2-4ab5-bb9a-2f7af591ec49">}}
 
@@ -191,7 +191,7 @@ That means when we as engineers try to build large systems with multiple compone
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/87019f6c-70dd-4f38-b634-ab8226e6a0d3">}}
 
-Each of these components is a million decisions to be made. Here are a list I can tick off just by looking at this diagram.
+Each of these components is a million decisions to be made. Here is a list I can tick off just by looking at this diagram.
 
 + Should we use our own model or an open-source base-model or an API vendor? Which API vendor? 
 +  How should we go about testing our prompts? How should we constrain the outputs of the model? +  Do we want to generate plain text, or JSON, or binary responses? 
@@ -229,9 +229,9 @@ This means there’s a lot of trial and error. Not many people realize it, but m
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1cb830ce-0421-41f4-bca8-e78b8fd51630">}}
 
-This is doubly true for LLMs, where our main medium of input and output is freeform text.  We have some model aspect that we put as many requirements in text into, and hope to get back logical text, or instructions, or code out.  Because the inputs of natural language are so varied and so are the outputs, the process becomes three times harder to control and evaluate. 
+This is doubly true for LLMs, where our main medium of input and output is freeform text.  We have some model that we add text requirements to, and hope to get back logical text, or instructions, or code out.  Because the inputs of natural language are so varied and so are the outputs, the process becomes three times harder to control and evaluate. 
 
-What this means for focus is that the developer, like the monks, have to create a center of focus, and that center of focus is the first use-case for evaluation for your model.  That means, if you’re a bank, you can’t evaluate a model on how well it writes poetry. It needs to be on how well a model creates top-level topics for all of your documents. 
+What this means for focus is that the developer, like the monks, has to create a center of focus, and that center of focus is the first use-case for evaluation for your model.  That means, if you’re a bank, you can’t evaluate a model on how well it writes poetry. It needs to be on how well a model creates top-level topics for all of your documents. 
 
 This means creating both what we call offline and online evaluation metrics. Online evaluation metrics are those that can be assessed by people using your product or platform, or simply doing what we call a vibe check, and offline evaluation is more scientific and offers us a grounded reference against academic benchmarks to see if our model generalizes well. In order to have a well-functioning machine 
 
@@ -288,7 +288,7 @@ So, on the final day, the final developer shared a story.  He said, “This stor
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d1e1bc32-ed56-496e-b6eb-895902c67b98">}}
 
 
-She writes that keeping track of translation between human and code logic is hard.  “When you are writing code, your mind is full of details, millions of bits of knowledge. This knowledge is in human form, which is to ray rather chaotic…For example, try to think of everything you know about something as simple as an invoice. Now try to tell an alien how to prepare one. That is programming...To program is to translate between the chaos of human life and the line-by-line world of computer language.”
+She writes that keeping track of translation between human and code logic is hard.  “When you are writing code, your mind is full of details, millions of bits of knowledge. This knowledge is in human form, which is to say rather chaotic. For example, try to think of everything you know about something as simple as an invoice. Now try to tell an alien how to prepare one. That is programming...To program is to translate between the chaos of human life and the line-by-line world of computer language.”
 
 She says that, in order to do this, a developer must not “lose attention. As the human world-knowledge tumbles about in your mind, you must keep typing, typing. You must not be interrupted.”
 
@@ -314,9 +314,9 @@ Here’s an example of a reprex in Python, the RMSE code we just reviewed in the
 
 Reprex comes in handy when you're dealing with complex distributed systems. For example, here’s an actual problem the developers were dealing with while trying to serve their model: trying to troubleshooting Ray. 
 
-Ray, is a Python and C++-based distributed framework for training and serving machine learning models, used by companies training LLMs. Its predecessors include Hadoop and Spark. It also takes inspiration from other distributed libraries. The cool thing about Ray is that it is very easy to run locally, and spinning up a single instance is something that comes out of the box, meaning we are already closer to the metal. 
+Ray is a Python and C++-based distributed framework for training and serving machine learning models, used by companies training LLMs. Its predecessors include Hadoop and Spark. It also takes inspiration from other distributed libraries. The cool thing about Ray is that it is very easy to run locally, and spinning up a single instance is something that comes out of the box, meaning we are already closer to the metal. 
 
-However,  if you have an issue, it can take a while to get to the bottom of it because of how complex the architecture is. Ray has several [orthogonal patterns](https://docs.ray.io/en/latest/ray-observability/key-concepts.html) working together. First, there are tasks that you can execute on a remote cluster and actors, which are stateful tasks. This comes from the actor pattern in computer science which recieves messages from its environment and can send messages back. 
+However,  if you have an issue, it can take a while to get to the bottom of it because of how complex the architecture is. Ray has several [orthogonal patterns](https://docs.ray.io/en/latest/ray-observability/key-concepts.html) working together. First, there are tasks that you can execute on a remote cluster and actors, which are stateful tasks. This comes from the actor pattern in computer science which receives messages from its environment and can send messages back. 
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a21ce1d1-d205-4a7e-a11b-f9eb40967390">}}
 
@@ -329,7 +329,7 @@ But don't forget that humans can only keep several things in memory when they tr
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9cd7b6ce-63d5-4efa-ba37-c5ac680aba93">}}
 
-In building their trending topic application, the team had an issue where they were looking to test a topic detection pipeline of their model using Ray serve.  Ray Serve takes your local deployable code and ships  it to your Ray cluster using the Ray client, which an API that connects a Python script to a remote Ray cluster. 
+In building their trending topic application, the team had an issue where they were looking to test a topic detection pipeline of their model using Ray serve.  Ray Serve takes your local deployable code and ships it to your Ray cluster using the Ray client, which is an API that connects a Python script to a remote Ray cluster. 
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9cd7b6ce-63d5-4efa-ba37-c5ac680aba93">}}
 
@@ -357,11 +357,11 @@ The way to start here is to start reading logs and stack traces. When you have a
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7839cbd1-e99d-4d97-8400-1d944b3c4811">}}
 
-There’s a lot going on here, and it seems to be coming form importlib rather than Ray itself, but Ray uses importlib as a dependency. So, in order to isolate it, the team went into the module in Ray that calls importlib, which lives in `python/ray/_private/utils.py`.
+There’s a lot going on here, and it seems to be coming from importlib rather than Ray itself, but Ray uses importlib as a dependency. So, in order to isolate it, the team went into the module in Ray that calls importlib, which lives in `python/ray/_private/utils.py`.
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/785667f9-a7d7-457a-98b1-0fdcd0212162">}}
 
-What the team then did was to [find the method](https://github.com/ray-project/ray/blob/683d7f378b913b943f7edf5cdca6548e807f33ed/python/ray/_private/utils.py#L1163) that opens the import path, and create a reprex for the issue, where they took that exact method calling importlib.import_module, put it into a notebook, and called the code directly. 
+What the team then did was to [find the method](https://github.com/ray-project/ray/blob/683d7f378b913b943f7edf5cdca6548e807f33ed/python/ray/_private/utils.py#L1163) that opens the import path, and created a reprex for the issue, where they took that exact method calling importlib.import_module, put it into a notebook, and called the code directly. 
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9bbc78a8-7886-49db-8936-7c498acb8eb2">}}
 
@@ -373,19 +373,24 @@ This directly didn’t work, and they proved it without using any external depen
 
 They weren’t done yet, though. When they tried to deploy this, they also got a 404 error when they tried to download the deployable from the Git hash.  This is because they were trying to enable asset downloads, aka our Topic trend detection code, from a private GitHub repo onto the head node in the cluster for running the code. Initially, they tried to use a fine-grained PAT: This didn't work, so they had to use a legacy GitHUB token. Along the way, they learned that Ray uses a library called `smart_open` for streaming files from S3/GitHub, which helped them troubleshoot further issues. 
 
-All of this is abstracted away from us by the YAML, quickly-changing documentation, and multiple parts of the system. To get from that to the piece of information you need, the team need to ruthlessly strip out all areas of detail and focus on the problem, and, hopefully, get to a reproducible example. This is getting closer to the metal, this is attention. 
+All of this is abstracted away from us by the YAML, quickly-changing documentation, and multiple parts of the system. To get from that to the piece of information you need, the team needed to ruthlessly strip out all areas of detail and focus on the problem, and, hopefully, get to a reproducible example. This is getting closer to the metal, this is attention. 
 
-Finally, the team had a prototype running in production.   With this issue resolved, the team moved on, and was successfully able to deploy the topic detection app, much to the delight of the CEO. Everyone got raises and lived happily ever after in their own castles in Florence. Until they started to scale. 
+Finally, the team had a prototype running in production.   With this issue resolved, the team moved on, and was successfully able to deploy the topic detection app, much to the delight of the CEO. Everyone got raises and lived happily ever after in their own castles in Florence.  
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/4b69210a-f0a3-423b-8667-1030cb5ec90d">}}
+Until they started to develop more products. 
+
+{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9d276802-623d-4fbd-b761-1d703c7bd4a0">}}
 
 # Conclusion
 
 The developers celebrated. They had launched something into production, managed to cut away from the hype of the LLM space, and focused on a use-case that was important to their company. 
 
-Their LLM was now in production. They now came together to do a retro on what they had accomplished, and why they were able to do so. 
+{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d8032a94-4e8b-4424-ade3-539bffb1fdcf">}}
 
+They now came together to do a retro on what they had accomplished, and why they were able to do so. 
 They started by picking a single use-case for generative AI in their application and evaluating the models available for that use-case. Then, they picked online and offline evaluation metrics to continue the evaluation loop. Finally, when it came down to building the system, they focused on the smallest composable parts possible instead of starting with the top, and broke down the code until they understood it. 
+
+{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/68b5b8d4-b5ad-44e5-b56f-47a9d1f7f23c">}}
 
 All of this helped them concentrate, focus on what was most important and stay close to the metal. 
 
