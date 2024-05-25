@@ -7,7 +7,9 @@ title = "Don't worry about LLMs"
 description = 'All we have to do is get closer to the metal'
 +++
 
-This is a transcript of the talk I gave at PyCon Italia 2024 in May in Florence. 
+This is a near-transcript of [the talk I gave](https://2024.pycon.it/en/keynotes/stay-close-to-the-metal) at PyCon Italia 2024 in May in Florence. 
+
+video to follow once it's available!
 
 # Introduction
 
