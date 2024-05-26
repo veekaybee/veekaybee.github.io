@@ -4,6 +4,7 @@ creator = '@vboykis'
 date = '2024-05-25'
 site = '@vboykis'
 title = "Don't worry about LLMs"
+url: /2024/05/20/dont-worry-about-llms/
 description = 'All we have to do is get closer to the metal'
 +++
 
