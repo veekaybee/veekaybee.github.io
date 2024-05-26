@@ -1,15 +1,15 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2024-05-20'
+date = '2024-05-25'
 site = '@vboykis'
 title = "Don't worry about LLMs"
 description = 'All we have to do is get closer to the metal'
 +++
 
-This is a near-transcript of [the talk I gave](https://2024.pycon.it/en/keynotes/stay-close-to-the-metal) at PyCon Italia 2024 in May in Florence. 
+This is a near-transcript of [the talk I gave](https://2024.pycon.it/en/keynotes/stay-close-to-the-metal) at [PyCon Italia 2024](https://www.youtube.com/watch?v=Ik0voaZmf5A) in May in Florence. 
 
-video to follow once it's available!
+{{< youtube "Ik0voaZmf5A?si=h2Yfx5v_LIfWd6xz&amp;start=30316" >}}
 
 # Introduction
 
