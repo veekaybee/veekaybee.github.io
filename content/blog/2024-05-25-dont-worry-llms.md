@@ -386,18 +386,18 @@ Finally, the team had a prototype running in production.   With this issue resol
 
 Until they started to develop more products. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9d276802-623d-4fbd-b761-1d703c7bd4a0">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_75_resized.png">}}
 
 # Conclusion
 
 The developers celebrated. They had launched something into production, managed to cut away from the hype of the LLM space, and focused on a use-case that was important to their company. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d8032a94-4e8b-4424-ade3-539bffb1fdcf">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_76_resized.png">}}
 
 They now came together to do a retro on what they had accomplished, and why they were able to do so. 
 They started by picking a single use-case for generative AI in their application and evaluating the models available for that use-case. Then, they picked online and offline evaluation metrics to continue the evaluation loop. Finally, when it came down to building the system, they focused on the smallest composable parts possible instead of starting with the top, and broke down the code until they understood it. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/68b5b8d4-b5ad-44e5-b56f-47a9d1f7f23c">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_77_resized.png">}}
 
 All of this helped them concentrate, focus on what was most important and stay close to the metal. 
 
