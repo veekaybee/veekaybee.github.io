@@ -124,76 +124,80 @@ In other words, we’d like to minimize epsilon, because it will mean that, at e
 
 The equation we use for this is RMSE (Root mean squared error). 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/bed27822-9717-4c3e-9dd6-0e08a7497931">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_23_resized.png">}}
 
 
 Let’s say we initialize the function with some x values and weights. How do we optimize it? Using gradient descent. We start with either zeros or randomly-initialized values for the weights and continue recalculating both the weights and error term until we come to an optimal stopping point.  We’ll know we’re succeeding because our loss, as calculated by RMSE should incrementally decrease in every training iteration.
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/441a463a-c66c-4868-905e-083b5d6ceea1">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_24_resized.png">}}
 
 For our particular model, we can see that the loss curve reaches a local minimum after ten iterations.  If you look at the curve for the elevation the bastaixos walked from Montjuic to Santa Maria del Mar, you’ll see that it follows the same pattern. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/5a14d71f-068d-4700-9c81-42d310e958a8">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_25_resized.png">}}
 
 That’s because these two things lay out a fundamental pattern: [working on optimizing one thing at a time.](https://arxiv.org/abs/1609.04747)  
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/968e8689-bec4-4d80-978f-b9d49f550d00">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_26_resized.png">}}
 
 The bastaixos had a single goal: the completion of the cathedral, and the single functionality of carrying stones to that goal. They didn’t work on carving the stone, nor on the stained glass, nor on architecture. They just moved rocks. Everything else was peripheral, and the focus allowed them to get just one great thing done. The engineers realized that they also needed to learn to be bastaixos and focus on a single machine learning task. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fb198cda-d8ac-4eea-859a-d66b1b79a817">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_27_resized.png">}}
 
 But what they realized was that LLMs in and of themselves, while also operating on the principle of gradient descent, [are set up to solve](https://arxiv.org/abs/2402.06196) an unbounded number of open-ended tasks: they can write poems, complete recipes, classify text, summarize text, evaluate other models, act as chatbots, and much, much more. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/25265164-ba46-4137-8b93-4461efd70c61">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_28_resized.png">}}
 
 When the engineers went back to the drawing board, it was clear what they needed: the focus on a single use-case for their customers. What’s the best way to figure out what you need LLMs for? List all the problems your business is facing and see if machine learning will be the right way to address them. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/11a95c18-3dd7-425f-9c96-d40a18f54cbb">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_29_resized.png">}}
 
 Machine learning generally, and LLMs more specifically, are good for where the number of heuristics you develop starts to outweigh their maintenance cost. I’ve heard this also called the [1000-intern heuristic](https://www.youtube.com/watch?t=280&v=glpR1MD1UoM&feature=youtu.be): if it’s a task that can be simplified by a thousand people entirely new to the task doing it, then do that. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ce4659f8-71e4-4916-b69c-673e40470f0e">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_30_resized.png">}}
 
 The simplest tasks for large language models to do are summarization, classification, translation, named entity recognition, and similar. If your problems fall in that space, you’ll have an easier time than with open-ended tasks like reasoning.  This is also the reason why, often, simpler models perform better for specific tasks than general LLMs that are meant to generalize to out-of-distribution tasks.
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/c53cbf38-5da6-4cd7-a042-142d4abba520">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_31_resized.png">}}
 
 When the team thought about all the numerous things their company did, what they realized is that one of their biggest problems was trending topic detection: they have a lot of documents constantly floating around, particularly around the patronages they’re performing, and they perform a lot of art patronage. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/07da0ab8-2795-4a87-b1e2-1da102e068e1">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_32_resized.png">}}
 
 They wanted to be able to get a sense of the types of art and types of artists in the hands of the corporation at any given time so they could further explore those trends and make sure their art funding was even. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/95cd43b5-309e-4f9f-b4c5-69f2579cd22a">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_33_resized.png">}}
 
 Armed with this information, The Medici team decided that they wanted to use it internally to look at all the documents they had related to the large trove of artwork they had acquired. It would be easier to do internal topic detection than other outward-facing use-cases because they had subject-matter experts, and the categories of art were fairly established since they had in-house art experts. They presented this plan to the CEO, who was pleased. Now, they were at their next task, but they were still overwhelmed. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/c23ce972-652e-4023-8b13-79ed8982049d">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_34_resized.png">}}
+
+
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_35_resized.png">}}
 
 ## The Measurable Goal
 
 On the second day, another developer had a story.  She said, I’ve been reading about medieval monks.  
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/db2f9714-98b3-4793-8380-5db7fd77e38e">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_36_resized.png">}}
 
-Jamie Keiner, at the Department of Classics in the University of Georgia, wrote a book called [“The Wandering Mind”](https://wwnorton.com/books/9781631498053), about how medieval monks used to harness attention to make their prayers more effective.  Every day, their goal was to get higher on the spiritual plane away from earthly matters. But they kept getting distracted by the daily minutiae of life - legal disputes, farming and livestock, gossip, banality of everyday life that overloads your attention.    
+Jamie Keiner, at the Department of Classics in the University of Georgia, wrote a book called [“The Wandering Mind”](https://wwnorton.com/books/9781631498053), about how medieval monks used to harness attention to make their prayers more effective.  Every day, their goal was to get higher on the spiritual plane away from earthly matters. But they kept getting distracted by the daily minutiae of life - legal disputes, farming and livestock, gossip, banality of everyday life that overloads your attention.  
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/db2f9714-98b3-4793-8380-5db7fd77e38e">}}
+
 
 From the writings of one monk,  [John Cassian](https://en.wikipedia.org/wiki/John_Cassian), a Christian monk in the Roman empire, for example, who traveled to Egypt, it turns out that distractions are not new: In the 420s, he wrote that “the mind gets pushed around by random distractions.” Like him, many monks and nuns saw distraction as a “primordial struggle”, and something they felt obligated to continually fight 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/53ecc132-08ab-4e01-ac0c-4a8613a5b470">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_38_resized.png">}}
 
 What monks and nuns recognized is that, if they wanted to get closer to true understanding, they would have to separate from distractions that bound them to society, because it was impossible to focus on one thing at a time, and they only wanted to focus on prayer. As a monk called Hildemar of Civate put, “it is impossible to focus on two things at once - “in uno homine duas intentiones esse non posse.” 
 
 Much later, scientists confirmed that human brains have very poor capabilities for multitasking, as well.  The most items a human can hold in memory is about 7, plus or minus two, and we definitely cannot do two things simultaneously. After 7 items our cache is cleared and we start getting confused and lost. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/30cfa45e-7f7d-4a7d-a58c-0c54ada60329">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_39_resized.png">}}
 
 That means when we as engineers try to build large systems with multiple components, with large amounts of decisions to be made, the brain will shut down.  This is the case in the LLM land today. The average LLM system might look something like this.
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/87019f6c-70dd-4f38-b634-ab8226e6a0d3">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_40_resized.png">}}
+
 
 Each of these components is a million decisions to be made. Here is a list I can tick off just by looking at this diagram.
 
@@ -205,17 +209,17 @@ Each of these components is a million decisions to be made. Here is a list I can
 + Are we doing model fine-tuning, do we need separate data-collection mechanisms? 
 + How do we evaluate this model? 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/34ba15a8-d8e1-4248-bbbf-8f4ea32a23ba">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_41_resized.png">}}
+
 
 The monks told us that, even though we will have a lot of distractions and environmental variables, we need to focus on developing one good piece of software at a time as we build. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/34ba15a8-d8e1-4248-bbbf-8f4ea32a23ba">}}
 
 The developer telling the story said this reminds me of another established traditional development pattern: the philosophy of Unix, which says, tools that we build should be minimal and modular and do one thing at a time so we can combine them together later.
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/955c3924-ea0f-44d8-871d-46abe5b4fdbd">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_43_resized.png">}}
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/eb710e04-3c5e-428a-921e-42845b39fb4a">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_44_resized.png">}}
 
 It’s true that when we build machine learning systems, we have no choice: we need vector databases, and APIs, and data stores, and, most importantly, models. But, when we build an entire machine learning system at once, for example, connecting five different APIs rather than one, or trying five models rather than one, five use-cases, we see a deterioration at each stage of the process rather than focusing on streamlining a single use-case and task end-to-end.  
 
