@@ -19,58 +19,58 @@ This is a near-transcript of [the talk I gave](https://2024.pycon.it/en/keynotes
 
 Buongiorno PyconIt, grazie per avermi invitata a parlare! Avrei voluta fare tutto il discorso in italiano, ma lo sto ancora imparando. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/c86c6f58-9314-4573-ac2d-3c3a0632106e">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_2_resized.png">}}
 
 Per adesso posso parlare soltanto di gelato o colori. Perché non so ancora dire, “don’t worry about LLMs”, il resto sarà in inglese.
 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/5de1044d-3dd7-4acc-a53c-9cb66a8f21fa">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_3_resized.png">}}
 
 [I’m Vicki](https://vickiboykis.com/) and I work as a machine learning engineer [at Mozilla.ai](https://blog.mozilla.ai/author/vicki/), building a platform to enable developers to evaluate and select between different LLMs. Before working on LLMs, I’ve built large-scale ML systems in security, social recommenders, and tv content recommendations 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/006ba830-8a5d-46ac-b0ee-072a6ef218de">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_4_resized.png">}}
 
 After working with LLMs for the past year, what I've found is that the new engineering systems we’re building around these LLMs are a lot like the old ones. Once we cut away the hype, what we’re usually left with are plain engineering and machine learning problems. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7847edbf-f92e-4c37-811d-d35661dfd2dd">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_5_resized.png">}}
 
 But how do we as practitioners cut away the hype?  Since we are in Firenze, I want to tell a story I recently heard while talking to other tech folks that took place here that might help us to navigate this. Around town, there is a company called Medici Corp. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d55cf74f-4194-4fd8-a6c5-73863e659d11">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_6_resized.png">}}
 
 They are a very large organization, spread out into lots of different industries in banking, pharma, fine arts, and philanthropy. They were very successful, but recently, their CEO was worried about being left behind in AI.
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/8590deda-54e6-477e-af56-ad4a1f40d6c6">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_7_resized.png">}}
 
 And she wanted to see if there was some way they could incorporate a chatbot or similar into their offerings. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/840b6a35-3709-4ad2-b891-81d66cc7e5f0">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_8_resized.png">}}
 
 The CEO created a small R&D task force of developers and machine learning engineers and tasked them with investigating what it would take to add AI to their product over the course of a sprint. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/40a09a78-362f-4634-9c4f-ab12f059d233">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_9_resized.png">}}
 
 Now, the developers, machine learning engineers, and PMs, were all very experienced in industry, but new to LLMs, and when they started looking at all the different model choices, platforms, and the buzz around LLMs, they became very distraught. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/3815084f-e82a-4f82-ab50-b78993b9415f">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_10_resized.png">}}
 
 There were too many open-ended options , a lot of people who were loud online. So, the developers decided to rent an Airbnb outside the city for a week so they could really focus, isolate, and ship some code. When they got together around a whiteboard, they frantically started researching what tools to build an LLM with, and what they saw was [this chart.](https://mattturck.com/mad2024/) 
 
 “What do we do,” they asked. How were they going to compete in this insanely crowded market? More importantly, how could they as engineers even understand this landscape? 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/3815084f-e82a-4f82-ab50-b78993b9415f">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_11_resized.png">}}
 
 As they worried their team lead stepped forward and said, “In times like these, I turn to the wisdom of the foundational thinkers. [There is one](http://antirez.com/news/140) who said, 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/52ed8f91-86d4-4163-9a67-929d5d593026">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_12_resized.png">}}
 
 The developers turned to the team lead and said, “This man says the truth, but how can we possibly turn this into actionable advice that we can write features for with feature flags and unit tests in a two-week sprint? And deliver a product that has a magic emoji on it?” In other words, "How do we deliver AI?"
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/fe56aac1-8bbe-43c4-a0d0-124ae709cb16">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_13_resized.png">}}
 
 The team lead said, “Here’s what we’re going to do. We’re going to get in small groups and research what other people have done in the situation, and then we’re going to present what other people did.”  
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/40682084-18f1-4d95-9bab-1ec333c834ae">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_14_resized.png">}}
 
 The engineers groaned, because group work is the worst. But the team lead said, “Reading about what people in the past have done is the only way to build and keep our context window, which is our knowledge base of classical architecture patterns and historical engineering context that allows us to make good, grounded engineering decisions.” 
 
@@ -78,7 +78,7 @@ The engineers groaned, because group work is the worst. But the team lead said, 
 
 So the engineers agreed and went off to do research. All day the engineers researched and read, and the next day, they all gathered in a group. One stepped forward, and began to tell her story.
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/32aed6bd-f570-4efa-8e84-e406b0d44529">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_15_resized.png">}}
 
 She said, once upon a time in Barcelona, they were building a grand cathedral, called Santa Maria Del Mar.  At that time, [many Gothic cathedrals](https://en.wikipedia.org/wiki/Building_a_Gothic_cathedral) were built in periods that took a long amount of time, usually fifty to one hundred years. [Santa Maria del Mar](https://carrersbcn.com/2021/01/17/the-legendary-bastaixos-of-the-santa-maria-del-mar/) was finished in only fifty five, even notwithstanding a fire and the plague that started the neighborhood where it was being built, and is the only church surviving in the Catalan Gothic style. 
 
@@ -88,33 +88,33 @@ A key force on the project were the bastaixos, or porters. They had an organized
 
 Right now, to get from here to the Cathedral, it takes about 50 minutes to walk, downward.  In those days, the bastaixos would have walked past the Port of Barcelona to get there, taking longer, over an hour, carrying a stone that weighs over 40kg on his back alone.  
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/01ca8672-2c7c-4a6c-9f60-779a9c53a206">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_16_resized.png">}}
 
 So a bastaix would first put the stone on his back, and then move it all the way to the cathedral. Then, he would go back and move another stone. They did this all day, day-in and day out.  The stones weighed 40 kg and the only protection they had was the turban on their head, called a capcana that rolled up above the neck. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ec98ff22-d249-4faf-a5a5-748c9d2da65f">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_17_resized.png">}}
 
 {{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/b84338a1-84a7-4ad5-825c-d273d4d2badc">}}
 
 The machine learning engineer paused and said, you know, now that I’m telling this story, it reminds me of something, and that something is gradient descent.  
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/5e4b6694-19d4-4248-b9a0-8cdbe937ca2a">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_18_resized.png">}}
 
 [Gradient descent](https://arxiv.org/abs/1805.05052) is a key algorithm that many machine learning models, including neural networks in the transformer family that powers GPT-style models, use for training the model.
 
 Gradient descent minimizes the loss function by iteratively adjusting the model's parameters (weights and biases). The process involves calculating the gradient of the loss function with respect to the model parameters and then updating these parameters in the direction that reduces the loss.
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/df855cd4-3bed-4048-a034-788eca2b5dbe">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_19_resized.png">}}
 
 For example, [let’s say that we produce artisanal hazelnut spread](http://vickiboykis.com/test_blog/2024/02/26/gguf-the-long-way-around/) for statisticians, Nulltella. We want to predict how many jars of Nulltella we’ll produce on any given day. Let’s say we have some data available to us, and that is, how many hours of sunshine we have per day, and how many jars of Nulltella we’ve been able to produce every day.
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7727470d-a6f2-4ab5-bb9a-2f7af591ec49">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_20_resized.png">}}
 
 It turns out that we feel more inspired to produce hazelnut spread when it’s sunny out.  We can clearly see this relationship between input and output in our data (we do not produce Nulltella Friday-Sunday because we prefer to spend those days talking about Python.)
 
 Now that we have our data, we need to write our prediction algorithm, where we know, based on our current values, what future values could potentially be. The equation to predict output Y from inputs X for linear regression is outlined here. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a8d846be-2ded-4c8b-8d48-314103b0daae">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_21_resized.png">}}
 
 Our task is to continuously adjust our weights and biases for all of our features to optimally solve this equation for the difference between our actual as presented by our data and a prediction based on the algorithm to find the smallest sum of squared differences, between each point and the line.
 
