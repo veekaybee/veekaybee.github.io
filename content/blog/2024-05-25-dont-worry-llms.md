@@ -14,7 +14,8 @@ This is a near-transcript of [the talk I gave](https://2024.pycon.it/en/keynotes
 
 # Introduction
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/dc645053-50d0-482c-92e5-e4e292fb324f">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_1_resized.png">}}
+
 
 Buongiorno PyconIt, grazie per avermi invitata a parlare! Avrei voluta fare tutto il discorso in italiano, ma lo sto ancora imparando. 
 
