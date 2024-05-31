@@ -225,17 +225,17 @@ It’s true that when we build machine learning systems, we have no choice: we n
 
 How do we get to programs that do one thing well in machine learning, i.e. perform our task of topic detection? The best way is to understand first that machine learning, unlike developing product features like “the ability to click a button” or “sending data to the database”, is a cyclical process that involves a lot of iteration before we get something working we’re happy with, and the way to get to happiness is to pick an evaluatable baseline. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/85e27c5f-0d58-4f32-bfe7-8a9c81a44e80">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_45_resized.png">}}
 
 Machine learning-based systems are typically also services in the backend of web applications.They are integrated into production workflows. But, they process data much differently. In these systems, we don’t start with business logic. We start with input data that we use to build a model that will suggest the business logic for us.   
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/e18ef82b-c7b0-4e4b-b4f7-d80d5f731ddc">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_46_resized.png">}}
 
 This requires thinking about application development slightly differently - we need to be able to loop through a machine learning inference cycle quickly and examine the results: are they right? If yes we keep the model, if no we go back and change one thing and move on. 
 
 This means there’s a lot of trial and error. Not many people realize it, but machine learning is more like alchemy than even software engineering. The top people in the field even said so, as Ali Rahmi did in his [NeurIPS keynote in 2017. ](https://www.science.org/content/article/ai-researchers-allege-machine-learning-alchemy)
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/1cb830ce-0421-41f4-bca8-e78b8fd51630">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_47_resized.png">}}
 
 This is doubly true for LLMs, where our main medium of input and output is freeform text.  We have some model that we add text requirements to, and hope to get back logical text, or instructions, or code out.  Because the inputs of natural language are so varied and so are the outputs, the process becomes three times harder to control and evaluate. 
 
@@ -250,50 +250,51 @@ So the developers decided to look at two metrics:
 
 The vibe check is as simple as: creating a list of documents and manually labeling topics for these documents, for a number of different documents. Here’s an example from the wikipedia page for Michelangelo. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/408bf404-f207-43f6-ba97-a043edd1bce6">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_48_resized.png">}}
 
 We can see that we added some human topics based on simply scanning the text and our knowledge of categories, as experts in art. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/bfae4032-c3bc-4806-90e5-c28f438b8a6b">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_49_resized.png">}}
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/bfae4032-c3bc-4806-90e5-c28f438b8a6b">}}
 
 The comparison is now to run it against our LLM and see what topics it generates. We use [llamafile locally](https://github.com/Mozilla-Ocho/llamafile), with a local quantized model for quick iteration between prompts and responses without having to use external models. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/944339d5-52f8-4cee-85ae-9dd259067b74">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_51_resized.png">}}
 
 We can now compare the results we generated ourselves and what the model generates. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/3addada4-5218-4a43-849b-9aea0abfe83b">}}
+
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_52_resized.png">}}
 
 We can see the results are ok, but maybe not as low-level as we'd like? For example, "Renaissance" doesn't help us at all since all of our artists are from the Renaissance. And literature is not a category in art. So our next step would be to modify the prompt. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/55e3cf53-35bb-4a19-9324-abe8ade1acd4">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_53_resized.png">}}
 
 We can do this kind of prompt tuning manually for a bit, or use automatic prompt-tuning libraries, but then we might find that our model itself doesn't have enough information about art, in which case we might want to fine-tune it with samples of text specifically related to Renaissance art, and try again. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/993e4e8a-cb80-46a2-abe2-fbe7ea61efe7">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_54_resized.png">}}
+
 
 Once we go through this manual cycle, we can also perform offline metric evaluation, which allows us to more systematically evaluate the model based on agreed-up academic benchmarks. Topic alignment is an imprecise science because it's based on what humans think are good topics for categories, but [we can use metrics](http://proceedings.mlr.press/v28/chuang13.pdf) like cosine similarity to look at how well given topic pairs match. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/ef2cb5df-e197-43cc-8964-682d4721fadf">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_55_resized.png">}}
 
 Once the developers did this and tuned the model, the CEO was once again happy. But, now the team had a different problem, the curse of success. They needed to deploy this model to production. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/dc9c3f8a-be82-48fd-8946-e0d55f85f9f0">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_56_resized.png">}}
 
 Now, the team had a use-case for trending topic detection, and they had an evaluation metric: manual vibes and rescaled dot product for similarity between human-assigned and machine-assigned topics. 
 
 They had problems, though. The systems they were building were big and complicated. They now involved the model, and something horrible called LLM ops that [now involved](https://towardsdatascience.com/llm-monitoring-and-observability-c28121e75c2f) updating, monitoring the system, storing prompts, monitoring model output, monitoring latency, security, package updates. They had built a product with an LLM producing summarization inputs, but now, whenever something broke, they didn’t know where to look.  
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/5ee369af-7ac0-4874-84f6-789fece51360">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_57_resized.png">}}
 
 ## The Reproducible Example
 
 So, on the final day, the final developer shared a story.  He said, “This story is about [Ellen Ullman](https://en.wikipedia.org/wiki/Ellen_Ullman). She was a software engineer who worked on complex systems starting in the late 1970s including at startups and large companies, wrote a number of essays about the art of practicing computer science.  Her latest book is called “Life in Code”, and in it, she describes the mind of a programmer as they are writing a program. And this ties together everything we’ve been talking about so far. 
 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/d1e1bc32-ed56-496e-b6eb-895902c67b98">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_58_resized.png">}}
 
 
 She writes that keeping track of translation between human and code logic is hard.  “When you are writing code, your mind is full of details, millions of bits of knowledge. This knowledge is in human form, which is to say rather chaotic. For example, try to think of everything you know about something as simple as an invoice. Now try to tell an alien how to prepare one. That is programming...To program is to translate between the chaos of human life and the line-by-line world of computer language.”
@@ -304,21 +305,25 @@ In this kind of environment, you are information-constrained, but focused. It is
 
 Most programs were written and compiled locally in languages like C. There were much fewer third-party libraries. Implementations were written from scratch, and the main source of information were books, man pages, and Usenet. The approximate user experience would be similar to writing python by only being able to access python.org. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/c4c05efd-0d9b-45ce-adc4-00b92dc6246d">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_59_resized.png">}}
 
 Ullman describes this phenomenon in another part of the book where she describes working with a developer named Frank. Frank previously had worked as a hardcore technical contributor, but when he was working with Ullman, he had moved to financial reports, and he personally was miserable, and he also hated Ullman because she was “close to the metal.”
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/37bf80c0-4dfb-4160-84ab-5afeebbf74ba">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_60_resized.png">}}
 
 These days, it is extremely hard to be close to the metal, because when we work with distributed systems, and machine learning, and the cloud, each of these have been built on top of the levels of turtles that previous developers have built, and it is easier to get distracted.When you throw non-deterministic LLMs and the distributed systems used to train and serve them into the mix, you come up with a special kind of hell that makes it impossible to have a good developer experience. 
 
 What we can do is what people have always done: [create reprex](https://reprex.tidyverse.org/). A reprex is a reproducible example, an idea that comes from the R community. In R, it’s fairly easy because it’s a self-contained piece of software, but we can also strive for the same thing. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/25fbed54-7271-4ae3-90aa-0b4675834d73">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_61_resized.png">}}
 
 Here’s an example of a reprex in Python, the RMSE code we just reviewed in the first section. We can know it will run the same way on our reviewer’s computer as ours, we can troubleshoot and check. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/25fbed54-7271-4ae3-90aa-0b4675834d73">}}
+```python
+def root_mean_squared_error(y_true:float, y_predicted:float) -> float:
+    cost = math.sqrt(np.sum((y_true-y_predicted)**2) / len(y_true))
+    return cost
+```
 
 Reprex comes in handy when you're dealing with complex distributed systems. For example, here’s an actual problem the developers were dealing with while trying to serve their model: trying to troubleshooting Ray. 
 
@@ -326,12 +331,11 @@ Ray is a Python and C++-based distributed framework for training and serving mac
 
 However,  if you have an issue, it can take a while to get to the bottom of it because of how complex the architecture is. Ray has several [orthogonal patterns](https://docs.ray.io/en/latest/ray-observability/key-concepts.html) working together. First, there are tasks that you can execute on a remote cluster and actors, which are stateful tasks. This comes from the actor pattern in computer science which receives messages from its environment and can send messages back. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/a21ce1d1-d205-4a7e-a11b-f9eb40967390">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_63_resized.png">}}
 
-We also have the cluster-level communication patterns, with the global control store managing transactions and rf you are running this on top of Kubernetes, also the Kubernetes primitives there is also the Task execution graph, 
-the various modules: the dashboard, ray train, and Ray serve. The amount of patterns you have to understand in order to wrap your mind around it is truly astounding. 
+We also have the cluster-level communication patterns, with the global control store managing transactions and if you are running this on top of Kubernetes, also the Kubernetes primitives there is also the Task execution graph, the various modules: the dashboard, ray train, and Ray serve. The amount of patterns you have to understand in order to wrap your mind around it is truly astounding. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/57e4ee50-058e-4f05-ae14-57fed4464470">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_65_resized.png">}}
 
 But don't forget that humans can only keep several things in memory when they trace through complexity!
 
