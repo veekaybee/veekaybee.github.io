@@ -335,31 +335,26 @@ However,  if you have an issue, it can take a while to get to the bottom of it b
 
 We also have the cluster-level communication patterns, with the global control store managing transactions and if you are running this on top of Kubernetes, also the Kubernetes primitives there is also the Task execution graph, the various modules: the dashboard, ray train, and Ray serve. The amount of patterns you have to understand in order to wrap your mind around it is truly astounding. 
 
-{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_65_resized.png">}}
 
 But don't forget that humans can only keep several things in memory when they trace through complexity!
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9cd7b6ce-63d5-4efa-ba37-c5ac680aba93">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_65_resized.png">}}
 
 In building their trending topic application, the team had an issue where they were looking to test a topic detection pipeline of their model using Ray serve.  Ray Serve takes your local deployable code and ships it to your Ray cluster using the Ray client, which is an API that connects a Python script to a remote Ray cluster. 
-
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/9cd7b6ce-63d5-4efa-ba37-c5ac680aba93">}}
 
 Ray Serve allows you the ability to serve a model with code that gets sent using bundled Ray actors known as deployments.  A Deployment is served usually on top of Kubernetes, on top of Ray, within some sort of cloud cluster. It’s made up of several Ray Actors, which are stateful services run and managed by the Ray control plane. The Controller acts as the entrypoint for the deployment , tied to a proxy on the head node of a Ray cluster, and forwards it to replicas which serve a request with an instantiated model. 
 
 In order to serve a deployment, you can use the pattern of specifying a [YAML-base config.](https://docs.ray.io/en/latest/serve/configure-serve-deployment.html) 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/533e3f80-985a-48f2-a00e-e050d53e4f3d">}}
-
 One critical piece here is the working dir, which specifies the where code to download to the cluster at runtime: This is part of how ray specifies the [RuntimeEnv.](https://docs.ray.io/en/latest/ray-core/handling-dependencies.html#runtime-environments) 
 
 > A copy of the working_dir will be downloaded to the cluster at runtime, and the current working directory of each remote Ray worker will be changed to that `working_dir` copy
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/dab6e5ef-9024-491d-b7fe-52ae1e1c48b6">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_68_resized.png">}}
 
 In a production-grade deployment, it’s recommended that the working_dir comes from a served zip executable, which is usually pinned to a hash in GitHub. So the team had their config file set up like this: 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/e0d191f5-34ad-4bcc-beed-d14dd57e71a8">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_69_resized.png">}}
 
 However, there are several points of failure in the YAML file, which looks to simplify but in fact hides complexity from us in the ways config is read and implemented in the code itself. But this model didn’t launch or run. Why?  If you look at all the failure points, there are at least three or four that could trip you up. First, the way Ray handles import paths could be different behavior than the way we usually assume uvicorn routes them. Then, there is the question of the runtime environment: what happens when our deployable asset is hosted on github. Then, we have the issue of Python dependencies: when you’re working with fast-moving libraries like transformers and torch, it’s always guaranteed that you’ll have conflicts, sometimes even if you pin them to specific versions. Finally, there is the Ray deployment logic itself: what happens when we specify CPU and GPU options, and how do those work with our Kubernetes cluster? 
 
@@ -367,7 +362,7 @@ Whew.  Time to start debugging.
 
 The way to start here is to start reading logs and stack traces. When you have a very large, distributed system, here’s a sample of the stacktrace you might get, and it can be very discouraging because it doesn’t point you to where the issue is. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/7839cbd1-e99d-4d97-8400-1d944b3c4811">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_70_resized.png">}}
 
 There’s a lot going on here, and it seems to be coming from importlib rather than Ray itself, but Ray uses importlib as a dependency. So, in order to isolate it, the team went into the module in Ray that calls importlib, which lives in `python/ray/_private/utils.py`.
 
