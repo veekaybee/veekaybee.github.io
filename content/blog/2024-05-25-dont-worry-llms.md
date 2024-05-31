@@ -120,7 +120,7 @@ Our task is to continuously adjust our weights and biases for all of our feature
 
 In other words, we’d like to minimize epsilon, because it will mean that, at each point, our predicted Y is as close to our actual Y as we can get, given the other points. 
 
-{{< figure  width="400" src="https://github.com/veekaybee/veekaybee.github.io/assets/3837836/02e05a5e-696e-4814-bbf4-66f431385b4a">}}
+{{< figure  width="400" src="https://raw.githubusercontent.com/veekaybee/veekaybee.github.io/main/static/images/dontworryllms_22_resized.png">}}
 
 The equation we use for this is RMSE (Root mean squared error). 
 
