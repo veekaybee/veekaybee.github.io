@@ -1,7 +1,7 @@
 +++
 card = 'summary'
 creator = '@vboykis'
-date = '2024-06-08'
+date = '2024-09-19'
 site = '@vboykis'
 title = "Dead Internet Souls"
 description = 'Yeah slop, but humans are still here'
