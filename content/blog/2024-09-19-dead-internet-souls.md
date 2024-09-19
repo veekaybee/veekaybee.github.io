@@ -13,7 +13,7 @@ Alexandr Pushkin, the greatest living Russian-language author at the time, heard
 
 The internet today is filled with dead souls. Or, more accurately, souls who were never alive in any sense of the word: text copypasta from LLMS, slop artwork generated from generative art tools, and bots on aging social networks that are quickly emptying of real content as real people [migrate to group chats](https://sriramk.com/group-chats-rule-the-world). 
 
-It used to be different. In the beginning, the internet was made of people. I came online in the mid 1990s, along with the rest of America, and for the first few years of my internet experience, my primary threat model was someone on AOL finding out that I was 12 ([A/S/L](https://books.google.com/books?id=P54CfcXKMUUC&pg=PA87#v=onepage&q&f=false)) , and also where I live. After all, no one on the internet knew if [I was a dog.](https://en.wikipedia.org/wiki/On_the_Internet,_nobody_knows_you%27re_a_dog) 
+It used to be different. In the beginning, the internet was made of people. I came online in the mid 1990s, along with the rest of America, and for the first few years of my internet experience, my primary threat model was someone on AOL finding out that I was 12 ([A/S/L](https://books.google.com/books?id=P54CfcXKMUUC&pg=PA87#v=onepage&q&f=false) , and also where I live. After all, no one on the internet knew if [I was a dog.](https://en.wikipedia.org/wiki/On_the_Internet,_nobody_knows_you%27re_a_dog)) 
 
 Based on my priors, I thought that this would be the world my kids would grow up into as well, and as they got older, I started preparing them against the dangers of strangers on the internet. 
 
