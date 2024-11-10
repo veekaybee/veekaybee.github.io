@@ -93,7 +93,7 @@ Then, when we're ready to query our model. This is the step that most people tak
 2. That text is then embedded in the context of the model's vocabulary by converting each word to an embedding and then creating an embedding vector of the input query.
 3. We then passing the vector to the model's encoder, which stores the relative position of embeddings to each other in the model's vocabulary
 4. Passing those results to the attention mechanism for lookup, which compares the similarity using various metrics of each token and position with every other token in the reference text (the model). This happens many times in multi-head attention architectures. 
-5. Getting results back from the decoder. What is returned from the decoder is a [set of tokens and the probability of those tokens.](https://huggingface.co/docs/transformers/en/llm_tutorial).
+5. Getting results back from the decoder. A [set of tokens and the probability of those tokens is returned from the decoder.](https://huggingface.co/docs/transformers/en/llm_tutorial)
 
 First, we need to generate the first token that all the other tokens are conditioned upon.  However, afterwards, [returning probablities takes many forms](https://huggingface.co/blog/how-to-generate): namely search strategies like greedy search and and sampling, most frequently top-k sampling, the method originally used by GPT-2. Depending on which strategy you pick and what tradeoffs you'd like to make, you will get [slightly different answers of resulting tokens selected from the model's vocabulary.](https://gist.github.com/kalomaze/4473f3f975ff5e5fade06e632498f73e)   
 
