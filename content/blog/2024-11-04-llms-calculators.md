@@ -3,7 +3,7 @@ card = 'summary'
 creator = '@vboykis'
 date = '2024-11-09'
 site = '@vboykis'
-title = "Why are we using LLMs as calculators"
+title = "Why are we using LLMs as calculators?"
 description = 'For AGI'
 +++
 
