@@ -9,7 +9,7 @@ description = 'For AGI'
 
 We [keep trying to get LLMs to do math](https://www.reddit.com/r/singularity/comments/122ilav/why_is_maths_so_hard_for_llms/). We want them [to count the number of "rs" in strawberry](https://community.openai.com/t/incorrect-count-of-r-characters-in-the-word-strawberry/829618), to perform [algebraic reasoning](https://arxiv.org/abs/2303.05398), [do multiplication](https://news.ycombinator.com/item?id=30309302), and [to solve math theorems.](https://mathstodon.xyz/@tao/113132502735585408) 
 
-<img width="758" alt="Screenshot 2024-11-04 at 10 19 23 AM" src="https://github.com/user-attachments/assets/29ce6ef4-f92a-4397-9eda-fb6ccf202590">
+{{< figure  width="400" src="https://github.com/user-attachments/assets/29ce6ef4-f92a-4397-9eda-fb6ccf202590">}}
 
 A [recent experiment particularly](https://x.com/yuntiandeng/status/1836114401213989366) piqued my interest. Researchers used OpenAI's new [4o model](https://openai.com/index/hello-gpt-4o/) to solve multiplication problems by using the prompt:
 
@@ -18,11 +18,11 @@ Calculate the product of x and y. Please provide the final answer in the format:
 Final Answer: [result]
 ```
 
-<img width="478" alt="llm_calc" src="https://github.com/user-attachments/assets/72f1f906-20b6-4d5d-880a-da1065e15f39">
+{{< figure  width="400" src="https://github.com/user-attachments/assets/72f1f906-20b6-4d5d-880a-da1065e15f39">}}
 
 These models are generally [trained for natural language tasks](https://arxiv.org/abs/2204.07705), particularly text completions and chat. 
 
-<img width="848" alt="Screenshot 2024-11-04 at 10 22 23 AM" src="https://github.com/user-attachments/assets/1ef1bc9d-408d-40ea-b2ec-073120785ac6">
+{{< figure  width="400" src="https://github.com/user-attachments/assets/1ef1bc9d-408d-40ea-b2ec-073120785ac6">}}
 
 So why are we trying to get these enormous models, good for natural text completion tasks like summarization, translation, and writing poems, to multiply three-digit numbers and, what's more, attempt to return the results as a number? 
 
@@ -31,9 +31,9 @@ Two reasons:
 2. We don't actually want them to do math for the sake of replacing calculators, we want to understand if they can reason their way to AGI.
 # Computers and counting in history
 
-In the history of human relationships with computers, we've always wanted to count large groups of things because [we're terrible at it](https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two). Initially we used our hands - or others' - in the Roman empire, administrators known as _calculatores_ and  slaves known as [calculones](https://kartsci.org/kocomu/computer-history/history-abacus-ancient-computing/) performed household accounting manually. 
+In the history of human relationships with computers, we've always wanted to count large groups of things because [we're terrible at it](https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two). Initially we used our hands - or others' - in the Roman empire, administrators known as _calculatores_ and  slaves known as [calculones](https://kartsci.org/kocomu/computer-history/history-abacus-ancient-computing/) performed household accounting manually.
 
-<img width="1159" alt="Screenshot 2024-11-04 at 10 30 11 AM" src="https://github.com/user-attachments/assets/bbe7a45f-86a5-40f3-abba-ec635ce7c93f">
+{{< figure  width="400" src="https://github.com/user-attachments/assets/bbe7a45f-86a5-40f3-abba-ec635ce7c93f">}}
 
 Then, we started inventing calculation lookup tables. After the French Revolution, the French Republican government switched to the metric system in order to collect property taxes. In order to perform these calculations, it hired human computers to do the conversions by creating large tables of logarithms for decimal division of angles, [Tables du Cadastre](https://inria.hal.science/inria-00543946/document). This system was never completed and eventually scrapped, but it inspired Charles Babbage to do his work on machiens for calculation along with Ada Lovelace, which in turn kicked off the modern era of computing. 
 
@@ -51,11 +51,11 @@ Second, we want to understand if LLMs can "think." There is no one definition of
 
 One way humans reason is through performing different kinds of math: arithmetic, solving proofs, and reasoning through symbolic logic.  The underlying question in artificial intelligence is whether machines can reason outside of the original task we gave them. For large language models, the ask is whether they can move from summarizing first a book if they were trained for books, to a movie script plot, to finally, summarizing what you did all day if you pass it a bunch of documents about your activity. So, it stands to reason that if LLMs can "solve" math problems, they can achieve AGI. 
 
-There are approximately seven hundred million benchmarks to see if LLMs can reason ([here's an example](https://www.llm-reasoning-benchmark.com/), and [here's another one](https://arxiv.org/abs/2307.13692). Even since I started this draft yesterday, [a new one came out.](https://epochai.org/frontiermath/the-benchmark)  
+There are approximately seven hundred million benchmarks to see if LLMs can reason. [Here's an example](https://www.llm-reasoning-benchmark.com/), and [here's another one](https://arxiv.org/abs/2307.13692). Even since I started this draft yesterday, [a new one came out.](https://epochai.org/frontiermath/the-benchmark)  
 
 Since it's hard to define what "reasoning" or "thinking" means, the benchmarks try to proxy to see if models can answer the same questions we give to humans in settings such as university tests and compare the answers between human annotators generating ground truth and inference run on the model. 
 
-These types of tasks make up a [large number of LLM benchmarks that are popular on LLM leaderboards.](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard).
+These types of tasks make up a [large number of LLM benchmarks that are popular on LLM leaderboards.](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard)
 
 # How calculators work
 
@@ -66,11 +66,9 @@ However, evaluating how good LLMs are at calculation doesn't take into account a
         + multiplication is just addition, and 
         + division is subtraction
 
-In software calculators, [the software takes user keyboard input](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/), generates a scan code for that key press, encodes the signal, converts it to character data, and uses an encoding standard to convert the key press to a binary representation. That binary representation is sent to the application level, which now starts to work with the variable in the programming language the calculator uses, and performs operations on those variables based on [internally-defined methods for addition, subtraction, multiplication, and division.](https://gitlab.gnome.org/GNOME/gnome-calculator/-/blob/main/lib/number.vala?ref_type=heads#L587). 
+In software calculators, [the software takes user keyboard input](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/), generates a scan code for that key press, encodes the signal, converts it to character data, and uses an encoding standard to convert the key press to a binary representation. That binary representation is sent to the application level, which now starts to work with the variable in the programming language the calculator uses, and performs operations on those variables based on [internally-defined methods for addition, subtraction, multiplication, and division.](https://gitlab.gnome.org/GNOME/gnome-calculator/-/blob/main/lib/number.vala?ref_type=heads#L587) 
 
 Software calculators can grow to be fairly complicated with the addition of graphing operations and calculus, but usually have a standard collected set of methods to follow to perform the actual calcuation. As a fun aside, [here's a great piece](https://www.pcalc.com/mac/thirty.html) on what it was like to build a calculator app Back In The Day. 
-
-<img width="743" alt="Screenshot 2024-11-03 at 8 55 18 AM" src="https://github.com/user-attachments/assets/af7bc287-8ff8-4546-9366-614ed6df6e67">
 
 The hardest part of the calculator is writing the logic for representing numbers correctly and creating manual classes of operations that cover all of math's weird corner cases. 
 
@@ -103,25 +101,25 @@ Finally, even after this part, to ensure that what the model outputs is an actua
 
 So this entire process, in order to add "what is 2+2", we do a non-deterministic a lookup from an enormous hashtable that contains the sum of public human knowledge we've seen fit to collect for our dataset, then we squeeze it through the tiny, nondeterministic funnels of decoding strategies and guided generation to get to an answer from a sampled probability distribution. All of this includes large swaths of actual humans in the loop guiding the model.
 
-![untitled@2x(1)](https://github.com/user-attachments/assets/8bd85044-8583-48dd-b620-f8f13a134d18)
+{{< figure  width="700" src="https://github.com/user-attachments/assets/8bd85044-8583-48dd-b620-f8f13a134d18">}}
 
 And, all of this, only to get an answer that's right only some percent of the time, not consistent across all model architectures and platforms and in many cases has to be coaxed out of the model using techniques like chain of thought. 
 
 As an example, here's an aswer I've tried on OpenAI, Claude, Gemini, and locally using Mistral via llamafile and ollama:
 
-<img width="567" alt="Screenshot 2024-11-02 at 7 30 49 PM" src="https://github.com/user-attachments/assets/7be40c7f-8f7b-48db-9ad9-80c421e3c05c">
+{{< figure  width="400" src="https://github.com/user-attachments/assets/7be40c7f-8f7b-48db-9ad9-80c421e3c05c">}}
 Claude Sonnet 3.5
 
-<img width="841" alt="Screenshot 2024-11-02 at 7 31 53 PM" src="https://github.com/user-attachments/assets/ec024d0d-3d58-4bab-9052-a31c91a0bc62">
+{{< figure  width="400" src="https://github.com/user-attachments/assets/ec024d0d-3d58-4bab-9052-a31c91a0bc62">}}
 Gemini 1.5 Flash
 
-<img width="670" alt="Screenshot 2024-11-02 at 7 32 29 PM" src="https://github.com/user-attachments/assets/ecd53bb1-063a-477d-9969-877cfa3eb35c">
+{{< figure  width="400" src="https://github.com/user-attachments/assets/ecd53bb1-063a-477d-9969-877cfa3eb35c">}}
 OpenAI ChatGPT GPT-4 Turbo
 
-<img width="908" alt="Screenshot 2024-11-09 at 11 21 45 PM" src="https://github.com/user-attachments/assets/3fd6bdaf-dc08-4208-959f-46df356bc4d9">
+{{< figure  width="400" src="https://github.com/user-attachments/assets/3fd6bdaf-dc08-4208-959f-46df356bc4d9">}}
 Llamafile Mistral 7-B Instruct 2
 
-<img width="788" alt="Screenshot 2024-11-09 at 11 24 57 PM" src="https://github.com/user-attachments/assets/986371b3-6703-41a9-bdf8-ea74680149ed">
+{{< figure  width="400" src="https://github.com/user-attachments/assets/986371b3-6703-41a9-bdf8-ea74680149ed">}}
 Ollama Mistral
 
 If you ask any given calculator what 2+2 is, you'll always get 4. This doesn't work with LLMs, even when it's variations of the same model, much less different models hosted across different service providers and in different levels of quantization, different sampling strategies, mix of input data, and more.   
