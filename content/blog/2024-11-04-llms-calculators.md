@@ -130,7 +130,7 @@ From a user perspective, this is absolutely a disastrous violation of Jakob's La
 
 However, when you realize that the goal is, as [Terrence Tao notes](https://mathstodon.xyz/@tao/113132502735585408), to get models to solve mathematical theorems, it makes more sense, although all these models are still very far from actual reasoning. 
 
-I'd love to see us spend time more understanding and working on the practical uses [he discusses](https://unlocked.microsoft.com/ai-anthology/terence-tao/): drafts of documents, as ways to check understanding of a codebase, and of course, [generating boilerplate Pydantic models for me personally.](https://vickiboykis.com/2023/02/26/what-should-you-use-chatgpt-for/). 
+I'd love to see us spend time more understanding and working on the practical uses [he discusses](https://unlocked.microsoft.com/ai-anthology/terence-tao/): drafts of documents, as ways to check understanding of a codebase, and of course, [generating boilerplate Pydantic models for me personally](https://vickiboykis.com/2023/02/26/what-should-you-use-chatgpt-for/). 
 
 But, this is the core tradeoff between practicality and research: do we spend time on Pydantic now because it's what's useful to us at the moment, or do we try to get the model to write the code itself to the point where we don't even need Pydantic, or Python, or programming languages, and can write natural language code, backed by mathematical reasoning? 
 
