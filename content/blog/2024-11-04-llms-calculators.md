@@ -39,7 +39,7 @@ Then, we started inventing calculation lookup tables. After the French Revolutio
 
 UNIVAC, one of the first modern computers, was used by the Census Bureau in [population counting.](https://www.census.gov/about/history/bureau-history/census-innovations/technology/univac-i.html)
 
-The nascent field of artificial intelligence developed jointly in line with the expectation that machines should be able to replace humans in computation through historical developments like the Turing Test, the [Dartmouth Artificial Intelligence Conference](https://spectrum.ieee.org/dartmouth-ai-workshop) and [Arthur Samuel's checkers demo](https://www.ibm.com/history/early-games). 
+The nascent field of artificial intelligence developed jointly in line with the expectation that machines should be able to replace humans in computation through historical developments like the Turing Test and [Turing's chess program](https://en.wikipedia.org/wiki/Turochamp), the [Dartmouth Artificial Intelligence Conference](https://spectrum.ieee.org/dartmouth-ai-workshop) and [Arthur Samuel's checkers demo](https://www.ibm.com/history/early-games). 
 
 Humans have been inventing machines to mostly do math for milennia, and it's only recently that computing tasks have moved up the stack from calculations to higher human endeavors like writing, searching for information, and shitposting.  So naturally, we want to use LLMs to do the thing we've been doing with computers and software all these years.
 
@@ -72,34 +72,35 @@ Software calculators can grow to be fairly complicated with the addition of grap
 
 The hardest part of the calculator is writing the logic for representing numbers correctly and creating manual classes of operations that cover all of math's weird corner cases. 
 
-However, To get an LLM to add "2+2", we have a much more complex level of operations. Instead of a binary calculation machine that uses small, simple math business logic to derive an answer based on addition, we create an enormous model of the entire universe of human public thought and try to reason our way into the correct mathematical answer based on how many times the model has "seen" or been exposed to the text "2+2" in written form. 
+However, to get an LLM to add "2+2", we have a much more complex level of operations. Instead of a binary calculation machine that uses small, simple math business logic to derive an answer based on addition, we create an enormous model of the entire universe of human public thought and try to reason our way into the correct mathematical answer based on how many times the model has "seen" or been exposed to the text "2+2" in written form. 
 
-We first train a large language model to answer questions by: 
+We first train a large language model to answer questions. 
 
 ![d8e7f5ec-c333-4890-8430-7f73fe9e89fa_1588x386](https://github.com/user-attachments/assets/87e4ee63-7270-4fcf-89da-45769b7aba53)
 
 [Source](https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training)
 
+This includes: 
 1. [Gathering and deduplicating](https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training) an enormous amount of large-scale, clean internet text
 2. We then train the model by feeding it the data and asking it, at a very simplified level, to predict the next word in a given sentence. We then compare that prediction to the baseline sentence and adjust a loss function. An attention mechanism helps guide the prediction by keeping a context map of all the words of our vocabulary (our large-scale clean internet text.)
 3. Once the model is trained initially to perform the task of text completion, we perform [instruction fine-tuning](https://arxiv.org/abs/2308.10792), to more closely align the model with the task of performing a summarization task or following instructions. 
-4. Finally, the model is aligned with human preferences with RLHF. [This process](https://huggingface.co/blog/rlhf)  involves collecting a set of questions with human responses, and having human annotators rank the response of the model, and then feeding those ranks back into the model for tuning.  
+4. The model is aligned with human preferences with RLHF. [This process](https://huggingface.co/blog/rlhf)  involves collecting a set of questions with human responses, and having human annotators rank the response of the model, and then feeding those ranks back into the model for tuning.  
 5. Finally, we stand up that artifact (or have it accessable as a service.) The artifact is [a file or a collection of files](https://vickiboykis.com/2024/02/28/gguf-the-long-way-around/) that contain the model architecture and weights and biases of the model generated from steps 2 and 3. 
 
 Then, when we're ready to query our model. This is the step that most people take to get an answer from an LLM when they hit a service or run a local model, equivalent to opening up the calculator app. 
 
-1. We write "What's 2 +2" into the text box.
+1. We write "What's 2 + 2" into the text box.
 2. This natural-language query [is tokenized](https://cybernetist.com/2024/10/21/you-should-probably-pay-attention-to-tokenizers/).  Tokenization is the process of first converting our query into a string of words that the model uses as the first step in performing numerical lookups.
 2. That text is then embedded in the context of the model's vocabulary by converting each word to an embedding and then creating an embedding vector of the input query.
 3. We then passing the vector to the model's encoder, which stores the relative position of embeddings to each other in the model's vocabulary
 4. Passing those results to the attention mechanism for lookup, which compares the similarity using various metrics of each token and position with every other token in the reference text (the model). This happens many times in multi-head attention architectures. 
-5. Getting results back from the decoder. A [set of tokens and the probability of those tokens is returned from the decoder.](https://huggingface.co/docs/transformers/en/llm_tutorial)
-
-First, we need to generate the first token that all the other tokens are conditioned upon.  However, afterwards, [returning probablities takes many forms](https://huggingface.co/blog/how-to-generate): namely search strategies like greedy search and and sampling, most frequently top-k sampling, the method originally used by GPT-2. Depending on which strategy you pick and what tradeoffs you'd like to make, you will get [slightly different answers of resulting tokens selected from the model's vocabulary.](https://gist.github.com/kalomaze/4473f3f975ff5e5fade06e632498f73e)   
+5. Getting results back from the decoder. A [set of tokens and the probability of those tokens is returned from the decoder.](https://huggingface.co/docs/transformers/en/llm_tutorial)  We need to generate the first token that all the other tokens are conditioned upon.  However, afterwards, [returning probablities takes many forms](https://huggingface.co/blog/how-to-generate): namely search strategies like greedy search and and sampling, most frequently top-k sampling, the method originally used by GPT-2. Depending on which strategy you pick and what tradeoffs you'd like to make, you will get [slightly different answers of resulting tokens selected from the model's vocabulary.](https://gist.github.com/kalomaze/4473f3f975ff5e5fade06e632498f73e)   
 
 Finally, even after this part, to ensure that what the model outputs is an actual number, we could do a number of different guided generation strategies to ensure we get ints or longs as output from [multiplication, addition, etc.](https://dottxt-ai.github.io/outlines/latest/welcome/) 
 
-So this entire process, in order to add "what is 2+2", we do a non-deterministic a lookup from an enormous hashtable that contains the sum of public human knowledge we've seen fit to collect for our dataset, then we squeeze it through the tiny, nondeterministic funnels of decoding strategies and guided generation to get to an answer from a sampled probability distribution. All of this includes large swaths of actual humans in the loop guiding the model.
+So this entire process, in order to add "what is 2+2", we do a non-deterministic a lookup from an enormous hashtable that contains the sum of public human knowledge we've seen fit to collect for our dataset, then we squeeze it through the tiny, nondeterministic funnels of decoding strategies and guided generation to get to an answer from a sampled probability distribution. 
+
+These steps include a large amount of actual humans in the loop guiding the model throughout its various stages.
 
 {{< figure  width="700" src="https://github.com/user-attachments/assets/8bd85044-8583-48dd-b620-f8f13a134d18">}}
 
@@ -126,7 +127,7 @@ If you ask any given calculator what 2+2 is, you'll always get 4. This doesn't w
 
 ## Why are we even doing this? 
 
-From a user perspective, this is absolutely a disastrous violation of Jakob's Law of Ux, which states that people [expect the same kind of output](https://vickiboykis.com/2024/05/06/weve-been-put-in-the-vibe-space/) from the same kind of interface. 
+From a user perspective, this is absolutely a disastrous violation of Jakob's Law of UX, which states that people [expect the same kind of output](https://vickiboykis.com/2024/05/06/weve-been-put-in-the-vibe-space/) from the same kind of interface. 
 
 However, when you realize that the goal is, as [Terrence Tao notes](https://mathstodon.xyz/@tao/113132502735585408), to get models to solve mathematical theorems, it makes more sense, although all these models are still very far from actual reasoning. 
 
