@@ -15,7 +15,7 @@ So, what do? This year, I managed a pretty good balance of fiction and arts book
 
 Here were my favorite reads: 
 
-+ [Cathedral of the Sea by Ildefonso Falcones](https://www.goodreads.com/book/show/1790237.Cathedral_of_the_Sea) - One of the biggest recent creative impacts of my life was a trip I took to Barcelona in 2023. After that trip, inspired by the general vibe of the city and a visit to the Picasso museum there, I finished both [Viberary](https://vickiboykis.com/2024/01/05/retro-on-viberary/) and [my embeddings text.](https://github.com/veekaybee/what_are_embeddings/). 
++ [Cathedral of the Sea by Ildefonso Falcones](https://www.goodreads.com/book/show/1790237.Cathedral_of_the_Sea) - One of the biggest recent creative impacts of my life was a trip I took to Barcelona in 2023. After that trip, inspired by the general vibe of the city and a visit to the Picasso museum there, I finished both [Viberary](https://vickiboykis.com/2024/01/05/retro-on-viberary/) and [my embeddings text.](https://github.com/veekaybee/what_are_embeddings/)
 
     After I came back, I started reading a lot about Barcelona, Spain, and the people who lived there. I read Orwell's [Homage to Catalonia](https://en.wikipedia.org/wiki/Homage_to_Catalonia), [Grape, Olive, Pig](https://www.harpercollins.com/products/grape-olive-pig-matt-goulding?variant=32129872691234), the [selected writings and art of Joan Miro](https://www.goodreads.com/book/show/50622.Joan_Mir_), and Leigh Bardugo's [The Familiar](https://www.goodreads.com/book/show/133286777-the-familiar). 
 
