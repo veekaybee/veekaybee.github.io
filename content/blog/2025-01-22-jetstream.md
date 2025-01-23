@@ -227,12 +227,12 @@ func (w *WebSocketManager) readPump(ctx context.Context) {
 }
 ```
 
-However, unlike an HTTP call, wesocksets are open persistently and don't offer any guarantees of retries, so we have to implement this logic ourselves. Fortunately, gorilla has a lot of [good examples.](https://github.com/gorilla/websocket/blob/main/examples/chat/client.go)
+However, unlike an HTTP call, websocksets are open persistently and don't offer any guarantees of retries, so we have to implement this logic ourselves. Fortunately, gorilla has a lot of [good examples.](https://github.com/gorilla/websocket/blob/main/examples/chat/client.go)
 
-You'll notice a couple key points here: first, we log and handle the case where the web socket disconnects. Then, we do some ultra-fancy print logging to keep track of how many posts we've actuallly processed. And finally, we now get to the actual data, an `var post db.ATPost` that we process, parse, and write to the database, which we initialize as a post [repository](https://martinfowler.com/eaaCatalog/repository.html), a fancy word for "database with dependency injection". 
+You'll notice a couple key points here: first, we log and handle the case where the web socket disconnects. Then, we do some ultra-fancy print logging to keep track of how many posts we've actually processed. And finally, we now get to the actual data, an `var post db.ATPost` that we process, parse, and write to the database, which we initialize as a post [repository](https://martinfowler.com/eaaCatalog/repository.html), a fancy word for "database with dependency injection". 
 
 > **Golang tooling**: 
-Go just works out of the box. Unlike my beloved Python, it doesn't need uv, formatting, linting, or special build processes. At least, for a fairly small project, everything is batteries included. In fact, its boringness and rigidiy allowed me to move really quickly. What surprised me is that I thought that VSCode would work really well with go, but actually didn't as code I impored wouldn't get loaded automatically, and there were a couple bugs that made me switch to Goland, which works extremely smoothly, without fail, and its local autocomplete at the line level is much better than PyCharm's equivalent, likely because Go is much smaller, and statically-typed. 
+Go just works out of the box. Unlike my beloved Python, it doesn't need uv, formatting, linting, or special build processes. At least, for a fairly small project, everything is batteries included. In fact, its boringness and rigidity allowed me to move really quickly. What surprised me is that I thought that VSCode would work really well with go, but actually didn't as code I imported wouldn't get loaded automatically, and there were a couple bugs that made me switch to Goland, which works extremely smoothly, without fail, and its local autocomplete at the line level is much better than PyCharm's equivalent, likely because Go is much smaller, and statically-typed. 
 
 > **Jetbrains LLMs**: 
 Jetbrains' local LLMs are extremely well-done and I'd encourage anyone interested [to check out the paper.](https://arxiv.org/html/2405.08704v3) 
@@ -321,7 +321,7 @@ The `DID` is the ID of the PDS (user repository) where the action happened, the 
 }
 ```
 
-So we parse these JSON objects and [store them as Go structs](https://github.com/veekaybee/gitfeed/blob/4e9248a83435e586a1c855d659baf103323678ec/db/db.go#L17). Go has a [super handy tool](https://transform.tools/json-to-go) where you can paste a JSON oject and get back the Go struct. 
+So we parse these JSON objects and [store them as Go structs](https://github.com/veekaybee/gitfeed/blob/4e9248a83435e586a1c855d659baf103323678ec/db/db.go#L17). Go has a [super handy tool](https://transform.tools/json-to-go) where you can paste a JSON object and get back the Go struct. 
 
 And then we write that struct to a DB with a `posts` [table](https://github.com/veekaybee/gitfeed/blob/4e9248a83435e586a1c855d659baf103323678ec/cmd/ingest/ingest.go#L185) that we've already instantiated for this purpose. 
 
@@ -359,7 +359,7 @@ We set up [several routes](https://github.com/veekaybee/gitfeed/blob/4e9248a8343
 
 And then we're up and running as soon as we build and run our Go executable. 
 
-# Building and Running Go Artrifacts
+# Building and Running Go Artifacts
 
 So easy. [Just a small Makefile](https://github.com/veekaybee/gitfeed/blob/main/Makefile) and we're rebuilding and testing, and then serving the binaries.  
 
@@ -377,12 +377,12 @@ I run all of this on a small DigitalOcean droplet, and [redeploy to the droplet]
 
 # Final Reflections
 
-This app was so much fun to develop and I learned an enormous amount of stuff. Small, self-contained apps are a joy, and especially when there's a front-end component where you have a self-reinforcing feedback loop. Since us machine learning engineers work at what a friend called "the backe-end of the backend", we don't often get to experience UI changes, and seeing through something end-to-end was a joy. 
+This app was so much fun to develop and I learned an enormous amount of stuff. Small, self-contained apps are a joy, and especially when there's a front-end component where you have a self-reinforcing feedback loop. Since us machine learning engineers work at what a friend called "the back-end of the backend", we don't often get to experience UI changes, and seeing through something end-to-end was a joy. 
 
 There were points of friction: It was definitely frustrating getting up and going with a whole new language and tech stack, but once I got back into the flow, it was great. 
 
-As always, the hardest part of this project, as with any project, was understanding the data model and the business logic, and parsing out those objects correctly. The second-hardest was algining elements in CSS. 
+As always, the hardest part of this project, as with any project, was understanding the data model and the business logic, and parsing out those objects correctly. The second-hardest was aligning elements in CSS. 
 
-I'd love to get to a point [where the app can surface Trending GitHub repos.](https://github.com/veekaybee/gitfeed/issues/9). And mabye [add some unit tests.](https://github.com/veekaybee/gitfeed/issues/12)  
+I'd love to get to a point [where the app can surface Trending GitHub repos.](https://github.com/veekaybee/gitfeed/issues/9). And maybe [add some unit tests.](https://github.com/veekaybee/gitfeed/issues/12)  
 
 Upon writing this, I realized I have like three other posts I want to write about this process, so I'll leave this as-is for now. 
