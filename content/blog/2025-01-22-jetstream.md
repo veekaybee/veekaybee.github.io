@@ -4,7 +4,7 @@ creator = '@vboykis'
 date = '2025-01-23'
 site = '@vboykis'
 title = "You can just hack on ATProto"
-description = 'Building a lightweight Go app on the Jestream'
+description = 'Building a lightweight Go app on the Jetstream'
 image =  "https://raw.githubusercontent.com/veekaybee/gitfeed/refs/heads/main/static/android-chrome-512x512.png"
 +++
 
@@ -13,7 +13,7 @@ image =  "https://raw.githubusercontent.com/veekaybee/gitfeed/refs/heads/main/st
 ##### [Icon by iconixar](https://www.freepik.com/author/user8839173/icons)
 
 Since I signed up for Bluesky last year, 
-I've been wanting to make something using the [AT Protocol](https://atproto.com/) that the platform is build on top of.
+I've been wanting to make something using the [AT Protocol](https://atproto.com/) that the platform is built on top of.
 
 I finally had a chance to do it over the holiday break and built [GitFeed](https://github.com/veekaybee/gitfeed), a small Go app that filters the Bluesky network firehose by posts that have GitHub links and renders them into a refreshable, ephemeral feed. 
 
@@ -29,13 +29,13 @@ Bluesky is both a decentralized protocol, called AtProto and a social media comp
 
 There is a lot more in the [AT Protocol Paper](https://arxiv.org/abs/2402.03239), but the basics are this:
 
-* Data for each user is hosted individually in a [PDS](https://github.com/bluesky-social/pds) - a personal data store - which is a database storing a collection of records that are cryptographically signed and encoded in [DAG-CBOR](https://ipld.io/specs/codecs/dag-cbor/spec/) format. The record schema is defined by a ["lexicon"](https://atproto.com/guides/lexicon), which is dependent on the type of data being transfered. The records themselves are stored in a [merkle search tree](https://inria.hal.science/hal-02303490/document) structure which makes it easy to rebalance records efficiently both on read and write. Its default storage engine [is SQLite.](https://bsky.app/profile/jacob.gold/post/3lbar43hgx22t)
+* Data for each user is hosted individually in a [PDS](https://github.com/bluesky-social/pds) - a personal data store - which is a database storing a collection of records that are cryptographically signed and encoded in [DAG-CBOR](https://ipld.io/specs/codecs/dag-cbor/spec/) format. The record schema is defined by a ["lexicon"](https://atproto.com/guides/lexicon), which is dependent on the type of data being transferred. The records themselves are stored in a [merkle search tree](https://inria.hal.science/hal-02303490/document) structure which makes it easy to rebalance records efficiently both on read and write. Its default storage engine [is SQLite.](https://bsky.app/profile/jacob.gold/post/3lbar43hgx22t)
 
 * Each user has a PDS, exposed as a web service to network indexers. There is an indexer, the relay, which "scrapes" but really hits all the PDSes in the network for updates. Right now there is only one true relay, run by Bluesky the company, and there is a lot of debate around what that means for a decentralized network and [efforts to diversify and decentralize](https://alice.bsky.sh/post/3laega7icmi2q). To better get a sense for how the data model works, [you can play around with this tool, ](https://atproto-browser.vercel.app/  ) which is what I spent a lot of time doing during this project. 
 
 The TL; DR is that you can think of the At Proto Atmosphere as a collection of databases, or, really, websites, that the relay indexes and turns into the firehose. Data is then filtered on the firehose side for CSAM and other logic, before it's turned into an AppView. The AppView is what you see if you sign into `bsky.app. `
 
-If this sounds familiar, it's because it's how web crawlers, including Google work, with the exception that their crawled results are not available to everyone for acess. 
+If this sounds familiar, it's because it's how web crawlers, including Google work, with the exception that their crawled results are not available to everyone for access. 
 
 Steve has a very [nice write-up of all of this](https://steveklabnik.com/writing/how-does-bluesky-work), with a beautiful ascii diagram.  
 
@@ -54,7 +54,7 @@ Moreover, in order to implement a feed, [generally](https://www.reddit.com/r/Red
  - a cursor in case you lose your place in consuming the feed
  - latency considerations 
  - Thinking about how you render feed objects (eventually they become large and need to be [hydrated](https://jrashford.com/2022/04/22/how-to-hydrate-tweets-using-hydrator/))
- - potentialy ranking that feed's content
+ - potentially ranking that feed's content
  - retries and handling for if you skip feed elements
 
 Additionally, specific to atproto, your feed is published at your own PDS - [Personal Data Server, a LOT more about this here](https://atproto.com/guides/glossary#pds-personal-data-server). You can see this at the link on the Gift Articles Feed:
@@ -79,8 +79,8 @@ McFunley says you only have [so many innovation tokens](https://mcfunley.com/cho
 
 I always want to [get to a demo](https://mitchellh.com/writing/building-large-technical-projects) quickly. But, the goal of side projects is to do stuff you wouldn't get to explore otherwise, so I chose to spend  my innovation tokens on:
 
-* learning a new backend language, Go: this thing had to serve code fast as a binary and have a very simple deployment story. I have a background in Java/Scala and initially thought about Java, but unfortunately there is no small light-weight Java server that I'm aware of (Spring doesn't count) and Go has steadily been growing in popularity since its inception and especially after the language added features like [generics](https://go.dev/blog/why-generics) and I wanted to check it out. Just as importantly, the backend of Bluesky and the protocol were specced out and [written in Typescript and Go](https://docs.bsky.app/docs/starter-templates/clients), and I thought it might be easier to nagivate the Atmosphere in those languages.
-* getting slightly better at frond-end dev: I'd dabbled a bit with front-end design [for Viberary](https://vickiboykis.com/2024/01/05/retro-on-viberary/) but used almost no Javascript, which I'd need to render a feed.
+* learning a new backend language, Go: this thing had to serve code fast as a binary and have a very simple deployment story. I have a background in Java/Scala and initially thought about Java, but unfortunately there is no small light-weight Java server that I'm aware of (Spring doesn't count) and Go has steadily been growing in popularity since its inception and especially after the language added features like [generics](https://go.dev/blog/why-generics) and I wanted to check it out. Just as importantly, the backend of Bluesky and the protocol were specced out and [written in Typescript and Go](https://docs.bsky.app/docs/starter-templates/clients), and I thought it might be easier to navigate the Atmosphere in those languages.
+* getting slightly better at front-end dev: I'd dabbled a bit with front-end design [for Viberary](https://vickiboykis.com/2024/01/05/retro-on-viberary/) but used almost no Javascript, which I'd need to render a feed.
 * understanding the At Proto data model
 
 I didn't need to: 
@@ -97,9 +97,9 @@ Working with the Bluesky firehose has a set of complications other than paginati
 
 Moreover, the sheer volume of firehose events has grown to the point where folks consuming it need to invest heavily in scaling strategies for downstream application consumers. 
 
-Jetstream instead streams content in JSON, with [reduced bandwith and costs](https://jazco.dev/2024/09/24/jetstream/). 
+Jetstream instead streams content in JSON, with [reduced bandwidth and costs](https://jazco.dev/2024/09/24/jetstream/). 
 
-As a tradeoff, Jetsteream is less stable, doesn't contain content that needs API verification, and don't offer pagination, activity offets, or uptime guarantees.  As the docs say, it's good for low-stakes side projects that don't require heavy authentication or veracity, aka gitfeed. 
+As a tradeoff, Jetstream is less stable, doesn't contain content that needs API verification, and don't offer pagination, activity offets, or uptime guarantees.  As the docs say, it's good for low-stakes side projects that don't require heavy authentication or veracity, aka gitfeed. 
 
 ## Serving GitFeed
 
