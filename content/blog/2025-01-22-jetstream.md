@@ -23,7 +23,7 @@ You can [see GitFeed here](http://www.gitfeed.me/), but it might not actually be
 
 The cool part of an open protocol is that you can also [just clone the repo](https://github.com/veekaybee/gitfeed) and run a hosted version of it yourself. 
 
-## Let's talk about AtProto
+## ATProto
 
 Bluesky is both a decentralized protocol, called AtProto and a social media company, called Bluesky plc that develops both the protocol and one of the Apps running on the protocol, Bluesky. 
 
@@ -39,7 +39,7 @@ If this sounds familiar, it's because it's how web crawlers, including Google wo
 
 Steve has a very [nice write-up of all of this](https://steveklabnik.com/writing/how-does-bluesky-work), with a beautiful ascii diagram.  
 
-Al(most) all of the data streaming through each person's PDS is public, and enables the creation of [projects like](https://docs.bsky.app/showcase) the [Bluesky firehose as a screensaver](https://news.ycombinator.com/item?id=42159786), or goodfeeds, [surfacing feeds across the network.](https://goodfeeds.co/), or TikTok and I[Instagram-like apps.](https://bsky.app/profile/did:plc:24kqkpfy6z7avtgu3qg57vvl)   As you can imagine, the protocol then lends itself to a lot of nice experimentation (make sure to [check the TOS/Developer guidelines](https://bsky.social/about/support/community-guidelines) before you do so). 
+Al(most) all of the data streaming through each person's PDS is public, and enables the creation of [projects like](https://docs.bsky.app/showcase) the [Bluesky firehose as a screensaver](https://news.ycombinator.com/item?id=42159786), or goodfeeds, [surfacing feeds across the network.](https://goodfeeds.co/), or TikTok and [Instagram-like apps.](https://bsky.app/profile/did:plc:24kqkpfy6z7avtgu3qg57vvl)   As you can imagine, the protocol then lends itself to a lot of nice experimentation (make sure to [check the TOS/Developer guidelines](https://bsky.social/about/support/community-guidelines) before you do so). 
 
 # Let's find all the gists
 
@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 I was surprised at how much about JS was already familiar to me from Python and PHP, but where I really got stuck was in understanding how the DOM and Javascript work together, what a Javascript app structure looks like, and the Javascript ecosystem. 
 
 > **Using LLMs to build GitFeed**: 
+
 I've done a lot of work with [llamafile](https://github.com/Mozilla-Ocho/llamafile), and recently, I've also been enjoying the local LLM stack of: **Ollama** for the model backend and **OpenWebUI** for the front-end. Ollama serves versioned [GGUF model weights](https://vickiboykis.com/2024/02/28/gguf-the-long-way-around/) wrapped in a Docker-like paradigm that hits an API wrapping llama.cpp in an (of course) Go interface. For this project, I used `mistral:latest` and `qwen2.5-coder:latest` , the best code model at the time (in the ancient space of 3 months ago, Deepseek3 wasn't out). I did reasonably well between the two of them, with only 5% of requests that I had to bypass and send to Claude.  I did find myself getting frustrated because I couldn't clearly articulate the unknown unknowns I had about Javascript, though, and eventually I just gave up and bought `Eloquent Javascript` which I'm hoping to dig into this year to better understand what `Qwen` and I wrote together and how I can improve it. 
 
 ## Ingest
@@ -189,7 +190,7 @@ I used the `gorilla/websocket` implementation of the websocket procool.  for han
 
 We need to be able to [read and write to/from the websocket](https://brojonat.com/posts/websockets/): 
 
->  The main thing to internalize about working with WebSockets in Go is that each client connection should get at least two goroutines: one that continuously processes messages coming from the client (i.e., a “read pump”), and one that continuously processes message going out to the client (i.e., a “write pump”). 
+> The main thing to internalize about working with WebSockets in Go is that each client connection should get at least two goroutines: one that continuously processes messages coming from the client (i.e., a “read pump”), and one that continuously processes message going out to the client (i.e., a “write pump”). 
 
 However, this becomes easier since for GitFeed, we're only reading from and not writing to the websocket, we need to implement logic to readPump
 
@@ -232,9 +233,11 @@ However, unlike an HTTP call, websocksets are open persistently and don't offer 
 You'll notice a couple key points here: first, we log and handle the case where the web socket disconnects. Then, we do some ultra-fancy print logging to keep track of how many posts we've actually processed. And finally, we now get to the actual data, an `var post db.ATPost` that we process, parse, and write to the database, which we initialize as a post [repository](https://martinfowler.com/eaaCatalog/repository.html), a fancy word for "database with dependency injection". 
 
 > **Golang tooling**: 
+
 Go just works out of the box. Unlike my beloved Python, it doesn't need uv, formatting, linting, or special build processes. At least, for a fairly small project, everything is batteries included. In fact, its boringness and rigidity allowed me to move really quickly. What surprised me is that I thought that VSCode would work really well with go, but actually didn't as code I imported wouldn't get loaded automatically, and there were a couple bugs that made me switch to Goland, which works extremely smoothly, without fail, and its local autocomplete at the line level is much better than PyCharm's equivalent, likely because Go is much smaller, and statically-typed. 
 
 > **Jetbrains LLMs**: 
+
 Jetbrains' local LLMs are extremely well-done and I'd encourage anyone interested [to check out the paper.](https://arxiv.org/html/2405.08704v3) 
 
 # What is an AtProto Post
